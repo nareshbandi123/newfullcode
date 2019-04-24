@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<report
+	progress="">
+	<activity
+		result="Failed"
+		duration="0ms"
+		durationms="0"
+		type="root"
+		rid="f36fb2c110ed64a"
+		totalerrorcount="1"
+		totalwarningcount="0"
+		totalsuccesstestcasecount="0"
+		totalfailedtestcasecount="0"
+		totalblockedtestcasecount="0"
+		childsuccesscount="0"
+		childfailedcount="0"
+		childblockedcount="0"
+		totalsuccesscount="0"
+		totalfailedcount="0"
+		totalblockedcount="0"
+		totalmaintenancemodecount="0"
+		user="administrator"
+		rxversion="8.2.1.0"
+		host="CIGNITI-W16"
+		osversion="Microsoft Windows NT 6.2.9200.0 64bit"
+		runtimeversion="4.0.30319.42000"
+		procarch="32bit"
+		oslanguage="en-US"
+		dtnlanguage="en-US"
+		screenresolution="1600x900"
+		timestamp="3/28/2019 2:36:54 AM"
+		timestampiso="2019-03-28T07:36:54"
+		endtime="3/28/2019 2:42:08 AM"
+		timeoutfactor="1"
+		module="VerifyThreeMetrics">
+		<detail>
+			VerifyThreeMetrics
+		</detail>
+		<errormessage>
+			Value cannot be null.
+Parameter name: category
+		</errormessage>
+		<varbindings>
+		</varbindings>
+		<item
+			timeRelativeToTestSuiteStartTime="05:13.362"
+			timeRelativeToTestModuleStartTime="05:13.365"
+			timeWallClock="02:42:07"
+			time="05:13.362"
+			level="Error"
+			category="Module"
+			errimg=".\VerifyTh_e5134757_e3a670b5_trace.jpg"
+			errthumb=".\VerifyTh_e5134757_e3a670b5_trace_thumb.jpg">
+			<message>
+				Value cannot be null.<br/>Parameter name: category
+			</message>
+			<metainfo
+				stacktrace="   at Ranorex.Report.Log(ReportLevel level, String category, String message, Boolean escape, IReportMetadata[] metaData)
+   at Ranorex.Report.Log(ReportLevel level, String category, String message)
+   at Ranorex.Report.Failure(String category, String message)
+   at AutomationSQLdm.Commons.Reports.ReportLog(String log, SQLdmReportLevel reportlevel, Element element, String category) in C:\AutomationSQLdm\AutomationSQLdm\AutomationSQLdm\Commons\Reports.cs:line 21
+   at AutomationSQLdm.Grooming_Modifications.TC_721950.VerifyThreeMetrics.StartProcess() in C:\AutomationSQLdm\AutomationSQLdm\AutomationSQLdm\Grooming Modifications\TC_721950\VerifyThreeMetrics.cs:line 56
+   at AutomationSQLdm.Grooming_Modifications.TC_721950.VerifyThreeMetrics.Ranorex.Core.Testing.ITestModule.Run() in C:\AutomationSQLdm\AutomationSQLdm\AutomationSQLdm\Grooming Modifications\TC_721950\VerifyThreeMetrics.cs:line 35
+   at Ranorex.Core.Testing.TestModuleLeaf.RunInternal(DataContext parentDataContext, Int32 iteration, Int32 iterationCount, Boolean skipIteration)"
+				codefile="C:\AutomationSQLdm\AutomationSQLdm\AutomationSQLdm\Commons\Reports.cs"
+				codeline="21"
+				loglvl="Error">
+			</metainfo>
+		</item>
+	</activity>
+</report>

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<recordtable
+embeddedrepository="False"
+id="e461a081-13dd-49a1-be04-7dd1624076d3"
+mode="Global"
+rxversion="8.2">
+	<name>
+		Recording1
+	</name>
+	<repeatcount>
+		1
+	</repeatcount>
+	<turbomode>
+		False
+	</turbomode>
+	<genreport>
+		True
+	</genreport>
+	<speedfactor>
+		1
+	</speedfactor>
+	<useDefaultItemLogging>
+		True
+	</useDefaultItemLogging>
+	<codegen
+	classname="Recording1"
+	namespace="AutomationSQLdm.OperatorSecurityRole.TC_T721974">
+	</codegen>
+	<variables>
+	</variables>
+	<recorditems>
+	</recorditems>
+	<repository
+	id="be0255f8-40a8-4bb9-8a65-d721eb3a73d3"
+	name="AutomationSQLdmRepository"
+	relativepath="..\..\AutomationSQLdmRepository.rxrep"
+	rxversion="8.2">
+		<codegen
+		classname="AutomationSQLdmRepository"
+		namespace="AutomationSQLdm">
+		</codegen>
+		<rootfolder
+		id="7bd21acd-09e4-4c42-81c5-68b39ccd889b"
+		name="_rootdummy_">
+		</rootfolder>
+	</repository>
+	<usercodefile
+	lang="CSharp">
+		Recording1.UserCode.cs
+	</usercodefile>
+	<references>
+	</references>
+</recordtable>

@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<report
+	progress="">
+	<activity
+		result="Success"
+		duration="0ms"
+		durationms="0"
+		type="root"
+		rid="212cd70345c4003e"
+		totalerrorcount="1"
+		totalwarningcount="0"
+		totalsuccesstestcasecount="0"
+		totalfailedtestcasecount="0"
+		totalblockedtestcasecount="0"
+		childsuccesscount="0"
+		childfailedcount="0"
+		childblockedcount="0"
+		totalsuccesscount="0"
+		totalfailedcount="0"
+		totalblockedcount="0"
+		totalmaintenancemodecount="0"
+		user="administrator"
+		rxversion="8.2.1.0"
+		host="CIGNITI-W10"
+		osversion="Windows 10 64bit"
+		runtimeversion="4.0.30319.42000"
+		procarch="32bit"
+		oslanguage="en-US"
+		dtnlanguage="en-US"
+		screenresolution="1366x768"
+		timestamp="4/17/2019 4:32:09 AM"
+		timestampiso="2019-04-17T11:32:09"
+		endtime="4/17/2019 4:32:10 AM"
+		timeoutfactor="1">
+		<detail>
+			Ranorex Testscript
+		</detail>
+		<item
+			timeRelativeToTestSuiteStartTime="00:00.065"
+			timeRelativeToTestModuleStartTime="00:00.068"
+			timeWallClock="04:32:09"
+			time="00:00.065"
+			level="Error"
+			category="User">
+			<message>
+				Unexpected exception occurred: AutomationSQLdm.TestRailAPI.APIException: TestRail API returned HTTP 500 (&quot;Invalid characters in URI: [/index_php?/api/v2/add_run/P6]&quot;)<br/>   at AutomationSQLdm.TestRailAPI.APIClient.SendRequest(String method, String uri, Object data) in D:\repos\fullcodenew\AutomationSQLdm\AutomationSQLdm\TestRailAPI\APIClient.cs:line 140<br/>   at AutomationSQLdm.TestRailAPI.APIClient.SendPost(String uri, Object data) in D:\repos\fullcodenew\AutomationSQLdm\AutomationSQLdm\TestRailAPI\APIClient.cs:line 47<br/>   at AutomationSQLdm.TestRailAPI.Rail.AddRun() in D:\repos\fullcodenew\AutomationSQLdm\AutomationSQLdm\TestRailAPI\Rail.cs:line 57<br/>   at AutomationSQLdm.Program.ConfigureTestRail() in D:\repos\fullcodenew\AutomationSQLdm\AutomationSQLdm\Program.cs:line 58<br/>   at AutomationSQLdm.Program.Main(String[] args) in D:\repos\fullcodenew\AutomationSQLdm\AutomationSQLdm\Program.cs:line 33
+			</message>
+			<metainfo
+				codefile="D:\repos\fullcodenew\AutomationSQLdm\AutomationSQLdm\Program.cs"
+				codeline="40"
+				loglvl="Error">
+			</metainfo>
+		</item>
+	</activity>
+</report>

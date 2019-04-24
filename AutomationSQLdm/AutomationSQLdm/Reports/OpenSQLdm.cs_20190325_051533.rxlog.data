@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<report
+	progress="">
+	<activity
+		result="Failed"
+		duration="0ms"
+		durationms="0"
+		type="root"
+		rid="2c3d8d2e701bbe9"
+		totalerrorcount="1"
+		totalwarningcount="0"
+		totalsuccesstestcasecount="0"
+		totalfailedtestcasecount="0"
+		totalblockedtestcasecount="0"
+		childsuccesscount="0"
+		childfailedcount="0"
+		childblockedcount="0"
+		totalsuccesscount="0"
+		totalfailedcount="0"
+		totalblockedcount="0"
+		totalmaintenancemodecount="0"
+		user="administrator"
+		rxversion="8.2.1.0"
+		host="AUT-SQL-DEV-001"
+		osversion="Windows Server 2008 R2 Service Pack 1 64bit"
+		runtimeversion="4.0.30319.42000"
+		procarch="32bit"
+		oslanguage="en-US"
+		dtnlanguage="en-US"
+		screenresolution="1600x900"
+		timestamp="3/25/2019 5:15:43 AM"
+		timestampiso="2019-03-25T10:15:43"
+		endtime="3/25/2019 5:17:07 AM"
+		timeoutfactor="1"
+		module="OpenSQLdm">
+		<detail>
+			OpenSQLdm
+		</detail>
+		<errormessage>
+			Value cannot be null.
+Parameter name: category
+		</errormessage>
+		<varbindings>
+		</varbindings>
+		<item
+			timeRelativeToTestSuiteStartTime="01:23.674"
+			timeRelativeToTestModuleStartTime="01:23.676"
+			timeWallClock="05:17:07"
+			time="01:23.674"
+			level="Error"
+			category="Module"
+			errimg=".\OpenSQLd_c9403415_2e23f530_trace.jpg"
+			errthumb=".\OpenSQLd_c9403415_2e23f530_trace_thumb.jpg">
+			<message>
+				Value cannot be null.<br/>Parameter name: category
+			</message>
+			<metainfo
+				stacktrace="   at Ranorex.Report.Log(ReportLevel level, String category, String message, Boolean escape, IReportMetadata[] metaData)
+   at Ranorex.Report.Log(ReportLevel level, String category, String message)
+   at Ranorex.Report.Failure(String category, String message)
+   at AutomationSQLdm.Commons.Reports.ReportLog(String log, SQLdmReportLevel reportlevel, Element element, String category) in c:\AutomationSQLdm\AutomationSQLdm\AutomationSQLdm\Commons\Reports.cs:line 21
+   at AutomationSQLdm.Application.OpenSQLdm.StartProcess() in c:\AutomationSQLdm\AutomationSQLdm\AutomationSQLdm\Application\OpenSQLdm.cs:line 45
+   at AutomationSQLdm.Application.OpenSQLdm.Ranorex.Core.Testing.ITestModule.Run() in c:\AutomationSQLdm\AutomationSQLdm\AutomationSQLdm\Application\OpenSQLdm.cs:line 31
+   at Ranorex.Core.Testing.TestModuleLeaf.RunInternal(DataContext parentDataContext, Int32 iteration, Int32 iterationCount, Boolean skipIteration)"
+				codefile="c:\AutomationSQLdm\AutomationSQLdm\AutomationSQLdm\Commons\Reports.cs"
+				codeline="21"
+				loglvl="Error">
+			</metainfo>
+		</item>
+	</activity>
+</report>

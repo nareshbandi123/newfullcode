@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<report
+	progress="">
+	<activity
+		result="Failed"
+		duration="0ms"
+		durationms="0"
+		type="root"
+		rid="15425e6cb4155bf4"
+		totalerrorcount="1"
+		totalwarningcount="2"
+		totalsuccesstestcasecount="0"
+		totalfailedtestcasecount="0"
+		totalblockedtestcasecount="0"
+		childsuccesscount="0"
+		childfailedcount="0"
+		childblockedcount="0"
+		totalsuccesscount="0"
+		totalfailedcount="0"
+		totalblockedcount="0"
+		totalmaintenancemodecount="0"
+		user="administrator"
+		rxversion="8.2.1.0"
+		host="AUT-SQL-DEV-001"
+		osversion="Windows Server 2008 R2 Service Pack 1 64bit"
+		runtimeversion="4.0.30319.42000"
+		procarch="32bit"
+		oslanguage="en-US"
+		dtnlanguage="en-US"
+		screenresolution="1600x900"
+		timestamp="3/25/2019 4:49:35 AM"
+		timestampiso="2019-03-25T09:49:35"
+		endtime="3/25/2019 4:50:09 AM"
+		timeoutfactor="1"
+		module="OpenSQLdm">
+		<detail>
+			OpenSQLdm
+		</detail>
+		<errormessage>
+			Value cannot be null.
+Parameter name: category
+		</errormessage>
+		<varbindings>
+		</varbindings>
+		<item
+			timeRelativeToTestSuiteStartTime="00:09.641"
+			timeRelativeToTestModuleStartTime="00:09.643"
+			timeWallClock="04:49:45"
+			time="00:09.641"
+			level="Warn"
+			category="WinForms"
+			errimg=".\OpenSQLd_260ba8b5_78347aec_trace.jpg"
+			errthumb=".\OpenSQLd_260ba8b5_78347aec_trace_thumb.jpg">
+			<message>
+				This control (from process '(Unknown)') seems to be a Windows Forms control, but was not recognized as such, possibly due to a security limitation. UI element identification capabilities for this control may be limited.<br/>If this control is a WinForms control, please make sure that the automating process has the rights to access the automated application. Otherwise, please ignore this limitation.<br/>Process: (pid 0)<br/>The following website provides more information on this technology limitation:<br/>https://www.ranorex.com/help/v8.2/interfaces-connectivity/technology-instrumentation/general-troubleshooting/#DotNetWinForms<br/>(This message is only shown once per report.)
+			</message>
+			<metainfo
+				limitationName="PotentiallyWinForms"
+				showInProgressDialog="False"
+				codefile="c:\AutomationSQLdm\AutomationSQLdm\AutomationSQLdm\Application\OpenSQLdm.cs"
+				codeline="40"
+				loglvl="Warn">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:17.515"
+			timeRelativeToTestModuleStartTime="00:17.517"
+			timeWallClock="04:49:53"
+			time="00:17.515"
+			level="Warn"
+			category="WPF"
+			errimg=".\OpenSQLd_260ba8b5_9be265ec_trace.jpg"
+			errthumb=".\OpenSQLd_260ba8b5_9be265ec_trace_thumb.jpg">
+			<message>
+				Failed to instrument WPF process. UI element identification capabilities for this window are limited.
+
+Could not set-up managed injection endpoint: Bootstrapping Ranorex Instrumentation failed. The injection timed out. Probably the AUT is blocking the UI thread.
+
+If your application is currently in startup state please try to add a delay action to your Ranorex test application before you execute actions on Ranorex elements to give Ranorex the possibility to load correctly into the AUT.<br/>Process: 'SQLdmDesktopClient' (pid 6988)<br/>The following website provides more information on this technology limitation:<br/>https://www.ranorex.com/help/v8.2/interfaces-connectivity/technology-instrumentation/general-troubleshooting/#DotNetWPF<br/>(This message is only shown once per report.)
+			</message>
+			<metainfo
+				limitationName="WPF Instrumentation"
+				showInProgressDialog="False"
+				codefile="c:\AutomationSQLdm\AutomationSQLdm\AutomationSQLdm\Application\OpenSQLdm.cs"
+				codeline="40"
+				loglvl="Warn">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:32.857"
+			timeRelativeToTestModuleStartTime="00:32.859"
+			timeWallClock="04:50:08"
+			time="00:32.857"
+			level="Error"
+			category="Module"
+			errimg=".\OpenSQLd_260ba8b5_007618ef_trace.jpg"
+			errthumb=".\OpenSQLd_260ba8b5_007618ef_trace_thumb.jpg">
+			<message>
+				Value cannot be null.<br/>Parameter name: category
+			</message>
+			<metainfo
+				stacktrace="   at Ranorex.Report.Log(ReportLevel level, String category, String message, Boolean escape, IReportMetadata[] metaData)
+   at Ranorex.Report.Failure(String category, String message)
+   at AutomationSQLdm.Commons.Reports.ReportLog(String log, SQLdmReportLevel reportlevel, Element element, String category) in c:\AutomationSQLdm\AutomationSQLdm\AutomationSQLdm\Commons\Reports.cs:line 21
+   at AutomationSQLdm.Application.OpenSQLdm.StartProcess() in c:\AutomationSQLdm\AutomationSQLdm\AutomationSQLdm\Application\OpenSQLdm.cs:line 45
+   at AutomationSQLdm.Application.OpenSQLdm.Ranorex.Core.Testing.ITestModule.Run() in c:\AutomationSQLdm\AutomationSQLdm\AutomationSQLdm\Application\OpenSQLdm.cs:line 31
+   at Ranorex.Core.Testing.TestModuleLeaf.RunInternal(DataContext parentDataContext, Int32 iteration, Int32 iterationCount, Boolean skipIteration)"
+				codefile="c:\AutomationSQLdm\AutomationSQLdm\AutomationSQLdm\Commons\Reports.cs"
+				codeline="21"
+				loglvl="Error">
+			</metainfo>
+		</item>
+	</activity>
+</report>

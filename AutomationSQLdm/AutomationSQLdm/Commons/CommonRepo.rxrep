@@ -1,0 +1,41 @@
+﻿<repository
+id="454894c8-a743-439e-9ca8-840d1f743896"
+name="CommonRepo"
+rxversion="8.2">
+	<codegen
+	classname="CommonRepo"
+	namespace="AutomationSQLdm.Commons">
+	</codegen>
+	<rootfolder
+	capname="unknown"
+	id="9d2c49e9-5e4f-42bf-a8cf-910a588e3639"
+	isrooted="True"
+	name="Root"
+	searchtimeout="0ms"
+	usecache="True">
+		<appfolder
+		capname="form"
+		id="1a73f651-c755-42fc-8b6e-622d9bbcf5f6"
+		isrooted="True"
+		name="Application"
+		searchtimeout="30000ms"
+		usecache="True">
+			<item
+			addcaps="treeitem,accessible,accessibletreeitem"
+			capname="treeitem"
+			id="6945e911-73e0-44d3-b52f-f257cd63dbd9"
+			name="AllServers"
+			refimgid="dd5fed5b-c9fe-4452-ab2f-3af2c41693a9"
+			searchtimeout="30000ms">
+				/form[@title~'^Idera\ SQL\ diagnostic\ mana']//tree[@controlname='userViewTreeView']//treeitem[@accessiblename='All Servers']
+			</item>
+			<basepath>
+				/form[@title~'^Idera\ SQL\ diagnostic\ mana']
+			</basepath>
+		</appfolder>
+		<basepath>
+		</basepath>
+	</rootfolder>
+	<variables>
+	</variables>
+</repository>

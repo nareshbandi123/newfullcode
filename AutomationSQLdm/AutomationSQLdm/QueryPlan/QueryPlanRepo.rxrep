@@ -39,14 +39,14 @@ rxversion="8.2">
 			capname="text"
 			id="8e40f701-63be-4ffb-a947-93ef2ff123bd"
 			name="File"
-			searchtimeout="30000ms">
+			searchtimeout="180000ms">
 				/form[@title~'^Idera\ SQL\ diagnostic\ mana']//list[@automationid='fileMenu']/picture[@automationid='HeaderPresenter']/text[@caption='File']
 			</item>
 			<item
 			capname="tabpage"
 			id="7d1ef42b-c90e-43b5-9c73-65b5f3c4864c"
 			name="tabQueries"
-			searchtimeout="30000ms">
+			searchtimeout="600000ms">
 				/form[@title~'^Idera\ SQL\ diagnostic\ mana']//toolbar[@automationid='ribbon']/tabpage[@automationid='Queries']
 			</item>
 			<folder
@@ -152,6 +152,13 @@ rxversion="8.2">
 				searchtimeout="30000ms">
 					//form[@controlname='MonitoredSqlServerInstancePropertiesDialog']//container[@controlname='propertiesControl']//container[@controlname='queryMonitorPropertyPage']//container[@controlname='tableLayoutPanel17']/checkbox[@controlname='enableQueryMonitorTraceCheckBox']
 				</item>
+				<item
+				capname="button"
+				id="2d949e8d-20b6-41a7-80fa-752f447a195b"
+				name="btnMSSPAdvanced"
+				searchtimeout="30000ms">
+					//form[@controlname='MonitoredSqlServerInstancePropertiesDialog']//container[@controlname='propertiesControl']//container[@controlname='queryMonitorPropertyPage']//container[@controlname='tableLayoutPanel18']/button[@controlname='queryMonitorAdvancedOptionsButton']
+				</item>
 				<basepath>
 					//form[@controlname='MonitoredSqlServerInstancePropertiesDialog']//container[@controlname='propertiesControl']//container[@controlname='queryMonitorPropertyPage']
 				</basepath>
@@ -202,8 +209,15 @@ rxversion="8.2">
 				capname="combobox"
 				id="effa3ba9-fec7-4d8d-b111-ed7ad8576798"
 				name="ddlPPPlansBy"
-				searchtimeout="30000ms">
+				searchtimeout="180000ms">
 					//form[@controlname='MonitoredSqlServerInstancePropertiesDialog']//container[@controlname='propertiesControl']//container[@controlname='tableLayoutPanel16']/container[@controlname='fmePoorlyPerformingThresholds']//element[@controlname='topPlanComboBox']/combobox[@accessiblename='Plans by ']/combobox[@accessiblerole='ComboBox']
+				</item>
+				<item
+				capname="button"
+				id="631a39c2-acdd-4171-b133-42da76f46742"
+				name="btnPPPlandByOpen"
+				searchtimeout="30000ms">
+					//form[@controlname='MonitoredSqlServerInstancePropertiesDialog']//container[@controlname='propertiesControl']//container[@controlname='tableLayoutPanel16']/container[@controlname='fmePoorlyPerformingThresholds']//element[@controlname='topPlanComboBox']/combobox[@accessiblename='Plans by ']/?/?/button[@accessiblename='Open']
 				</item>
 				<basepath>
 					//form[@controlname='MonitoredSqlServerInstancePropertiesDialog']//container[@controlname='propertiesControl']//container[@controlname='tableLayoutPanel16']/container[@controlname='fmePoorlyPerformingThresholds']
@@ -225,6 +239,63 @@ rxversion="8.2">
 			</item>
 			<basepath>
 				//form[@controlname='MonitoredSqlServerInstancePropertiesDialog']
+			</basepath>
+		</appfolder>
+		<appfolder
+		capname="form"
+		id="38d99a91-55c7-4f38-9728-f7a06ff13f25"
+		isrooted="True"
+		name="ExceptionMessageDialog"
+		searchtimeout="30000ms"
+		usecache="True">
+			<item
+			capname="button"
+			id="dec13f4a-bf70-4f7f-b5ec-cbf77deef220"
+			name="btnMSSPYes"
+			searchtimeout="30000ms">
+				//form[@controlname='ExceptionMessageBoxForm']//container[@controlname='pnlButtons']/button[@controlname='button1']
+			</item>
+			<item
+			capname="button"
+			id="f870e4c5-28e7-4a7c-8a07-103a2d0c30ec"
+			name="btnMSSPNo"
+			searchtimeout="30000ms">
+				//form[@controlname='ExceptionMessageBoxForm']//container[@controlname='pnlButtons']/button[@controlname='button2']
+			</item>
+			<basepath>
+				//form[@controlname='ExceptionMessageBoxForm']
+			</basepath>
+		</appfolder>
+		<appfolder
+		capname="form"
+		id="f65540a7-57a9-4d1c-a82a-41f020368eff"
+		isrooted="True"
+		name="AdvancedQueryFilterConfigurationDialog"
+		searchtimeout="30000ms"
+		usecache="True">
+			<item
+			capname="button"
+			id="ebcdba65-0ba0-481a-a483-b7bb880d4c5f"
+			name="btnAQFMCancle"
+			searchtimeout="30000ms">
+				//form[@controlname='AdvancedQueryFilterConfigurationDialog']//button[@controlname='cancelButton']
+			</item>
+			<item
+			capname="button"
+			id="314148bc-f50d-4681-841f-b36e66a7abd6"
+			name="btnAQFMOk"
+			searchtimeout="30000ms">
+				//form[@controlname='AdvancedQueryFilterConfigurationDialog']//button[@controlname='okButton']
+			</item>
+			<item
+			capname="checkbox"
+			id="9b52d1eb-7ec4-4fd2-8afc-07cad0dbe11a"
+			name="cbAQFCExcludeSQLDMQuery"
+			searchtimeout="30000ms">
+				//form[@controlname='AdvancedQueryFilterConfigurationDialog']//container[@controlname='propertiesControl1']//container[@controlname='propertyPage1']/container[@controlname='office2007PropertyPage1']//container[@controlname='panel1']/checkbox[@controlname='chkExcludeDM']
+			</item>
+			<basepath>
+				//form[@controlname='AdvancedQueryFilterConfigurationDialog']
 			</basepath>
 		</appfolder>
 		<basepath>

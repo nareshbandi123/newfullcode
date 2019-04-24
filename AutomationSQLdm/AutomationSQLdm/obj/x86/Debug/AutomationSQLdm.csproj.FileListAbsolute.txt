@@ -38,3 +38,16 @@ D:\repos\fullcodenew\AutomationSQLdm\AutomationSQLdm\bin\Debug\Ranorex.Core.Reso
 D:\repos\fullcodenew\AutomationSQLdm\AutomationSQLdm\bin\Debug\Newtonsoft.Json.dll
 D:\repos\fullcodenew\AutomationSQLdm\AutomationSQLdm\bin\Debug\Newtonsoft.Json.pdb
 D:\repos\fullcodenew\AutomationSQLdm\AutomationSQLdm\bin\Debug\Newtonsoft.Json.xml
+D:\repos\completecode\newfullcode\AutomationSQLdm\AutomationSQLdm\obj\x86\Debug\AutomationSQLdm.csprojResolveAssemblyReference.cache
+D:\repos\completecode\newfullcode\AutomationSQLdm\AutomationSQLdm\obj\x86\Debug\AutomationSQLdm.exe
+D:\repos\completecode\newfullcode\AutomationSQLdm\AutomationSQLdm\obj\x86\Debug\AutomationSQLdm.pdb
+D:\repos\completecode\newfullcode\AutomationSQLdm\AutomationSQLdm\bin\Debug\AutomationSQLdm.rxtmg
+D:\repos\completecode\newfullcode\AutomationSQLdm\AutomationSQLdm\bin\Debug\AutomationSQLdm.rxtst
+D:\repos\completecode\newfullcode\AutomationSQLdm\AutomationSQLdm\bin\Debug\RepositoryImages\BVTRepo66deb29b.rximgres
+D:\repos\completecode\newfullcode\AutomationSQLdm\AutomationSQLdm\bin\Debug\AutomationSQLdm.exe.config
+D:\repos\completecode\newfullcode\AutomationSQLdm\AutomationSQLdm\bin\Debug\AutomationSQLdm.exe
+D:\repos\completecode\newfullcode\AutomationSQLdm\AutomationSQLdm\bin\Debug\AutomationSQLdm.pdb
+D:\repos\completecode\newfullcode\AutomationSQLdm\AutomationSQLdm\bin\Debug\Newtonsoft.Json.dll
+D:\repos\completecode\newfullcode\AutomationSQLdm\AutomationSQLdm\bin\Debug\Ranorex.Core.Resolver.dll
+D:\repos\completecode\newfullcode\AutomationSQLdm\AutomationSQLdm\bin\Debug\Newtonsoft.Json.pdb
+D:\repos\completecode\newfullcode\AutomationSQLdm\AutomationSQLdm\bin\Debug\Newtonsoft.Json.xml

@@ -473,15 +473,30 @@
     </Compile>
     <Compile Include="QueryPlan\QueryPlanRepo.cs">
       <DependentUpon>QueryPlanRepo.rxrep</DependentUpon>
-      <id>0be24bb5-66f0-4cb4-96e9-8d021eb51d83</id>
-      <BoundTo>913b3a5e-acfd-4548-8238-de94858511fa</BoundTo>
+      <id>53bb95dd-dd82-44d0-8e99-184270577e29</id>
+      <BoundTo>2a6e2818-930d-4d6e-a905-7aa6e7d6f3aa</BoundTo>
       <RepositoryCode>true</RepositoryCode>
     </Compile>
     <Compile Include="QueryPlan\Steps.cs">
-      <id>2fe9afa7-bd7f-4539-8571-524e6a064363</id>
+      <id>3f9e147b-7054-46d2-b101-d9118176ded4</id>
     </Compile>
     <Compile Include="QueryPlan\TC_722069\Inputinvaliddataincollectqueryplanscountandverifychangescantbesaved.cs">
       <id>4f77f1fa-30d6-467d-acc3-e3181ef5802c</id>
+    </Compile>
+    <Compile Include="QueryPlan\TC_722072\SelectDurationmillisecondsforqueryplans.cs">
+      <id>6a676b4e-7146-47e7-b048-12f771e96a0f</id>
+    </Compile>
+    <Compile Include="QueryPlan\TC_722073\SelectLogicaldiskReadsforQueryPlans.cs">
+      <id>dc48b6ae-e654-452f-bba9-a384c6d83881</id>
+    </Compile>
+    <Compile Include="QueryPlan\TC_722074\SelectCPUUsageforQueryPlans.cs">
+      <id>14643fb1-a254-4efe-9d07-4e8623cfdae1</id>
+    </Compile>
+    <Compile Include="QueryPlan\TC_722075\SelectPhysicalDiskWritesforQueryPlans.cs">
+      <id>ce4481c3-a778-455d-adb3-6de5cda51a60</id>
+    </Compile>
+    <Compile Include="QueryPlan\TC_722081\VerifyQueryStoreradioButtonisnewlyaddedfor2016and2017versioninstances.cs">
+      <id>53041b9e-032b-439b-b907-713da0507112</id>
     </Compile>
     <Compile Include="TestRailAPI\APIClient.cs">
       <id>f372d424-5d9d-46f5-99e8-27b22423ebee</id>
@@ -573,12 +588,12 @@
     </None>
     <None Include="QueryPlan\QueryPlanRepo.rximg">
       <DependentUpon>QueryPlanRepo.rxrep</DependentUpon>
-      <id>c31761fe-e528-4f72-88b5-91ebb0fcfd26</id>
-      <BoundTo>913b3a5e-acfd-4548-8238-de94858511fa</BoundTo>
+      <id>7beef307-453e-4a02-8a3a-878fa40d7085</id>
+      <BoundTo>2a6e2818-930d-4d6e-a905-7aa6e7d6f3aa</BoundTo>
       <imageblob>true</imageblob>
     </None>
     <None Include="QueryPlan\QueryPlanRepo.rxrep">
-      <id>913b3a5e-acfd-4548-8238-de94858511fa</id>
+      <id>2a6e2818-930d-4d6e-a905-7aa6e7d6f3aa</id>
       <repoid>15534317-1b35-45c5-bf69-1f843eb766cb</repoid>
       <reporootid>425f0314-efb0-4ba1-80d4-752d599c9284</reporootid>
     </None>
@@ -839,6 +854,21 @@
     </Folder>
     <Folder Include="OperatorSecurityRole\TC_T721990">
       <id>d13c23b5-c19f-4806-88c3-352149232bec</id>
+    </Folder>
+    <Folder Include="QueryPlan\TC_722081">
+      <id>87f46e44-fcbe-45fa-bbfa-8a2b3b67e926</id>
+    </Folder>
+    <Folder Include="QueryPlan\TC_722075">
+      <id>77b56a72-cd65-469f-a872-8e80cf468f2d</id>
+    </Folder>
+    <Folder Include="QueryPlan\TC_722074">
+      <id>0847a94a-2939-4eb8-b1fa-8d70cb66e50d</id>
+    </Folder>
+    <Folder Include="QueryPlan\TC_722073">
+      <id>29d9ed26-5f53-4dc4-8896-c1cd4c1ecc96</id>
+    </Folder>
+    <Folder Include="QueryPlan\TC_722072">
+      <id>2d4c5f95-fa96-44f0-b9c7-cb4657419c56</id>
     </Folder>
     <Folder Include="TestRailAPI">
       <id>ef133857-78f0-4eb7-a7cd-526159e9ff32</id>

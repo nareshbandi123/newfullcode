@@ -36,6 +36,15 @@ namespace AutomationSQLdm.Configuration
 		public const string Query_DBSizeDateTimeAggregation   		= "Select * from DatabaseSizeDateTimeAggregation";
 		public const string Query_DiskDriveStatisticsAggregation	= "Select * from DiskDriveStatisticsAggregation";
 		public const string Query_TableGrowthAggregation 			= "Select * from TableGrowthAggregation";
+		
+		//Available Queryyes for Top Query Plans
+		//delete from QueryMonitorStatistics
+		public const string Query_DurationMilliseconds		= "select PlanID from QueryMonitorStatistics where SQLServerID = '4' and PlanID is not null order by DurationMilliseconds DESC";
+		public const string Query_LogicalDiskReads 			= "select PlanID from QueryMonitorStatistics where SQLServerID = '4' and PlanID is not null order by Reads DESC";
+		public const string Query_CPUUsage 					= "select PlanID from QueryMonitorStatistics where SQLServerID = '4' and PlanID is not null order by CPUMilliseconds DESC";
+		public const string Query_PhysicalDiskWrites		= "select PlanID from QueryMonitorStatistics where SQLServerID = '4' and PlanID is not null order by Writes DESC";
+		
+		
 		public static string WindowsUser = System.Configuration.ConfigurationManager.AppSettings["WindowsUser"].ToString();
 		public static string WinUserPassword = System.Configuration.ConfigurationManager.AppSettings["WinUserPassword"].ToString();
 		

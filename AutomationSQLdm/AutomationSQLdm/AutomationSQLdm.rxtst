@@ -243,10 +243,20 @@ rxversion="8.2">
 			id="0fca66f4-eb4c-42a8-8d32-66dbdbc5a552"
 			name="T722035">
 			</smartfoldernode>
+			<teardown
+			id="106fd51b-c5a5-4742-b597-6cca1bc25cba"
+			name="teardown">
+			</teardown>
 			<testcase
 			id="108e23af-36b4-40f8-a0ea-7f4cae06e41d"
 			name="Server_Properties_-_Query_Monitor_Top_Query_Plans:_Input_invalid_data_in_collect_query_plans_count_a">
 			</testcase>
+			<testmodule
+			id="12b05770-739f-41e4-845f-1c5e9fd8968f"
+			name="OpenSQLdm"
+			ref="f749ea84-58c0-4b06-b370-33030d553c6d"
+			type="UserCode">
+			</testmodule>
 			<testmodule
 			enabled="False"
 			id="133b6949-7361-4b23-b61e-22db0c05d900"
@@ -336,6 +346,10 @@ rxversion="8.2">
 			id="1aadaa97-5169-44c8-b8e8-ad43c193389f"
 			name="teardown">
 			</teardown>
+			<testcase
+			id="1ac74b73-425c-4536-9faf-0b38a547b9e1"
+			name="Query_Monitor_Top_Query_Plans:_Select_'Duration(milliseconds)'_for_query_plans_from_the_drop_down_an">
+			</testcase>
 			<testmodule
 			id="1bb4f9d3-125d-4931-bfbf-fd25996b1571"
 			name="CloseSQLdm"
@@ -530,6 +544,12 @@ rxversion="8.2">
 			id="2fa7c99d-7606-4f03-b688-b5a6f475dda7"
 			name="teardown">
 			</teardown>
+			<testmodule
+			id="2fb2633c-403d-4ad8-977d-798c323f7c5c"
+			name="SelectDurationmillisecondsforqueryplans"
+			ref="462f0a88-1f90-46cc-a20d-50172419e9e9"
+			type="UserCode">
+			</testmodule>
 			<testcase
 			id="2fba39f6-effb-41ea-b852-506c916c5506"
 			name="Resources_Disk_Size:_Verify_data_collection_happens_on_an_instance_connected_with_user_without_sys_a">
@@ -542,6 +562,16 @@ rxversion="8.2">
 			id="2fdaa6b4-2969-466c-a341-e56442141ef8"
 			name="BVT_-_Verify_that_Databases>Tables_&amp;_Indexes_view_is_displayed_successfully">
 			</testcase>
+			<testcase
+			id="30810f3a-eddd-437a-9023-e849fae7ad81"
+			name="Query_Monitor_Top_Query_Plans_Select_CPU_Usage_for_query_plans_from_the_drop_down_and_verify_if_quer">
+			</testcase>
+			<testmodule
+			id="30b0fe9c-d638-429b-820f-1a8d0a6d0b87"
+			name="SelectPhysicalDiskWritesforQueryPlans"
+			ref="ef4d3abb-cacb-48a0-aa06-e71701bb72f8"
+			type="UserCode">
+			</testmodule>
 			<smartfoldernode
 			id="30e2fbd5-3474-4605-9eeb-7e70474a0597"
 			name="T722140">
@@ -621,9 +651,21 @@ rxversion="8.2">
 			name="T722021">
 			</smartfoldernode>
 			<testmodule
+			id="371b2143-537a-4db1-880d-7ee88667fc8e"
+			name="CloseSQLdm"
+			ref="0fe8941e-6526-477a-bc6f-cb90c434e430"
+			type="UserCode">
+			</testmodule>
+			<testmodule
 			id="376b6c0d-72af-4320-b37c-2b9bf1eacd44"
 			name="VerifyViewDataAcknowledgeWindowsUser"
 			ref="d2bafe2f-10cb-45f8-878d-838b021b2d88"
+			type="UserCode">
+			</testmodule>
+			<testmodule
+			id="3898950d-2a94-4dd1-9e3f-6b9fcd58da5d"
+			name="SelectCPUUsageforQueryPlans"
+			ref="85c63f56-76c7-4c17-83ae-7afa2b6a4c9d"
 			type="UserCode">
 			</testmodule>
 			<testcase
@@ -640,6 +682,12 @@ rxversion="8.2">
 			id="38e97fd6-0709-4347-a084-27a0b5f63dc3"
 			name="teardown">
 			</teardown>
+			<testmodule
+			id="38f36030-4626-415e-8396-c295f6987ef8"
+			name="CloseSQLdm"
+			ref="0fe8941e-6526-477a-bc6f-cb90c434e430"
+			type="UserCode">
+			</testmodule>
 			<testmodule
 			id="39637784-b982-49dd-a74f-4eb01f03f343"
 			name="VerifySessionsSummaryIsDisplaying"
@@ -688,6 +736,10 @@ rxversion="8.2">
 			id="3d36bec5-db3b-4838-9b87-e3f566d6dc2b"
 			name="Administration->Application_Security:_Able_to_save_user_with_new_permission">
 			</testcase>
+			<smartfoldernode
+			id="3dafb233-c9d8-4f45-9491-d303bdfc0e96"
+			name="T722075">
+			</smartfoldernode>
 			<testmodule
 			id="3e683415-a67f-4086-b32f-80fefd69246a"
 			name="VerifyQueriesStatementModeviewisDisplayedSuccessfully"
@@ -778,6 +830,16 @@ rxversion="8.2">
 			name="BVT_-_Verify_that_SQLdm_Today_pane_is_displayed_successfully">
 			</testcase>
 			<testmodule
+			id="46c37abb-89a0-4a60-99b2-008086513be0"
+			name="VerifyQueryStoreradioButtonisnewlyaddedfor2016and2017versioninstances"
+			ref="4434a720-b45d-40e3-919d-c07ae666718e"
+			type="UserCode">
+			</testmodule>
+			<setup
+			id="480618d0-31ef-4558-9816-1aa4305d9e06"
+			name="setup">
+			</setup>
+			<testmodule
 			id="485c8591-9087-460c-a4ca-a57bb3ccd0be"
 			name="VerifySnoozeAlertsForFewMinutesForWindowsUser"
 			ref="83b5bf4c-d31f-489c-9f5c-ed1afb8ec463"
@@ -793,6 +855,10 @@ rxversion="8.2">
 			id="49617662-f886-4568-a44b-dad3b43ebbdc"
 			name="teardown">
 			</teardown>
+			<testcase
+			id="499d98bd-bdb3-403e-aa5c-88719a9f30b8"
+			name="Query_Monitor_Top_Query_Plans:_Select_'CPU_Usage'_for_query_plans_from_the_drop_down_and_verify_if_q">
+			</testcase>
 			<teardown
 			id="4a08f341-ada6-4c7d-8a21-337bbf8df63a"
 			name="teardown">
@@ -951,6 +1017,12 @@ rxversion="8.2">
 			id="54e6079c-c80d-4860-aa0f-b7dff1cb2c4c"
 			name="T721954">
 			</smartfoldernode>
+			<testmodule
+			id="556e7c67-ba8f-4aed-b2a7-4401dad01322"
+			name="OpenSQLdm"
+			ref="f749ea84-58c0-4b06-b370-33030d553c6d"
+			type="UserCode">
+			</testmodule>
 			<smartfoldernode
 			id="55b0585d-03df-4ebb-94ac-796912d23c20"
 			name="T722131">
@@ -1160,6 +1232,12 @@ rxversion="8.2">
 			type="UserCode">
 			</testmodule>
 			<testmodule
+			id="658ef799-2022-47cb-959b-26e7b5254fd9"
+			name="CloseSQLdm"
+			ref="0fe8941e-6526-477a-bc6f-cb90c434e430"
+			type="UserCode">
+			</testmodule>
+			<testmodule
 			id="65b99fa2-48c7-4f66-90e3-3c8b07e0caae"
 			name="VerifydatacollectionhappensonaninstanceconnectedwithuserwithoutsysadminpermissionandshowsdataonDiskscreen"
 			ref="e6b29af8-f6ab-4b8a-8490-01edb61138a8"
@@ -1265,6 +1343,12 @@ rxversion="8.2">
 			id="6fd47306-f65b-41ad-b6e5-53f17ae9a108"
 			name="teardown">
 			</teardown>
+			<testmodule
+			id="702f61d0-ff64-419f-b75e-4f2321b0467d"
+			name="OpenSQLdm"
+			ref="f749ea84-58c0-4b06-b370-33030d553c6d"
+			type="UserCode">
+			</testmodule>
 			<testcase
 			id="709bfb4c-54f7-4f4f-a942-5e3669937416"
 			name="Sessions_Summary:_Verify_data_collection_happens_on_all_widgets_on_an_instance_connected_with_user_w">
@@ -1353,6 +1437,10 @@ rxversion="8.2">
 			id="7664e1da-8585-4cc5-bb1a-3813bfc68bff"
 			name="teardown">
 			</teardown>
+			<testcase
+			id="76969114-54de-453c-aa1a-cc72761c7dbc"
+			name="Query_Monitor_Top_Query_Plans_Select_Physical_disk_writes_for_query_plans_from_the_drop_down_and_ver">
+			</testcase>
 			<setup
 			id="76b37f42-90db-419a-89b6-bf06391c12fc"
 			name="setup">
@@ -1475,6 +1563,12 @@ rxversion="8.2">
 			id="820f9d77-754f-41dc-a8c1-7d3ed5d36586"
 			name="Verify_that_Databases>Mirroring_view_is_displayed_successfully">
 			</testcase>
+			<testmodule
+			id="8261d0cb-8241-4e9c-aafa-a22e163d99eb"
+			name="SelectLogicaldiskReadsforQueryPlans"
+			ref="c4aacd93-8c42-473b-85a4-6036a8d4ebef"
+			type="UserCode">
+			</testmodule>
 			<teardown
 			id="833e4662-c02b-49bb-9df0-218a3c043974"
 			name="teardown">
@@ -1695,6 +1789,14 @@ rxversion="8.2">
 			name="PendingUpdate_BVT_-_Verify_that_Sessions>Locks_view_is_displayed_successfully">
 			</testcase>
 			<teardown
+			id="929998cc-f5d7-4ac9-8881-cc2ae6f8be13"
+			name="teardown">
+			</teardown>
+			<setup
+			id="930e60de-5ddd-4a7d-b8b6-ae1af25edfa4"
+			name="setup">
+			</setup>
+			<teardown
 			id="93836a95-5ca4-46cd-974a-697807762e4a"
 			name="teardown">
 			</teardown>
@@ -1724,6 +1826,10 @@ rxversion="8.2">
 			ref="f749ea84-58c0-4b06-b370-33030d553c6d"
 			type="UserCode">
 			</testmodule>
+			<smartfoldernode
+			id="95e0909a-b5e7-4bd8-afef-bc6a8b1db7d7"
+			name="T722081">
+			</smartfoldernode>
 			<testmodule
 			id="97c89cf5-d9a3-4752-8be0-e5ed0bfaf15f"
 			name="CloseSQLdm"
@@ -1734,6 +1840,10 @@ rxversion="8.2">
 			id="9a48a158-10b9-4f3b-8c05-a8ea6f82c90f"
 			name="Verify_that_Resources>_Procedure_Cache_view_is_displayed_successfully">
 			</testcase>
+			<setup
+			id="9b201bdf-2584-4ede-8e08-b9d78c0d37a2"
+			name="setup">
+			</setup>
 			<teardown
 			id="9b495264-2c54-415f-845d-f2f7c58e17e4"
 			name="teardown">
@@ -1746,6 +1856,10 @@ rxversion="8.2">
 			id="9bcc024a-8fdf-4895-99c6-4b5dacbfc775"
 			name="verify_the_Database_File_Statistics_table_is_aggregated">
 			</testcase>
+			<teardown
+			id="9bfce8fe-9f66-4f70-afd4-f56c44a30210"
+			name="teardown">
+			</teardown>
 			<setup
 			id="9ccc3746-b851-4ac3-a58f-dd754880d14f"
 			name="setup">
@@ -1830,6 +1944,10 @@ rxversion="8.2">
 			id="a1ac0847-a243-48c1-9a6a-21f1eac79a25"
 			name="BVT_-_Verify_that_Overview>_Time_line_is_displayed_successfully">
 			</testcase>
+			<teardown
+			id="a1c9b145-7521-4ae7-837a-549f6336c1cd"
+			name="teardown">
+			</teardown>
 			<smartfoldernode
 			id="a239672f-a1ed-4886-bf3a-f3b55b93fc96"
 			name="T722149">
@@ -2000,6 +2118,12 @@ rxversion="8.2">
 			ref="0fe8941e-6526-477a-bc6f-cb90c434e430"
 			type="UserCode">
 			</testmodule>
+			<testmodule
+			id="b1d3d726-9560-49c6-ae70-4bdb62a51fc0"
+			name="OpenSQLdm"
+			ref="f749ea84-58c0-4b06-b370-33030d553c6d"
+			type="UserCode">
+			</testmodule>
 			<testcase
 			id="b2e1864d-35ca-46ab-98b4-cd18d2295e86"
 			name="Sessions_Blocking:_Verify_data_collection_happens_on_all_widgets_on_an_instance_connected_with_user_">
@@ -2106,6 +2230,10 @@ rxversion="8.2">
 			id="ba3270f3-e051-45ce-9dd1-92675886c60d"
 			name="T722033">
 			</smartfoldernode>
+			<setup
+			id="baa7677d-5422-4c15-b895-62fb23ebe1e1"
+			name="setup">
+			</setup>
 			<teardown
 			id="bb0954f3-8941-463b-b56b-100522085cec"
 			name="teardown">
@@ -2146,6 +2274,12 @@ rxversion="8.2">
 			id="bece2a26-94e3-464d-bf88-5b7587096a4b"
 			name="Resources_File_Activity:_Verify_data_collection_happens_on_on_an_instance_connected_with_user_withou">
 			</testcase>
+			<testmodule
+			id="bf5315a4-c198-4e69-a15c-13acd8cce8dc"
+			name="OpenSQLdm"
+			ref="f749ea84-58c0-4b06-b370-33030d553c6d"
+			type="UserCode">
+			</testmodule>
 			<smartfoldernode
 			id="bf6b8a25-6c65-40d7-8d47-80467e36f33a"
 			name="T721948">
@@ -2235,6 +2369,12 @@ rxversion="8.2">
 			name="T722160">
 			</smartfoldernode>
 			<testmodule
+			id="c81093e3-5877-4b6d-b96b-ed4e6bbbde3e"
+			name="CloseSQLdm"
+			ref="0fe8941e-6526-477a-bc6f-cb90c434e430"
+			type="UserCode">
+			</testmodule>
+			<testmodule
 			id="c8590190-b8bf-45f1-bb3a-8ba07a72b537"
 			name="Inputinvaliddataincollectqueryplanscountandverifychangescantbesaved"
 			ref="8ad4418d-28e0-4c10-bb72-c0138eff7f8c"
@@ -2284,6 +2424,10 @@ rxversion="8.2">
 			ref="9eec7784-3ed3-4c00-97a3-33be26456784"
 			type="UserCode">
 			</testmodule>
+			<smartfoldernode
+			id="ca5f7b5a-f77f-42b0-a1b7-23248239d4d9"
+			name="T722073">
+			</smartfoldernode>
 			<testmodule
 			id="cc473b74-dbdf-46d5-ab48-315d21d5d277"
 			name="CloseSQLdm"
@@ -2508,6 +2652,10 @@ rxversion="8.2">
 			id="e4194f27-1f26-4c01-8a99-1a7ea9e472fb"
 			name="setup">
 			</setup>
+			<teardown
+			id="e5173b0f-f280-4198-834b-c64c802a0c15"
+			name="teardown">
+			</teardown>
 			<testmodule
 			id="e5503913-fc54-4c09-b26d-729f70424da6"
 			name="VerifyDatabasesTablesIndexesViewIsDisplayedSuccessfully"
@@ -2640,6 +2788,10 @@ rxversion="8.2">
 			ref="164fe565-1406-4fb0-923e-cb069c84c0f3"
 			type="UserCode">
 			</testmodule>
+			<smartfoldernode
+			id="f1fcc00a-cace-4c4e-8932-fc45ee879b04"
+			name="T722072">
+			</smartfoldernode>
 			<testmodule
 			id="f2325006-d409-4574-8f8a-da636c63760a"
 			name="VerifySnoozeAlertsFor10MinutesForWindowsUser"
@@ -2650,6 +2802,12 @@ rxversion="8.2">
 			id="f29543a7-2abe-4d20-aab1-b47eedb0344c"
 			name="OpenSQLdm"
 			ref="f749ea84-58c0-4b06-b370-33030d553c6d"
+			type="UserCode">
+			</testmodule>
+			<testmodule
+			id="f2d7c579-045e-4248-bef4-738c3f1e2946"
+			name="CloseSQLdm"
+			ref="0fe8941e-6526-477a-bc6f-cb90c434e430"
 			type="UserCode">
 			</testmodule>
 			<setup
@@ -2696,6 +2854,10 @@ rxversion="8.2">
 			ref="1d2a268e-c317-4470-a58c-953e2cbb7196"
 			type="UserCode">
 			</testmodule>
+			<setup
+			id="f6948d2b-7f48-4749-b5a2-2be5cbcc51bc"
+			name="setup">
+			</setup>
 			<testmodule
 			id="f74640c3-e0cc-4b85-a608-56c4db3870fb"
 			name="CloseSQLdm"
@@ -2712,6 +2874,10 @@ rxversion="8.2">
 			id="f9e7d861-38e0-49a8-a60a-dbca8c89c27b"
 			name="T722018">
 			</smartfoldernode>
+			<testcase
+			id="fa261ada-2ada-4d35-865c-34c21c257a2f"
+			name="Query_Monitor_Query_Store_Verify_Query_Store_radio_button_is_newly_added_for_2016_and_2017_version_i">
+			</testcase>
 			<testmodule
 			id="facb2f9f-53e8-4638-b6d1-61ee1b8a2708"
 			name="CloseSQLdm"
@@ -2782,6 +2948,10 @@ rxversion="8.2">
 			ref="0fe8941e-6526-477a-bc6f-cb90c434e430"
 			type="UserCode">
 			</testmodule>
+			<smartfoldernode
+			id="ff2ff9b9-6317-4883-961a-da38b44bd44e"
+			name="T722074">
+			</smartfoldernode>
 			<teardown
 			id="ff42303a-e19c-4e5f-9574-a0487262f6d4"
 			name="teardown">
@@ -5058,6 +5228,146 @@ rxversion="8.2">
 						name="teardown">
 							<testmodule
 							id="2bd8b652-f436-4fde-b303-7d4e018baf21"
+							name="CloseSQLdm">
+							</testmodule>
+						</teardown>
+					</smartfoldernode>
+					<smartfoldernode
+					id="ca5f7b5a-f77f-42b0-a1b7-23248239d4d9"
+					name="T722073">
+						<setup
+						id="930e60de-5ddd-4a7d-b8b6-ae1af25edfa4"
+						name="setup">
+							<testmodule
+							id="12b05770-739f-41e4-845f-1c5e9fd8968f"
+							name="OpenSQLdm">
+							</testmodule>
+						</setup>
+						<testcase
+						id="499d98bd-bdb3-403e-aa5c-88719a9f30b8"
+						name="Query_Monitor_Top_Query_Plans:_Select_'CPU_Usage'_for_query_plans_from_the_drop_down_and_verify_if_q">
+							<testmodule
+							id="8261d0cb-8241-4e9c-aafa-a22e163d99eb"
+							name="SelectLogicaldiskReadsforQueryPlans">
+							</testmodule>
+						</testcase>
+						<teardown
+						id="a1c9b145-7521-4ae7-837a-549f6336c1cd"
+						name="teardown">
+							<testmodule
+							id="38f36030-4626-415e-8396-c295f6987ef8"
+							name="CloseSQLdm">
+							</testmodule>
+						</teardown>
+					</smartfoldernode>
+					<smartfoldernode
+					id="3dafb233-c9d8-4f45-9491-d303bdfc0e96"
+					name="T722075">
+						<setup
+						id="480618d0-31ef-4558-9816-1aa4305d9e06"
+						name="setup">
+							<testmodule
+							id="b1d3d726-9560-49c6-ae70-4bdb62a51fc0"
+							name="OpenSQLdm">
+							</testmodule>
+						</setup>
+						<testcase
+						id="76969114-54de-453c-aa1a-cc72761c7dbc"
+						name="Query_Monitor_Top_Query_Plans_Select_Physical_disk_writes_for_query_plans_from_the_drop_down_and_ver">
+							<testmodule
+							id="30b0fe9c-d638-429b-820f-1a8d0a6d0b87"
+							name="SelectPhysicalDiskWritesforQueryPlans">
+							</testmodule>
+						</testcase>
+						<teardown
+						id="929998cc-f5d7-4ac9-8881-cc2ae6f8be13"
+						name="teardown">
+							<testmodule
+							id="c81093e3-5877-4b6d-b96b-ed4e6bbbde3e"
+							name="CloseSQLdm">
+							</testmodule>
+						</teardown>
+					</smartfoldernode>
+					<smartfoldernode
+					id="95e0909a-b5e7-4bd8-afef-bc6a8b1db7d7"
+					name="T722081">
+						<setup
+						id="9b201bdf-2584-4ede-8e08-b9d78c0d37a2"
+						name="setup">
+							<testmodule
+							id="556e7c67-ba8f-4aed-b2a7-4401dad01322"
+							name="OpenSQLdm">
+							</testmodule>
+						</setup>
+						<testcase
+						id="fa261ada-2ada-4d35-865c-34c21c257a2f"
+						name="Query_Monitor_Query_Store_Verify_Query_Store_radio_button_is_newly_added_for_2016_and_2017_version_i">
+							<testmodule
+							id="46c37abb-89a0-4a60-99b2-008086513be0"
+							name="VerifyQueryStoreradioButtonisnewlyaddedfor2016and2017versioninstances">
+							</testmodule>
+						</testcase>
+						<teardown
+						id="106fd51b-c5a5-4742-b597-6cca1bc25cba"
+						name="teardown">
+							<testmodule
+							id="371b2143-537a-4db1-880d-7ee88667fc8e"
+							name="CloseSQLdm">
+							</testmodule>
+						</teardown>
+					</smartfoldernode>
+					<smartfoldernode
+					id="ff2ff9b9-6317-4883-961a-da38b44bd44e"
+					name="T722074">
+						<setup
+						id="baa7677d-5422-4c15-b895-62fb23ebe1e1"
+						name="setup">
+							<testmodule
+							id="bf5315a4-c198-4e69-a15c-13acd8cce8dc"
+							name="OpenSQLdm">
+							</testmodule>
+						</setup>
+						<testcase
+						id="30810f3a-eddd-437a-9023-e849fae7ad81"
+						name="Query_Monitor_Top_Query_Plans_Select_CPU_Usage_for_query_plans_from_the_drop_down_and_verify_if_quer">
+							<testmodule
+							id="3898950d-2a94-4dd1-9e3f-6b9fcd58da5d"
+							name="SelectCPUUsageforQueryPlans">
+							</testmodule>
+						</testcase>
+						<teardown
+						id="e5173b0f-f280-4198-834b-c64c802a0c15"
+						name="teardown">
+							<testmodule
+							id="658ef799-2022-47cb-959b-26e7b5254fd9"
+							name="CloseSQLdm">
+							</testmodule>
+						</teardown>
+					</smartfoldernode>
+					<smartfoldernode
+					id="f1fcc00a-cace-4c4e-8932-fc45ee879b04"
+					name="T722072">
+						<setup
+						id="f6948d2b-7f48-4749-b5a2-2be5cbcc51bc"
+						name="setup">
+							<testmodule
+							id="702f61d0-ff64-419f-b75e-4f2321b0467d"
+							name="OpenSQLdm">
+							</testmodule>
+						</setup>
+						<testcase
+						id="1ac74b73-425c-4536-9faf-0b38a547b9e1"
+						name="Query_Monitor_Top_Query_Plans:_Select_'Duration(milliseconds)'_for_query_plans_from_the_drop_down_an">
+							<testmodule
+							id="2fb2633c-403d-4ad8-977d-798c323f7c5c"
+							name="SelectDurationmillisecondsforqueryplans">
+							</testmodule>
+						</testcase>
+						<teardown
+						id="9bfce8fe-9f66-4f70-afd4-f56c44a30210"
+						name="teardown">
+							<testmodule
+							id="f2d7c579-045e-4248-bef4-738c3f1e2946"
 							name="CloseSQLdm">
 							</testmodule>
 						</teardown>

@@ -20,6 +20,32 @@ namespace AutomationSQLdm.Extensions
     
    public static class Extension
 	{
+   	
+   		public static int sleepTime = 3000;
+   		public static bool ClickThis(this Ranorex.Text item)
+		{
+			System.Threading.Thread.Sleep(sleepTime);
+			item.Click();
+			System.Threading.Thread.Sleep(sleepTime);
+			return true;
+		}
+		
+		public static bool ClickThis(this Ranorex.TabPage item)
+		{
+			System.Threading.Thread.Sleep(sleepTime);
+			item.Click();
+			System.Threading.Thread.Sleep(sleepTime);
+			return true;
+		}
+		
+		public static bool ClickThis(this Ranorex.RadioButton item)
+		{
+			System.Threading.Thread.Sleep(sleepTime);
+			item.Click();
+			System.Threading.Thread.Sleep(sleepTime);
+			return true;
+		}
+		
 		public static bool ClickThis(this Ranorex.Button item)
 		{
 			System.Threading.Thread.Sleep(200);

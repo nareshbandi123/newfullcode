@@ -68,6 +68,11 @@ namespace AutomationSQLdm.Commons
 				throw new Exception("Failed : GetCaseID : " + ex.Message);
 			}
 		}
+		
+		 public static void WaitForSync(int TimeInSeconds)
+       {
+       		System.Threading.Thread.Sleep(TimeInSeconds);
+       }
     
 		public static void RightClickOnServer(string serverName)
 		{

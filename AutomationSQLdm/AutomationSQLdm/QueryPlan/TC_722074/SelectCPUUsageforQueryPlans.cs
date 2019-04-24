@@ -58,10 +58,12 @@ namespace AutomationSQLdm.QueryPlan.TC_722074
         		Steps.UnCheckEnableQueryMonitor();
         		Steps.ClickOnOkInMSSP();
         		Steps.VerifyQueryDataForTopQueryPlan(Config.Query_CPUUsage,"CPU Usage");
+        		Common.UpdateStatus(1); // 1 : Pass
         		
         	} 
         	catch (Exception ex)
         	{
+        		Common.UpdateStatus(5); // 5 : fail
         		Reports.ReportLog(ex.Message, Reports.SQLdmReportLevel.Fail, null, Config.TestCaseName);
         	}
         	return true;

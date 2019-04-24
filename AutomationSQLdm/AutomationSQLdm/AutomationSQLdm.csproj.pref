@@ -5,7 +5,6 @@
   <Array name="bookmarks" />
   <Array name="files">
     <Element value="AutomationSQLdm.rxtst" />
-    <Element value="BVT\TC_722159\VerifythatSessionsLocksviewisDisplayedSuccessfully.cs" />
   </Array>
   <Properties name="projectSavedData">
     <Properties name="customTool">

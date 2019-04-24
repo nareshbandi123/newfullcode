@@ -88,6 +88,6 @@
       <string>62160dca-0078-43fb-9227-be0da74ac54b</string>
     </ArrayOfString>
   </SerializedValue>
-  <ProjectBrowserState value="[Solution AutomationSQLdm[AutomationSQLdm[Base[]BVT[]Commons[]Configuration[]OperatorSecurityRole[TC_T721990[]]QueryPlan[]TestRailAPI[]]]]&#xD;&#xA;Solution AutomationSQLdm\AutomationSQLdm\BVT&#xD;&#xA;Solution AutomationSQLdm\AutomationSQLdm\BVT" />
+  <ProjectBrowserState value="[Solution AutomationSQLdm[AutomationSQLdm[]]]&#xD;&#xA;Solution AutomationSQLdm\AutomationSQLdm\AutomationSQLdm.rxtst&#xD;&#xA;Solution AutomationSQLdm" />
   <StartupProject value="{61F99090-53F7-41D0-9F8A-6FC8C2262E52}" />
 </Properties>

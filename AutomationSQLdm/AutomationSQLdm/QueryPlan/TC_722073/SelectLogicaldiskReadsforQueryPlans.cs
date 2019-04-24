@@ -57,9 +57,11 @@ namespace AutomationSQLdm.QueryPlan.TC_722073
         		Steps.UnCheckEnableQueryMonitor();
         		Steps.ClickOnOkInMSSP();
         		Steps.VerifyQueryDataForTopQueryPlan(Config.Query_LogicalDiskReads,"LogicalDiskReads");
+        		Common.UpdateStatus(1); // 1 : Pass
         	} 
         	catch (Exception ex)
         	{
+        		Common.UpdateStatus(5); // 5 : fail
         		Reports.ReportLog(ex.Message, Reports.SQLdmReportLevel.Fail, null, Config.TestCaseName);
         	}
         	return true;

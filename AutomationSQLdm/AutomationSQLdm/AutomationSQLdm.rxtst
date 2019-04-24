@@ -348,7 +348,7 @@ rxversion="8.2">
 			</teardown>
 			<testcase
 			id="1ac74b73-425c-4536-9faf-0b38a547b9e1"
-			name="Query_Monitor_Top_Query_Plans:_Select_'Duration(milliseconds)'_for_query_plans_from_the_drop_down_an">
+			name="Server_Properties_-_Query_Monitor_Top_Query_Plans:_Select_'Duration(milliseconds)'_for_query_plans_f">
 			</testcase>
 			<testmodule
 			id="1bb4f9d3-125d-4931-bfbf-fd25996b1571"
@@ -564,7 +564,7 @@ rxversion="8.2">
 			</testcase>
 			<testcase
 			id="30810f3a-eddd-437a-9023-e849fae7ad81"
-			name="Query_Monitor_Top_Query_Plans_Select_CPU_Usage_for_query_plans_from_the_drop_down_and_verify_if_quer">
+			name="Server_Properties_-_Query_Monitor_Top_Query_Plans:_Select_'CPU_Usage'_for_query_plans_from_the_drop_">
 			</testcase>
 			<testmodule
 			id="30b0fe9c-d638-429b-820f-1a8d0a6d0b87"
@@ -857,7 +857,7 @@ rxversion="8.2">
 			</teardown>
 			<testcase
 			id="499d98bd-bdb3-403e-aa5c-88719a9f30b8"
-			name="Query_Monitor_Top_Query_Plans:_Select_'CPU_Usage'_for_query_plans_from_the_drop_down_and_verify_if_q">
+			name="Server_Properties_-_Query_Monitor_Top_Query_Plans:_Select_'Logical_disk_reads'_for_query_plans_from_">
 			</testcase>
 			<teardown
 			id="4a08f341-ada6-4c7d-8a21-337bbf8df63a"
@@ -1439,7 +1439,7 @@ rxversion="8.2">
 			</teardown>
 			<testcase
 			id="76969114-54de-453c-aa1a-cc72761c7dbc"
-			name="Query_Monitor_Top_Query_Plans_Select_Physical_disk_writes_for_query_plans_from_the_drop_down_and_ver">
+			name="Server_Properties_-_Query_Monitor_Top_Query_Plans:_Select_'Physical_disk_writes'_for_query_plans_fro">
 			</testcase>
 			<setup
 			id="76b37f42-90db-419a-89b6-bf06391c12fc"
@@ -2876,7 +2876,7 @@ rxversion="8.2">
 			</smartfoldernode>
 			<testcase
 			id="fa261ada-2ada-4d35-865c-34c21c257a2f"
-			name="Query_Monitor_Query_Store_Verify_Query_Store_radio_button_is_newly_added_for_2016_and_2017_version_i">
+			name="Server_Properties_Query_Monitor_Query_Store:_Verify_'Query_Store'_radio_button_is_newly_added_for_20">
 			</testcase>
 			<testmodule
 			id="facb2f9f-53e8-4638-b6d1-61ee1b8a2708"
@@ -5245,7 +5245,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="499d98bd-bdb3-403e-aa5c-88719a9f30b8"
-						name="Query_Monitor_Top_Query_Plans:_Select_'CPU_Usage'_for_query_plans_from_the_drop_down_and_verify_if_q">
+						name="Server_Properties_-_Query_Monitor_Top_Query_Plans:_Select_'Logical_disk_reads'_for_query_plans_from_">
 							<testmodule
 							id="8261d0cb-8241-4e9c-aafa-a22e163d99eb"
 							name="SelectLogicaldiskReadsforQueryPlans">
@@ -5273,7 +5273,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="76969114-54de-453c-aa1a-cc72761c7dbc"
-						name="Query_Monitor_Top_Query_Plans_Select_Physical_disk_writes_for_query_plans_from_the_drop_down_and_ver">
+						name="Server_Properties_-_Query_Monitor_Top_Query_Plans:_Select_'Physical_disk_writes'_for_query_plans_fro">
 							<testmodule
 							id="30b0fe9c-d638-429b-820f-1a8d0a6d0b87"
 							name="SelectPhysicalDiskWritesforQueryPlans">
@@ -5301,7 +5301,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="fa261ada-2ada-4d35-865c-34c21c257a2f"
-						name="Query_Monitor_Query_Store_Verify_Query_Store_radio_button_is_newly_added_for_2016_and_2017_version_i">
+						name="Server_Properties_Query_Monitor_Query_Store:_Verify_'Query_Store'_radio_button_is_newly_added_for_20">
 							<testmodule
 							id="46c37abb-89a0-4a60-99b2-008086513be0"
 							name="VerifyQueryStoreradioButtonisnewlyaddedfor2016and2017versioninstances">
@@ -5329,7 +5329,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="30810f3a-eddd-437a-9023-e849fae7ad81"
-						name="Query_Monitor_Top_Query_Plans_Select_CPU_Usage_for_query_plans_from_the_drop_down_and_verify_if_quer">
+						name="Server_Properties_-_Query_Monitor_Top_Query_Plans:_Select_'CPU_Usage'_for_query_plans_from_the_drop_">
 							<testmodule
 							id="3898950d-2a94-4dd1-9e3f-6b9fcd58da5d"
 							name="SelectCPUUsageforQueryPlans">
@@ -5357,7 +5357,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="1ac74b73-425c-4536-9faf-0b38a547b9e1"
-						name="Query_Monitor_Top_Query_Plans:_Select_'Duration(milliseconds)'_for_query_plans_from_the_drop_down_an">
+						name="Server_Properties_-_Query_Monitor_Top_Query_Plans:_Select_'Duration(milliseconds)'_for_query_plans_f">
 							<testmodule
 							id="2fb2633c-403d-4ad8-977d-798c323f7c5c"
 							name="SelectDurationmillisecondsforqueryplans">

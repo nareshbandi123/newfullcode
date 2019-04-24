@@ -52,11 +52,12 @@ namespace AutomationSQLdm.QueryPlan.TC_722081
         		Steps.VerifyQueryStoreRB();
         		Steps.ClickOnOkInMSSP();
         		Steps.ClickOnWarningYes();
-        		
+        		Common.UpdateStatus(1); // 1 : Pass
         		
         	} 
         	catch (Exception ex)
         	{
+        		Common.UpdateStatus(5); // 5 : fail
         		Reports.ReportLog(ex.Message, Reports.SQLdmReportLevel.Fail, null, Config.TestCaseName);
         	}
         	return true;

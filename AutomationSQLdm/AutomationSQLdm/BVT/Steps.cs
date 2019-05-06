@@ -759,7 +759,7 @@ namespace AutomationSQLdm.BVT
 			
 			
 			
-			public static void VerifyConfigurationInDataBases()
+	public static void VerifyConfigurationInDataBases()
 			{
 				try 
 				{
@@ -965,7 +965,7 @@ namespace AutomationSQLdm.BVT
 		                CompressedImage rsSummary = repo.SQLdm.TableLayoutPanelInfo.GetRESSummary();
 		                Imaging.FindOptions options = Imaging.FindOptions.Default;
 		                RepoItemInfo info = repo.SQLdm.TableLayoutPanelInfo;
-		                bool isvalid = Validate.ContainsImage(info, rsSummary, options,"Summary View image comparision in Resources Tab", false);
+		                bool isvalid = Validate.ContainsImage(info, rsSummary, options,"Summary View image comparision in Resources Tab", true);
 			         }
 			    }
 	            catch (Exception ex)
@@ -1688,7 +1688,7 @@ public static void VerifyTablesAndIndexesInDataBases()
 		   public static void VerifyMirroringViewInDataBases()
 			{
 				try 
-				{
+					{
 					repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
 				    repo.SQLdm.tblDBSMirroringInfo.WaitForItemExists(1000000);
 				    

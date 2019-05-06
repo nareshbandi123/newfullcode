@@ -35,9 +35,9 @@ namespace AutomationSQLdm.Grooming_Modifications.TC_721952
         {
         	try 
         	{
-        		Steps.AddSQLServerInstance(Config.ServerOptions_CMWIN2016SQL17); //CMWIN2016SQL17
+        		//Steps.AddSQLServerInstance(Config.ServerOptions_CMWIN2016SQL17); //CMWIN2016SQL17
         		Steps.VerifyQueryDataCount(Config.Query_MonitoredSQLServers,"MonitoredSQLServers");
-        		Steps.DeleteSQLServerInstance(Config.ServerOptions_CMWIN2016SQL17); //CMWIN2016SQL17
+        		//Steps.DeleteSQLServerInstance(Config.ServerOptions_CMWIN2016SQL17); //CMWIN2016SQL17
         		Steps.VerifyInstanceIsDeleted("select * from AnalysisConfiguration where MonitoredServerID = 6","AnalysisConfiguration");
         		Common.UpdateStatus(1); // 1 : Pass
         	} 

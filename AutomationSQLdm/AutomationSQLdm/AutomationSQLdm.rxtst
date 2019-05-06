@@ -23,7 +23,7 @@ rxversion="8.2">
 			</testmodule>
 			<testcase
 			id="00cc335b-488d-4b98-b76a-3e105f81c4d7"
-			name="BVT_-_Verify_that_Sessions>Details_view_is_displayed_successfully">
+			name="BVTVerify_that_SessionsDetails_view_is_displayed_successfully">
 			</testcase>
 			<teardown
 			id="019db3da-9cea-49b1-9bad-2c3c21f883d7"
@@ -35,7 +35,7 @@ rxversion="8.2">
 			</smartfoldernode>
 			<testcase
 			id="01ca3326-7021-4661-b128-1bb668c6f3ae"
-			name="Queries_Signature_Mode:_Verify_query_data_collection_happens_on_on_an_instance_connected_with_user_w">
+			name="Data_collection_happens_on_an_instanc_connected_with_user_without_sys_adm_permission_and_shows_data">
 			</testcase>
 			<testmodule
 			id="0212ff5f-1f11-4b4f-9897-516e6776f7c5"
@@ -55,7 +55,7 @@ rxversion="8.2">
 			</smartfoldernode>
 			<testcase
 			id="02b511d3-a564-4c1e-a739-827f9720dc58"
-			name="BVT_-_Verify_that_an_action_provider_can_be_edited_successfully">
+			name="BVT_Verify_that_an_action_provider_can_be_edited_successfully">
 			</testcase>
 			<testmodule
 			id="02f1441a-072d-4bf0-869d-ed447f39d745"
@@ -71,11 +71,11 @@ rxversion="8.2">
 			</testmodule>
 			<testcase
 			id="03bc89c8-0e1f-4733-84d5-776633cc9ff9"
-			name="Resources_CPU:_Verify_data_collection_happens_on_an_instance_connected_with_user_without_sys_admin_p">
+			name="CPU_Verify_data_happens_on_an_instance_connected_with_user_without_sys_adm_perm_and_shows_data">
 			</testcase>
 			<testcase
 			id="03e2130d-f3a7-4aa6-896f-f4547c7471d1"
-			name="Resources_Memory:_Verify_data_collection_happens_on_an_instance_connected_with_user_without_sys_admi">
+			name="Memory_Verify_data_happens_on_instance_connected_with_user_without_sys_adm_perm_and_shows_data">
 			</testcase>
 			<setup
 			id="03f8d739-30b4-411f-bfa7-a8dbcb28e2a6"
@@ -107,7 +107,7 @@ rxversion="8.2">
 			</teardown>
 			<testcase
 			id="05bcc726-6419-49e8-a494-8a5278862c78"
-			name="BVT_-_Verify_that_Sessions>Summary_view_is_displayed_successfully">
+			name="BVTVerify_that_Sessions>Summary_view_is_displayed_successfully">
 			</testcase>
 			<teardown
 			id="0645da8e-90f5-40f0-b1cd-cfd1e4612aca"
@@ -115,7 +115,7 @@ rxversion="8.2">
 			</teardown>
 			<testcase
 			id="06696590-b8f9-46de-b9ef-5511646617ce"
-			name="Verify_query_data_connected_with_user_and_shows_data_on_Tempdb_Summary_screen">
+			name="DB_Tempdb_Verify_query_data_happens_on_instance_connected_with_user_without_sys_adm_perm">
 			</testcase>
 			<setup
 			id="06b22905-6d48-474b-a718-8421c705a1c5"
@@ -179,7 +179,7 @@ rxversion="8.2">
 			</smartfoldernode>
 			<testcase
 			id="0a7113e2-7c9a-4795-a57b-a660dd7b9601"
-			name="BVT_-_Verify_that_Services>SQL_Agent_Jobs_view_is_displayed_successfully">
+			name="BVT_Verify_that_Services_SQL_Agent_Jobs_view_is_displayed_successfully">
 			</testcase>
 			<testmodule
 			id="0a9f9b9a-f771-4876-b108-7405eb207881"
@@ -195,7 +195,7 @@ rxversion="8.2">
 			</testmodule>
 			<testcase
 			id="0bd1a927-1551-41e9-9c82-2475054ead2f"
-			name="Resources_Disk:_Verify_data_collection_happens_on_an_instance_connected_with_user_without_sys_admin_">
+			name="Disk_Verify_data_happens_on__instance_connected_with_user_without_sys_adm_perm_and_shows_data">
 			</testcase>
 			<smartfoldernode
 			id="0beff35f-96b7-4eb1-a7b1-905dd548c5fd"
@@ -249,7 +249,7 @@ rxversion="8.2">
 			</teardown>
 			<testcase
 			id="108e23af-36b4-40f8-a0ea-7f4cae06e41d"
-			name="Server_Properties_-_Query_Monitor_Top_Query_Plans:_Input_invalid_data_in_collect_query_plans_count_a">
+			name="Query_Monitor_Top_Query_Plans_Input_invalid_data_in_collect_query_plans_count_and_verify_changes_can">
 			</testcase>
 			<testmodule
 			id="12b05770-739f-41e4-845f-1c5e9fd8968f"
@@ -316,7 +316,7 @@ rxversion="8.2">
 			</smartfoldernode>
 			<testcase
 			id="1796ca3b-b401-4052-b07b-d1ecc506edd7"
-			name="Monitored_Servers>Snooze_Alerts:_Verify_user_having_'View_data,_acknowledge_alarms_and_control_maint">
+			name="Monitor_Servers_Verify_user_having_View_data_permission_able_to_Snooze_Alerts">
 			</testcase>
 			<testmodule
 			id="17974697-e191-4abd-81dd-ea558b28907a"
@@ -332,7 +332,7 @@ rxversion="8.2">
 			</testmodule>
 			<testcase
 			id="1884f6e6-0cb7-497b-b874-8039095f47a4"
-			name="Tools>Snooze_Alerts:_Verify_user_having_'View_data,_acknowledge_alarms_and_control_maintenance_mode_">
+			name="Verify_user_having_View_data,_acknowledge_alarms_and_control_maint_permission_able_to_Snooze_Alerts">
 			</testcase>
 			<teardown
 			id="18b6fc7c-2a60-4137-a449-c0190ed8ef2a"
@@ -348,7 +348,7 @@ rxversion="8.2">
 			</teardown>
 			<testcase
 			id="1ac74b73-425c-4536-9faf-0b38a547b9e1"
-			name="Server_Properties_-_Query_Monitor_Top_Query_Plans:_Select_'Duration(milliseconds)'_for_query_plans_f">
+			name="Select_Duration(millisecond)_for_query_plans_and_verify_if_query_plans_are_collected_for_top_queries">
 			</testcase>
 			<testmodule
 			id="1bb4f9d3-125d-4931-bfbf-fd25996b1571"
@@ -466,7 +466,7 @@ rxversion="8.2">
 			</smartfoldernode>
 			<testcase
 			id="28debe71-d230-490d-ae17-f5f2e1b1d391"
-			name="BVT_-_Server_Properties>OS_Metrics_-_Verify_that_SQLdm_user_can_enable_the_WMI_collection_option">
+			name="BVT_Server_Properties_OS_Metrics__Verify_that_SQLdm_user_can_enable_the_WMI_collection_option">
 			</testcase>
 			<testcase
 			id="28ec00c5-9134-4339-85b9-58e85ef785d9"
@@ -518,7 +518,7 @@ rxversion="8.2">
 			</setup>
 			<testcase
 			id="2e128438-0422-438d-9756-ad743eb0a28f"
-			name="PendingUpdate_BVT_-_Verify_that_Databases>Files_view_is_displayed_successfully">
+			name="PendingUpdateBVT_Verify_that_DatabasesFiles_view_is_displayed_successfully">
 			</testcase>
 			<testmodule
 			id="2eb7361d-33e5-4f4c-a0b0-6e05b6eac011"
@@ -552,7 +552,7 @@ rxversion="8.2">
 			</testmodule>
 			<testcase
 			id="2fba39f6-effb-41ea-b852-506c916c5506"
-			name="Resources_Disk_Size:_Verify_data_collection_happens_on_an_instance_connected_with_user_without_sys_a">
+			name="Disk_Size_Verify_collection_happens_on_an_instance_connected_with_user_without_sys_adm_perm">
 			</testcase>
 			<smartfoldernode
 			id="2fc22f4b-e5f5-48ee-86ff-0475fb25628f"
@@ -564,7 +564,7 @@ rxversion="8.2">
 			</testcase>
 			<testcase
 			id="30810f3a-eddd-437a-9023-e849fae7ad81"
-			name="Server_Properties_-_Query_Monitor_Top_Query_Plans:_Select_'CPU_Usage'_for_query_plans_from_the_drop_">
+			name="Select_CPU_Usage_for_query_plans_from_the_drop_down_and_verify_if_query_plans_are_collected_for_top_">
 			</testcase>
 			<testmodule
 			id="30b0fe9c-d638-429b-820f-1a8d0a6d0b87"
@@ -706,7 +706,7 @@ rxversion="8.2">
 			</teardown>
 			<testcase
 			id="3aff3327-67d9-4af2-9528-59758f182aeb"
-			name="BVT_-_Verify_that_Databases>Summary_view_is_displayed_successfully">
+			name="BVTVerify_that_DatabasesSummary_view_is_displayed_successfully">
 			</testcase>
 			<setup
 			id="3b5db687-f8a9-4842-9074-d2c2425bfa1d"
@@ -734,7 +734,7 @@ rxversion="8.2">
 			</testmodule>
 			<testcase
 			id="3d36bec5-db3b-4838-9b87-e3f566d6dc2b"
-			name="Administration->Application_Security:_Able_to_save_user_with_new_permission">
+			name="Administration_Application_Security_Able_to__save_user_with_new_permission">
 			</testcase>
 			<smartfoldernode
 			id="3dafb233-c9d8-4f45-9491-d303bdfc0e96"
@@ -748,7 +748,7 @@ rxversion="8.2">
 			</testmodule>
 			<testcase
 			id="3e766f26-f359-4433-a785-e46a3d0a2210"
-			name="Tags>Snooze_Alerts:_Verify_user_having_'View_data,_acknowledge_alarms_and_control_maintenance_mode_s">
+			name="Tag_Verify_user_having_View_data_permission_able_to_Snooze_Alerts">
 			</testcase>
 			<testmodule
 			id="3eeae7be-ca1f-410c-beba-c1d85c963a8b"
@@ -780,7 +780,7 @@ rxversion="8.2">
 			</testcase>
 			<testcase
 			id="405212f5-0558-4c37-9380-511e2dd4f116"
-			name="PendingUpdate_Verify_that_Resources>_Disk_view_is_displayed_successfully">
+			name="PendingUpdate_Verify_that_Resources_Disk_view_is_displayed_successfully">
 			</testcase>
 			<testmodule
 			id="41a6a128-3af3-44a3-8f79-e8b36cf6e0fd"
@@ -790,11 +790,11 @@ rxversion="8.2">
 			</testmodule>
 			<testcase
 			id="42d83b8c-fd76-40e6-8b93-9d47399d979b"
-			name="Queries_Query_History:_Verify_query_data_collection_happens_on_on_an_instance_connected_with_user_wi">
+			name="Query_History_Verify_data_collection_happens_on_instance_connected_with_user_without_sys_adm_perm">
 			</testcase>
 			<testcase
 			id="43003c27-7db4-4039-81e8-2036224c62ff"
-			name="Sessions_Locks:_Verify_data_collection_happens_on_all_widgets_on_an_instance_connected_with_user_wit">
+			name="Locks_Verify_collection_happens_on_widgets_on_instance_connected_with_user_without_sys_admin_Locks">
 			</testcase>
 			<setup
 			id="435754d5-9ab4-4240-b15e-cc8dab651c1b"
@@ -819,7 +819,6 @@ rxversion="8.2">
 			type="UserCode">
 			</testmodule>
 			<testmodule
-			enabled="False"
 			id="46208dff-a930-4911-b582-e64c8222a0d5"
 			name="CloseSQLdm"
 			ref="0fe8941e-6526-477a-bc6f-cb90c434e430"
@@ -827,7 +826,7 @@ rxversion="8.2">
 			</testmodule>
 			<testcase
 			id="46b49656-710b-4684-a8b4-2e31e1a0bc90"
-			name="BVT_-_Verify_that_SQLdm_Today_pane_is_displayed_successfully">
+			name="BVTVerify_that_SQLdm_Today_pane_is_displayed_successfully">
 			</testcase>
 			<testmodule
 			id="46c37abb-89a0-4a60-99b2-008086513be0"
@@ -857,7 +856,7 @@ rxversion="8.2">
 			</teardown>
 			<testcase
 			id="499d98bd-bdb3-403e-aa5c-88719a9f30b8"
-			name="Server_Properties_-_Query_Monitor_Top_Query_Plans:_Select_'Logical_disk_reads'_for_query_plans_from_">
+			name="Select_Logical_disk_reads_for_query_plans__and_verify_if_query_plans_are_collected_for_top_queries">
 			</testcase>
 			<teardown
 			id="4a08f341-ada6-4c7d-8a21-337bbf8df63a"
@@ -869,7 +868,7 @@ rxversion="8.2">
 			</teardown>
 			<testcase
 			id="4b08f018-a6c5-4629-9d54-3aee75b5b82c"
-			name="BVT_-_Verify_that_Dashboard_pane_is_displayed_successfully">
+			name="BVTVerify_that_Dashboard_pane_is_displayed_successfully">
 			</testcase>
 			<testmodule
 			id="4b235f53-6a0e-4b07-8ceb-61d82f8b4bf0"
@@ -879,7 +878,7 @@ rxversion="8.2">
 			</testmodule>
 			<testcase
 			id="4b832a35-949f-4132-9621-4d6e91961914"
-			name="BVT_-_Verify_that_Queries>Query_History_view_is_displayed_successfully">
+			name="BVTVerify_that_QueriesQuery_History_view_is_displayed_successfully">
 			</testcase>
 			<smartfoldernode
 			id="4ba03085-24c1-4f8c-8bb4-4bb90d4864c9"
@@ -887,7 +886,7 @@ rxversion="8.2">
 			</smartfoldernode>
 			<testcase
 			id="4bef9d5c-fdbf-4411-a770-7e9e81da8132"
-			name="Increase_the_length_of_time_that_data_can_be_retained_by_'Groom_standard_metrics_and_baselines'_metr">
+			name="Increase_the_length_of_time_that_data_can_be_retained_by_'Groom_standard_metrics_and_baselines'">
 			</testcase>
 			<setup
 			id="4c0fdb7d-d8f1-4ac9-9210-2338aaaa2ac4"
@@ -933,7 +932,7 @@ rxversion="8.2">
 			</testmodule>
 			<testcase
 			id="4fe740d5-9485-4470-88ba-9435d7901f12"
-			name="Resources_Procedure_Cache:_Verify_data_collection_happens_on_on_an_instance_connected_with_user_with">
+			name="Procedure_Cache_Verify_data_happens_on_instance_connected_with_user_without_sys_adm_perm">
 			</testcase>
 			<testmodule
 			id="5081a715-430e-41b1-b467-4158dc864bb4"
@@ -1041,7 +1040,7 @@ rxversion="8.2">
 			</testmodule>
 			<testcase
 			id="57667bce-424d-41cd-a6d1-d89580b4b15c"
-			name="All_Servers_>_Maintenance_Mode:_Verify_user_having_'View_data,_acknowledge_alarms_and_control_mainte">
+			name="All_Servers_Verify_user_having_View_data_permission_able_to_enable_or_disable_servers">
 			</testcase>
 			<testmodule
 			id="57bfe58d-fcbf-41a9-8214-70e37260b20d"
@@ -1142,7 +1141,7 @@ rxversion="8.2">
 			</testmodule>
 			<testcase
 			id="5ca6450d-b5fe-44a6-b0a2-c2999ed2adc0"
-			name="Databases_Files:_Verify_query_data_collection_happens_on_on_an_instance_connected_with_user_without_">
+			name="DB_Files_Verify_query_data_happens_on_instance_connected_with_user_without_sys_adm_perm">
 			</testcase>
 			<testmodule
 			id="5cc1d791-4fc4-4dec-91f9-5543d7a4588f"
@@ -1245,7 +1244,7 @@ rxversion="8.2">
 			</testmodule>
 			<testcase
 			id="65bb6fbe-7fbe-400f-826a-73e60c8cf3fb"
-			name="PendingUpdate_BVT_-_Verify_that_Sessions>Blocking_view_is_displayed_successfully">
+			name="PendingUpdateBVTVerify_that_SessionsBlocking_view_is_displayed_successfully">
 			</testcase>
 			<testmodule
 			id="6738e1f1-df35-4da2-8c4e-bd922fcd4cf2"
@@ -1351,7 +1350,7 @@ rxversion="8.2">
 			</testmodule>
 			<testcase
 			id="709bfb4c-54f7-4f4f-a942-5e3669937416"
-			name="Sessions_Summary:_Verify_data_collection_happens_on_all_widgets_on_an_instance_connected_with_user_w">
+			name="Sessions_Verify_data_happens_on_widgets_on_an_instance_connected_with_user_without_sys_adm_Summary">
 			</testcase>
 			<testmodule
 			id="7135127e-55ea-4e3d-a4b5-9cc547b00244"
@@ -1439,7 +1438,7 @@ rxversion="8.2">
 			</teardown>
 			<testcase
 			id="76969114-54de-453c-aa1a-cc72761c7dbc"
-			name="Server_Properties_-_Query_Monitor_Top_Query_Plans:_Select_'Physical_disk_writes'_for_query_plans_fro">
+			name="Select_Physical_disk_writes_for_query_plans_and_verify_if_query_plans_are_collected_for_top_queries">
 			</testcase>
 			<setup
 			id="76b37f42-90db-419a-89b6-bf06391c12fc"
@@ -1527,11 +1526,11 @@ rxversion="8.2">
 			</testmodule>
 			<testcase
 			id="7d4cf63f-2fbd-4a89-9b0a-72baf217da79"
-			name="PendingUpdate_BVT_-_Verify_that_Overview>_Details_is_displayed_successfully">
+			name="PendingUpdateBVTVerify_that_OverviewDetails_is_displayed_successfully">
 			</testcase>
 			<testcase
 			id="7e0d844a-8add-4dba-9cab-e37b43249c10"
-			name="PendingUpdate_Verify_that_Resources>_Server_Waits_view_is_displayed_successfully">
+			name="PendingUpdate_Verify_that_Resources_Server_Waits_view_is_displayed_successfully">
 			</testcase>
 			<setup
 			id="7e4ef81b-bbfb-401f-ae29-731f9e6059ce"
@@ -1551,7 +1550,7 @@ rxversion="8.2">
 			</testmodule>
 			<testcase
 			id="7ee5f97e-e1b9-495b-8772-0f6ceb433c4e"
-			name="My_Views>Maintenance_mode:_Verify_user_having_'View_data,_acknowledge_alarms_and_control_maintenance">
+			name="Verify_user_having_View_data_permission_able_to_change_Maintenance_mode">
 			</testcase>
 			<testmodule
 			id="7f2a3fde-a9ab-476e-8adc-78e7d770fa0d"
@@ -1607,7 +1606,7 @@ rxversion="8.2">
 			</testmodule>
 			<testcase
 			id="86a1df28-5254-4268-84de-d73b10511b09"
-			name="BVT_-_Verify_that_Overview>_Configuration_is_displayed_successfully">
+			name="BVTVerify_that_OverviewConfiguration_is_displayed_successfully">
 			</testcase>
 			<smartfoldernode
 			id="86a7a173-0f32-4c76-a603-43baf14febee"
@@ -1615,11 +1614,11 @@ rxversion="8.2">
 			</smartfoldernode>
 			<testcase
 			id="86bb397a-1f26-4a0a-a698-6b29e7839fc1"
-			name="My_Views>Snooze_Alerts:_Verify_user_having_'View_data,_acknowledge_alarms_and_control_maintenance_mo">
+			name="My_Views_Verify_user_having_View_data_permission_able_to_Snooze_Alerts">
 			</testcase>
 			<testcase
 			id="86c0d9ad-4371-49c5-a975-0e5e054f3a20"
-			name="Resources_Summary:_Verify_data_collection_happens_on_an_instance_connected_with_user_without_sys_adm">
+			name="Verify_data_collection_happens_on_an_instance_connected_with_user_without_sys_admin_permission">
 			</testcase>
 			<smartfoldernode
 			id="86e36b78-bcd5-4718-9d43-6288d2ea503a"
@@ -1720,7 +1719,7 @@ rxversion="8.2">
 			</setup>
 			<testcase
 			id="8dc33922-6530-45bc-bff8-7ebb34dace7f"
-			name="Administration->Application_Security:_Adding_SQLUser_to_security_role_by_selecting_“View_data,_ackno">
+			name="Adding_SQLUser_to_security_role_by_selecting_View_data,_acknowledge_alarms,_and_control_maint">
 			</testcase>
 			<testcase
 			id="8ed291a1-a1a6-485c-93e5-54cdfaec83cc"
@@ -1782,11 +1781,11 @@ rxversion="8.2">
 			</teardown>
 			<testcase
 			id="920b76f2-9f0c-4f1d-940d-5f18e59e5a5e"
-			name="BVT_-_Verify_that_Databases>Configuration_view_is_displayed_successfully">
+			name="BVTVerify_that_DatabasesConfiguration_view_is_displayed_successfully">
 			</testcase>
 			<testcase
 			id="9219b935-b062-4097-a38a-2a5c4785e7b9"
-			name="PendingUpdate_BVT_-_Verify_that_Sessions>Locks_view_is_displayed_successfully">
+			name="PendingUpdateBVTVerify_that_SessionsLocks_view_is_displayed_successfully">
 			</testcase>
 			<teardown
 			id="929998cc-f5d7-4ac9-8881-cc2ae6f8be13"
@@ -1818,7 +1817,7 @@ rxversion="8.2">
 			</testmodule>
 			<testcase
 			id="95823dcb-b2cf-4de5-bf9d-a6bc2cb51483"
-			name="Sessions_Details:_Verify_data_collection_happens_on_all_widgets_on_an_instance_connected_with_user_w">
+			name="Sessions_Verify_collection_happens_on_widgets_on_instance_connected_with_user_without_sys_adm_perm">
 			</testcase>
 			<testmodule
 			id="95d99da8-0cca-4124-ada7-e60201ee28a2"
@@ -1866,7 +1865,7 @@ rxversion="8.2">
 			</setup>
 			<testcase
 			id="9ccd5f85-3629-4ead-9f8b-4e15c0ef72eb"
-			name="Verify_that_Databases>Tempdb_Summary_view_is_displayed_successfully">
+			name="Verify_that_DatabasesTempdb_Summary_view_is_displayed_successfully">
 			</testcase>
 			<testmodule
 			id="9cf86921-2686-4eeb-944d-4c57e12c8e91"
@@ -1942,7 +1941,7 @@ rxversion="8.2">
 			</teardown>
 			<testcase
 			id="a1ac0847-a243-48c1-9a6a-21f1eac79a25"
-			name="BVT_-_Verify_that_Overview>_Time_line_is_displayed_successfully">
+			name="BVTVerify_that_OverviewTime_line_is_displayed_successfully">
 			</testcase>
 			<teardown
 			id="a1c9b145-7521-4ae7-837a-549f6336c1cd"
@@ -1964,7 +1963,7 @@ rxversion="8.2">
 			</setup>
 			<testcase
 			id="a2f76d2f-997a-4f7d-a7bb-744c9bf61549"
-			name="Databases_Summary:_Verify_query_data_collection_happens_on_on_an_instance_connected_with_user_withou">
+			name="DB_Summary_Verify_query_data_happens_on_on_an_instance_connected_with_user_without_sys_adm_perm">
 			</testcase>
 			<testmodule
 			id="a381769a-a71d-4c73-bd5a-acf9998ad426"
@@ -1974,14 +1973,13 @@ rxversion="8.2">
 			</testmodule>
 			<testcase
 			id="a4142070-7fd6-406b-8b6e-8c033a8a7920"
-			name="Databases_Configuration:_Verify_data_collection_happens_on_on_an_instance_connected_with_user_withou">
+			name="DB_Config_Verify_data_happens_on_instance_connected_with_user_without_sys_adm_perm">
 			</testcase>
 			<testcase
 			id="a4cb1e53-f221-4e45-8478-eb6c297977e9"
-			name="Resources_Server_Waits:_Verify_data_collection_happens_on_on_an_instance_connected_with_user_without">
+			name="Server_Waits_Verify_data_happens_on__instance_connected_with_user_without_sys_adm_perm">
 			</testcase>
 			<testmodule
-			enabled="False"
 			id="a4d3a3c8-9bd6-4b00-b5e9-450db0fd71da"
 			name="OpenSQLdm"
 			ref="f749ea84-58c0-4b06-b370-33030d553c6d"
@@ -2003,7 +2001,7 @@ rxversion="8.2">
 			</testcase>
 			<testcase
 			id="a61ea813-3b9a-49c4-b555-3ba2052fe1ab"
-			name="PendingUpdate_BVT_-_Verify_that_Overview>_Active_Alerts_are_displayed_successfully">
+			name="PendingUpdateBVTVerify_that_OverviewActive_Alerts_are_displayed_successfully">
 			</testcase>
 			<testmodule
 			id="a64156e1-f342-4813-93ba-c9ce324e57a3"
@@ -2013,7 +2011,7 @@ rxversion="8.2">
 			</testmodule>
 			<testcase
 			id="a6475606-3aef-4438-b10f-0d6803787c50"
-			name="a">
+			name="Availability_of_View_data,_acknowledge_alarms,_and_control_maintenanc_mode_on_created_SQLUser_screen">
 			</testcase>
 			<testmodule
 			id="a6485a48-70c9-472a-8307-6c5f3e677cd8"
@@ -2061,7 +2059,7 @@ rxversion="8.2">
 			</testmodule>
 			<testcase
 			id="ab146ed0-8b3b-42ba-93ea-f143296db0c1"
-			name="Verify_that_Resources>_CPU_is_displayed_successfully">
+			name="Verify_that_Resources_CPU_is_displayed_successfully">
 			</testcase>
 			<testmodule
 			id="ab75c640-d3e2-4e67-bcfa-cd4858e47a8b"
@@ -2095,7 +2093,7 @@ rxversion="8.2">
 			</testmodule>
 			<testcase
 			id="ad9bfb31-0916-465e-a782-e7d879991455"
-			name="PendingUpdate_BVT_-_Verify_that_Queries>Signature_Mode_view_is_displayed_successfully">
+			name="PendingUpdateBVTVerify_that_QueriesSignature_Mode_view_is_displayed_successfully">
 			</testcase>
 			<testmodule
 			enabled="False"
@@ -2126,7 +2124,7 @@ rxversion="8.2">
 			</testmodule>
 			<testcase
 			id="b2e1864d-35ca-46ab-98b4-cd18d2295e86"
-			name="Sessions_Blocking:_Verify_data_collection_happens_on_all_widgets_on_an_instance_connected_with_user_">
+			name="Blocking_Verify_collection_happens_on_widgets_on_instance_connected_with_user_without_sys_adm_perm">
 			</testcase>
 			<setup
 			id="b2f3dfe4-dbbd-4c07-939a-f8192ba2f475"
@@ -2158,7 +2156,7 @@ rxversion="8.2">
 			</setup>
 			<testcase
 			id="b5b91754-cea7-4971-bed6-a8152b520d23"
-			name="Queries_Statement_Mode:_Verify_query_data_collection_happens_on_on_an_instance_connected_with_user_w">
+			name="Statement_Mode_Verify_query_data_collection_happens_on_instance_connected_with_user_without_sys_adm">
 			</testcase>
 			<testmodule
 			id="b5f94e53-955d-4238-80e3-2682893354ad"
@@ -2240,7 +2238,7 @@ rxversion="8.2">
 			</teardown>
 			<testcase
 			id="bb0c52e8-c156-4567-8b48-e7b39f082b46"
-			name="All_Servers_>Snooze_Alerts:_Verify_user_having_'View_data,_acknowledge_alarms_and_control_maintenanc">
+			name="All_Servers_Snooze_Alerts_Verify_user_having_View_data_permission_able_to_Snooze_Alerts">
 			</testcase>
 			<testcase
 			id="bb371360-2975-4abf-86bf-5dc881f242e6"
@@ -2248,7 +2246,7 @@ rxversion="8.2">
 			</testcase>
 			<testcase
 			id="bc68ef6e-1027-4245-ace3-c338fcdf3072"
-			name="BVT_-_Verify_that_Queries>Statement_Mode_view_is_displayed_successfully">
+			name="BVTVerify_that_QueriesStatement_Mode_view_is_displayed_successfully">
 			</testcase>
 			<teardown
 			id="bc70a16a-eb40-4b7d-b258-f09fd410c5b7"
@@ -2272,7 +2270,7 @@ rxversion="8.2">
 			</setup>
 			<testcase
 			id="bece2a26-94e3-464d-bf88-5b7587096a4b"
-			name="Resources_File_Activity:_Verify_data_collection_happens_on_on_an_instance_connected_with_user_withou">
+			name="File_Activity_Verify_data_happens_on_instance_connected_with_user_without_sys_adm_perm">
 			</testcase>
 			<testmodule
 			id="bf5315a4-c198-4e69-a15c-13acd8cce8dc"
@@ -2302,7 +2300,7 @@ rxversion="8.2">
 			</smartfoldernode>
 			<testcase
 			id="c317497f-24a4-4221-b77f-c9727bb58fcc"
-			name="Administration->Application_Security:_Availability_of_“View_data,_acknowledge_alarms,_and_control_ma">
+			name="Availability_of_View_data,_acknowledge_alarms,_and_control_maintenance_mode_on_created_WindowsUser">
 			</testcase>
 			<testmodule
 			id="c364e2c7-65c4-4ad8-a276-8547f176e2ec"
@@ -2358,7 +2356,7 @@ rxversion="8.2">
 			</testmodule>
 			<testcase
 			id="c723161f-b9fc-4010-b416-17e70eac8061"
-			name="Databases_Availability_Group:_Verify_query_data_collection_happens_on_on_an_instance_connected_with_">
+			name="DB_Avail_Group_Verify_query_data_happens_on__instance_connected_with_user_without_sys_adm_perm">
 			</testcase>
 			<smartfoldernode
 			id="c736bec3-9280-4650-b7d5-88d6fc418078"
@@ -2406,7 +2404,7 @@ rxversion="8.2">
 			</testmodule>
 			<testcase
 			id="c9244b2d-4f9b-44de-b7cc-c2b51b53d941"
-			name="Administration->Application_Security:_Adding_WindowsUser_to_security_role_by_selecting_“View_data,_a">
+			name="Adding_WindowsUser_to_security_role_by_selecting_View_data,_acknowledge_alarms,_and_control_maint">
 			</testcase>
 			<testmodule
 			id="c936695e-eb53-4700-8e21-279b906468ad"
@@ -2446,7 +2444,7 @@ rxversion="8.2">
 			</testcase>
 			<testcase
 			id="cd3222e8-8b66-477b-9de3-def4031735ad"
-			name="PendingUpdate_BVT_-_Verify_that_Resources>_Memory_view_is_displayed_successfully">
+			name="PendingUpdate_BVT_Verify_that_Resources_Memory_view_is_displayed_successfully">
 			</testcase>
 			<testmodule
 			id="cda6e772-f124-4b53-bb32-91b5d7ecfa1c"
@@ -2606,7 +2604,7 @@ rxversion="8.2">
 			</setup>
 			<testcase
 			id="dee800eb-8a23-4991-9bc3-288a4edf33ab"
-			name="BVT_-_Verify_that_Queries>Query_Waits_view_is_displayed_successfully">
+			name="BVTVerify_that_QueriesQuery_Waits_view_is_displayed_successfully">
 			</testcase>
 			<setup
 			id="e00c3c30-9251-4719-846f-9d7bfbc318c2"
@@ -2876,7 +2874,7 @@ rxversion="8.2">
 			</smartfoldernode>
 			<testcase
 			id="fa261ada-2ada-4d35-865c-34c21c257a2f"
-			name="Server_Properties_Query_Monitor_Query_Store:_Verify_'Query_Store'_radio_button_is_newly_added_for_20">
+			name="Server_Properties_Verify_Query_Store_radio_button_is_newly_added_for_2016_and_2017_version_instances">
 			</testcase>
 			<testmodule
 			id="facb2f9f-53e8-4638-b6d1-61ee1b8a2708"
@@ -3061,7 +3059,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="4bef9d5c-fdbf-4411-a770-7e9e81da8132"
-						name="Increase_the_length_of_time_that_data_can_be_retained_by_'Groom_standard_metrics_and_baselines'_metr">
+						name="Increase_the_length_of_time_that_data_can_be_retained_by_'Groom_standard_metrics_and_baselines'">
 							<testmodule
 							id="31036361-0bd7-4bee-be95-9e750c10f322"
 							name="VerifyGroomMetricsAndBaseLineMaxValue">
@@ -3072,34 +3070,6 @@ rxversion="8.2">
 						name="teardown">
 							<testmodule
 							id="65453d8e-72d8-4996-a241-971bfca62921"
-							name="CloseSQLdm">
-							</testmodule>
-						</teardown>
-					</smartfoldernode>
-					<smartfoldernode
-					id="83c712f9-9907-4fee-a88a-dbb2e3d28ea1"
-					name="T721950">
-						<setup
-						id="20a40f5d-9f51-4011-b388-2f22f17773e1"
-						name="setup">
-							<testmodule
-							id="fb608831-8a0c-420e-b575-321dbcc0c59e"
-							name="OpenSQLdm">
-							</testmodule>
-						</setup>
-						<testcase
-						id="0e55ab9d-eb87-442f-a8df-d6bd66627901"
-						name="Verify_three_metrics_Disk_Space,_Table_Space,_Database_space_associated_tables">
-							<testmodule
-							id="a8c1b7eb-f461-4353-bb81-9293841171b5"
-							name="VerifyThreeMetrics">
-							</testmodule>
-						</testcase>
-						<teardown
-						id="d187ab19-31c3-48b7-b0ce-1a70f79b0cdd"
-						name="teardown">
-							<testmodule
-							id="83b2ca28-eaa2-4d21-b8bb-3138f33cdad9"
 							name="CloseSQLdm">
 							</testmodule>
 						</teardown>
@@ -3123,6 +3093,34 @@ rxversion="8.2">
 							name="DeleteforMonitoredServerID">
 							</testmodule>
 						</testcase>
+						<smartfoldernode
+						id="83c712f9-9907-4fee-a88a-dbb2e3d28ea1"
+						name="T721950">
+							<setup
+							id="20a40f5d-9f51-4011-b388-2f22f17773e1"
+							name="setup">
+								<testmodule
+								id="fb608831-8a0c-420e-b575-321dbcc0c59e"
+								name="OpenSQLdm">
+								</testmodule>
+							</setup>
+							<testcase
+							id="0e55ab9d-eb87-442f-a8df-d6bd66627901"
+							name="Verify_three_metrics_Disk_Space,_Table_Space,_Database_space_associated_tables">
+								<testmodule
+								id="a8c1b7eb-f461-4353-bb81-9293841171b5"
+								name="VerifyThreeMetrics">
+								</testmodule>
+							</testcase>
+							<teardown
+							id="d187ab19-31c3-48b7-b0ce-1a70f79b0cdd"
+							name="teardown">
+								<testmodule
+								id="83b2ca28-eaa2-4d21-b8bb-3138f33cdad9"
+								name="CloseSQLdm">
+								</testmodule>
+							</teardown>
+						</smartfoldernode>
 						<teardown
 						id="0c15d487-a0a0-4f9d-bce6-6a379d5dd0be"
 						name="teardown">
@@ -3341,7 +3339,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="46b49656-710b-4684-a8b4-2e31e1a0bc90"
-						name="BVT_-_Verify_that_SQLdm_Today_pane_is_displayed_successfully">
+						name="BVTVerify_that_SQLdm_Today_pane_is_displayed_successfully">
 							<testmodule
 							id="e7bdae9b-f6c9-4f14-893b-206546caa1c7"
 							name="VerifySQLdmToday">
@@ -3369,7 +3367,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="05bcc726-6419-49e8-a494-8a5278862c78"
-						name="BVT_-_Verify_that_Sessions>Summary_view_is_displayed_successfully">
+						name="BVTVerify_that_Sessions>Summary_view_is_displayed_successfully">
 							<testmodule
 							id="39637784-b982-49dd-a74f-4eb01f03f343"
 							name="VerifySessionsSummaryIsDisplaying">
@@ -3397,7 +3395,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="00cc335b-488d-4b98-b76a-3e105f81c4d7"
-						name="BVT_-_Verify_that_Sessions>Details_view_is_displayed_successfully">
+						name="BVTVerify_that_SessionsDetails_view_is_displayed_successfully">
 							<testmodule
 							id="f0fc7ac0-59d6-4cf9-9958-056e0ce36eea"
 							name="VerifySessionsDetailsviewisdisplayedsuccessfully">
@@ -3425,7 +3423,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="9219b935-b062-4097-a38a-2a5c4785e7b9"
-						name="PendingUpdate_BVT_-_Verify_that_Sessions>Locks_view_is_displayed_successfully">
+						name="PendingUpdateBVTVerify_that_SessionsLocks_view_is_displayed_successfully">
 							<testmodule
 							id="bdae40b0-cdc9-43e8-9564-02beafbbb672"
 							name="VerifythatSessionsLocksviewisDisplayedSuccessfully">
@@ -3453,7 +3451,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="4b08f018-a6c5-4629-9d54-3aee75b5b82c"
-						name="BVT_-_Verify_that_Dashboard_pane_is_displayed_successfully">
+						name="BVTVerify_that_Dashboard_pane_is_displayed_successfully">
 							<testmodule
 							id="8f5f1a01-aeee-469b-a9b2-2bb10ad04e50"
 							name="VerifythatSessionsLocksviewisDisplayedSuccessfully">
@@ -3481,7 +3479,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="65bb6fbe-7fbe-400f-826a-73e60c8cf3fb"
-						name="PendingUpdate_BVT_-_Verify_that_Sessions>Blocking_view_is_displayed_successfully">
+						name="PendingUpdateBVTVerify_that_SessionsBlocking_view_is_displayed_successfully">
 							<testmodule
 							id="745730ea-f071-4bbb-8d71-b417572a1e3f"
 							name="VerifythatSessionsBlockingViewisDisplayedSuccessfully">
@@ -3509,7 +3507,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="7d4cf63f-2fbd-4a89-9b0a-72baf217da79"
-						name="PendingUpdate_BVT_-_Verify_that_Overview>_Details_is_displayed_successfully">
+						name="PendingUpdateBVTVerify_that_OverviewDetails_is_displayed_successfully">
 							<testmodule
 							id="6c5d0043-816a-4c6f-898f-ad424a6e2613"
 							name="VerifyOverviewDetailsIsDisplayedSuccessfully">
@@ -3537,7 +3535,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="86a1df28-5254-4268-84de-d73b10511b09"
-						name="BVT_-_Verify_that_Overview>_Configuration_is_displayed_successfully">
+						name="BVTVerify_that_OverviewConfiguration_is_displayed_successfully">
 							<testmodule
 							id="5081a715-430e-41b1-b467-4158dc864bb4"
 							name="VerifyOverviewConfigurationIsDisplayedSuccessfully">
@@ -3565,7 +3563,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="a61ea813-3b9a-49c4-b555-3ba2052fe1ab"
-						name="PendingUpdate_BVT_-_Verify_that_Overview>_Active_Alerts_are_displayed_successfully">
+						name="PendingUpdateBVTVerify_that_OverviewActive_Alerts_are_displayed_successfully">
 							<testmodule
 							id="d9c49cb2-9647-4ce7-95d1-ebb3755619c9"
 							name="VerifyOverviewActiveAlertsAreDisplayedSuccessfully">
@@ -3593,7 +3591,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="a1ac0847-a243-48c1-9a6a-21f1eac79a25"
-						name="BVT_-_Verify_that_Overview>_Time_line_is_displayed_successfully">
+						name="BVTVerify_that_OverviewTime_line_is_displayed_successfully">
 							<testmodule
 							id="026d09b9-b3d3-4e8c-87d4-8d835fa03091"
 							name="VerifyOverviewTimeLineIsDisplayedSuccessfully">
@@ -3621,7 +3619,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="ad9bfb31-0916-465e-a782-e7d879991455"
-						name="PendingUpdate_BVT_-_Verify_that_Queries>Signature_Mode_view_is_displayed_successfully">
+						name="PendingUpdateBVTVerify_that_QueriesSignature_Mode_view_is_displayed_successfully">
 							<testmodule
 							id="6e9b87ff-bfb4-4078-ad95-f3b6493327fb"
 							name="VerifyQueriesSignatureModeviewisDisplayedSuccessfully">
@@ -3649,7 +3647,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="bc68ef6e-1027-4245-ace3-c338fcdf3072"
-						name="BVT_-_Verify_that_Queries>Statement_Mode_view_is_displayed_successfully">
+						name="BVTVerify_that_QueriesStatement_Mode_view_is_displayed_successfully">
 							<testmodule
 							id="3e683415-a67f-4086-b32f-80fefd69246a"
 							name="VerifyQueriesStatementModeviewisDisplayedSuccessfully">
@@ -3677,7 +3675,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="4b832a35-949f-4132-9621-4d6e91961914"
-						name="BVT_-_Verify_that_Queries>Query_History_view_is_displayed_successfully">
+						name="BVTVerify_that_QueriesQuery_History_view_is_displayed_successfully">
 							<testmodule
 							id="4f3ea765-22f7-40b3-8b2c-2e880aa6d216"
 							name="VerifyQueriesQueryHistoryviewisDisplayedSuccessfully">
@@ -3705,7 +3703,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="dee800eb-8a23-4991-9bc3-288a4edf33ab"
-						name="BVT_-_Verify_that_Queries>Query_Waits_view_is_displayed_successfully">
+						name="BVTVerify_that_QueriesQuery_Waits_view_is_displayed_successfully">
 							<testmodule
 							id="3cb8908a-18b7-4f6c-a408-c5600b500590"
 							name="VerifyQueriesQueryWaitsviewisDisplayedSuccessfully">
@@ -3733,7 +3731,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="3aff3327-67d9-4af2-9528-59758f182aeb"
-						name="BVT_-_Verify_that_Databases>Summary_view_is_displayed_successfully">
+						name="BVTVerify_that_DatabasesSummary_view_is_displayed_successfully">
 							<testmodule
 							id="f413faf2-1def-47a4-94b5-eb4e6b9bd354"
 							name="VerifyDatabasesSummaryviewisDisplayedSuccessfully">
@@ -3761,7 +3759,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="9ccd5f85-3629-4ead-9f8b-4e15c0ef72eb"
-						name="Verify_that_Databases>Tempdb_Summary_view_is_displayed_successfully">
+						name="Verify_that_DatabasesTempdb_Summary_view_is_displayed_successfully">
 							<testmodule
 							id="f0448d78-95a5-4a2b-a220-8ac3c9f4ea8e"
 							name="VerifyDatabasesTempdbSummaryviewisDisplayedSuccessfully">
@@ -3789,7 +3787,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="920b76f2-9f0c-4f1d-940d-5f18e59e5a5e"
-						name="BVT_-_Verify_that_Databases>Configuration_view_is_displayed_successfully">
+						name="BVTVerify_that_DatabasesConfiguration_view_is_displayed_successfully">
 							<testmodule
 							id="e19ecb64-4a14-479f-87f6-4364a882682b"
 							name="VerifyDatabasesConfigurationviewisDisplayedSuccessfully">
@@ -3817,7 +3815,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="2e128438-0422-438d-9756-ad743eb0a28f"
-						name="PendingUpdate_BVT_-_Verify_that_Databases>Files_view_is_displayed_successfully">
+						name="PendingUpdateBVT_Verify_that_DatabasesFiles_view_is_displayed_successfully">
 							<testmodule
 							id="2d14c9a7-e59a-46c2-ae99-4913df24e084"
 							name="VerifyDatabasesFilesviewisDisplayedSuccessfully">
@@ -3845,7 +3843,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="86c0d9ad-4371-49c5-a975-0e5e054f3a20"
-						name="Resources_Summary:_Verify_data_collection_happens_on_an_instance_connected_with_user_without_sys_adm">
+						name="Verify_data_collection_happens_on_an_instance_connected_with_user_without_sys_admin_permission">
 							<testmodule
 							id="a0328154-3362-4ebe-b967-d86b7673561a"
 							name="Verifydatacollectionhappensandshowsdata">
@@ -3901,7 +3899,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="c9244b2d-4f9b-44de-b7cc-c2b51b53d941"
-						name="Administration->Application_Security:_Adding_WindowsUser_to_security_role_by_selecting_“View_data,_a">
+						name="Adding_WindowsUser_to_security_role_by_selecting_View_data,_acknowledge_alarms,_and_control_maint">
 							<testmodule
 							id="9cf86921-2686-4eeb-944d-4c57e12c8e91"
 							name="AddingWindowsUserToSecurityRole">
@@ -3929,7 +3927,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="8dc33922-6530-45bc-bff8-7ebb34dace7f"
-						name="Administration->Application_Security:_Adding_SQLUser_to_security_role_by_selecting_“View_data,_ackno">
+						name="Adding_SQLUser_to_security_role_by_selecting_View_data,_acknowledge_alarms,_and_control_maint">
 							<testmodule
 							id="7ad4f656-19b4-4e73-8f1d-48088e434070"
 							name="AddingSqlUserToSecurityRole">
@@ -3957,7 +3955,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="c317497f-24a4-4221-b77f-c9727bb58fcc"
-						name="Administration->Application_Security:_Availability_of_“View_data,_acknowledge_alarms,_and_control_ma">
+						name="Availability_of_View_data,_acknowledge_alarms,_and_control_maintenance_mode_on_created_WindowsUser">
 							<testmodule
 							id="376b6c0d-72af-4320-b37c-2b9bf1eacd44"
 							name="VerifyViewDataAcknowledgeWindowsUser">
@@ -3985,7 +3983,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="a6475606-3aef-4438-b10f-0d6803787c50"
-						name="a">
+						name="Availability_of_View_data,_acknowledge_alarms,_and_control_maintenanc_mode_on_created_SQLUser_screen">
 							<testmodule
 							id="d87fd68e-df86-4c23-a902-ec3073b8740d"
 							name="VerifyViewDataAcknowledgeSqlUser">
@@ -4013,7 +4011,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="1884f6e6-0cb7-497b-b874-8039095f47a4"
-						name="Tools>Snooze_Alerts:_Verify_user_having_'View_data,_acknowledge_alarms_and_control_maintenance_mode_">
+						name="Verify_user_having_View_data,_acknowledge_alarms_and_control_maint_permission_able_to_Snooze_Alerts">
 							<testmodule
 							id="ec56eb32-27dd-4b93-9c61-2d2e8157cece"
 							name="VerifySnoozeAlertsForFewMinutesForWindowsUser">
@@ -4041,7 +4039,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="1796ca3b-b401-4052-b07b-d1ecc506edd7"
-						name="Monitored_Servers>Snooze_Alerts:_Verify_user_having_'View_data,_acknowledge_alarms_and_control_maint">
+						name="Monitor_Servers_Verify_user_having_View_data_permission_able_to_Snooze_Alerts">
 							<testmodule
 							id="f2325006-d409-4574-8f8a-da636c63760a"
 							name="VerifySnoozeAlertsFor10MinutesForWindowsUser">
@@ -4069,7 +4067,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="3e766f26-f359-4433-a785-e46a3d0a2210"
-						name="Tags>Snooze_Alerts:_Verify_user_having_'View_data,_acknowledge_alarms_and_control_maintenance_mode_s">
+						name="Tag_Verify_user_having_View_data_permission_able_to_Snooze_Alerts">
 							<testmodule
 							id="d26f14da-857e-4d0a-92a8-81311058ef83"
 							name="VerifySnoozeAlertsForFewMinutesForSqlUser">
@@ -4097,7 +4095,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="28debe71-d230-490d-ae17-f5f2e1b1d391"
-						name="BVT_-_Server_Properties>OS_Metrics_-_Verify_that_SQLdm_user_can_enable_the_WMI_collection_option">
+						name="BVT_Server_Properties_OS_Metrics__Verify_that_SQLdm_user_can_enable_the_WMI_collection_option">
 							<testmodule
 							id="a241ac74-aea5-44e4-9090-b631af9f7627"
 							name="VerifySQLdmUserCanEnableWMIcollectionOption">
@@ -4125,7 +4123,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="7ee5f97e-e1b9-495b-8772-0f6ceb433c4e"
-						name="My_Views>Maintenance_mode:_Verify_user_having_'View_data,_acknowledge_alarms_and_control_maintenance">
+						name="Verify_user_having_View_data_permission_able_to_change_Maintenance_mode">
 							<testmodule
 							id="b4c7a4ad-7775-416b-a5cb-b7c018dcba7f"
 							name="VerifyMaintenanceModeForSqlUser">
@@ -4153,7 +4151,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="86bb397a-1f26-4a0a-a698-6b29e7839fc1"
-						name="My_Views>Snooze_Alerts:_Verify_user_having_'View_data,_acknowledge_alarms_and_control_maintenance_mo">
+						name="My_Views_Verify_user_having_View_data_permission_able_to_Snooze_Alerts">
 							<testmodule
 							id="485c8591-9087-460c-a4ca-a57bb3ccd0be"
 							name="VerifySnoozeAlertsForFewMinutesForWindowsUser">
@@ -4209,7 +4207,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="ab146ed0-8b3b-42ba-93ea-f143296db0c1"
-						name="Verify_that_Resources>_CPU_is_displayed_successfully">
+						name="Verify_that_Resources_CPU_is_displayed_successfully">
 							<testmodule
 							id="ebc222c2-98e2-4fae-816f-66393acc9d01"
 							name="VerifythatResourcesCPUisDisplayedSuccessfully">
@@ -4265,7 +4263,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="cd3222e8-8b66-477b-9de3-def4031735ad"
-						name="PendingUpdate_BVT_-_Verify_that_Resources>_Memory_view_is_displayed_successfully">
+						name="PendingUpdate_BVT_Verify_that_Resources_Memory_view_is_displayed_successfully">
 							<testmodule
 							id="f608fa12-cdfe-4149-8d45-7d117e7af0bc"
 							name="VerifyResourcesMemoryviewisDisplayedSuccessfully">
@@ -4293,7 +4291,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="405212f5-0558-4c37-9380-511e2dd4f116"
-						name="PendingUpdate_Verify_that_Resources>_Disk_view_is_displayed_successfully">
+						name="PendingUpdate_Verify_that_Resources_Disk_view_is_displayed_successfully">
 							<testmodule
 							id="ca07f600-758b-408c-8499-d7ba06ffeac4"
 							name="PendingUpdateVerifythatResourcesDiskviewisDisplayedSuccessfully">
@@ -4433,7 +4431,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="7e0d844a-8add-4dba-9cab-e37b43249c10"
-						name="PendingUpdate_Verify_that_Resources>_Server_Waits_view_is_displayed_successfully">
+						name="PendingUpdate_Verify_that_Resources_Server_Waits_view_is_displayed_successfully">
 							<testmodule
 							id="ea7e4308-ac09-46a1-ab8e-3c9e254e354d"
 							name="PendingUpdateVerifythatResourcesServerWaitsviewisDisplayedSuccessfull">
@@ -4461,7 +4459,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="0a7113e2-7c9a-4795-a57b-a660dd7b9601"
-						name="BVT_-_Verify_that_Services>SQL_Agent_Jobs_view_is_displayed_successfully">
+						name="BVT_Verify_that_Services_SQL_Agent_Jobs_view_is_displayed_successfully">
 							<testmodule
 							id="0bac12d4-4765-48d1-9dae-806db910179c"
 							name="VerifyServicesSQLAgentJobsViewIsDisplayedSuccessfully">
@@ -4545,7 +4543,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="02b511d3-a564-4c1e-a739-827f9720dc58"
-						name="BVT_-_Verify_that_an_action_provider_can_be_edited_successfully">
+						name="BVT_Verify_that_an_action_provider_can_be_edited_successfully">
 							<testmodule
 							id="e8dc2bba-1989-4217-ba8d-fb958b88f977"
 							name="VerifyanActionProviderCanbeEditedSuccessfully">
@@ -4573,7 +4571,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="108e23af-36b4-40f8-a0ea-7f4cae06e41d"
-						name="Server_Properties_-_Query_Monitor_Top_Query_Plans:_Input_invalid_data_in_collect_query_plans_count_a">
+						name="Query_Monitor_Top_Query_Plans_Input_invalid_data_in_collect_query_plans_count_and_verify_changes_can">
 							<testmodule
 							id="c8590190-b8bf-45f1-bb3a-8ba07a72b537"
 							name="Inputinvaliddataincollectqueryplanscountandverifychangescantbesaved">
@@ -4629,7 +4627,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="57667bce-424d-41cd-a6d1-d89580b4b15c"
-						name="All_Servers_>_Maintenance_Mode:_Verify_user_having_'View_data,_acknowledge_alarms_and_control_mainte">
+						name="All_Servers_Verify_user_having_View_data_permission_able_to_enable_or_disable_servers">
 							<testmodule
 							id="7135127e-55ea-4e3d-a4b5-9cc547b00244"
 							name="VerifyMaintenanceModeForAllServersForWindowsUser">
@@ -4657,7 +4655,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="3d36bec5-db3b-4838-9b87-e3f566d6dc2b"
-						name="Administration->Application_Security:_Able_to_save_user_with_new_permission">
+						name="Administration_Application_Security_Able_to__save_user_with_new_permission">
 							<testmodule
 							id="536c215f-3c1c-48f1-a87e-7965624bc9dd"
 							name="VerifySnoozeAlertsForFewMinutesForSqlUser">
@@ -4685,7 +4683,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="01ca3326-7021-4661-b128-1bb668c6f3ae"
-						name="Queries_Signature_Mode:_Verify_query_data_collection_happens_on_on_an_instance_connected_with_user_w">
+						name="Data_collection_happens_on_an_instanc_connected_with_user_without_sys_adm_permission_and_shows_data">
 							<testmodule
 							id="14af11fd-0de2-40b4-b816-0658c8039fbb"
 							name="VerifyquerydatacollectionInQueriesSignatureMode">
@@ -4713,7 +4711,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="b5b91754-cea7-4971-bed6-a8152b520d23"
-						name="Queries_Statement_Mode:_Verify_query_data_collection_happens_on_on_an_instance_connected_with_user_w">
+						name="Statement_Mode_Verify_query_data_collection_happens_on_instance_connected_with_user_without_sys_adm">
 							<testmodule
 							id="276e0590-e954-4755-af81-dcfbb58023dd"
 							name="Verifyquerydatacollectionhappensononaninstanceconnectedwithuserwithoutsysadminpermission">
@@ -4741,7 +4739,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="42d83b8c-fd76-40e6-8b93-9d47399d979b"
-						name="Queries_Query_History:_Verify_query_data_collection_happens_on_on_an_instance_connected_with_user_wi">
+						name="Query_History_Verify_data_collection_happens_on_instance_connected_with_user_without_sys_adm_perm">
 							<testmodule
 							id="a81bfc37-bfd9-4645-8675-b401679e2a0b"
 							name="Verifyquerydatacollectionhappensononaninstanceconnectedwithuserwithoutsysadminpermission">
@@ -4769,7 +4767,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="95823dcb-b2cf-4de5-bf9d-a6bc2cb51483"
-						name="Sessions_Details:_Verify_data_collection_happens_on_all_widgets_on_an_instance_connected_with_user_w">
+						name="Sessions_Verify_collection_happens_on_widgets_on_instance_connected_with_user_without_sys_adm_perm">
 							<testmodule
 							id="edf1f46c-892b-4bf5-aa7a-76a3c0e1a670"
 							name="Verifydatacollectionhappensonallwidgetsonaninstanceconnectedwithuserwithoutsysadminpermission">
@@ -4797,7 +4795,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="709bfb4c-54f7-4f4f-a942-5e3669937416"
-						name="Sessions_Summary:_Verify_data_collection_happens_on_all_widgets_on_an_instance_connected_with_user_w">
+						name="Sessions_Verify_data_happens_on_widgets_on_an_instance_connected_with_user_without_sys_adm_Summary">
 							<testmodule
 							id="5e2a7343-9f2d-440a-ade4-f8c74c74159f"
 							name="VerifydatacollectionhappensonallwidgetsonaninstanceconnectedwithuserwithoutsysadminpermissionandshowsdataonSessions">
@@ -4825,7 +4823,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="43003c27-7db4-4039-81e8-2036224c62ff"
-						name="Sessions_Locks:_Verify_data_collection_happens_on_all_widgets_on_an_instance_connected_with_user_wit">
+						name="Locks_Verify_collection_happens_on_widgets_on_instance_connected_with_user_without_sys_admin_Locks">
 							<testmodule
 							id="18817fc7-e047-4915-9ea3-357a1574890d"
 							name="VerifydatacollectionhappensandshowsdataonSessionsLocks">
@@ -4853,7 +4851,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="b2e1864d-35ca-46ab-98b4-cd18d2295e86"
-						name="Sessions_Blocking:_Verify_data_collection_happens_on_all_widgets_on_an_instance_connected_with_user_">
+						name="Blocking_Verify_collection_happens_on_widgets_on_instance_connected_with_user_without_sys_adm_perm">
 							<testmodule
 							id="efa450f2-7db2-4af7-96d9-ab53ce9cea13"
 							name="VerifydatacollectionhappensshowsdataonSessionsBlocking">
@@ -4881,7 +4879,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="2fba39f6-effb-41ea-b852-506c916c5506"
-						name="Resources_Disk_Size:_Verify_data_collection_happens_on_an_instance_connected_with_user_without_sys_a">
+						name="Disk_Size_Verify_collection_happens_on_an_instance_connected_with_user_without_sys_adm_perm">
 							<testmodule
 							id="5d11e667-bf15-4a32-b373-e3ba1d057e9c"
 							name="VerifydatacollectionhappensonaninstanceconnectedwithuserwithoutsysadminpermissionandshowsdataonDiskSizescreen">
@@ -4909,7 +4907,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="bece2a26-94e3-464d-bf88-5b7587096a4b"
-						name="Resources_File_Activity:_Verify_data_collection_happens_on_on_an_instance_connected_with_user_withou">
+						name="File_Activity_Verify_data_happens_on_instance_connected_with_user_without_sys_adm_perm">
 							<testmodule
 							id="16be5e26-002b-4569-831e-06982cf98973"
 							name="VerifydatacollectionhappensonaninstanceconnectedwithuserwithoutsysadminpermissionandshowsdataonFileActivityscreen">
@@ -4937,7 +4935,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="03bc89c8-0e1f-4733-84d5-776633cc9ff9"
-						name="Resources_CPU:_Verify_data_collection_happens_on_an_instance_connected_with_user_without_sys_admin_p">
+						name="CPU_Verify_data_happens_on_an_instance_connected_with_user_without_sys_adm_perm_and_shows_data">
 							<testmodule
 							id="44679178-b785-4393-99ff-253016c0a569"
 							name="Verifydatacollectionhappensonaninstanceconnectedwithuserwithoutsysadminpermissionandshowsdata">
@@ -4965,7 +4963,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="03e2130d-f3a7-4aa6-896f-f4547c7471d1"
-						name="Resources_Memory:_Verify_data_collection_happens_on_an_instance_connected_with_user_without_sys_admi">
+						name="Memory_Verify_data_happens_on_instance_connected_with_user_without_sys_adm_perm_and_shows_data">
 							<testmodule
 							id="41a6a128-3af3-44a3-8f79-e8b36cf6e0fd"
 							name="VerifydatacollectionhappensonaninstanceconnectedwithuserwithoutsysadminpermissionandshowsdataonMemoryscreen">
@@ -4993,7 +4991,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="0bd1a927-1551-41e9-9c82-2475054ead2f"
-						name="Resources_Disk:_Verify_data_collection_happens_on_an_instance_connected_with_user_without_sys_admin_">
+						name="Disk_Verify_data_happens_on__instance_connected_with_user_without_sys_adm_perm_and_shows_data">
 							<testmodule
 							id="65b99fa2-48c7-4f66-90e3-3c8b07e0caae"
 							name="VerifydatacollectionhappensonaninstanceconnectedwithuserwithoutsysadminpermissionandshowsdataonDiskscreen">
@@ -5021,7 +5019,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="4fe740d5-9485-4470-88ba-9435d7901f12"
-						name="Resources_Procedure_Cache:_Verify_data_collection_happens_on_on_an_instance_connected_with_user_with">
+						name="Procedure_Cache_Verify_data_happens_on_instance_connected_with_user_without_sys_adm_perm">
 							<testmodule
 							id="a542bda0-034e-4050-adf9-5894402a17c9"
 							name="VerifydatacollectionhappensononaninstanceconnectedwithuserwithoutsysadminpermissionandshowsdataonProcedureCachescreen">
@@ -5049,7 +5047,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="a4cb1e53-f221-4e45-8478-eb6c297977e9"
-						name="Resources_Server_Waits:_Verify_data_collection_happens_on_on_an_instance_connected_with_user_without">
+						name="Server_Waits_Verify_data_happens_on__instance_connected_with_user_without_sys_adm_perm">
 							<testmodule
 							id="9051b8f3-c0b1-43a4-8480-c96b4687b8ed"
 							name="VerifydatacollectionandshowsdataonServerWaitsscreen">
@@ -5077,7 +5075,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="a2f76d2f-997a-4f7d-a7bb-744c9bf61549"
-						name="Databases_Summary:_Verify_query_data_collection_happens_on_on_an_instance_connected_with_user_withou">
+						name="DB_Summary_Verify_query_data_happens_on_on_an_instance_connected_with_user_without_sys_adm_perm">
 							<testmodule
 							id="8423bee5-843e-4d75-be3f-46036f8aa24f"
 							name="VerifyquerydataconnectedwithuserandshowsdataonSummaryscreen">
@@ -5105,7 +5103,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="bb0c52e8-c156-4567-8b48-e7b39f082b46"
-						name="All_Servers_>Snooze_Alerts:_Verify_user_having_'View_data,_acknowledge_alarms_and_control_maintenanc">
+						name="All_Servers_Snooze_Alerts_Verify_user_having_View_data_permission_able_to_Snooze_Alerts">
 							<testmodule
 							id="fdcf5063-bbc1-47fc-97fe-5231044e6a53"
 							name="VerifySnoozeAlertsAllServerSqlUser">
@@ -5133,7 +5131,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="c723161f-b9fc-4010-b416-17e70eac8061"
-						name="Databases_Availability_Group:_Verify_query_data_collection_happens_on_on_an_instance_connected_with_">
+						name="DB_Avail_Group_Verify_query_data_happens_on__instance_connected_with_user_without_sys_adm_perm">
 							<testmodule
 							id="fc320ecb-9955-46dc-a351-9a104c3348eb"
 							name="VerifyquerydataconnectedwithuserandshowsdataonAvailabilityGroupscreen">
@@ -5161,7 +5159,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="06696590-b8f9-46de-b9ef-5511646617ce"
-						name="Verify_query_data_connected_with_user_and_shows_data_on_Tempdb_Summary_screen">
+						name="DB_Tempdb_Verify_query_data_happens_on_instance_connected_with_user_without_sys_adm_perm">
 							<testmodule
 							id="00770db9-d5c8-4293-9333-2b4d4594826f"
 							name="VerifyquerydataconnectedwithuserandshowsdataonTempdbSummaryscreen">
@@ -5189,7 +5187,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="a4142070-7fd6-406b-8b6e-8c033a8a7920"
-						name="Databases_Configuration:_Verify_data_collection_happens_on_on_an_instance_connected_with_user_withou">
+						name="DB_Config_Verify_data_happens_on_instance_connected_with_user_without_sys_adm_perm">
 							<testmodule
 							id="1da05469-c3e3-4644-ad01-04662d1c0fb0"
 							name="VerifydatacollectionhappensandshowsdataonConfigurationscreen">
@@ -5217,7 +5215,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="5ca6450d-b5fe-44a6-b0a2-c2999ed2adc0"
-						name="Databases_Files:_Verify_query_data_collection_happens_on_on_an_instance_connected_with_user_without_">
+						name="DB_Files_Verify_query_data_happens_on_instance_connected_with_user_without_sys_adm_perm">
 							<testmodule
 							id="055589e0-8db7-49eb-a52f-e73cc90a5a32"
 							name="VerifyquerydatacollectionhappensandshowsdataonFilesscreen">
@@ -5245,7 +5243,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="499d98bd-bdb3-403e-aa5c-88719a9f30b8"
-						name="Server_Properties_-_Query_Monitor_Top_Query_Plans:_Select_'Logical_disk_reads'_for_query_plans_from_">
+						name="Select_Logical_disk_reads_for_query_plans__and_verify_if_query_plans_are_collected_for_top_queries">
 							<testmodule
 							id="8261d0cb-8241-4e9c-aafa-a22e163d99eb"
 							name="SelectLogicaldiskReadsforQueryPlans">
@@ -5273,7 +5271,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="76969114-54de-453c-aa1a-cc72761c7dbc"
-						name="Server_Properties_-_Query_Monitor_Top_Query_Plans:_Select_'Physical_disk_writes'_for_query_plans_fro">
+						name="Select_Physical_disk_writes_for_query_plans_and_verify_if_query_plans_are_collected_for_top_queries">
 							<testmodule
 							id="30b0fe9c-d638-429b-820f-1a8d0a6d0b87"
 							name="SelectPhysicalDiskWritesforQueryPlans">
@@ -5301,7 +5299,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="fa261ada-2ada-4d35-865c-34c21c257a2f"
-						name="Server_Properties_Query_Monitor_Query_Store:_Verify_'Query_Store'_radio_button_is_newly_added_for_20">
+						name="Server_Properties_Verify_Query_Store_radio_button_is_newly_added_for_2016_and_2017_version_instances">
 							<testmodule
 							id="46c37abb-89a0-4a60-99b2-008086513be0"
 							name="VerifyQueryStoreradioButtonisnewlyaddedfor2016and2017versioninstances">
@@ -5329,7 +5327,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="30810f3a-eddd-437a-9023-e849fae7ad81"
-						name="Server_Properties_-_Query_Monitor_Top_Query_Plans:_Select_'CPU_Usage'_for_query_plans_from_the_drop_">
+						name="Select_CPU_Usage_for_query_plans_from_the_drop_down_and_verify_if_query_plans_are_collected_for_top_">
 							<testmodule
 							id="3898950d-2a94-4dd1-9e3f-6b9fcd58da5d"
 							name="SelectCPUUsageforQueryPlans">
@@ -5357,7 +5355,7 @@ rxversion="8.2">
 						</setup>
 						<testcase
 						id="1ac74b73-425c-4536-9faf-0b38a547b9e1"
-						name="Server_Properties_-_Query_Monitor_Top_Query_Plans:_Select_'Duration(milliseconds)'_for_query_plans_f">
+						name="Select_Duration(millisecond)_for_query_plans_and_verify_if_query_plans_are_collected_for_top_queries">
 							<testmodule
 							id="2fb2633c-403d-4ad8-977d-798c323f7c5c"
 							name="SelectDurationmillisecondsforqueryplans">
@@ -5382,6 +5380,15 @@ rxversion="8.2">
 	default="TestRun">
 		<testconfiguration
 		name="TestRun">
+			<testcontainer
+			id="0a7113e2-7c9a-4795-a57b-a660dd7b9601">
+			</testcontainer>
+			<testcontainer
+			id="5e3b329f-982d-4a6d-9158-0eed5778ea4f">
+			</testcontainer>
+			<testcontainer
+			id="62a10fcd-851e-42d9-840c-413a0109598c">
+			</testcontainer>
 		</testconfiguration>
 	</testconfigurations>
 	<references>

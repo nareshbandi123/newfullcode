@@ -51,3 +51,16 @@ D:\repos\completecode\newfullcode\AutomationSQLdm\AutomationSQLdm\bin\Debug\Newt
 D:\repos\completecode\newfullcode\AutomationSQLdm\AutomationSQLdm\bin\Debug\Ranorex.Core.Resolver.dll
 D:\repos\completecode\newfullcode\AutomationSQLdm\AutomationSQLdm\bin\Debug\Newtonsoft.Json.pdb
 D:\repos\completecode\newfullcode\AutomationSQLdm\AutomationSQLdm\bin\Debug\Newtonsoft.Json.xml
+D:\repos\newfullcode\AutomationSQLdm\AutomationSQLdm\bin\Debug\AutomationSQLdm.rxtmg
+D:\repos\newfullcode\AutomationSQLdm\AutomationSQLdm\bin\Debug\AutomationSQLdm.rxtst
+D:\repos\newfullcode\AutomationSQLdm\AutomationSQLdm\bin\Debug\RepositoryImages\BVTRepo66deb29b.rximgres
+D:\repos\newfullcode\AutomationSQLdm\AutomationSQLdm\bin\Debug\AutomationSQLdm.exe.config
+D:\repos\newfullcode\AutomationSQLdm\AutomationSQLdm\bin\Debug\AutomationSQLdm.exe
+D:\repos\newfullcode\AutomationSQLdm\AutomationSQLdm\bin\Debug\AutomationSQLdm.pdb
+D:\repos\newfullcode\AutomationSQLdm\AutomationSQLdm\bin\Debug\Newtonsoft.Json.dll
+D:\repos\newfullcode\AutomationSQLdm\AutomationSQLdm\bin\Debug\Ranorex.Core.Resolver.dll
+D:\repos\newfullcode\AutomationSQLdm\AutomationSQLdm\bin\Debug\Newtonsoft.Json.pdb
+D:\repos\newfullcode\AutomationSQLdm\AutomationSQLdm\bin\Debug\Newtonsoft.Json.xml
+D:\repos\newfullcode\AutomationSQLdm\AutomationSQLdm\obj\x86\Debug\AutomationSQLdm.csprojResolveAssemblyReference.cache
+D:\repos\newfullcode\AutomationSQLdm\AutomationSQLdm\obj\x86\Debug\AutomationSQLdm.exe
+D:\repos\newfullcode\AutomationSQLdm\AutomationSQLdm\obj\x86\Debug\AutomationSQLdm.pdb

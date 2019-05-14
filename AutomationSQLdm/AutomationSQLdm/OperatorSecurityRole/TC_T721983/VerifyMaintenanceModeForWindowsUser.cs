@@ -37,6 +37,8 @@ namespace AutomationSQLdm.OperatorSecurityRole.TC_T721983
         {
         	try 
         	{
+        	  Common.ClickStartConsole();
+        	  Common.ConnectDMRepoWindowsUser();
         	  Steps.ClickAdministration();
         	  Steps.ClickApplicationSecurity();
         	  Steps.ClickEnableSecurity();
@@ -58,11 +60,18 @@ namespace AutomationSQLdm.OperatorSecurityRole.TC_T721983
         	  Steps.VerifyMaintainceModeContextMenuItems();
         	  Steps.EnableMaintainceMode();
         	  Steps.VerifyMaintainceModeIsChanged();
-        	  
+        	  Common.UpdateStatus(1); // 1 : Pass
         	} 
         	catch (Exception ex)
         	{
+        		Common.UpdateStatus(5); // 5 : fail
         		Validate.Fail(ex.Message);
+        	}
+        	finally
+        	{
+        		Steps.ClickAdministration();
+        		Steps.ClickWindowsUserToDelete();
+        	    Steps.DeleteAddedUser();
         	}
         	return true;
         }

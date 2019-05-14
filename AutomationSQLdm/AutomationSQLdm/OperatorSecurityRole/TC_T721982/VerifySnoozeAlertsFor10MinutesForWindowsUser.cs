@@ -37,6 +37,8 @@ namespace AutomationSQLdm.OperatorSecurityRole.TC_T721982
         {
         	try 
         	{
+        	  Common.ClickStartConsole();
+        	  Common.ConnectDMRepoWindowsUser();
         	  Steps.ClickAdministration();
         	  Steps.ClickApplicationSecurity();
         	  Steps.ClickEnableSecurity();
@@ -57,6 +59,7 @@ namespace AutomationSQLdm.OperatorSecurityRole.TC_T721982
         	  Steps.ClickSnoozeAlertContextMenu();
         	  Steps.SetSnoozeAlertTime();
         	  Steps.VerifyServerSnoozed();
+        	  Steps.ClickResumeAlertContextMenu();
         	  Common.UpdateStatus(1); // 1 : Pass
         	} 
         	catch (Exception ex)

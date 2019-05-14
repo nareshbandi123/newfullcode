@@ -26,6 +26,8 @@ namespace AutomationSQLdm.Commons
 		public const string SqlSystemUserPassword = @"Admin@123";
 		
 		public const string SQLdmRepository = @"SQLdmRepository";
+		public const string tagSnoozeAlert = "TagSnoozeAlert";
+		public const string allServer = "AllServer";
 #endregion
 	}
 }

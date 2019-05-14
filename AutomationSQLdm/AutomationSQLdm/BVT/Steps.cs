@@ -42,8 +42,10 @@ namespace AutomationSQLdm.BVT
     	public static string ResponseName ="ResponseName";
     	public static string EditResponseName ="NewResponseName";
     	public static string CopyResponseName ="ResponseName(Copy)";
-    	public static string SQLUserName="sa";
-    	public static string SQLPassword="control*88";	
+    	//public static string SQLUserName="sa";
+    	//public static string SQLPassword="control*88";	
+    	public static string SQLUserName="Test";
+    	public static string SQLPassword="Test@1";
     	
     	public static void VerifySQLdmToday()
 			{
@@ -1870,7 +1872,7 @@ public static void VerifyTablesAndIndexesInDataBases()
 							Reports.ReportLog("PopupMessage does not Exists", Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
 							throw new Exception("Failed : VerifyPopupMessage ");
 						}
-				     
+				        repo.MonitoredSqlServerInstancePropertiesDial.btnOk.Click();
 						repo.MonitoredSqlServerInstancePropertiesDial.btnClose.Click();
 				     	Thread.Sleep(360000);
 				    } 

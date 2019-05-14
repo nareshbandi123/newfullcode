@@ -156,6 +156,50 @@ rxversion="8.2">
 			searchtimeout="30000ms">
 				/form[@title~'^Idera\ SQL\ diagnostic\ mana']//container[@accessiblename='Home']/toolbar[@accessiblename='Permissions']/button[@accessiblename='Edit']
 			</item>
+			<item
+			addcaps="button,control,nativewindow"
+			capname="button"
+			id="e2208178-14a9-4c81-83ac-7040f3ce82a0"
+			name="CancelButton"
+			refimgid="b87998fe-6aba-4c1d-bc81-fed76b29cba3"
+			refpath="/form[@controlname='GettingStartedWizard']/container[@controlname='footerPanel']/button[@controlname='cancelButton']"
+			searchtimeout="30000ms">
+				/form[@title~'^Idera\ SQL\ diagnostic\ mana']/?/?/button[@controlname='cancelButton']
+			</item>
+			<item
+			capname="button"
+			id="254945ef-160d-4887-83a8-834a01203c25"
+			name="btnStartConsole"
+			searchtimeout="30000ms">
+				/form[@title~'^Idera\ SQL\ diagnostic\ mana']/?/?/button[@controltext='Start Console']
+			</item>
+			<item
+			addcaps="treeitem,accessible,accessibletreeitem"
+			capname="treeitem"
+			id="6903854f-2b1c-493f-9889-921b27b56f5a"
+			name="MyViewsAllServers"
+			refimgid="612ade5d-2a2d-4f1a-afc0-0e766121545d"
+			searchtimeout="30000ms">
+				/form[@title~'^Idera\ SQL\ diagnostic\ mana']//container[@controlname='NavigationPaneControl']//container[@controlname='userViewsPanel']/tree[@controlname='userViewsTreeView']/treeitem[@accessiblename&gt;'All Servers']
+			</item>
+			<item
+			addcaps="text,control,nativewindow"
+			capname="text"
+			id="0a718083-c629-489b-b026-8f64d6644495"
+			name="Tags"
+			refimgid="c88c2010-62f5-48e0-ab46-6c4914b9a448"
+			searchtimeout="30000ms">
+				/form[@title~'^Idera\ SQL\ diagnostic\ mana']/statusbar[@automationid='statusBar']//container[@automationid='navigationPaneHost']//container[@controlname='NavigationPaneControl']//container[@controlname='tagsPanel']/text[@controlname='manageTagsLabel']
+			</item>
+			<item
+			addcaps="treeitem,accessible,accessibletreeitem"
+			capname="treeitem"
+			id="fd46d20a-6c84-486d-86b2-ea3d77063153"
+			name="TagSnoozeAlert"
+			refimgid="2b1ea055-4c2d-44c5-ac2b-29544b7b3ee3"
+			searchtimeout="30000ms">
+				/form[@title~'^Idera\ SQL\ diagnostic\ mana']/statusbar[@automationid='statusBar']//container[@automationid='navigationPaneHost']//container[@controlname='NavigationPaneControl']//container[@controlname='tagsPanel']/tree[@controlname='tagsTreeView']/treeitem[@accessiblename&gt;'TagSnoozeAlert']
+			</item>
 			<basepath>
 				/form[@title~'^Idera\ SQL\ diagnostic\ mana']
 			</basepath>
@@ -221,7 +265,7 @@ rxversion="8.2">
 			id="7a396840-f02f-4960-aaab-3ff9800f57cb"
 			name="AvailableServers"
 			searchtimeout="30000ms">
-				/form[@controlname='AddPermissionWizard']/container[@controlname='_wizard']//container[@controlname='_serversListSelectorControl']//list[@controlname='listBoxAvailable']
+				/form[@controlname='AddPermissionWizard']/container[@controlname='_wizard']//list[@controlname='listBoxAvailable']/list[@accessiblename='Selected Servers:']
 			</item>
 			<item
 			addcaps="button,control,nativewindow"
@@ -359,6 +403,15 @@ XrLp0EM2aG+RntUiB+ZT6fxfIsRPbYnQgbXhGFYAAAAASUVORK5CYII=
 			refpath="/contextmenu[@processname='SQLdmDesktopClient']/menuitem[@accessiblename='Snooze Alerts...']"
 			searchtimeout="30000ms">
 				/contextmenu[@processname='SQLdmDesktopClient']/menuitem[@accessiblename='Snooze Alerts...']
+			</item>
+			<item
+			addcaps="menuitem,accessible"
+			capname="menuitem"
+			id="54dd8657-9b3b-4ee9-9b0a-91518c90b49d"
+			name="ResumeAlerts_ContextMenu"
+			refimgid="a68b8e74-7701-4d66-853d-7a1d7fc64389"
+			searchtimeout="30000ms">
+				/contextmenu[@processname='SQLdmDesktopClient']/menuitem[@accessiblename='Resume Alerts...']
 			</item>
 			<item
 			addcaps="menuitem,accessible"
@@ -732,6 +785,117 @@ l0yXQ6LNnACkLwckb1yDqDh3YKn6dEq9zy3R45TosMX40PsbQOyiLqiHhLo/eesqIwl1z6L6V3uM
 T9Yo73q8rE8A7i0xEOVI4p+HYggATMyByxdnyKPRP6rxbVilw67wcVBOAtambRFvof4hufvzyTGa
 yBbJEskUycg1sS/HxN7sPPaI7M7KY1dmKjszUsnJL2LhTf7rGAy/AP7X5rYY5FLEAAAAAElFTkSu
 QmCC
+			</icon>
+		</appfolder>
+		<appfolder
+		addcaps="form,control,nativewindow"
+		capname="form"
+		id="63698209-1c78-4c59-a1fc-cb8bb722444a"
+		isrooted="True"
+		name="ManageTagsDialog"
+		refpath="/form[@controlname='ManageTagsDialog']"
+		searchtimeout="30000ms"
+		usecache="True">
+			<item
+			addcaps="button,control,nativewindow"
+			capname="button"
+			id="d09abec1-27d4-44c4-9dd1-33326a88a05d"
+			name="AddButton"
+			refimgid="06a48de5-a590-4996-b473-c17b52e3c0ae"
+			refpath="/form[@controlname='ManageTagsDialog']/container[@controlname='office2007PropertyPage1']/container[@controlname='backgroundPanel']/container[@controlname='ContentPanel']/container[@controlname='manageTagsMainContainer']/container[@controlname='manageTagsButtonsContainer']/button[@controlname='addButton']"
+			searchtimeout="30000ms">
+				/form[@controlname='ManageTagsDialog']/container[@controlname='office2007PropertyPage1']//container[@controlname='manageTagsButtonsContainer']/button[@controlname='addButton']
+			</item>
+			<item
+			addcaps="table,control,nativewindow"
+			capname="table"
+			id="b6a6dc49-8b7f-43da-9250-0f53fec8e79e"
+			name="TagsListView"
+			refimgid="25c5ee70-e6b7-478b-b332-adea1c6ccb38"
+			searchtimeout="30000ms">
+				/form[@controlname='ManageTagsDialog']/container[@controlname='office2007PropertyPage1']//container[@controlname='ContentPanel']//table[@controlname='tagsListView']
+			</item>
+			<item
+			addcaps="button,control,nativewindow"
+			capname="button"
+			id="fad4530d-57f7-40b0-9aba-0e480f31b0fa"
+			name="DoneButton"
+			refimgid="02d0b29d-98ae-4426-80db-29aab5ab0187"
+			refpath="/form[@controlname='ManageTagsDialog']/button[@controlname='doneButton']"
+			searchtimeout="30000ms">
+				/form[@controlname='ManageTagsDialog']/button[@controlname='doneButton']
+			</item>
+			<basepath>
+				/form[@controlname='ManageTagsDialog']
+			</basepath>
+			<icon>
+				iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+jwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAH4SURBVDhPrdFdSJNhGMbxR1BzhTJzapnsJGgU
+RnQQEXYQhGkEgRIUihSzrKyEMM0ME00ENRY6WjPLmOasObKkHDTKmoSBERUZbNWsVdtys/nRKjr5
+9+F74AvBwLrggufk/l0Hj/gveTDoYD6VzmcB6SnLsDGZbxOdfPW2EnbXMDNawvTjPCaHNnKlOj4y
+MGRQEfY08cVVzsyzQqYeZTN5by2fB9R0VC6KDNxvTZqzmknIrmGiP4VxaxzGsoVyYGxNNM7VMTzP
+iGVkVRyOlQrsusVMDWcT+r1qUxPoS+DTtWh83QJ9qUIOTN/sJWQ2ETDq8Taexro8noEmJaE7GoL9
+yQR6Ffh7ovjYJfBcFuhK4uRA8KIBf3MDnqpy3hwoQq9O5EaDkuCv1XFLDD6z4INJ8K5D4G4XNO5f
+IAfenzqB+3AxzvwdvMjZTPWSFCy1CfivRuGVVscuCV63CZxGQX1RrBxwFe5idFsWTzPXMZKh4aAq
+7a9/P7fS+SxQkZrKEdVSipPS2J24jAJlOlV9b+l08Kftd+GsDequw7Fu2HrcJgekpyxlZhdGO5y5
+DTVWONoF+9qgoOUH67U9kYG9hiectECpCbTnIV/3ndz6ADmVr1iReyEykFc3yJ5zsLM5zPZaH1sq
+XrLp0EM2aG+RntUiB+ZT6fxfIsRPbYnQgbXhGFYAAAAASUVORK5CYII=
+			</icon>
+		</appfolder>
+		<appfolder
+		addcaps="form,control,nativewindow"
+		capname="form"
+		id="e66b4bc3-703b-46a5-811a-d7d49164a756"
+		isrooted="True"
+		name="TagPropertiesDialog"
+		refpath="/form[@controlname='TagPropertiesDialog']"
+		searchtimeout="30000ms"
+		usecache="True">
+			<item
+			addcaps="text,accessible"
+			capname="text"
+			id="9884fdba-5b65-4304-ae27-24011788cb2e"
+			name="TagName"
+			refimgid="72a6c297-535e-4da5-80c4-86bc019e19e5"
+			refpath="/form[@controlname='TagPropertiesDialog']/text[@controlname='tagNameTextBox']/text[@accessiblerole='Text']"
+			searchtimeout="30000ms">
+				/form[@controlname='TagPropertiesDialog']/?/?/text[@accessiblerole='Text']
+			</item>
+			<item
+			addcaps="checkbox,control,nativewindow"
+			capname="checkbox"
+			id="ec2ab8a2-be10-448c-a31a-8c84f6a3cd08"
+			name="SelectAllServersCheckBox"
+			refimgid="d5a68b12-70a0-443a-bbff-b92bdbe05b86"
+			refpath="/form[@controlname='TagPropertiesDialog']/tabpagelist[@controlname='tabControl1']/tabpage[@controlname='tabPage1']/checkbox[@controlname='selectAllServersCheckBox']"
+			searchtimeout="30000ms">
+				/form[@controlname='TagPropertiesDialog']/?/?/tabpage[@controlname='tabPage1']/checkbox[@controlname='selectAllServersCheckBox']
+			</item>
+			<item
+			addcaps="button,control,nativewindow"
+			capname="button"
+			id="3f98e077-0812-464a-9654-63a0e9a96d86"
+			name="OkButton"
+			refimgid="fe4a1a11-e74f-4451-a248-a027587400a8"
+			refpath="/form[@controlname='TagPropertiesDialog']/button[@controlname='okButton']"
+			searchtimeout="30000ms">
+				/form[@controlname='TagPropertiesDialog']/button[@controlname='okButton']
+			</item>
+			<basepath>
+				/form[@controlname='TagPropertiesDialog']
+			</basepath>
+			<icon>
+				iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+jwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAH4SURBVDhPrdFdSJNhGMbxR1BzhTJzapnsJGgU
+RnQQEXYQhGkEgRIUihSzrKyEMM0ME00ENRY6WjPLmOasObKkHDTKmoSBERUZbNWsVdtys/nRKjr5
+9+F74AvBwLrggufk/l0Hj/gveTDoYD6VzmcB6SnLsDGZbxOdfPW2EnbXMDNawvTjPCaHNnKlOj4y
+MGRQEfY08cVVzsyzQqYeZTN5by2fB9R0VC6KDNxvTZqzmknIrmGiP4VxaxzGsoVyYGxNNM7VMTzP
+iGVkVRyOlQrsusVMDWcT+r1qUxPoS+DTtWh83QJ9qUIOTN/sJWQ2ETDq8Taexro8noEmJaE7GoL9
+yQR6Ffh7ovjYJfBcFuhK4uRA8KIBf3MDnqpy3hwoQq9O5EaDkuCv1XFLDD6z4INJ8K5D4G4XNO5f
+IAfenzqB+3AxzvwdvMjZTPWSFCy1CfivRuGVVscuCV63CZxGQX1RrBxwFe5idFsWTzPXMZKh4aAq
+7a9/P7fS+SxQkZrKEdVSipPS2J24jAJlOlV9b+l08Kftd+GsDequw7Fu2HrcJgekpyxlZhdGO5y5
+DTVWONoF+9qgoOUH67U9kYG9hiectECpCbTnIV/3ndz6ADmVr1iReyEykFc3yJ5zsLM5zPZaH1sq
+XrLp0EM2aG+RntUiB+ZT6fxfIsRPbYnQgbXhGFYAAAAASUVORK5CYII=
 			</icon>
 		</appfolder>
 		<basepath>

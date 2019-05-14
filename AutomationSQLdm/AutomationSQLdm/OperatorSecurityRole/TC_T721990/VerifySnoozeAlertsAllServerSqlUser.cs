@@ -38,10 +38,12 @@ namespace AutomationSQLdm.OperatorSecurityRole.TC_T721990
         {
         	try 
         	{
+        	  Common.ClickStartConsole();
+        	  Common.ConnectDMRepoWindowsUser();
         	  Steps.ClickAdministration();
         	  Steps.ClickApplicationSecurity();
-        	  Steps.ClickEnableSecurity();
-        	  Steps.AcceptExceptionMessage();
+//        	  Steps.ClickEnableSecurity();
+//        	  Steps.AcceptExceptionMessage();
         	  Steps.ClickToAddUsers();
         	  Steps.ClickNextButton();
         	  Steps.EnterDomianUserName(Constants.NewSqlUser);
@@ -58,7 +60,8 @@ namespace AutomationSQLdm.OperatorSecurityRole.TC_T721990
 			  Steps.RightClickAllServer();
         	  Steps.ClickSnoozeAlertContextMenu();
         	  Steps.SetSnoozeAlertTime();
-        	  Steps.VerifyServerSnoozed();
+        	  Steps.VerifyAllServerSnoozed(Constants.allServer);
+        	  Steps.ClickResumeAlertContextMenu();
         	  Common.UpdateStatus(1); // 1 : Pass
         	} 
         	catch (Exception ex)
@@ -69,7 +72,7 @@ namespace AutomationSQLdm.OperatorSecurityRole.TC_T721990
         	finally
         	{
         		Steps.ClickAdministration();
-        		Steps.ClickWindowsUserToDelete();
+        		Steps.ClickSqlUserToDelete();
         	    Steps.DeleteAddedUser();
         	}
         	return true;

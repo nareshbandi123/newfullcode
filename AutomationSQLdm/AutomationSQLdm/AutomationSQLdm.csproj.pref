@@ -1,23 +1,18 @@
 ﻿<Properties>
-  <Array name="bookmarks">
-    <Element value="Breakpoint|D:\repos\newfullcode\AutomationSQLdm\AutomationSQLdm\Grooming Modifications\Steps.cs|150|5|True|Break||" />
+  <Array name="active">
+    <Element value="Commons\CommonRepo.rxrep" />
   </Array>
+  <Array name="bookmarks" />
   <Array name="files">
-    <Element value="BVT\TC_722141\VerifyDatabasesMirroringViewIsDisplayedSuccessfully.cs" />
+    <Element value="Commons\CommonRepo.rxrep" />
+    <Element value="OperatorSecurityRole\OperatorSecurityRoleRepo.rxrep" />
     <Element value="AutomationSQLdm.rxtst" />
-    <Element value="BVT\BVTRepo.cs" />
     <Element value="BVT\BVTRepo.rxrep" />
     <Element value="BVT\Steps.cs" />
-    <Element value="BVT\TC_722144\VerifyDatabasesBackupsRestoresViewIsDisplayedSuccessfully.cs" />
-    <Element value="Grooming Modifications\TC_721952\DeleteforMonitoredServerID.cs" />
-    <Element value="Grooming Modifications\TC_721959\VerifyGroomMetricsAndBaseLineMaxValue.cs" />
+    <Element value="BVT\TC_722159\VerifythatSessionsLocksviewisDisplayedSuccessfully.cs" />
     <Element value="OperatorSecurityRole\Steps.cs" />
-    <Element value="OperatorSecurityRole\TC_T721977\VerifyViewDataAcknowledgeSqlUser.cs" />
-    <Element value="Commons\Reports.cs" />
-    <Element value="Grooming Modifications\TC_721944\VerifyGroomForecastingData.cs" />
-    <Element value="Grooming Modifications\Steps.cs" />
-    <Element value="Grooming Modifications\GroomingRepo.rxrep" />
-    <Element value="Grooming Modifications\GroomingRepo.cs" />
+    <Element value="Commons\Common.cs" />
+    <Element value="Commons\Constants.cs" />
   </Array>
   <Properties name="projectSavedData">
     <Properties name="customTool">

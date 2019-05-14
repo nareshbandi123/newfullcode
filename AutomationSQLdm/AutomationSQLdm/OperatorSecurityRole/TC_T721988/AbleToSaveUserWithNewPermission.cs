@@ -38,7 +38,8 @@ namespace AutomationSQLdm.OperatorSecurityRole.TC_T721988
         {
         	try 
         	{
-        	  //Steps.Cell_test();
+        	  Common.ClickStartConsole();
+        	  Common.ConnectDMRepoWindowsUser();
         	  Steps.ClickAdministration();
         	  Steps.ClickApplicationSecurity();
         	  Steps.ClickEnableSecurity();
@@ -66,6 +67,7 @@ namespace AutomationSQLdm.OperatorSecurityRole.TC_T721988
         		Common.UpdateStatus(5); // 5 : fail
         		Reports.ReportLog(ex.Message, Reports.SQLdmReportLevel.Fail, null, Config.TestCaseName);
         	}
+        	
         	return true;
         }
     }

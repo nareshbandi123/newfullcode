@@ -37,6 +37,8 @@ namespace AutomationSQLdm.OperatorSecurityRole.TC_T721974
         {
         	try 
         	{
+        	  Common.ClickStartConsole();
+        	  Common.ConnectDMRepoWindowsUser();
         	  Steps.ClickAdministration();
         	  Steps.ClickApplicationSecurity();
         	  Steps.ClickEnableSecurity();

@@ -7,8 +7,13 @@
       <string>60513a05-eab7-41e7-8c10-e51c735edc2e</string>
       <string>4a6de247-0fc0-4c5f-91de-4426bcec9862</string>
       <string>435ace51-31ae-4bef-bf4d-5d490d806462</string>
+      <string>01f97181-a0b1-4b2f-b667-36ead09b81c0</string>
+      <string>c0e8f708-922b-4cbc-918f-1c572421a0b8</string>
+      <string>0c693408-e214-4380-8159-107dc370551b</string>
+      <string>c4373fa7-0337-4407-b57d-3a35e4353bae</string>
       <string>71079302-9dbc-417b-bb90-d5bcef186919</string>
       <string>ded140a1-ce76-4733-a693-b0ad421f5fac</string>
+      <string>57517799-165b-4c0a-9248-0880689f0d55</string>
       <string>28d505b6-6704-4f18-ae40-dfd9c24fdcc7</string>
       <string>d51e70be-b510-4597-b7ba-3ddbae30f06d</string>
       <string>71a738f9-6698-414a-bdb4-8794c49c46e2</string>
@@ -17,6 +22,6 @@
       <string>602b8b30-97ba-464a-928e-eb39126a1183</string>
     </ArrayOfString>
   </SerializedValue>
-  <ProjectBrowserState value="[Solution AutomationSQLdm[AutomationSQLdm[]]]&#xD;&#xA;Solution AutomationSQLdm\AutomationSQLdm\AutomationSQLdm.rxtst&#xD;&#xA;Solution AutomationSQLdm\AutomationSQLdm\AutomationSQLdmRepository.rxrep" />
+  <ProjectBrowserState value="[Solution AutomationSQLdm[AutomationSQLdm[AddServers[]Commons[]OperatorSecurityRole[TC_T721974[]TC_T721975[]TC_T721976[]TC_T721977[]TC_T721981[]TC_T721982[]TC_T721983[]TC_T721988[]TC_T721989[]TC_T721990[]TC_T721993[]TC_T721994[]OperatorSecurityRoleRepo.rxrep[]]]]]&#xD;&#xA;Solution AutomationSQLdm\AutomationSQLdm\Commons\CommonRepo.rxrep&#xD;&#xA;Solution AutomationSQLdm\AutomationSQLdm\Commons\CommonRepo.rxrep" />
   <StartupProject value="{61F99090-53F7-41D0-9F8A-6FC8C2262E52}" />
 </Properties>

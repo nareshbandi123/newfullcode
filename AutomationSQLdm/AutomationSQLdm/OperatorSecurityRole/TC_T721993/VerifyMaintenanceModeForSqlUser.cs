@@ -37,6 +37,8 @@ namespace AutomationSQLdm.OperatorSecurityRole.New_folder
         {
         	try 
         	{
+        	  Common.ClickStartConsole();
+        	  Common.ConnectDMRepoWindowsUser();
         	  Steps.ClickAdministration();
         	  Steps.ClickApplicationSecurity();
         	  Steps.ClickEnableSecurity();
@@ -54,7 +56,7 @@ namespace AutomationSQLdm.OperatorSecurityRole.New_folder
         	  Steps.ClickFinishButton();
         	  Steps.VerifySqlUserAdded();
 			  Steps.ClickServersInLeftPane();
-			  Steps.RightClickMonitoredServer();
+			  Steps.RightClickAllServer_MyViews();
         	  Steps.ClickMaintainceModeContextMenu();
         	  Steps.VerifyMaintainceModeContextMenuItems();
         	  Steps.EnableMaintainceMode();
@@ -65,6 +67,12 @@ namespace AutomationSQLdm.OperatorSecurityRole.New_folder
         	{
         		Common.UpdateStatus(5); // 5 : fail
         		Validate.Fail(ex.Message);
+        	}
+        	finally
+        	{
+        		Steps.ClickAdministration();
+        		Steps.ClickSqlUserToDelete();
+        	    Steps.DeleteAddedUser();
         	}
         	return true;
         }

@@ -37,6 +37,8 @@ namespace AutomationSQLdm.OperatorSecurityRole.TC_T721981
         {
         	try 
         	{
+        	  Common.ClickStartConsole();
+        	  Common.ConnectDMRepoWindowsUser();
         	  Steps.ClickAdministration();
         	  Steps.ClickApplicationSecurity();
         	  Steps.ClickEnableSecurity();
@@ -52,19 +54,24 @@ namespace AutomationSQLdm.OperatorSecurityRole.TC_T721981
         	  Steps.ClickNextButton();
         	  Steps.ClickFinishButton();
         	  Steps.VerifyWindowsUserAdded();
-        	  //Steps.ClickWindowsUserToDelete();
-        	  //Steps.DeleteAddedUser();
 			  AutomationSQLdm.Grooming_Modifications.Steps.ClickOnTools();
         	  Steps.SelectSnoozeAlertMenuItem();
         	  Steps.SetSnoozeAlertTime();
         	  AutomationSQLdm.Grooming_Modifications.Steps.ClickOnTools();
         	  Steps.VerifySnoozeAlertApplied();
+        	  Steps.ResumeAlertMenuItem();
         	  Common.UpdateStatus(1); // 1 : Pass
         	} 
         	catch (Exception ex)
         	{
         		Common.UpdateStatus(5); // 5 : fail
         		Validate.Fail(ex.Message);
+        	}
+        	finally
+        	{
+        		Steps.ClickAdministration();
+        		Steps.ClickWindowsUserToDelete();
+        	    Steps.DeleteAddedUser();
         	}
         	return true;
         }

@@ -127,10 +127,6 @@ rxversion="8.2">
 			ref="f749ea84-58c0-4b06-b370-33030d553c6d"
 			type="UserCode">
 			</testmodule>
-			<smartfoldernode
-			id="0797ec3c-ccaf-4243-9584-dcedb3f76a1c"
-			name="T721992">
-			</smartfoldernode>
 			<teardown
 			id="07c81d18-fa99-4e1c-ab25-4f4add840ed3"
 			name="teardown">
@@ -434,6 +430,10 @@ rxversion="8.2">
 			id="24e492a3-ae95-41c7-8888-8e97327b45b7"
 			name="T721944">
 			</smartfoldernode>
+			<smartfoldernode
+			id="258f24c3-ca2b-40c7-b96b-21e737088944"
+			name="AddServers">
+			</smartfoldernode>
 			<setup
 			id="25b1e370-f237-4c7e-9146-ae7789106995"
 			name="setup">
@@ -640,12 +640,6 @@ rxversion="8.2">
 			ref="0fe8941e-6526-477a-bc6f-cb90c434e430"
 			type="UserCode">
 			</testmodule>
-			<testmodule
-			id="36272233-6bfc-470c-af94-2c01fbad7d27"
-			name="OpenSQLdm"
-			ref="f749ea84-58c0-4b06-b370-33030d553c6d"
-			type="UserCode">
-			</testmodule>
 			<smartfoldernode
 			id="366e71df-f11e-4966-abbf-1e67786a324e"
 			name="T722021">
@@ -746,10 +740,6 @@ rxversion="8.2">
 			ref="2a7433f1-7c9b-4d26-88b3-87da2eabe8a8"
 			type="UserCode">
 			</testmodule>
-			<testcase
-			id="3e766f26-f359-4433-a785-e46a3d0a2210"
-			name="Tag_Verify_user_having_View_data_permission_able_to_Snooze_Alerts">
-			</testcase>
 			<testmodule
 			id="3eeae7be-ca1f-410c-beba-c1d85c963a8b"
 			name="OpenSQLdm"
@@ -1128,12 +1118,6 @@ rxversion="8.2">
 			type="UserCode">
 			</testmodule>
 			<testmodule
-			id="5c291ee0-e0d1-4b15-87f1-daeecd907ce9"
-			name="CloseSQLdm"
-			ref="0fe8941e-6526-477a-bc6f-cb90c434e430"
-			type="UserCode">
-			</testmodule>
-			<testmodule
 			id="5c48bb4d-42f2-42d5-a300-1d9af55a521c"
 			name="OpenSQLdm"
 			ref="f749ea84-58c0-4b06-b370-33030d553c6d"
@@ -1186,7 +1170,6 @@ rxversion="8.2">
 			name="setup">
 			</setup>
 			<testmodule
-			enabled="False"
 			id="6193d8f6-8f7c-4391-82d3-a6be41d0a785"
 			name="OpenSQLdm"
 			ref="f749ea84-58c0-4b06-b370-33030d553c6d"
@@ -1282,6 +1265,12 @@ rxversion="8.2">
 			id="6919800e-f5fe-4026-a178-53cd63aa7bec"
 			name="teardown">
 			</teardown>
+			<testmodule
+			id="69f50950-e8cc-47cb-827c-f799ab28f121"
+			name="CloseSQLdm"
+			ref="0fe8941e-6526-477a-bc6f-cb90c434e430"
+			type="UserCode">
+			</testmodule>
 			<teardown
 			id="6a1da312-3e49-4ff3-a1e3-0247736e90b6"
 			name="teardown">
@@ -1432,6 +1421,12 @@ rxversion="8.2">
 			id="75b270c4-baaf-4265-a919-7d3ea3767349"
 			name="T722115">
 			</smartfoldernode>
+			<testmodule
+			id="76609d94-920f-4b71-bdf0-1dc910258a3f"
+			name="PrerequisitiesForAddingServers"
+			ref="bc85c1d6-deab-4841-a556-dd353972a7d9"
+			type="UserCode">
+			</testmodule>
 			<teardown
 			id="7664e1da-8585-4cc5-bb1a-3813bfc68bff"
 			name="teardown">
@@ -1635,10 +1630,6 @@ rxversion="8.2">
 			type="UserCode">
 			</testmodule>
 			<setup
-			id="87c5bcc6-1df3-43e0-85ea-ddb767a2fd5f"
-			name="setup">
-			</setup>
-			<setup
 			id="87ffd0fc-d0ae-42b7-81d8-3a2510550c19"
 			name="setup">
 			</setup>
@@ -1667,7 +1658,6 @@ rxversion="8.2">
 			name="setup">
 			</setup>
 			<testmodule
-			enabled="False"
 			id="8a53940b-80b1-4660-b05f-e26f71f179b2"
 			name="CloseSQLdm"
 			ref="0fe8941e-6526-477a-bc6f-cb90c434e430"
@@ -1689,10 +1679,6 @@ rxversion="8.2">
 			</teardown>
 			<teardown
 			id="8ad0e61c-5645-4059-9238-0014908dc688"
-			name="teardown">
-			</teardown>
-			<teardown
-			id="8bca483d-e578-4de3-84b9-e7e2ede15420"
 			name="teardown">
 			</teardown>
 			<setup
@@ -1936,6 +1922,10 @@ rxversion="8.2">
 			name="T722146">
 			</smartfoldernode>
 			<teardown
+			id="a10bb61e-d93c-4792-a564-96ecacdf9663"
+			name="teardown1">
+			</teardown>
+			<teardown
 			id="a1482ccd-a9dc-4b7c-a356-35796aea2145"
 			name="teardown">
 			</teardown>
@@ -2110,6 +2100,10 @@ rxversion="8.2">
 			id="aef51169-2c84-4ddd-afd2-1f65a04bd3aa"
 			name="T722031">
 			</smartfoldernode>
+			<setup
+			id="afa8e531-ea98-41fc-9d05-a6c0daf32942"
+			name="setup1">
+			</setup>
 			<testmodule
 			id="b09693bb-df0e-4b9d-9c5b-d16fb74122a9"
 			name="CloseSQLdm"
@@ -2488,6 +2482,12 @@ rxversion="8.2">
 			ref="f749ea84-58c0-4b06-b370-33030d553c6d"
 			type="UserCode">
 			</testmodule>
+			<testmodule
+			id="d043fc8d-b94d-4ec4-94ed-6100de674db8"
+			name="OpenSQLdm"
+			ref="f749ea84-58c0-4b06-b370-33030d553c6d"
+			type="UserCode">
+			</testmodule>
 			<teardown
 			id="d184918a-8a26-4e44-91a7-12878a2e400f"
 			name="teardown">
@@ -2500,12 +2500,6 @@ rxversion="8.2">
 			id="d1ca6ec3-6822-4517-a74a-deb6afb3f6bc"
 			name="CloseSQLdm"
 			ref="0fe8941e-6526-477a-bc6f-cb90c434e430"
-			type="UserCode">
-			</testmodule>
-			<testmodule
-			id="d26f14da-857e-4d0a-92a8-81311058ef83"
-			name="VerifySnoozeAlertsForFewMinutesForSqlUser"
-			ref="c0223962-f997-4c6f-b6c0-24cb8014dabb"
 			type="UserCode">
 			</testmodule>
 			<testmodule
@@ -2962,6 +2956,30 @@ rxversion="8.2">
 				<testcase
 				id="5e3b329f-982d-4a6d-9158-0eed5778ea4f"
 				name="AutomationSQLdm">
+					<smartfoldernode
+					id="258f24c3-ca2b-40c7-b96b-21e737088944"
+					name="AddServers">
+						<setup
+						id="afa8e531-ea98-41fc-9d05-a6c0daf32942"
+						name="setup1">
+							<testmodule
+							id="d043fc8d-b94d-4ec4-94ed-6100de674db8"
+							name="OpenSQLdm">
+							</testmodule>
+							<testmodule
+							id="76609d94-920f-4b71-bdf0-1dc910258a3f"
+							name="PrerequisitiesForAddingServers">
+							</testmodule>
+						</setup>
+						<teardown
+						id="a10bb61e-d93c-4792-a564-96ecacdf9663"
+						name="teardown1">
+							<testmodule
+							id="69f50950-e8cc-47cb-827c-f799ab28f121"
+							name="CloseSQLdm">
+							</testmodule>
+						</teardown>
+					</smartfoldernode>
 					<smartfoldernode
 					id="0beff35f-96b7-4eb1-a7b1-905dd548c5fd"
 					name="T721943">
@@ -4050,34 +4068,6 @@ rxversion="8.2">
 						name="teardown">
 							<testmodule
 							id="1f7f25a6-d77b-4709-bb80-a78591f5268c"
-							name="CloseSQLdm">
-							</testmodule>
-						</teardown>
-					</smartfoldernode>
-					<smartfoldernode
-					id="0797ec3c-ccaf-4243-9584-dcedb3f76a1c"
-					name="T721992">
-						<setup
-						id="87c5bcc6-1df3-43e0-85ea-ddb767a2fd5f"
-						name="setup">
-							<testmodule
-							id="36272233-6bfc-470c-af94-2c01fbad7d27"
-							name="OpenSQLdm">
-							</testmodule>
-						</setup>
-						<testcase
-						id="3e766f26-f359-4433-a785-e46a3d0a2210"
-						name="Tag_Verify_user_having_View_data_permission_able_to_Snooze_Alerts">
-							<testmodule
-							id="d26f14da-857e-4d0a-92a8-81311058ef83"
-							name="VerifySnoozeAlertsForFewMinutesForSqlUser">
-							</testmodule>
-						</testcase>
-						<teardown
-						id="8bca483d-e578-4de3-84b9-e7e2ede15420"
-						name="teardown">
-							<testmodule
-							id="5c291ee0-e0d1-4b15-87f1-daeecd907ce9"
 							name="CloseSQLdm">
 							</testmodule>
 						</teardown>
@@ -5380,15 +5370,6 @@ rxversion="8.2">
 	default="TestRun">
 		<testconfiguration
 		name="TestRun">
-			<testcontainer
-			id="0a7113e2-7c9a-4795-a57b-a660dd7b9601">
-			</testcontainer>
-			<testcontainer
-			id="5e3b329f-982d-4a6d-9158-0eed5778ea4f">
-			</testcontainer>
-			<testcontainer
-			id="62a10fcd-851e-42d9-840c-413a0109598c">
-			</testcontainer>
 		</testconfiguration>
 	</testconfigurations>
 	<references>

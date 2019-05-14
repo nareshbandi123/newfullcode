@@ -98,5 +98,61 @@ namespace AutomationSQLdm.Commons
 		    }
 		}
 		
+		public static void ClickStartConsole()
+		{
+		    try 
+		    {
+		    	if(repo.Application.btnStartConsoleInfo.Exists())
+		    	{
+		    		repo.Application.btnStartConsole.ClickThis();
+		    		Reports.ReportLog("Clicked Start Console button", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+		    	}
+		    	else
+		    		Reports.ReportLog("Start Console button does not exists", Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
+		    	
+		    } 
+		    catch (Exception ex) 
+		    {
+		        throw new Exception("Failed : ClickOnAllServers : " + ex.Message);
+		    }
+		}
+		
+		public static void ConnectDMRepoWindowsUser()
+		{
+			try
+			{
+				if(repo.Application.CaptionText.TextValue.Contains(Constants.SQLdmRepository))
+					Reports.ReportLog("Connected to SQLdmRepository Successfully !  "   , Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
+				else
+				{
+					Reports.ReportLog("Connecting to SQLdmRepository " , Reports.SQLdmReportLevel.Info, null, Configuration.Config.TestCaseName);
+					
+					repo.Application.File.Click();
+					Reports.ReportLog("Clicked File Menu Successfully ! ", Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
+					repo.SQLdmDesktopClient.ConnectToSQLDMRepository.Click();
+					Reports.ReportLog("Clicked Menuitem ConnectToSQLDMRepository Successfully ! ", Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
+					repo.RepositoryConnectionDialog.ConnectButton.ClickThis();
+					Reports.ReportLog("Clicked Connect Button Successfully !  " , Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
+					
+					if(repo.Application.btnStartConsoleInfo.Exists())
+						repo.Application.btnStartConsole.ClickThis();
+				
+					Delay.Milliseconds(2000);
+					
+					if(repo.Application.CaptionText.TextValue.Contains(Constants.SQLdmRepository))
+						Reports.ReportLog("Connected to SQLdmRepository Successfully !  "   , Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
+					else
+					{
+						Reports.ReportLog("Failed to connect to SQLdmRepository " , Reports.SQLdmReportLevel.Fail, null, Configuration.Config.TestCaseName);
+						throw new Exception("Failed to connect to SQLdmRepository.");
+					}
+				}
+			}
+			catch(Exception ex)
+			{
+				throw new Exception("Failed : ConnectDMRepo : " + ex.Message);
+			}
+		}
+		
     }
 }

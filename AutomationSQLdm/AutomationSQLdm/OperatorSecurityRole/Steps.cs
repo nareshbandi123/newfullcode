@@ -20,6 +20,7 @@ namespace AutomationSQLdm.OperatorSecurityRole
 	{
 		public static OperatorSecurityRoleRepo repo = OperatorSecurityRoleRepo.Instance;
 		public const string SNOOZEALERT_MENU = @"/contextmenu[@processname='SQLdmDesktopClient']/menuitem[@automationid='snoozeAllAlertsToolMenu']";
+		public const string RESUMEALERT_MENU = @"/contextmenu[@processname='SQLdmDesktopClient']/menuitem[@automationid='resumeAllAlertsToolMenu']";
 		public const string MAINTAINANCEMODE_MENU = @"/contextmenu[@processname='SQLdmDesktopClient']/menuitem[@automationid='MaintenanceModeButtonKey']";
 		public static int rownum = 0;
 		
@@ -40,6 +41,29 @@ namespace AutomationSQLdm.OperatorSecurityRole
 			catch (Exception ex)
 			{
 				throw new Exception("Failed : SelectSnoozeAlertMenuItem :" + ex.Message);
+			}
+		}
+		
+		
+		public static void ResumeAlertMenuItem()
+		{ 
+			try
+			{
+				Ranorex.MenuItem resumeAlert = RESUMEALERT_MENU;
+				if(resumeAlert != null && resumeAlert.Enabled ) 
+				{	
+					
+					resumeAlert.ClickThis();
+					repo.SnoozeAlertsDialog.OkButton.ClickThis();
+					Reports.ReportLog("Selected ResumeAlert MenuItem", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+				}
+				else
+				Reports.ReportLog("MenuItem ResumeAlert not Selected", Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
+					
+			}
+			catch (Exception ex)
+			{
+				throw new Exception("Failed : ResumeAlertMenuItem :" + ex.Message);
 			}
 		}
 		
@@ -68,11 +92,12 @@ namespace AutomationSQLdm.OperatorSecurityRole
 			try
 			{
 				var allServers = repo.Application.AllServers;
+				repo.Application.AllServersInfo.WaitForItemExists(200000);
 				Report.Info(allServers.Items.Count.ToString());
 				if(allServers.Items.Count>=1)
 				{
 					allServers.Items[0].Click(System.Windows.Forms.MouseButtons.Right);
-					Reports.ReportLog("Clicked Server ", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+					Reports.ReportLog("Right Clicked First Server ", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 				}
 				else
 				{
@@ -84,6 +109,19 @@ namespace AutomationSQLdm.OperatorSecurityRole
 			catch (Exception ex)
 			{
 				throw new Exception("Failed : RightClickMonitoredServer :" + ex.Message);
+			}
+		}
+		
+		public static void RightClickAllServer_MyViews()
+		{ 
+			try
+			{
+				repo.Application.MyViewsAllServers.Click(System.Windows.Forms.MouseButtons.Right);
+				Reports.ReportLog("Right Clicked All Server Under My Views ", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+			}
+			catch (Exception ex)
+			{
+				throw new Exception("Failed : RightClickMonitoredServer_MyViews :" + ex.Message);
 			}
 		}
 		
@@ -101,6 +139,20 @@ namespace AutomationSQLdm.OperatorSecurityRole
 				throw new Exception("Failed : RightClickMonitoredServer :" + ex.Message);
 			}
 		}
+		
+//		public static void RightClickTag()
+//		{ 
+//			try
+//			{	
+//				var tagSnoozeAlert = repo.Application.TagSnoozeAlert;
+//				tagSnoozeAlert.Click(System.Windows.Forms.MouseButtons.Right);
+//				Reports.ReportLog("Right Clicked Tag ", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+//			}
+//			catch (Exception ex)
+//			{
+//				throw new Exception("Failed : RightClickTag :" + ex.Message);
+//			}
+//		}
 		
 		public static void ClickServersInLeftPane()
 		{ 
@@ -125,7 +177,21 @@ namespace AutomationSQLdm.OperatorSecurityRole
 			}
 			catch (Exception ex)
 			{
-				throw new Exception("Failed : SnoozeServer :" + ex.Message);
+				throw new Exception("Failed : ClickSnoozeAlertContextMenu :" + ex.Message);
+			}
+		}
+		
+		public static void ClickResumeAlertContextMenu()
+		{ 
+			try
+			{
+				repo.SQLdmDesktopClient.ResumeAlerts_ContextMenu.ClickThis();
+				repo.SnoozeAlertsDialog.OkButton.ClickThis();
+				Reports.ReportLog("Resumed alert for Server using Context Menu. ", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+			}
+			catch (Exception ex)
+			{
+				throw new Exception("Failed : ClickResumeAlertContextMenu :" + ex.Message);
 			}
 		}
 		
@@ -146,15 +212,15 @@ namespace AutomationSQLdm.OperatorSecurityRole
 		{ 
 			try
 			{
-				if(repo.SQLdmDesktopClient.EnableContextMenuItem.Enabled)
-				{
-					repo.SQLdmDesktopClient.EnableContextMenuItem.Click();
-					Reports.ReportLog("Maintenance Mode is Enabled ", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
-				}
-				else if(repo.SQLdmDesktopClient.DisableContextMenuItem.Enabled)
+				if(repo.SQLdmDesktopClient.DisableContextMenuItem.Enabled)
 				{
 					repo.SQLdmDesktopClient.DisableContextMenuItem.Click();
 					Reports.ReportLog("Maintenance Mode is Disabled ", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+				}
+				else if(repo.SQLdmDesktopClient.EnableContextMenuItem.Enabled)
+				{
+					repo.SQLdmDesktopClient.EnableContextMenuItem.Click();
+					Reports.ReportLog("Maintenance Mode is Enabled ", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 				}
 				else
 				{
@@ -172,19 +238,19 @@ namespace AutomationSQLdm.OperatorSecurityRole
 		{ 
 			try
 			{
-				Thread.Sleep(120000);
+				Thread.Sleep(10000);
 				RightClickMonitoredServer();
         	    ClickMaintainceModeContextMenu();
         	    
-        	    if(repo.SQLdmDesktopClient.EnableContextMenuItem.Enabled)
+        	    if(repo.SQLdmDesktopClient.EnableContextMenuItem.Enabled==false)
 					Reports.ReportLog("Maintaince Mode Is Enabled successfully ! ", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
-        	    else if(repo.SQLdmDesktopClient.DisableContextMenuItem.Enabled)
+        	    else if(repo.SQLdmDesktopClient.DisableContextMenuItem.Enabled==false)
 				{
 					Reports.ReportLog("Maintaince Mode is Disabled successfully ! ", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 				}
         	    else
         	    {
-        	    	Reports.ReportLog("Maintaince Mode is Disabled successfully. ", Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
+        	    	Reports.ReportLog("Maintaince Mode Not applied successfully. ", Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
 					Validate.Fail("Maintaince Mode Not applied successfully.");
         	    }
 			}
@@ -193,6 +259,32 @@ namespace AutomationSQLdm.OperatorSecurityRole
 				throw new Exception("Failed : VerifyMaintainceModeIsChanged :" + ex.Message);
 			}
 		}
+		
+//		public static void VerifyMaintainceModeIsChanged_MyViews()
+//		{ 
+//			try
+//			{
+//				Thread.Sleep(120000);
+//				RightClickAllServer_MyViews();
+//        	    ClickMaintainceModeContextMenu();
+//        	    
+//        	    if(repo.SQLdmDesktopClient.EnableContextMenuItem.Enabled==false)
+//					Reports.ReportLog("Maintaince Mode Is Enabled successfully ! ", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+//        	    else if(repo.SQLdmDesktopClient.DisableContextMenuItem.Enabled==false)
+//				{
+//					Reports.ReportLog("Maintaince Mode is Disabled successfully ! ", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+//				}
+//        	    else
+//        	    {
+//        	    	Reports.ReportLog("Maintaince Mode Not applied successfully. ", Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
+//					Validate.Fail("Maintaince Mode Not applied successfully.");
+//        	    }
+//			}
+//			catch (Exception ex)
+//			{
+//				throw new Exception("Failed : VerifyMaintainceModeIsChanged :" + ex.Message);
+//			}
+//		}
 		
 		public static void VerifyMaintainceModeContextMenuItems()
 		{ 
@@ -283,7 +375,54 @@ namespace AutomationSQLdm.OperatorSecurityRole
 					Reports.ReportLog("SnoozeAlert is applied successfully ! ", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 				else
 				{
-					Reports.ReportLog("SnoozeAlert Not applied successfully. ", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+					Reports.ReportLog("SnoozeAlert Not applied successfully. ", Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
+					Validate.Fail("SnoozeAlert Not applied successfully.");
+				}
+				
+			}
+			catch (Exception ex)
+			{
+				throw new Exception("Failed : VerifyServerSnoozed :" + ex.Message);
+			}
+		}
+		
+		
+		public static void VerifyAllServerSnoozed(string AllServerOrTag)
+		{ 
+			try
+			{
+				if(AllServerOrTag.Equals(Constants.allServer))
+					RightClickAllServer();
+				else if(AllServerOrTag.Equals(Constants.tagSnoozeAlert))
+					RightClickTag();
+				
+				if(!repo.SQLdmDesktopClient.SnoozeAlerts_ContextMenu.Enabled) 
+					Reports.ReportLog("SnoozeAlert is applied successfully ! ", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+				else
+				{
+					Reports.ReportLog("SnoozeAlert Not applied successfully. ", Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
+					Validate.Fail("SnoozeAlert Not applied successfully.");
+				}
+				
+			}
+			catch (Exception ex)
+			{
+				throw new Exception("Failed : VerifyServerSnoozed :" + ex.Message);
+			}
+		}
+		
+		
+		public static void VerifyServerSnoozed_MyViews()
+		{ 
+			try
+			{
+				RightClickAllServer_MyViews();
+				
+				if(!repo.SQLdmDesktopClient.SnoozeAlerts_ContextMenu.Enabled) 
+					Reports.ReportLog("SnoozeAlert is applied successfully ! ", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+				else
+				{
+					Reports.ReportLog("SnoozeAlert Not applied successfully. ", Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
 					Validate.Fail("SnoozeAlert Not applied successfully.");
 				}
 				
@@ -299,6 +438,7 @@ namespace AutomationSQLdm.OperatorSecurityRole
 			try
 			{
 				repo.SnoozeAlertsDialog.SnooozeAlertTime.TextValue = "10";
+				repo.SnoozeAlertsDialog.OkButton.Focus();
 				repo.SnoozeAlertsDialog.OkButton.ClickThis();
 				Reports.ReportLog("SnoozeAlert Time applied successfully ! ", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 			}
@@ -334,6 +474,7 @@ namespace AutomationSQLdm.OperatorSecurityRole
 			{
 				repo.Application.btnAdministrationInfo.WaitForExists(new Duration(100000));
 				repo.Application.btnAdministration.ClickThis();
+				//repo.Application.btnAdministration.Press();
 				Reports.ReportLog("Clicked Administration button", Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
 			}
 			catch(Exception ex)
@@ -473,11 +614,19 @@ namespace AutomationSQLdm.OperatorSecurityRole
 				if(repo.AddPermissionWizard.AvailableServersInfo.Exists())
 				{
 					serversLists = repo.AddPermissionWizard.AvailableServers;
-					if(serversLists.Children.Count >= 1)
+					int itemCount = serversLists.Children.Count;
+					Report.Info("Servers Count ="+ itemCount.ToString());
+					if(itemCount >= 1)
 					{
 						//Report.Info("serversLists.Items[0]: " + serversLists.Items[0]);
 						//serversLists.Children[0].Click();
 						serversLists.Items[0].Click();
+						Thread.Sleep(2000);
+						serversLists.Items[0].PressKeys("{LControlKey down}{LShiftKey down}");
+						Thread.Sleep(2000);
+						//serversLists.Items[itemCount/2+1].EnsureVisible();
+						serversLists.Items[itemCount/2+1].Click();
+						serversLists.Items[itemCount/2+1].PressKeys("{LControlKey up}{LShiftKey up}");
 						Reports.ReportLog("Selected Server", Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
 					}
 					else
@@ -528,6 +677,7 @@ namespace AutomationSQLdm.OperatorSecurityRole
 		{
 			try
 			{
+				repo.Application.NewWindowsUserAddedInfo.WaitForItemExists(20000);
 				if(repo.Application.NewWindowsUserAddedInfo.Exists())
 				{
 					Reports.ReportLog("New User Added Successfully ! " , Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
@@ -578,6 +728,7 @@ namespace AutomationSQLdm.OperatorSecurityRole
 		{
 			try
 			{
+				repo.NewSqlUserAddedInfo.WaitForItemExists(20000);
 				if(repo.NewSqlUserAddedInfo.Exists())
 				{
 					Reports.ReportLog("New User Added Successfully ! " , Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
@@ -736,6 +887,7 @@ namespace AutomationSQLdm.OperatorSecurityRole
 		{
 			try
 			{
+				repo.NewSqlUserAddedInfo.WaitForItemExists(20000);
 				repo.NewSqlUserAdded.Click();
 				Reports.ReportLog("Clicked New SqlUser Added " , Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
 			}
@@ -749,6 +901,7 @@ namespace AutomationSQLdm.OperatorSecurityRole
 		{
 			try
 			{
+				repo.Application.btnDeleteInfo.WaitForItemExists(20000);
 				repo.Application.btnDelete.Click();
 				repo.ExceptionForm.btnYes.Click();
 				Reports.ReportLog("New User Deleted Successfully ! ", Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
@@ -759,7 +912,43 @@ namespace AutomationSQLdm.OperatorSecurityRole
 			}
 		}
 		
-		public static void ConnectDMRepo()
+//		public static void ConnectDMRepo()
+//		{
+//			try
+//			{
+//				repo.Application.File.Click();
+//				Reports.ReportLog("Clicked File Menu Successfully ! ", Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
+//				repo.SQLdmDesktopClient.ConnectToSQLDMRepository.Click();
+//				Reports.ReportLog("Clicked Menuitem ConnectToSQLDMRepository Successfully ! ", Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
+//				Ranorex.ComboBox combobox = repo.RepositoryConnectionDialog.AuthenticationDropDownList;
+//				combobox.Click();
+//				ListItem lst_userItem = combobox.FindSingle<ListItem>("/list/listitem[@text='SQL Server Authentication']");
+//				lst_userItem.Focus();  
+//				lst_userItem.Click(); 
+//				Reports.ReportLog("SQL Server Authentication Selected ", Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
+//				repo.RepositoryConnectionDialog.Username.PressKeys(Constants.SqlSystemUser);
+//				Reports.ReportLog("Username : " + Constants.NewSqlUser + "Entered Successfully  " , Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
+//				
+//				repo.RepositoryConnectionDialog.Password.PressKeys(Constants.SqlSystemUserPassword);
+//				Reports.ReportLog("Passsword Entered Successfully  " , Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
+//				repo.RepositoryConnectionDialog.ConnectButton.ClickThis();
+//				Reports.ReportLog("Clicked Connect Button Successfully !  " , Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
+//				
+//				if(repo.Application.CaptionText.TextValue.Contains(Constants.SQLdmRepository))
+//					Reports.ReportLog("Connected to SQLdmRepository Successfully !  "   , Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
+//				else
+//				{
+//					Reports.ReportLog("Failed to connect to SQLdmRepository " , Reports.SQLdmReportLevel.Fail, null, Configuration.Config.TestCaseName);
+//					throw new Exception("Failed to connect to SQLdmRepository ");
+//				}
+//			}
+//			catch(Exception ex)
+//			{
+//				throw new Exception("Failed : ConnectDMRepo : " + ex.Message);
+//			}
+//		}
+		
+		public static void ConnectDMRepo(string userType)
 		{
 			try
 			{
@@ -767,17 +956,31 @@ namespace AutomationSQLdm.OperatorSecurityRole
 				Reports.ReportLog("Clicked File Menu Successfully ! ", Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
 				repo.SQLdmDesktopClient.ConnectToSQLDMRepository.Click();
 				Reports.ReportLog("Clicked Menuitem ConnectToSQLDMRepository Successfully ! ", Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
-				Ranorex.ComboBox combobox = repo.RepositoryConnectionDialog.AuthenticationDropDownList;
-				combobox.Click();
-				ListItem lst_userItem = combobox.FindSingle<ListItem>("/list/listitem[@text='SQL Server Authentication']");
-				lst_userItem.Focus();  
-				lst_userItem.Click(); 
-				Reports.ReportLog("SQL Server Authentication Selected ", Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
-				repo.RepositoryConnectionDialog.Username.PressKeys(Constants.SqlSystemUser);
-				Reports.ReportLog("Username : " + Constants.NewSqlUser + "Entered Successfully  " , Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
 				
-				repo.RepositoryConnectionDialog.Password.PressKeys(Constants.SqlSystemUserPassword);
-				Reports.ReportLog("Passsword Entered Successfully  " , Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
+				if(userType.Equals(Constants.SqlUser))
+				{
+					Ranorex.ComboBox combobox = repo.RepositoryConnectionDialog.AuthenticationDropDownList;
+					combobox.Click();
+					ListItem lst_userItem = combobox.FindSingle<ListItem>("/list/listitem[@text='SQL Server Authentication']");
+					lst_userItem.Focus();  
+					lst_userItem.Click(); 
+					Reports.ReportLog("SQL Server Authentication Selected ", Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
+					repo.RepositoryConnectionDialog.Username.PressKeys(Constants.NewSqlUser);
+					Reports.ReportLog("Username : " + Constants.NewSqlUser + "Entered Successfully  " , Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
+					
+					repo.RepositoryConnectionDialog.Password.PressKeys(Constants.NewSqlUserPassword);
+					Reports.ReportLog("Passsword Entered Successfully  " , Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
+				}
+				else
+				{
+					Ranorex.ComboBox combobox = repo.RepositoryConnectionDialog.AuthenticationDropDownList;
+					combobox.Click();
+					ListItem lst_userItem = combobox.FindSingle<ListItem>("/list/listitem[@text='Windows Authentication']");
+					lst_userItem.Focus();  
+					lst_userItem.Click(); 
+					Reports.ReportLog("Windows Authentication Selected ", Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
+				}
+								
 				repo.RepositoryConnectionDialog.ConnectButton.ClickThis();
 				Reports.ReportLog("Clicked Connect Button Successfully !  " , Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
 				
@@ -788,14 +991,13 @@ namespace AutomationSQLdm.OperatorSecurityRole
 					Reports.ReportLog("Failed to connect to SQLdmRepository " , Reports.SQLdmReportLevel.Fail, null, Configuration.Config.TestCaseName);
 					throw new Exception("Failed to connect to SQLdmRepository ");
 				}
+				Thread.Sleep(30000);
 			}
 			catch(Exception ex)
 			{
 				throw new Exception("Failed : ConnectDMRepo : " + ex.Message);
 			}
 		}
-		
-		
 		
 		public static void ClickCntextMenuItem(string textValue)
 		{ 
@@ -843,6 +1045,36 @@ namespace AutomationSQLdm.OperatorSecurityRole
 			catch (Exception ex)
 			{
 				throw new Exception("Failed : SnoozeServer :" + ex.Message);
+			}
+		}
+		
+		public static void RightClickTag()
+		{
+			try
+			{
+				if(!repo.Application.TagSnoozeAlertInfo.Exists())
+				{
+					repo.Application.Tags.Click();
+					repo.ManageTagsDialog.AddButton.ClickThis();
+					repo.TagPropertiesDialog.TagName.TextValue = Constants.tagSnoozeAlert;
+					repo.TagPropertiesDialog.SelectAllServersCheckBox.Checked = true;
+					repo.TagPropertiesDialog.OkButton.ClickThis();
+					repo.ManageTagsDialog.DoneButton.ClickThis();
+					Reports.ReportLog("TagSnoozeAlert Created Successfully. "   , Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
+				}
+				
+				if(repo.Application.TagSnoozeAlertInfo.Exists())
+				{
+					repo.Application.TagSnoozeAlert.Click(System.Windows.Forms.MouseButtons.Right);
+					Reports.ReportLog("Right Clicked on TagSnoozeAlert.", Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
+				}
+				else
+					Validate.Fail("Right Click Failed on TagSnoozeAlert.");
+
+			}
+			catch(Exception ex)
+			{
+				throw new Exception("Failed : CreateTag : " + ex.Message);
 			}
 		}
 		

@@ -110,6 +110,106 @@ namespace AutomationSQLdm.BVT
 					throw new Exception("Failed : VerifyDashboardView :" + ex.Message);
 				}
 			}
+    	
+    	public static void VerifyAllInDashboardView()
+			{
+				try 
+				{
+					
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.btnDBCPUInfo.WaitForExists(new Duration(1000000));
+				    
+				    //Verify CPU Pane is Displaying in Dashboard View
+				    if (repo.SQLdm.ServerInfo.btnDABCPUInfo.Exists())
+				    {
+				    	Reports.ReportLog("CPU Pane is Displaying in Dashboard View", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+				    }
+				    else
+				    {
+				    	Reports.ReportLog("CPU Pane is Not Displaying in Dashboard View", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+				    }
+				    
+				    //Verify ServerWaits Pane is Displaying in Dashboard View
+				    if (repo.SQLdm.ServerInfo.btnDABServerWaitsInfo.Exists())
+				    {
+				    	Reports.ReportLog("ServerWaits Pane is Displaying in Dashboard View", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+				    }
+				    else
+				    {
+				    	Reports.ReportLog("ServerWaits Pane is Not Displaying in Dashboard View", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+				    }
+				    
+				    //Verify Memory Pane is Displaying in Dashboard View
+				    if (repo.SQLdm.ServerInfo.btnDABMemoryInfo.Exists())
+				    {
+				    	Reports.ReportLog("Memory Pane is Displaying in Dashboard View", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+				    }
+				    else
+				    {
+				    	Reports.ReportLog("Memory Pane is Not Displaying in Dashboard View", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+				    }
+				    
+				     //Verify Cache Pane is Displaying in Dashboard View
+				    if (repo.SQLdm.ServerInfo.btnDABCacheInfo.Exists())
+				    {
+				    	Reports.ReportLog("Cache Pane is Displaying in Dashboard View", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+				    }
+				    else
+				    {
+				    	Reports.ReportLog("Cache Pane is Not Displaying in Dashboard View", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+				    }
+				    
+				     //Verify Network Pane is Displaying in Dashboard View
+				    if (repo.SQLdm.ServerInfo.btnDABNetworkInfo.Exists())
+				    {
+				    	Reports.ReportLog("Network Pane is Displaying in Dashboard View", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+				    }
+				    else
+				    {
+				    	Reports.ReportLog("Network Pane is Not Displaying in Dashboard View", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+				    }
+				    
+				    //Verify Sessions Pane is Displaying in Dashboard View
+				    if (repo.SQLdm.ServerInfo.btnDABSessionsInfo.Exists())
+				    {
+				    	Reports.ReportLog("Sessions Pane is Displaying in Dashboard View", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+				    }
+				    else
+				    {
+				    	Reports.ReportLog("Sessions Pane is Not Displaying in Dashboard View", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+				    }
+				    
+				     //Verify Disk Pane is Displaying in Dashboard View
+				    if (repo.SQLdm.ServerInfo.btnDABDiskInfo.Exists())
+				    {
+				    	Reports.ReportLog("Disk Pane is Displaying in Dashboard View", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+				    }
+				    else
+				    {
+				    	Reports.ReportLog("Disk Pane is Not Displaying in Dashboard View", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+				    }
+				    
+				     //Verify Databases Pane is Displaying in Dashboard View
+				    if (repo.SQLdm.ServerInfo.btnDABDatabasesInfo.Exists())
+				    {
+				    	Reports.ReportLog("Databases Pane is Displaying in Dashboard View", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+				    }
+				    else
+				    {
+				    	Reports.ReportLog("Databases Pane is Not Displaying in Dashboard View", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+				    }
+				    
+					if (repo.SQLdm.btnDBCPU.Text == "CPU")
+						Reports.ReportLog("Dashboard View Is Displaying", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+					else
+						Reports.ReportLog("Dashboard View Is Not Displaying", Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
+				} 
+				catch (Exception ex)
+				{
+					throw new Exception("Failed : VerifyAllInDashboardView :" + ex.Message);
+				}
+			}
+    	
         public static void ClickOnSessions()
 			{
 				try 
@@ -175,7 +275,7 @@ namespace AutomationSQLdm.BVT
 					throw new Exception("Failed : ClickOnBlocking :" + ex.Message);
 				}
 			}
-        public static void VerifySummaryUnderSessions()
+         public static void VerifySummaryUnderSessions()
 			{
 				try 
 				{
@@ -184,13 +284,71 @@ namespace AutomationSQLdm.BVT
 				    repo.SQLdm.txtSUMResponseTimeInfo.WaitForExists(new Duration(1000000));
 				    
 					if (repo.SQLdm.txtSUMResponseTime.TextValue == "Response Time")
+					{
 						Reports.ReportLog("Summary View Under Sessions Displayed Successfully", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+					}
 					else
+					{
 						Reports.ReportLog("Summary View Under Sessions Is Not Displaying", Reports.SQLdmReportLevel.Fail, null, Config.TestCaseName);
+					}
+					
 				} 
 				catch (Exception ex)
 				{
 					throw new Exception("Failed : VerifySummaryUnderSessions :" + ex.Message);
+				}
+			}
+         
+         public static void VerifyAllInSummaryUnderSessions()
+			{
+				try 
+				{
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
+				    
+				    //Verify Response TIme in Summary
+					if (repo.SQLdm.txtSUMResponseTimeInfo.Exists())
+					{
+						Reports.ReportLog("Response Time in Summary View Under Sessions Displayed Successfully", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+					}
+					else
+					{
+						Reports.ReportLog("Response Time in Summary View Under Sessions Is Not Showing", Reports.SQLdmReportLevel.Fail, null, Config.TestCaseName);
+					}
+					
+					//Verify Sessions in Summary
+					if (repo.SQLdm.txtSessionsInfo.Exists())
+					{
+						Reports.ReportLog("Sessions in Summary View Under Sessions Displayed Successfully", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+					}
+					else
+					{
+						Reports.ReportLog("Sessions in Summary View Under Sessions Is Not Showing", Reports.SQLdmReportLevel.Fail, null, Config.TestCaseName);
+					}
+					
+					//Verify LockStatisticsRequests in Summary
+					if (repo.SQLdm.ddlSESUMLockStatisticsRequestsInfo.Exists())
+					{
+						Reports.ReportLog("Lock Statistics Requests in Summary View Under Sessions Displayed Successfully", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+					}
+					else
+					{
+						Reports.ReportLog("Lock Statistics Requests in Summary View Under Sessions Is Not Showing", Reports.SQLdmReportLevel.Fail, null, Config.TestCaseName);
+					}
+					
+					//Verify BlockedSessions in Summary
+					if (repo.SQLdm.txtSESUMBlockedSessionsInfo.Exists())
+					{
+						Reports.ReportLog("Blocked Sessions in Summary View Under Sessions Displayed Successfully", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+					}
+					else
+					{
+						Reports.ReportLog("Blocked Sessions in Summary View Under Sessions Is Not Showing", Reports.SQLdmReportLevel.Fail, null, Config.TestCaseName);
+					}
+					
+				} 
+				catch (Exception ex)
+				{
+					throw new Exception("Failed : VerifyAllInSummaryUnderSessions :" + ex.Message);
 				}
 			}
         
@@ -198,14 +356,27 @@ namespace AutomationSQLdm.BVT
 			{
 				try 
 				{
-					
 				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
 				    repo.SQLdm.txtDEDetailsInfo.WaitForExists(new Duration(1000000));
 				    
 					if (repo.SQLdm.txtDEDetails.TextValue == "Details")
+					{
 						Reports.ReportLog("Details View Under Sessions Displayed Successfully", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+					}
 					else
+					{
 						Reports.ReportLog("Details View Under Sessions Is Not Displaying", Reports.SQLdmReportLevel.Fail, null, Config.TestCaseName);
+					}
+					
+					if (repo.SQLdm.tblSEDetailsInfo.Exists())
+					{
+						Reports.ReportLog("No Of Records Present in Details Is:" + repo.SQLdm.tblSEDetails.Rows.Count, Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+					}
+					else
+					{
+						Reports.ReportLog("There is No Records Present in Details Is:", Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
+					}
+					
 				} 
 				catch (Exception ex)
 				{
@@ -626,19 +797,26 @@ namespace AutomationSQLdm.BVT
 			{
 				try 
 				{
-					repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.tblQueryEventOccerrancesInfo.WaitForItemExists(1000000);
+					 repo.SQLdm.QueriesTab.rgQUESignatureModeInfo.WaitForItemExists(1000000);
 				    
-					if (repo.SQLdm.tblQueryEventOccerrances.Rows.Count >= 0 )
-					{
-						repo.SQLdm.tblQueryEventOccerrances.Rows[0].Click();
-						Reports.ReportLog("No Of Records Present in Signature Mode Is:" + repo.SQLdm.tblQueryEventOccerrances.Rows.Count, Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
-						Reports.ReportLog("Signature Mode Displayed Successfully", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
-					}
-					else
-					{
-						Reports.ReportLog("Signature Mode Is Not Displaying", Reports.SQLdmReportLevel.Fail, null, Config.TestCaseName);
-					}
+				    if (repo.SQLdm.QueriesTab.rgQUESignatureMode.Checked == true)
+				    {
+				    	Reports.ReportLog("Signature Mode Displaying By Default in Queries Tab", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+				    }
+				    else
+				    {
+				    	Reports.ReportLog("Signature Mode Is Not Displaying By Default in Queries Tab", Reports.SQLdmReportLevel.Fail, null, Config.TestCaseName);
+				    }
+				    
+//					if (repo.SQLdm.tblQueryEventOccerrances.Rows.Count >= 0 )
+//					{
+//						repo.SQLdm.tblQueryEventOccerrances.Rows[0].Click();
+//						Reports.ReportLog("No Of Records Present in Signature Mode Is:" + repo.SQLdm.tblQueryEventOccerrances.Rows.Count, Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
+//					}
+//					else
+//					{
+//						Reports.ReportLog("There is No Data in Signature Mode", Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
+//					}
 				} 
 				catch (Exception ex)
 				{

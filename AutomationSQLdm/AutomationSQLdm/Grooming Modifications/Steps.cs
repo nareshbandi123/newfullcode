@@ -68,7 +68,7 @@ namespace AutomationSQLdm.Grooming_Modifications
 				if (repo.GroomingOptionWindow.AggregateTextbox.TextValue == "1095")
 					Reports.ReportLog("Verify Aggregate forecasting data to daily records after is Displaying: " + repo.GroomingOptionWindow.AggregateTextbox.TextValue , Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 				else
-					Reports.ReportLog("Verify Aggregate forecasting data to daily records after is not displaying Default Value :1095", Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
+					Reports.ReportLog("Verify Aggregate forecasting data to daily records after is not displaying Default Value :1095", Reports.SQLdmReportLevel.Fail, null, Config.TestCaseName);
 			}
 			catch (Exception ex)
 			{
@@ -86,7 +86,7 @@ namespace AutomationSQLdm.Grooming_Modifications
 					
 					Reports.ReportLog("Groom forecasting data to daily records after is Displaying : " + repo.GroomingOptionWindow.GroomForecastTextbox.TextValue, Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 				else
-					Reports.ReportLog("Groom forecasting data to daily records after is not Displaying ", Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
+					Reports.ReportLog("Groom forecasting data to daily records after is not Displaying ", Reports.SQLdmReportLevel.Fail, null, Config.TestCaseName);
 			}
 			catch (Exception ex)
 			{
@@ -224,7 +224,7 @@ namespace AutomationSQLdm.Grooming_Modifications
 			}
 			catch (Exception ex)
 			{
-				throw new Exception("Failed : OpenProperties : " + ex.Message);
+				throw new Exception("Failed : DeleteSQLServerInstance : " + ex.Message);
 			}
 		}
 		
@@ -390,6 +390,29 @@ namespace AutomationSQLdm.Grooming_Modifications
 			}
 		}
 		
+		public static void GetMonitoredServerID(string Query,ref string ServerID)
+		{
+			try
+			{
+				DataTable dtInfo = DataAccess.GetData(Query);
+				if(dtInfo != null && dtInfo.Rows.Count > 0)
+				{
+					ServerID = dtInfo.Rows[0]["SQLServerID"].ToString();
+					Reports.ReportLog("Monitered Instance ID Is: " + ServerID , Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+				}
+				else
+				{
+					Reports.ReportLog("Failed to Get Monitered Instance ID", Reports.SQLdmReportLevel.Fail, null, Config.TestCaseName);
+				}
+				
+			}
+			catch (Exception ex)
+			{
+				throw new Exception("Failed : GetMonitoredServerID :" + ex.Message);
+			}
+			
+		}
+		
 		public static void VerifyInstanceIsDeleted(string Query,string TableName)
 		{
 			try
@@ -398,7 +421,7 @@ namespace AutomationSQLdm.Grooming_Modifications
 				if(dtInfo != null && dtInfo.Rows.Count == 0)
 					Reports.ReportLog("Deleted server ID is not showning in Table " + TableName , Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 				else
-					Reports.ReportLog("Deleted server ID is showning in Table: " + TableName, Reports.SQLdmReportLevel.Fail, null, Config.TestCaseName);
+					Reports.ReportLog("Server Instance is Not Deleted" + TableName, Reports.SQLdmReportLevel.Fail, null, Config.TestCaseName);
 				
 			}
 			catch (Exception ex)

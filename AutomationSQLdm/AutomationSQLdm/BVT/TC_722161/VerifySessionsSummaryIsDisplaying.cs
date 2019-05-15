@@ -39,7 +39,7 @@ namespace AutomationSQLdm.BVT.TC_722161
         		Steps.SelectRequiredServer(Config.ServerOptions_DEFAULTSERVER);
         		Steps.VerifyDashboardView();
         		Steps.ClickOnSessions();
-        		Steps.VerifySummaryUnderSessions();
+        		Steps.VerifyAllInSummaryUnderSessions();
         		Common.UpdateStatus(1); // 1 : Pass
        		        		
         	} 

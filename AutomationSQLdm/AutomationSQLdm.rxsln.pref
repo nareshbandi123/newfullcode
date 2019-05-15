@@ -5,6 +5,7 @@
     <ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
       <string>{61F99090-53F7-41D0-9F8A-6FC8C2262E52}</string>
       <string>60513a05-eab7-41e7-8c10-e51c735edc2e</string>
+      <string>8f29f265-6029-4d74-a75f-7ebb4cd617e4</string>
       <string>4a6de247-0fc0-4c5f-91de-4426bcec9862</string>
       <string>435ace51-31ae-4bef-bf4d-5d490d806462</string>
       <string>01f97181-a0b1-4b2f-b667-36ead09b81c0</string>
@@ -22,6 +23,6 @@
       <string>602b8b30-97ba-464a-928e-eb39126a1183</string>
     </ArrayOfString>
   </SerializedValue>
-  <ProjectBrowserState value="[Solution AutomationSQLdm[AutomationSQLdm[AddServers[]Commons[]OperatorSecurityRole[TC_T721974[]TC_T721975[]TC_T721976[]TC_T721977[]TC_T721981[]TC_T721982[]TC_T721983[]TC_T721988[]TC_T721989[]TC_T721990[]TC_T721993[]TC_T721994[]OperatorSecurityRoleRepo.rxrep[]]]]]&#xD;&#xA;Solution AutomationSQLdm\AutomationSQLdm\Commons\CommonRepo.rxrep&#xD;&#xA;Solution AutomationSQLdm\AutomationSQLdm\Commons\CommonRepo.rxrep" />
+  <ProjectBrowserState value="[Solution AutomationSQLdm[AutomationSQLdm[AddServers[]Configuration[]]]]&#xD;&#xA;Solution AutomationSQLdm\AutomationSQLdm\AutomationSQLdm.rxtst&#xD;&#xA;Solution AutomationSQLdm" />
   <StartupProject value="{61F99090-53F7-41D0-9F8A-6FC8C2262E52}" />
 </Properties>

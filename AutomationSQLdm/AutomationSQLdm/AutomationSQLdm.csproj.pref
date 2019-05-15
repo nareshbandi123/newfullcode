@@ -1,18 +1,15 @@
 ﻿<Properties>
   <Array name="active">
-    <Element value="Commons\CommonRepo.rxrep" />
+    <Element value="AutomationSQLdm.rxtst" />
   </Array>
   <Array name="bookmarks" />
   <Array name="files">
-    <Element value="Commons\CommonRepo.rxrep" />
-    <Element value="OperatorSecurityRole\OperatorSecurityRoleRepo.rxrep" />
-    <Element value="AutomationSQLdm.rxtst" />
-    <Element value="BVT\BVTRepo.rxrep" />
+    <Element value="BVT\TC_722141\VerifyDatabasesMirroringViewIsDisplayedSuccessfully.cs" />
     <Element value="BVT\Steps.cs" />
-    <Element value="BVT\TC_722159\VerifythatSessionsLocksviewisDisplayedSuccessfully.cs" />
-    <Element value="OperatorSecurityRole\Steps.cs" />
-    <Element value="Commons\Common.cs" />
-    <Element value="Commons\Constants.cs" />
+    <Element value="AutomationSQLdm.rxtst" />
+    <Element value="BVT\BVTRepo.cs" />
+    <Element value="BVT\TC_722161\VerifySessionsSummaryIsDisplaying.cs" />
+    <Element value="BVT\TC_722160\VerifySessionsDetailsviewisdisplayedsuccessfully.cs" />
   </Array>
   <Properties name="projectSavedData">
     <Properties name="customTool">

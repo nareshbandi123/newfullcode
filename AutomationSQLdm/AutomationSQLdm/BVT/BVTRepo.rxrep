@@ -4168,6 +4168,94 @@ AAAAAAAAABiKEP4PL9Uva6cOhYIAAAAASUVORK5CYII=
 			searchtimeout="30000ms">
 				//form[@title~'^Idera\ SQL\ diagnostic\ mana']//statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']/?/?/container[@controlname='_child']//table[@accessiblerole='Table']
 			</item>
+			<item
+			capname="menuitem"
+			id="c2d9335d-e7b2-4a65-8ad9-4395f5d88123"
+			name="ddlSESUMLockStatisticsRequests"
+			searchtimeout="30000ms">
+				//form[@title~'^Idera\ SQL\ diagnostic\ mana']//statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']//container[@controlname='lockStatisticsPanel']/toolbar[@controlname='lockStatisticsHeaderStrip']/menuitem[@accessiblename='Lock Statistics: Requests']
+			</item>
+			<item
+			capname="text"
+			id="070aa624-9076-4669-8035-c478a053e6e8"
+			name="txtSESUMBlockedSessions"
+			searchtimeout="30000ms">
+				//form[@title~'^Idera\ SQL\ diagnostic\ mana']//statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']//container[@controlname='blockedSessionsPanel']/toolbar[@controlname='blockedSessionsHeaderStrip']/text[@accessiblename='Blocked Sessions']
+			</item>
+			<item
+			capname="table"
+			id="f2dadfaf-bcd5-43f0-958f-da936f34aa59"
+			name="tblSEDetails"
+			searchtimeout="30000ms">
+				//form[@title~'^Idera\ SQL\ diagnostic\ mana']//statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']/?/?/container[@controlname='_child']/container[@controlname='SessionsDetailsView']//table[@accessiblerole='Table']
+			</item>
+			<folder
+			capname="container"
+			id="50b32cfa-f665-41db-8dd0-37efbadcd5b5"
+			isrooted="True"
+			name="ServerInfo"
+			searchtimeout="30000ms"
+			usecache="False">
+				<item
+				capname="button"
+				id="2c6b2870-ecb0-4c4c-b16d-c4b71691bc55"
+				name="btnDABServerWaits"
+				searchtimeout="30000ms">
+					//form[@title~'^Idera\ SQL\ diagnostic\ mana']//statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']//container[@controlname='ServerWaitsControl']/toolbar[@controlname='dashboardHeaderStrip']/button[@accessiblename='Server Waits']
+				</item>
+				<item
+				capname="button"
+				id="53fa24bb-683e-4ae7-a7e4-63716d196449"
+				name="btnDABCache"
+				searchtimeout="30000ms">
+					//form[@title~'^Idera\ SQL\ diagnostic\ mana']//statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']//container[@controlname='CacheControl']/toolbar[@controlname='dashboardHeaderStrip']/button[@accessiblename='Cache']
+				</item>
+				<item
+				capname="button"
+				id="6b15b24d-9da1-42fd-99c9-7cbe30e20151"
+				name="btnDABNetwork"
+				searchtimeout="30000ms">
+					//form[@title~'^Idera\ SQL\ diagnostic\ mana']//statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']//container[@controlname='NetworkControl']/toolbar[@controlname='dashboardHeaderStrip']/button[@accessiblename='Network']
+				</item>
+				<item
+				capname="button"
+				id="6d77137d-416e-4715-ae73-0715ea86a4fc"
+				name="btnDABSessions"
+				searchtimeout="30000ms">
+					//form[@title~'^Idera\ SQL\ diagnostic\ mana']//statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']//container[@controlname='SessionsControl']/toolbar[@controlname='dashboardHeaderStrip']/button[@accessiblename='Sessions']
+				</item>
+				<item
+				capname="button"
+				id="5cc72c88-81c8-4ec5-ab72-75579cf7d0a0"
+				name="btnDABDisk"
+				searchtimeout="30000ms">
+					//form[@title~'^Idera\ SQL\ diagnostic\ mana']//statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']//container[@controlname='DiskControl']/toolbar[@controlname='dashboardHeaderStrip']/button[@accessiblename='Disk']
+				</item>
+				<item
+				capname="button"
+				id="522948c8-5230-486e-a17b-c30011f7552f"
+				name="btnDABDatabases"
+				searchtimeout="30000ms">
+					//form[@title~'^Idera\ SQL\ diagnostic\ mana']//statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']//container[@controlname='DatabasesControl']/toolbar[@controlname='dashboardHeaderStrip']/button[@accessiblename='Databases']
+				</item>
+				<item
+				capname="button"
+				id="b38a52f8-8c8e-4000-87c0-ad6fee43186d"
+				name="btnDABCPU"
+				searchtimeout="30000ms">
+					//form[@title~'^Idera\ SQL\ diagnostic\ mana']//statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']//container[@controlname='CpuControl']/toolbar[@controlname='dashboardHeaderStrip']/button[@accessiblename='CPU']
+				</item>
+				<item
+				capname="button"
+				id="d44cac9f-ebd1-4e69-9b01-caddc14854a4"
+				name="btnDABMemory"
+				searchtimeout="30000ms">
+					//form[@title~'^Idera\ SQL\ diagnostic\ mana']//statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']//container[@controlname='MemoryControl']/toolbar[@controlname='dashboardHeaderStrip']/button[@accessiblename='Memory']
+				</item>
+				<basepath>
+					//form[@title~'^Idera\ SQL\ diagnostic\ mana']//statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']
+				</basepath>
+			</folder>
 			<basepath>
 				//form[@title~'^Idera\ SQL\ diagnostic\ mana']
 			</basepath>

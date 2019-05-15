@@ -39,7 +39,7 @@ namespace AutomationSQLdm.QueryPlan.TC_722069
         		Steps.ClickOnFile();
         		Steps.SelectConnectRepoOption();
         		Steps.ClickOnConnect();
-        		Steps.SelectServer(Config.ServerOptions_CMWIN2016S8);
+        		Steps.SelectServer(Config.ServerOptions_DEFAULTSERVER);
         		Steps.ClickOnQueriesTab();
         		Steps.ClickOnSignatureMode();
         		Steps.CheckEnableQueryMonitor();

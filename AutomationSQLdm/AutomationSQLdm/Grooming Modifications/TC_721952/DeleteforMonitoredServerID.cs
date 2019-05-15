@@ -35,10 +35,12 @@ namespace AutomationSQLdm.Grooming_Modifications.TC_721952
         {
         	try 
         	{
-        		//Steps.AddSQLServerInstance(Config.ServerOptions_CMWIN2016SQL17); //CMWIN2016SQL17
-        		Steps.VerifyQueryDataCount(Config.Query_MonitoredSQLServers,"MonitoredSQLServers");
-        		//Steps.DeleteSQLServerInstance(Config.ServerOptions_CMWIN2016SQL17); //CMWIN2016SQL17
-        		Steps.VerifyInstanceIsDeleted("select * from AnalysisConfiguration where MonitoredServerID = 6","AnalysisConfiguration");
+        		string ServerID = "";
+				Steps.AddSQLServerInstance(Config.ServerOptions_FORDELETE);
+				Steps.VerifyQueryDataCount(Config.Query_MonitoredSQLServers,"MonitoredSQLServers");
+				Steps.GetMonitoredServerID("select SQLServerID from MonitoredSQLServers where InstanceName =" + "'" + Config.ServerOptions_FORDELETE +"'",ref ServerID);
+				Steps.DeleteSQLServerInstance(Config.ServerOptions_FORDELETE);
+				Steps.VerifyInstanceIsDeleted("select * from AnalysisConfiguration where MonitoredServerID = " + ServerID,"AnalysisConfiguration");
         		Common.UpdateStatus(1); // 1 : Pass
         	} 
         	catch (Exception ex)

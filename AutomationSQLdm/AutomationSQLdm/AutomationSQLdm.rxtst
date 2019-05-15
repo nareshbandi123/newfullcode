@@ -5370,6 +5370,12 @@ rxversion="8.2">
 	default="TestRun">
 		<testconfiguration
 		name="TestRun">
+			<testcontainer
+			id="258f24c3-ca2b-40c7-b96b-21e737088944">
+			</testcontainer>
+			<testcontainer
+			id="5e3b329f-982d-4a6d-9158-0eed5778ea4f">
+			</testcontainer>
 		</testconfiguration>
 	</testconfigurations>
 	<references>

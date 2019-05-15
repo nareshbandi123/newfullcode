@@ -428,6 +428,7 @@ namespace AutomationSQLdm.BVT
             BVTRepoFolders.ViewFolder _view;
             BVTRepoFolders.ResourcesTabFolder _resourcestab;
             BVTRepoFolders.ServicesTabFolder _servicestab;
+            BVTRepoFolders.ServerInfoFolder _serverinfo;
             RepoItemInfo _radiosummaryInfo;
             RepoItemInfo _radiodetailsInfo;
             RepoItemInfo _radiolocksInfo;
@@ -471,6 +472,9 @@ namespace AutomationSQLdm.BVT
             RepoItemInfo _ddlresdisksizeInfo;
             RepoItemInfo _ddlconfigurationInfo;
             RepoItemInfo _tbldatabaseconfigurationInfo;
+            RepoItemInfo _ddlsesumlockstatisticsrequestsInfo;
+            RepoItemInfo _txtsesumblockedsessionsInfo;
+            RepoItemInfo _tblsedetailsInfo;
 
             /// <summary>
             /// Creates a new SQLdm  folder.
@@ -484,6 +488,7 @@ namespace AutomationSQLdm.BVT
                 _view = new BVTRepoFolders.ViewFolder(this);
                 _resourcestab = new BVTRepoFolders.ResourcesTabFolder(this);
                 _servicestab = new BVTRepoFolders.ServicesTabFolder(this);
+                _serverinfo = new BVTRepoFolders.ServerInfoFolder(this);
                 _radiosummaryInfo = new RepoItemInfo(this, "radioSummary", ".//toolbar[@automationid='ribbon']/tabpage[@automationid='Sessions']/toolbar[@automationid='sessionsTabViewsGroup']/container[@caption='']/radiobutton[1]", 30000, null, "cd1b304b-88bd-448d-84b1-a47b878dc059");
                 _radiodetailsInfo = new RepoItemInfo(this, "radioDetails", ".//toolbar[@automationid='ribbon']/tabpage[@automationid='Sessions']/toolbar[@automationid='sessionsTabViewsGroup']/container[@caption='']/radiobutton[2]", 30000, null, "514075e6-e49f-4bb1-bd46-69b8d3efb092");
                 _radiolocksInfo = new RepoItemInfo(this, "radioLocks", ".//toolbar[@automationid='ribbon']/tabpage[@automationid='Sessions']/toolbar[@automationid='sessionsTabViewsGroup']/container[@caption='']/radiobutton[3]", 30000, null, "d75d8732-b228-4244-aab9-8017060a5a68");
@@ -527,6 +532,9 @@ namespace AutomationSQLdm.BVT
                 _ddlresdisksizeInfo = new RepoItemInfo(this, "ddlRESDiskSize", ".//statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']/?/?/container[@controlname='_child']/container[@controlname='ResourcesDiskSizeView']//toolbar[@controlname='driveStatisticsHeaderStrip']/menuitem[@accessiblename~'^Current\\ Disk\\ Usage:\\ Megab']", 30000, null, "d204e29f-6b7b-4aca-84d5-98ed59863005");
                 _ddlconfigurationInfo = new RepoItemInfo(this, "ddlConfiguration", ".//statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']//combobox[@accessiblename='Loading...']/combobox[@accessiblerole='ComboBox']", 30000, null, "4f730a18-9d0c-4b16-a001-0062003d9a7b");
                 _tbldatabaseconfigurationInfo = new RepoItemInfo(this, "tblDatabaseConfiguration", ".//statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']/?/?/container[@controlname='_child']//table[@accessiblerole='Table']", 30000, null, "00fdde95-c450-4343-b5d6-976603152da5");
+                _ddlsesumlockstatisticsrequestsInfo = new RepoItemInfo(this, "ddlSESUMLockStatisticsRequests", ".//statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']//container[@controlname='lockStatisticsPanel']/toolbar[@controlname='lockStatisticsHeaderStrip']/menuitem[@accessiblename='Lock Statistics: Requests']", 30000, null, "c2d9335d-e7b2-4a65-8ad9-4395f5d88123");
+                _txtsesumblockedsessionsInfo = new RepoItemInfo(this, "txtSESUMBlockedSessions", ".//statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']//container[@controlname='blockedSessionsPanel']/toolbar[@controlname='blockedSessionsHeaderStrip']/text[@accessiblename='Blocked Sessions']", 30000, null, "070aa624-9076-4669-8035-c478a053e6e8");
+                _tblsedetailsInfo = new RepoItemInfo(this, "tblSEDetails", ".//statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']/?/?/container[@controlname='_child']/container[@controlname='SessionsDetailsView']//table[@accessiblerole='Table']", 30000, null, "f2dadfaf-bcd5-43f0-958f-da936f34aa59");
             }
 
             /// <summary>
@@ -1684,6 +1692,78 @@ namespace AutomationSQLdm.BVT
             }
 
             /// <summary>
+            /// The ddlSESUMLockStatisticsRequests item.
+            /// </summary>
+            [RepositoryItem("c2d9335d-e7b2-4a65-8ad9-4395f5d88123")]
+            public virtual Ranorex.MenuItem ddlSESUMLockStatisticsRequests
+            {
+                get
+                {
+                    return _ddlsesumlockstatisticsrequestsInfo.CreateAdapter<Ranorex.MenuItem>(true);
+                }
+            }
+
+            /// <summary>
+            /// The ddlSESUMLockStatisticsRequests item info.
+            /// </summary>
+            [RepositoryItemInfo("c2d9335d-e7b2-4a65-8ad9-4395f5d88123")]
+            public virtual RepoItemInfo ddlSESUMLockStatisticsRequestsInfo
+            {
+                get
+                {
+                    return _ddlsesumlockstatisticsrequestsInfo;
+                }
+            }
+
+            /// <summary>
+            /// The txtSESUMBlockedSessions item.
+            /// </summary>
+            [RepositoryItem("070aa624-9076-4669-8035-c478a053e6e8")]
+            public virtual Ranorex.Text txtSESUMBlockedSessions
+            {
+                get
+                {
+                    return _txtsesumblockedsessionsInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The txtSESUMBlockedSessions item info.
+            /// </summary>
+            [RepositoryItemInfo("070aa624-9076-4669-8035-c478a053e6e8")]
+            public virtual RepoItemInfo txtSESUMBlockedSessionsInfo
+            {
+                get
+                {
+                    return _txtsesumblockedsessionsInfo;
+                }
+            }
+
+            /// <summary>
+            /// The tblSEDetails item.
+            /// </summary>
+            [RepositoryItem("f2dadfaf-bcd5-43f0-958f-da936f34aa59")]
+            public virtual Ranorex.Table tblSEDetails
+            {
+                get
+                {
+                    return _tblsedetailsInfo.CreateAdapter<Ranorex.Table>(true);
+                }
+            }
+
+            /// <summary>
+            /// The tblSEDetails item info.
+            /// </summary>
+            [RepositoryItemInfo("f2dadfaf-bcd5-43f0-958f-da936f34aa59")]
+            public virtual RepoItemInfo tblSEDetailsInfo
+            {
+                get
+                {
+                    return _tblsedetailsInfo;
+                }
+            }
+
+            /// <summary>
             /// The OverViewTab folder.
             /// </summary>
             [RepositoryFolder("b4198f1b-1b59-48c6-abc4-9ecd0d0d6a75")]
@@ -1735,6 +1815,15 @@ namespace AutomationSQLdm.BVT
             public virtual BVTRepoFolders.ServicesTabFolder ServicesTab
             {
                 get { return _servicestab; }
+            }
+
+            /// <summary>
+            /// The ServerInfo folder.
+            /// </summary>
+            [RepositoryFolder("50b32cfa-f665-41db-8dd0-37efbadcd5b5")]
+            public virtual BVTRepoFolders.ServerInfoFolder ServerInfo
+            {
+                get { return _serverinfo; }
             }
         }
 
@@ -2832,6 +2921,254 @@ namespace AutomationSQLdm.BVT
                 get
                 {
                     return _rgsersqlagentjobsInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The ServerInfoFolder folder.
+        /// </summary>
+        [RepositoryFolder("50b32cfa-f665-41db-8dd0-37efbadcd5b5")]
+        public partial class ServerInfoFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _btndabserverwaitsInfo;
+            RepoItemInfo _btndabcacheInfo;
+            RepoItemInfo _btndabnetworkInfo;
+            RepoItemInfo _btndabsessionsInfo;
+            RepoItemInfo _btndabdiskInfo;
+            RepoItemInfo _btndabdatabasesInfo;
+            RepoItemInfo _btndabcpuInfo;
+            RepoItemInfo _btndabmemoryInfo;
+
+            /// <summary>
+            /// Creates a new ServerInfo  folder.
+            /// </summary>
+            public ServerInfoFolder(RepoGenBaseFolder parentFolder) :
+                    base("ServerInfo", ".//statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']", parentFolder, 30000, null, false, "50b32cfa-f665-41db-8dd0-37efbadcd5b5", "")
+            {
+                _btndabserverwaitsInfo = new RepoItemInfo(this, "btnDABServerWaits", ".//container[@controlname='ServerWaitsControl']/toolbar[@controlname='dashboardHeaderStrip']/button[@accessiblename='Server Waits']", 30000, null, "2c6b2870-ecb0-4c4c-b16d-c4b71691bc55");
+                _btndabcacheInfo = new RepoItemInfo(this, "btnDABCache", ".//container[@controlname='CacheControl']/toolbar[@controlname='dashboardHeaderStrip']/button[@accessiblename='Cache']", 30000, null, "53fa24bb-683e-4ae7-a7e4-63716d196449");
+                _btndabnetworkInfo = new RepoItemInfo(this, "btnDABNetwork", ".//container[@controlname='NetworkControl']/toolbar[@controlname='dashboardHeaderStrip']/button[@accessiblename='Network']", 30000, null, "6b15b24d-9da1-42fd-99c9-7cbe30e20151");
+                _btndabsessionsInfo = new RepoItemInfo(this, "btnDABSessions", ".//container[@controlname='SessionsControl']/toolbar[@controlname='dashboardHeaderStrip']/button[@accessiblename='Sessions']", 30000, null, "6d77137d-416e-4715-ae73-0715ea86a4fc");
+                _btndabdiskInfo = new RepoItemInfo(this, "btnDABDisk", ".//container[@controlname='DiskControl']/toolbar[@controlname='dashboardHeaderStrip']/button[@accessiblename='Disk']", 30000, null, "5cc72c88-81c8-4ec5-ab72-75579cf7d0a0");
+                _btndabdatabasesInfo = new RepoItemInfo(this, "btnDABDatabases", ".//container[@controlname='DatabasesControl']/toolbar[@controlname='dashboardHeaderStrip']/button[@accessiblename='Databases']", 30000, null, "522948c8-5230-486e-a17b-c30011f7552f");
+                _btndabcpuInfo = new RepoItemInfo(this, "btnDABCPU", ".//container[@controlname='CpuControl']/toolbar[@controlname='dashboardHeaderStrip']/button[@accessiblename='CPU']", 30000, null, "b38a52f8-8c8e-4000-87c0-ad6fee43186d");
+                _btndabmemoryInfo = new RepoItemInfo(this, "btnDABMemory", ".//container[@controlname='MemoryControl']/toolbar[@controlname='dashboardHeaderStrip']/button[@accessiblename='Memory']", 30000, null, "d44cac9f-ebd1-4e69-9b01-caddc14854a4");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("50b32cfa-f665-41db-8dd0-37efbadcd5b5")]
+            public virtual Ranorex.Container Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.Container>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("50b32cfa-f665-41db-8dd0-37efbadcd5b5")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The btnDABServerWaits item.
+            /// </summary>
+            [RepositoryItem("2c6b2870-ecb0-4c4c-b16d-c4b71691bc55")]
+            public virtual Ranorex.Button btnDABServerWaits
+            {
+                get
+                {
+                    return _btndabserverwaitsInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The btnDABServerWaits item info.
+            /// </summary>
+            [RepositoryItemInfo("2c6b2870-ecb0-4c4c-b16d-c4b71691bc55")]
+            public virtual RepoItemInfo btnDABServerWaitsInfo
+            {
+                get
+                {
+                    return _btndabserverwaitsInfo;
+                }
+            }
+
+            /// <summary>
+            /// The btnDABCache item.
+            /// </summary>
+            [RepositoryItem("53fa24bb-683e-4ae7-a7e4-63716d196449")]
+            public virtual Ranorex.Button btnDABCache
+            {
+                get
+                {
+                    return _btndabcacheInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The btnDABCache item info.
+            /// </summary>
+            [RepositoryItemInfo("53fa24bb-683e-4ae7-a7e4-63716d196449")]
+            public virtual RepoItemInfo btnDABCacheInfo
+            {
+                get
+                {
+                    return _btndabcacheInfo;
+                }
+            }
+
+            /// <summary>
+            /// The btnDABNetwork item.
+            /// </summary>
+            [RepositoryItem("6b15b24d-9da1-42fd-99c9-7cbe30e20151")]
+            public virtual Ranorex.Button btnDABNetwork
+            {
+                get
+                {
+                    return _btndabnetworkInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The btnDABNetwork item info.
+            /// </summary>
+            [RepositoryItemInfo("6b15b24d-9da1-42fd-99c9-7cbe30e20151")]
+            public virtual RepoItemInfo btnDABNetworkInfo
+            {
+                get
+                {
+                    return _btndabnetworkInfo;
+                }
+            }
+
+            /// <summary>
+            /// The btnDABSessions item.
+            /// </summary>
+            [RepositoryItem("6d77137d-416e-4715-ae73-0715ea86a4fc")]
+            public virtual Ranorex.Button btnDABSessions
+            {
+                get
+                {
+                    return _btndabsessionsInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The btnDABSessions item info.
+            /// </summary>
+            [RepositoryItemInfo("6d77137d-416e-4715-ae73-0715ea86a4fc")]
+            public virtual RepoItemInfo btnDABSessionsInfo
+            {
+                get
+                {
+                    return _btndabsessionsInfo;
+                }
+            }
+
+            /// <summary>
+            /// The btnDABDisk item.
+            /// </summary>
+            [RepositoryItem("5cc72c88-81c8-4ec5-ab72-75579cf7d0a0")]
+            public virtual Ranorex.Button btnDABDisk
+            {
+                get
+                {
+                    return _btndabdiskInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The btnDABDisk item info.
+            /// </summary>
+            [RepositoryItemInfo("5cc72c88-81c8-4ec5-ab72-75579cf7d0a0")]
+            public virtual RepoItemInfo btnDABDiskInfo
+            {
+                get
+                {
+                    return _btndabdiskInfo;
+                }
+            }
+
+            /// <summary>
+            /// The btnDABDatabases item.
+            /// </summary>
+            [RepositoryItem("522948c8-5230-486e-a17b-c30011f7552f")]
+            public virtual Ranorex.Button btnDABDatabases
+            {
+                get
+                {
+                    return _btndabdatabasesInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The btnDABDatabases item info.
+            /// </summary>
+            [RepositoryItemInfo("522948c8-5230-486e-a17b-c30011f7552f")]
+            public virtual RepoItemInfo btnDABDatabasesInfo
+            {
+                get
+                {
+                    return _btndabdatabasesInfo;
+                }
+            }
+
+            /// <summary>
+            /// The btnDABCPU item.
+            /// </summary>
+            [RepositoryItem("b38a52f8-8c8e-4000-87c0-ad6fee43186d")]
+            public virtual Ranorex.Button btnDABCPU
+            {
+                get
+                {
+                    return _btndabcpuInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The btnDABCPU item info.
+            /// </summary>
+            [RepositoryItemInfo("b38a52f8-8c8e-4000-87c0-ad6fee43186d")]
+            public virtual RepoItemInfo btnDABCPUInfo
+            {
+                get
+                {
+                    return _btndabcpuInfo;
+                }
+            }
+
+            /// <summary>
+            /// The btnDABMemory item.
+            /// </summary>
+            [RepositoryItem("d44cac9f-ebd1-4e69-9b01-caddc14854a4")]
+            public virtual Ranorex.Button btnDABMemory
+            {
+                get
+                {
+                    return _btndabmemoryInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The btnDABMemory item info.
+            /// </summary>
+            [RepositoryItemInfo("d44cac9f-ebd1-4e69-9b01-caddc14854a4")]
+            public virtual RepoItemInfo btnDABMemoryInfo
+            {
+                get
+                {
+                    return _btndabmemoryInfo;
                 }
             }
         }

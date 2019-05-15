@@ -35,7 +35,7 @@ namespace AutomationSQLdm.BVT.TC_722158
         	try 
         	{
         		Steps.SelectRequiredServer(Config.ServerOptions_DEFAULTSERVER);
-        		Steps.VerifyDashboardView();
+        		Steps.VerifyAllInDashboardView();
         		
        		        		
         	} 

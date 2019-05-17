@@ -11,7 +11,7 @@ using Ranorex.Core;
 using Ranorex.Core.Testing;
 using AutomationSQLdm.Base;
 using AutomationSQLdm.Commons;
-
+using AutomationSQLdm.Configuration;
 
 namespace AutomationSQLdm.OperatorSecurityRole.TC_T721989
 {
@@ -42,11 +42,9 @@ namespace AutomationSQLdm.OperatorSecurityRole.TC_T721989
         	  Common.ConnectDMRepoWindowsUser();
         	  Steps.ClickAdministration();
         	  Steps.ClickApplicationSecurity();
-        	  Steps.ClickEnableSecurity();
-        	  Steps.AcceptExceptionMessage();
         	  Steps.ClickToAddUsers();
         	  Steps.ClickNextButton();
-        	  Steps.EnterDomianUserName(Constants.NewWindowsUser);
+        	  Steps.EnterDomianUserName(Config.NewWindowsUser);
         	  Steps.ClickNextButton();
         	  Steps.ClickOptionBtn_ViewDataAcknowledgwAlarm();
         	  Steps.ClickNextButton();
@@ -54,15 +52,13 @@ namespace AutomationSQLdm.OperatorSecurityRole.TC_T721989
         	  Steps.ClickAddButton();
         	  Steps.ClickNextButton();
         	  Steps.ClickFinishButton();
-        	  Steps.VerifyWindowsUserAdded();
+			  Steps.VerifyUserAdded(Config.NewWindowsUser);
 			  Steps.ClickServersInLeftPane();
 			  Steps.RightClickAllServer();
         	  Steps.ClickMaintainceModeContextMenu();
         	  Steps.VerifyMaintainceModeContextMenuItems();
         	  Steps.EnableMaintainceMode();
         	  Steps.VerifyMaintainceModeIsChanged();
-        	  //Steps.ClickWindowsUserToDelete();
-        	  //Steps.DeleteAddedUser();
         	  Common.UpdateStatus(1); // 1 : Pass
         	  
         	} 
@@ -74,7 +70,7 @@ namespace AutomationSQLdm.OperatorSecurityRole.TC_T721989
         	finally
         	{
         		Steps.ClickAdministration();
-        		Steps.ClickWindowsUserToDelete();
+        		//Steps.ClickWindowsUserToDelete();
         	    Steps.DeleteAddedUser();
         	} 
         	

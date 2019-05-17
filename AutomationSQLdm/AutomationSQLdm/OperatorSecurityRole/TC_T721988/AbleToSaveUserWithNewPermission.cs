@@ -5,13 +5,14 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
 
+using Ranorex;
+using Ranorex.Core;
+using Ranorex.Core.Testing;
 using WinForms = System.Windows.Forms;
 using AutomationSQLdm.Base;
 using AutomationSQLdm.Commons;
 using AutomationSQLdm.Configuration;
-using Ranorex;
-using Ranorex.Core;
-using Ranorex.Core.Testing;
+
 
 namespace AutomationSQLdm.OperatorSecurityRole.TC_T721988
 {
@@ -42,11 +43,9 @@ namespace AutomationSQLdm.OperatorSecurityRole.TC_T721988
         	  Common.ConnectDMRepoWindowsUser();
         	  Steps.ClickAdministration();
         	  Steps.ClickApplicationSecurity();
-        	  Steps.ClickEnableSecurity();
-        	  Steps.AcceptExceptionMessage();
         	  Steps.ClickToAddUsers();
         	  Steps.ClickNextButton();
-        	  Steps.EnterDomianUserName(Constants.NewSqlUser);
+        	  Steps.EnterDomianUserName(Config.NewSqlUser);
         	  Steps.SelectSqlAuthentication();
         	  Steps.ClickNextButton();
         	  Steps.ClickOptionBtn_ViewDataAcknowledgwAlarm();
@@ -55,8 +54,7 @@ namespace AutomationSQLdm.OperatorSecurityRole.TC_T721988
         	  Steps.ClickAddButton();
         	  Steps.ClickNextButton();
         	  Steps.ClickFinishButton();
-        	  Steps.VerifySqlUserAdded();
-        	  //Steps.VerifyViewDataAcknowledgwAlarmIsSelected(Constants.SqlUser);
+			  Steps.VerifyUserAdded(Config.NewSqlUser);
         	  Steps.ChangePermission(Constants.SqlUser);
         	  Steps.VerifyPermissionChanged();
         	  Steps.DeleteAddedUser();

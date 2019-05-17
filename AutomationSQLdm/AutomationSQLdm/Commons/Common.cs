@@ -121,7 +121,7 @@ namespace AutomationSQLdm.Commons
 		{
 			try
 			{
-				if(repo.Application.CaptionText.TextValue.Contains(Constants.SQLdmRepository))
+				if(repo.Application.CaptionText.TextValue.Contains(Config.RepositoryName))
 					Reports.ReportLog("Connected to SQLdmRepository Successfully !  "   , Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
 				else
 				{
@@ -139,7 +139,7 @@ namespace AutomationSQLdm.Commons
 				
 					Delay.Milliseconds(2000);
 					
-					if(repo.Application.CaptionText.TextValue.Contains(Constants.SQLdmRepository))
+					if(repo.Application.CaptionText.TextValue.Contains(Config.RepositoryName))
 						Reports.ReportLog("Connected to SQLdmRepository Successfully !  "   , Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
 					else
 					{

@@ -416,6 +416,45 @@ rxversion="8.2">
 				//form[@controlname='ExceptionMessageBoxForm']
 			</basepath>
 		</appfolder>
+		<appfolder
+		capname="form"
+		id="9bf04c70-da51-4de1-baf9-e6f1a6b65a1e"
+		isrooted="True"
+		name="GettingStartWindow"
+		searchtimeout="30000ms"
+		usecache="True">
+			<item
+			capname="text"
+			id="96789711-c9ed-433f-adfe-f1fdd303319c"
+			name="txtGSWAddNewServer"
+			searchtimeout="30000ms">
+				//form[@controlname='GettingStartedWizard']//container[@controlname='addNewServersFeatureButton']/?/?/text[@controlname='featureHeaderLabel']
+			</item>
+			<item
+			capname="text"
+			id="cdd736dc-98fc-4aae-9b9a-575b32e91f6a"
+			name="txtGSWVisitTrialCenter"
+			searchtimeout="30000ms">
+				//form[@controlname='GettingStartedWizard']//container[@controlname='visitTrialCenterFeatureButton']/?/?/text[@controlname='featureHeaderLabel']
+			</item>
+			<item
+			capname="text"
+			id="3d546cef-5535-400a-b39e-4871d1ee18e5"
+			name="txtGSWConfigureAlerts"
+			searchtimeout="30000ms">
+				//form[@controlname='GettingStartedWizard']//container[@controlname='configureAlertsFeatureButton']/?/?/text[@controlname='featureHeaderLabel']
+			</item>
+			<item
+			capname="button"
+			id="5026ceaa-38c1-4ed7-9511-ae36069f57cd"
+			name="btnGSWStartConsole"
+			searchtimeout="30000ms">
+				//form[@controlname='GettingStartedWizard']//button[@controlname='cancelButton']
+			</item>
+			<basepath>
+				//form[@controlname='GettingStartedWizard']
+			</basepath>
+		</appfolder>
 		<basepath>
 		</basepath>
 	</rootfolder>

@@ -11,6 +11,8 @@
       <string>01f97181-a0b1-4b2f-b667-36ead09b81c0</string>
       <string>c0e8f708-922b-4cbc-918f-1c572421a0b8</string>
       <string>0c693408-e214-4380-8159-107dc370551b</string>
+      <string>188f64d6-ad22-4ac1-b5cd-39f40076ddb7</string>
+      <string>abee23c0-5716-42a1-86b1-5d7b521cf442</string>
       <string>c4373fa7-0337-4407-b57d-3a35e4353bae</string>
       <string>71079302-9dbc-417b-bb90-d5bcef186919</string>
       <string>ded140a1-ce76-4733-a693-b0ad421f5fac</string>
@@ -21,8 +23,10 @@
       <string>d4d710d0-ab61-4424-be91-0096fa1ff762</string>
       <string>18dce66b-5b8e-4cce-89eb-a21d34a22768</string>
       <string>602b8b30-97ba-464a-928e-eb39126a1183</string>
+      <string>0a4f52d5-88af-4a3e-80b9-1d9d3ac24f71</string>
+      <string>256f7f67-a7b8-4578-9357-c4b25a3d2ab9</string>
     </ArrayOfString>
   </SerializedValue>
-  <ProjectBrowserState value="[Solution AutomationSQLdm[AutomationSQLdm[AddServers[]Configuration[]]]]&#xD;&#xA;Solution AutomationSQLdm\AutomationSQLdm\AutomationSQLdm.rxtst&#xD;&#xA;Solution AutomationSQLdm" />
+  <ProjectBrowserState value="[Solution AutomationSQLdm[AutomationSQLdm[AddServers[]Configuration[]]]]&#xD;&#xA;Solution AutomationSQLdm\AutomationSQLdm\BVT&#xD;&#xA;Solution AutomationSQLdm" />
   <StartupProject value="{61F99090-53F7-41D0-9F8A-6FC8C2262E52}" />
 </Properties>

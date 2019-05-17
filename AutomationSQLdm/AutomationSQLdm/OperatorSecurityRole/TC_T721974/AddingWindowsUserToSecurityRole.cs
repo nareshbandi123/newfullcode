@@ -11,6 +11,7 @@ using Ranorex.Core;
 using Ranorex.Core.Testing;
 using AutomationSQLdm.Base;
 using AutomationSQLdm.Commons;
+using AutomationSQLdm.Configuration;
 
 namespace AutomationSQLdm.OperatorSecurityRole.TC_T721974
 {
@@ -37,15 +38,14 @@ namespace AutomationSQLdm.OperatorSecurityRole.TC_T721974
         {
         	try 
         	{
+        		
         	  Common.ClickStartConsole();
         	  Common.ConnectDMRepoWindowsUser();
         	  Steps.ClickAdministration();
         	  Steps.ClickApplicationSecurity();
-        	  Steps.ClickEnableSecurity();
-        	  Steps.AcceptExceptionMessage();
         	  Steps.ClickToAddUsers();
         	  Steps.ClickNextButton();
-        	  Steps.EnterDomianUserName(Constants.NewWindowsUser);
+        	  Steps.EnterDomianUserName(Config.NewWindowsUser);
         	  Steps.ClickNextButton();
         	  Steps.ClickOptionBtn_ViewDataAcknowledgwAlarm();
         	  Steps.ClickNextButton();
@@ -53,8 +53,7 @@ namespace AutomationSQLdm.OperatorSecurityRole.TC_T721974
         	  Steps.ClickAddButton();
         	  Steps.ClickNextButton();
         	  Steps.ClickFinishButton();
-        	  Steps.VerifyWindowsUserAdded();
-        	  Steps.ClickWindowsUserToDelete();
+        	  Steps.VerifyUserAdded(Config.NewWindowsUser);
         	  Steps.DeleteAddedUser();
         	  Common.UpdateStatus(1); // 1 : Pass
         	  

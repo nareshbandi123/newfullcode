@@ -18,14 +18,14 @@ namespace AutomationSQLdm.Commons
 #region SQLDM Constants
 				
 		
-		public const string NewWindowsUser = @"SIMPSONS\administrator1";
-		public const string NewSqlUser = @"sa1";
-		public const string NewSqlUserPassword = @"Admin@123";
-		
-		public const string SqlSystemUser = @"sa";
-		public const string SqlSystemUserPassword = @"Admin@123";
-		
-		public const string SQLdmRepository = @"SQLdmRepository";
+//		public const string NewWindowsUser = @"SIMPSONS\administrator1";
+//		public const string NewSqlUser = @"sa1";
+//		public const string NewSqlUserPassword = @"Admin@123";
+//		
+//		public const string SqlSystemUser = @"sa";
+//		public const string SqlSystemUserPassword = @"Admin@123";
+//		
+//		public const string SQLdmRepository = @"SQLdmRepository";
 		public const string tagSnoozeAlert = "TagSnoozeAlert";
 		public const string allServer = "AllServer";
 #endregion

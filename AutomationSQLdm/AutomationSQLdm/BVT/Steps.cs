@@ -29,8 +29,14 @@ namespace AutomationSQLdm.BVT
     [TestModule("E7D37F6D-5226-40D4-9599-A4CAAFF6A2A5", ModuleType.UserCode, 1)]
     public static class Steps 
     {
+    	//Object for Shared Repo
     	public static BVTRepo repo = BVTRepo.Instance;
     	
+    	//Handling Sync Wait
+    	public static int MinSyncWaitTime = 180000;
+    	public static int MidSyncWaitTime = 240000;    		
+		public static int MaxSyncWaitTime = 300000;    		
+    		
     	public const string AlertActionsandResponses_MENU = @"/contextmenu[@processname='SQLdmDesktopClient']/menuitem[@automationid='menuToolsAlertActions']";
     	public static string ProviderName="SMTPProvider";
     	public static string ProviderAddress="SMTPProviderAddress";
@@ -52,8 +58,8 @@ namespace AutomationSQLdm.BVT
 				try 
 				{
 					
-				    repo.Application.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.Application.SQLdmPaneInfo.WaitForExists(new Duration(1000000));
+				    repo.Application.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.Application.SQLdmPaneInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				    
 					if (repo.Application.SQLdmPane.TextValue == "SQLDM Today")
 						Reports.ReportLog("SQLdm Today pane is Displaying", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
@@ -97,8 +103,8 @@ namespace AutomationSQLdm.BVT
 				try 
 				{
 					
-				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.btnDBCPUInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.btnDBCPUInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				    
 					if (repo.SQLdm.btnDBCPU.Text == "CPU")
 						Reports.ReportLog("Dashboard View Is Displaying", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
@@ -116,8 +122,8 @@ namespace AutomationSQLdm.BVT
 				try 
 				{
 					
-				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.btnDBCPUInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.btnDBCPUInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				    
 				    //Verify CPU Pane is Displaying in Dashboard View
 				    if (repo.SQLdm.ServerInfo.btnDABCPUInfo.Exists())
@@ -215,8 +221,8 @@ namespace AutomationSQLdm.BVT
 				try 
 				{
 					
-				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.txtSessionsInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.txtSessionsInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				    repo.SQLdm.txtSessions.Click();
 					Reports.ReportLog("Successfully Clicked On Sessions", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 					
@@ -232,8 +238,8 @@ namespace AutomationSQLdm.BVT
 				try 
 				{
 					
-				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.radioDetailsInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.radioDetailsInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				    repo.SQLdm.radioDetails.Click();
 					Reports.ReportLog("Successfully Clicked On Details", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 					
@@ -248,8 +254,8 @@ namespace AutomationSQLdm.BVT
 				try 
 				{
 					
-				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.radioLocksInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.radioLocksInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				    repo.SQLdm.radioLocks.Click();
 					Reports.ReportLog("Successfully Clicked On Locks", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 					
@@ -264,8 +270,8 @@ namespace AutomationSQLdm.BVT
 				try 
 				{
 					
-				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.radioBlocksInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.radioBlocksInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				    repo.SQLdm.radioBlocks.Click();
 					Reports.ReportLog("Successfully Clicked On Blocking", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 					
@@ -280,8 +286,8 @@ namespace AutomationSQLdm.BVT
 				try 
 				{
 					
-				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.txtSUMResponseTimeInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.txtSUMResponseTimeInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				    
 					if (repo.SQLdm.txtSUMResponseTime.TextValue == "Response Time")
 					{
@@ -303,7 +309,7 @@ namespace AutomationSQLdm.BVT
 			{
 				try 
 				{
-				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				    
 				    //Verify Response TIme in Summary
 					if (repo.SQLdm.txtSUMResponseTimeInfo.Exists())
@@ -356,8 +362,8 @@ namespace AutomationSQLdm.BVT
 			{
 				try 
 				{
-				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.txtDEDetailsInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.txtDEDetailsInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				    
 					if (repo.SQLdm.txtDEDetails.TextValue == "Details")
 					{
@@ -389,8 +395,8 @@ namespace AutomationSQLdm.BVT
 				try 
 				{
 					
-				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.ddlLOLockStatisticsInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.ddlLOLockStatisticsInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				    
 					if (repo.SQLdm.ddlLOLockStatistics.Visible == true)
 						
@@ -408,8 +414,8 @@ namespace AutomationSQLdm.BVT
 				try 
 				{
 					
-				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.txtBLBlockReportsInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.txtBLBlockReportsInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				    
 					if (repo.SQLdm.txtBLBlockReports.TextValue == "Block Reports")
 						
@@ -428,8 +434,8 @@ namespace AutomationSQLdm.BVT
 				try 
 				{
 					
-				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.OverViewTab.rgOVDetailsInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.OverViewTab.rgOVDetailsInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				    repo.SQLdm.OverViewTab.rgOVDetails.Click();
 				    Reports.ReportLog("Successfully Clicked On Details in OverView", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 					
@@ -445,8 +451,8 @@ namespace AutomationSQLdm.BVT
 				try 
 				{
 					
-				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.OverViewTab.rgOVConfigurationInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.OverViewTab.rgOVConfigurationInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				    repo.SQLdm.OverViewTab.rgOVConfiguration.Click();
 				    Reports.ReportLog("Successfully Clicked On Configuration in OverView", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 					
@@ -462,8 +468,8 @@ namespace AutomationSQLdm.BVT
 				try 
 				{
 					
-				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.OverViewTab.rgOVActiveAlertsInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.OverViewTab.rgOVActiveAlertsInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				    repo.SQLdm.OverViewTab.rgOVActiveAlerts.Click();
 				    Reports.ReportLog("Successfully Clicked On Active Alerts in OverView", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 					
@@ -480,8 +486,8 @@ namespace AutomationSQLdm.BVT
 				try 
 				{
 					
-				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.OverViewTab.rgOVTimeLineInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.OverViewTab.rgOVTimeLineInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				    repo.SQLdm.OverViewTab.rgOVTimeLine.Click();
 				    Reports.ReportLog("Successfully Clicked On TimeLine in OverView", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 					
@@ -497,8 +503,8 @@ namespace AutomationSQLdm.BVT
 				try 
 				{
 					
-				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.tabQueriesInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.tabQueriesInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				    repo.SQLdm.tabQueries.Click();
 				    Reports.ReportLog("Successfully Clicked On Queries Tab", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 					
@@ -514,8 +520,8 @@ namespace AutomationSQLdm.BVT
 				try 
 				{
 					
-				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.tabDatabasesInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.tabDatabasesInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				    repo.SQLdm.tabDatabases.Click();
 				    Reports.ReportLog("Successfully Clicked On DataBases Tab", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 					
@@ -530,8 +536,8 @@ namespace AutomationSQLdm.BVT
 				try 
 				{
 					
-				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.QueriesTab.rgQUESignatureModeInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.QueriesTab.rgQUESignatureModeInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				    repo.SQLdm.QueriesTab.rgQUESignatureMode.Click();
 				    Reports.ReportLog("Successfully Clicked On Signature Mode in Queries", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 					
@@ -547,8 +553,8 @@ namespace AutomationSQLdm.BVT
 				try 
 				{
 					
-				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.QueriesTab.rgQUEStatementModeInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.QueriesTab.rgQUEStatementModeInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				    repo.SQLdm.QueriesTab.rgQUEStatementMode.Click();
 				    Reports.ReportLog("Successfully Clicked On Statement Mode in Queries", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 					
@@ -564,8 +570,8 @@ namespace AutomationSQLdm.BVT
 				try 
 				{
 					
-				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.QueriesTab.rgQUEQueryHistoryInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.QueriesTab.rgQUEQueryHistoryInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				    repo.SQLdm.QueriesTab.rgQUEQueryHistory.Click();
 				    Reports.ReportLog("Successfully Clicked On Query History in Queries", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 					
@@ -581,8 +587,8 @@ namespace AutomationSQLdm.BVT
 				try 
 				{
 					
-				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.QueriesTab.rgQUEQueryWaitsInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.QueriesTab.rgQUEQueryWaitsInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				    repo.SQLdm.QueriesTab.rgQUEQueryWaits.Click();
 				    Reports.ReportLog("Successfully Clicked On Query Waits in Queries", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 					
@@ -598,8 +604,8 @@ namespace AutomationSQLdm.BVT
 				try 
 				{
 					
-				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.DatabasesTab.rgDBMirroringInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.DatabasesTab.rgDBMirroringInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				    repo.SQLdm.DatabasesTab.rgDBMirroring.Click();
 				    Reports.ReportLog("Successfully Clicked On Mirroring in Databases", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 					
@@ -615,8 +621,8 @@ namespace AutomationSQLdm.BVT
 				try 
 				{
 					
-				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.DatabasesTab.rgDBTablesAndIndexesInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.DatabasesTab.rgDBTablesAndIndexesInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				    repo.SQLdm.DatabasesTab.rgDBTablesAndIndexes.Click();
 				    Reports.ReportLog("Successfully Clicked On TablesAndIndexes in Databases", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 					
@@ -632,8 +638,8 @@ namespace AutomationSQLdm.BVT
 				try 
 				{
 					
-				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.DatabasesTab.rgDBBackupsAndRestoresInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.DatabasesTab.rgDBBackupsAndRestoresInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				    repo.SQLdm.DatabasesTab.rgDBBackupsAndRestores.Click();
 				    Reports.ReportLog("Successfully Clicked On BackupsAndRestores in Databases", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 					
@@ -649,8 +655,8 @@ namespace AutomationSQLdm.BVT
 				try 
 				{
 					
-				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.DatabasesTab.rgDBFilesInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.DatabasesTab.rgDBFilesInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				    repo.SQLdm.DatabasesTab.rgDBFiles.Click();
 				    Reports.ReportLog("Successfully Clicked On Files in Databases", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 					
@@ -666,8 +672,8 @@ namespace AutomationSQLdm.BVT
 				try 
 				{ 
 					
-				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.DatabasesTab.rgDBConfigurationInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.DatabasesTab.rgDBConfigurationInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				    repo.SQLdm.DatabasesTab.rgDBConfiguration.Click();
 				    Reports.ReportLog("Successfully Clicked On Configuration in Databases", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 					
@@ -683,8 +689,8 @@ namespace AutomationSQLdm.BVT
 				try 
 				{ 
 					
-				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.DatabasesTab.rgDBTempDBSummaryInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.DatabasesTab.rgDBTempDBSummaryInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				    repo.SQLdm.DatabasesTab.rgDBTempDBSummary.Click();
 				    Reports.ReportLog("Successfully Clicked On TempDBSummary in Databases", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 					
@@ -700,8 +706,8 @@ namespace AutomationSQLdm.BVT
 				try 
 				{ 
 					
-				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.DatabasesTab.rgDBSummaryInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.DatabasesTab.rgDBSummaryInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				    repo.SQLdm.DatabasesTab.rgDBSummary.Click();
 				    Reports.ReportLog("Successfully Clicked On Summary in Databases", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 					
@@ -718,8 +724,8 @@ namespace AutomationSQLdm.BVT
 				try 
 				{
 					
-				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.View.txtOVDEChartInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.View.txtOVDEChartInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				    
 					if (repo.SQLdm.View.txtOVDEChart.TextValue == "Chart")
 						
@@ -738,8 +744,8 @@ namespace AutomationSQLdm.BVT
 				try 
 				{
 					
-				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.View.txtOVCONDetailsInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.View.txtOVCONDetailsInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				    
 					if (repo.SQLdm.View.txtOVCONDetails.TextValue == "Details")
 						
@@ -758,8 +764,8 @@ namespace AutomationSQLdm.BVT
 				try 
 				{
 					
-				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.View.txtOVAADetailsInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.View.txtOVAADetailsInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				    
 					if (repo.SQLdm.View.txtOVAADetails.TextValue == "Details")
 						
@@ -778,8 +784,8 @@ namespace AutomationSQLdm.BVT
 				try 
 				{
 					
-				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.txtOVTLDatabasesInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.txtOVTLDatabasesInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				    
 					if (repo.SQLdm.txtOVTLDatabases.TextValue == "Databases")
 						
@@ -797,7 +803,7 @@ namespace AutomationSQLdm.BVT
 			{
 				try 
 				{
-					 repo.SQLdm.QueriesTab.rgQUESignatureModeInfo.WaitForItemExists(1000000);
+					 repo.SQLdm.QueriesTab.rgQUESignatureModeInfo.WaitForItemExists(MaxSyncWaitTime);
 				    
 				    if (repo.SQLdm.QueriesTab.rgQUESignatureMode.Checked == true)
 				    {
@@ -828,8 +834,8 @@ namespace AutomationSQLdm.BVT
 			{
 				try 
 				{
-					repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.tblQueryEventOccerrancesInfo.WaitForItemExists(1000000);
+					repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.tblQueryEventOccerrancesInfo.WaitForItemExists(MaxSyncWaitTime);
 				    
 					if (repo.SQLdm.tblQueryEventOccerrances.Rows.Count >= 0 )
 					{
@@ -852,8 +858,8 @@ namespace AutomationSQLdm.BVT
 			{
 				try 
 				{
-					repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.tblQueryEventOccerrancesInfo.WaitForItemExists(1000000);
+					repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.tblQueryEventOccerrancesInfo.WaitForItemExists(MaxSyncWaitTime);
 				    
 					if (repo.SQLdm.tblQueryEventOccerrances.Rows.Count >= 0 )
 					{
@@ -893,8 +899,8 @@ namespace AutomationSQLdm.BVT
 			{
 				try 
 				{
-					repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.tblDBSSummaryInfo.WaitForItemExists(1000000);
+					repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.tblDBSSummaryInfo.WaitForItemExists(MaxSyncWaitTime);
 				    
 				    if (repo.SQLdm.tblDBSSummaryInfo.Exists())
 					{
@@ -917,8 +923,8 @@ namespace AutomationSQLdm.BVT
 			{
 				try 
 				{
-					repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.tblDBSTempDBSummaryInfo.WaitForItemExists(1000000);
+					repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.tblDBSTempDBSummaryInfo.WaitForItemExists(MaxSyncWaitTime);
 				    
 				    if (repo.SQLdm.tblDBSTempDBSummaryInfo.Exists())
 					{
@@ -943,8 +949,8 @@ namespace AutomationSQLdm.BVT
 			{
 				try 
 				{
-					repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.tblDBSConfigurationInfo.WaitForItemExists(1000000);
+					repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.tblDBSConfigurationInfo.WaitForItemExists(MaxSyncWaitTime);
 				    
 				    if (repo.SQLdm.tblDBSConfigurationInfo.Exists())
 					{
@@ -967,8 +973,8 @@ namespace AutomationSQLdm.BVT
 			{
 				try 
 				{
-					repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.tblDBSFilesInfo.WaitForItemExists(1000000);
+					repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.tblDBSFilesInfo.WaitForItemExists(MaxSyncWaitTime);
 				    
 				    if (repo.SQLdm.tblDBSFilesInfo.Exists())
 					{
@@ -1107,8 +1113,8 @@ namespace AutomationSQLdm.BVT
 				try 
 				{
 					
-				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.tabResourcesInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.tabResourcesInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				    repo.SQLdm.tabResources.Click();
 				    Reports.ReportLog("Successfully Clicked On Resources Tab", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 					
@@ -1123,8 +1129,8 @@ namespace AutomationSQLdm.BVT
 				try 
 				{
 					
-				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.ResourcesTab.rgRESSummaryInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.ResourcesTab.rgRESSummaryInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				    repo.SQLdm.ResourcesTab.rgRESSummary.Click();
 				    Reports.ReportLog("Successfully Clicked On Summary In Resources Tab", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 					
@@ -1160,8 +1166,8 @@ namespace AutomationSQLdm.BVT
 				try 
 				{
 					
-				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.ResourcesTab.rgRESProcedureCacheInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.ResourcesTab.rgRESProcedureCacheInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				    repo.SQLdm.ResourcesTab.rgRESProcedureCache.Click();
 				    Reports.ReportLog("Successfully Clicked On ProcedureCache In Resources Tab", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 					
@@ -1177,8 +1183,8 @@ namespace AutomationSQLdm.BVT
 				try 
 				{
 					
-				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.ResourcesTab.rgRESServerWaitsInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.ResourcesTab.rgRESServerWaitsInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				    repo.SQLdm.ResourcesTab.rgRESServerWaits.Click();
 				    Reports.ReportLog("Successfully Clicked On ServerWaits In Resources Tab", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 					
@@ -1193,8 +1199,8 @@ namespace AutomationSQLdm.BVT
 			{
 				try 
 				{
-					repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.tblRESServerWaitsInfo.WaitForItemExists(1000000);
+					repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.tblRESServerWaitsInfo.WaitForItemExists(MaxSyncWaitTime);
 				    
 				    if (repo.SQLdm.tblRESServerWaitsInfo.Exists())
 					{
@@ -1217,8 +1223,8 @@ namespace AutomationSQLdm.BVT
 				try 
 				{
 					
-				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.tabServicesInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.tabServicesInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				    repo.SQLdm.tabServices.Click();
 				    Reports.ReportLog("Successfully Clicked On Services Tab", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 					
@@ -1233,8 +1239,8 @@ namespace AutomationSQLdm.BVT
 			  {
 			  	try 
 				{
-					repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.tblDBSServiceSummaryInfo.WaitForItemExists(1000000);
+					repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.tblDBSServiceSummaryInfo.WaitForItemExists(MaxSyncWaitTime);
 				    
 				    if (repo.SQLdm.tblDBSServiceSummaryInfo.Exists())
 					{
@@ -1258,8 +1264,8 @@ namespace AutomationSQLdm.BVT
 			{
 				try 
 				{					
-				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.ServicesTab.rgSERSqlAgentJobsInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.ServicesTab.rgSERSqlAgentJobsInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				    repo.SQLdm.ServicesTab.rgSERSqlAgentJobs.Click();
 				    Reports.ReportLog("Successfully Clicked On Sql Agent Jobs in Services", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 					
@@ -1273,8 +1279,8 @@ namespace AutomationSQLdm.BVT
 			  {
 			  try 
 				{
-					repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.tblDBSServiceSqlAgentJobsInfo.WaitForItemExists(1000000);
+					repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.tblDBSServiceSqlAgentJobsInfo.WaitForItemExists(MaxSyncWaitTime);
 				    
 				    if (repo.SQLdm.tblDBSServiceSqlAgentJobsInfo.Exists())
 					{
@@ -1297,8 +1303,8 @@ namespace AutomationSQLdm.BVT
 			  {
 			  try 
 				{
-					repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.tblDBSServicesJobHistoryInfo.WaitForItemExists(1000000);
+					repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.tblDBSServicesJobHistoryInfo.WaitForItemExists(MaxSyncWaitTime);
 				    
 				    if (repo.SQLdm.tblDBSServicesJobHistoryInfo.Exists())
 					{
@@ -1323,8 +1329,8 @@ namespace AutomationSQLdm.BVT
 				try 
 				{
 					
-				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.ResourcesTab.rgRESFileActivityInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.ResourcesTab.rgRESFileActivityInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				    repo.SQLdm.ResourcesTab.rgRESFileActivity.Click();
 				    Reports.ReportLog("Successfully Clicked On FileActivity In Resources Tab", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 					
@@ -1339,8 +1345,8 @@ namespace AutomationSQLdm.BVT
 			{
 				try 
 				{
-					repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.ddlRESFileActivityInfo.WaitForItemExists(1000000);
+					repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.ddlRESFileActivityInfo.WaitForItemExists(MaxSyncWaitTime);
 				    
 				    if (repo.SQLdm.ddlRESFileActivityInfo.Exists())
 					{
@@ -1361,7 +1367,7 @@ namespace AutomationSQLdm.BVT
 		{
 		try 
 		{
-		repo.SQLdm.ToolsInfo.WaitForExists(new Duration(1000000));
+		repo.SQLdm.ToolsInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 		repo.SQLdm.Tools.Click();
 		Reports.ReportLog("ClickOnTools", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 		} 
@@ -1390,7 +1396,7 @@ namespace AutomationSQLdm.BVT
 				{
 					try 
 					{
-						repo.AlertActionsandResponsesOptionDialog.SelfInfo.WaitForExists(new Duration(1000000));
+						repo.AlertActionsandResponsesOptionDialog.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 						repo.AlertActionsandResponsesOptionDialog.tabActionProviders.Click();
 					  
 						Reports.ReportLog("ClickOnActionProviders", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
@@ -1405,16 +1411,16 @@ namespace AutomationSQLdm.BVT
 		 {
 			try 
 					{
-						repo.AlertActionsandResponsesOptionDialog.SelfInfo.WaitForExists(new Duration(1000000));
+						repo.AlertActionsandResponsesOptionDialog.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 						repo.AlertActionsandResponsesOptionDialog.btnAlertAndResponseAdd.Click();
-						repo.AlertActionsandResponsesOptionDialog.SelfInfo.WaitForExists(new Duration(1000000));
+						repo.AlertActionsandResponsesOptionDialog.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 						repo.AlertResponsesDialog.btnARDAdd.Click();
-						//repo.AddActionProviderDialog.SelfInfo.WaitForExists(new Duration(1000000));
-						repo.AddActionProviderDialog.chkNewProviderInfo.WaitForExists(new Duration(1000000));
+						//repo.AddActionProviderDialog.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+						repo.AddActionProviderDialog.chkNewProviderInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 						repo.AddActionProviderDialog.chkNewProvider.Rows[0].DoubleClick();
 						
 				        repo.AddActionProviderDialog.btnOK.Click();
-				        repo.AddActionproviderWizard.SelfInfo.WaitForExists(new Duration(1000000));
+				        repo.AddActionproviderWizard.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				        repo.AddActionproviderWizard.btnAPWNext.Click();
 				        repo.AddActionproviderWizard.ddlAPWProvider.Click();
 				        //code for select value from dropdown				        			        				      
@@ -1437,7 +1443,7 @@ namespace AutomationSQLdm.BVT
 				         repo.AddActionproviderWizard.txtAPWEmail.Element.SetAttributeValue("Text",ProviderEmail);
 						 repo.AddActionproviderWizard.btnAPWFinish.Click(); 
 				        
-						 repo.SMTPActionDialog.SelfInfo.WaitForExists(new Duration(1000000));
+						 repo.SMTPActionDialog.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 						repo.SMTPActionDialog.txtSADToAddress.Click();
 						repo.SMTPActionDialog.txtSADToAddress.Element.SetAttributeValue("Text",SMTPToAddress);
 						repo.SMTPActionDialog.btnSADOK.Click();
@@ -1459,7 +1465,7 @@ namespace AutomationSQLdm.BVT
 					try 
 					{
 					
-                     repo.AlertActionsandResponsesOptionDialog.SelfInfo.WaitForExists(new Duration(1000000));						
+                     repo.AlertActionsandResponsesOptionDialog.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));						
 					 Table tbl=repo.AlertActionsandResponsesOptionDialog.tblAlertResponses;
 					   foreach(Row row in tbl.Rows)
 					    {
@@ -1473,11 +1479,11 @@ namespace AutomationSQLdm.BVT
 					    		}
 					    	}
 					      }
-					   repo.AlertActionsandResponsesOptionDialog.SelfInfo.WaitForExists(new Duration(1000000));
+					   repo.AlertActionsandResponsesOptionDialog.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 					   repo.AlertActionsandResponsesOptionDialog.btnAlertAndResponseRemove.Click();
-					   repo.ExceptionMessageDialog.SelfInfo.WaitForExists(new Duration(1000000));
+					   repo.ExceptionMessageDialog.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 					   repo.ExceptionMessageDialog.btnAAROk.Click();
-					   repo.AlertActionsandResponsesOptionDialog.SelfInfo.WaitForExists(new Duration(1000000));
+					   repo.AlertActionsandResponsesOptionDialog.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 					   repo.AlertActionsandResponsesOptionDialog.btnFinish.Click();
 					   
               		      
@@ -1493,7 +1499,7 @@ namespace AutomationSQLdm.BVT
          	try 
 					{
 					
-                     repo.AlertActionsandResponsesOptionDialog.SelfInfo.WaitForExists(new Duration(1000000));						
+                     repo.AlertActionsandResponsesOptionDialog.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));						
 					 Table tbl=repo.AlertActionsandResponsesOptionDialog.tblAlertResponses;
 					   foreach(Row row in tbl.Rows)
 					    {
@@ -1507,11 +1513,11 @@ namespace AutomationSQLdm.BVT
 					    		}
 					    	}
 					      }
-					   repo.AlertActionsandResponsesOptionDialog.SelfInfo.WaitForExists(new Duration(1000000));
+					   repo.AlertActionsandResponsesOptionDialog.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 					   repo.AlertActionsandResponsesOptionDialog.btnAlertAndResponseCopy.Click();
-					   repo.AlertResponsesDialog.SelfInfo.WaitForExists(new Duration(1000000));
+					   repo.AlertResponsesDialog.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 					   repo.AlertResponsesDialog.btnARDOK.Click();				     
-					   repo.AlertActionsandResponsesOptionDialog.SelfInfo.WaitForExists(new Duration(1000000));
+					   repo.AlertActionsandResponsesOptionDialog.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 					   repo.AlertActionsandResponsesOptionDialog.btnFinish.Click();					                 		     
 					   Reports.ReportLog("Alert Responses Copied Successfully", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 					} 
@@ -1541,7 +1547,7 @@ namespace AutomationSQLdm.BVT
 					      }
 					   
 					   
-					   repo.AlertActionsandResponsesOptionDialog.SelfInfo.WaitForExists(new Duration(1000000));
+					   repo.AlertActionsandResponsesOptionDialog.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 					   repo.AlertActionsandResponsesOptionDialog.btnAlertAndResponseEdit.Click();
 					  			      
 				        repo.AlertResponsesDialog.txtARDName.Click();
@@ -1566,9 +1572,9 @@ namespace AutomationSQLdm.BVT
 				{
 					try 
 					{
-						repo.AlertActionsandResponsesOptionDialog.SelfInfo.WaitForExists(new Duration(1000000));
+						repo.AlertActionsandResponsesOptionDialog.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 						repo.AlertActionsandResponsesOptionDialog.btnActAndResAPAdd.Click();
-						repo.AlertActionsandResponsesOptionDialog.SelfInfo.WaitForExists(new Duration(1000000));
+						repo.AlertActionsandResponsesOptionDialog.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 						repo.AlertCommunicationsWizardDialog.btnACWNext.Click();
 				        repo.AlertCommunicationsWizardDialog.ddlACWProviderType.Click();
 				        //code for select value from dropdown				        			        				      
@@ -1616,11 +1622,11 @@ namespace AutomationSQLdm.BVT
 					    		}
 					    	}
 					      }
-					   repo.AlertActionsandResponsesOptionDialog.SelfInfo.WaitForExists(new Duration(1000000));
+					   repo.AlertActionsandResponsesOptionDialog.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 					   repo.AlertActionsandResponsesOptionDialog.btnActAndResAPRemove.Click();
-					   repo.ExceptionMessageDialog.SelfInfo.WaitForExists(new Duration(1000000));
+					   repo.ExceptionMessageDialog.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 					   repo.ExceptionMessageDialog.btnAAROk.Click();
-					   repo.AlertActionsandResponsesOptionDialog.SelfInfo.WaitForExists(new Duration(1000000));
+					   repo.AlertActionsandResponsesOptionDialog.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 					   repo.AlertActionsandResponsesOptionDialog.btnFinish.Click();
 					   
               		      
@@ -1652,9 +1658,9 @@ namespace AutomationSQLdm.BVT
 					      }
 					   
 					   
-					   repo.AlertActionsandResponsesOptionDialog.SelfInfo.WaitForExists(new Duration(1000000));
+					   repo.AlertActionsandResponsesOptionDialog.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 					   repo.AlertActionsandResponsesOptionDialog.btnActAndResAPEdit.Click();
-//					   repo.AlertActionsandResponsesOptionDialog.SelfInfo.WaitForExists(new Duration(1000000));
+//					   repo.AlertActionsandResponsesOptionDialog.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 //						repo.AlertCommunicationsWizardDialog.btnACWNext.Click();
 //				        repo.AlertCommunicationsWizardDialog.ddlACWProviderType.Click();
 				        //code for select value from dropdown				        			        				      
@@ -1691,11 +1697,11 @@ namespace AutomationSQLdm.BVT
 					    		}
 					    	}
 					      }
-					   repo.AlertActionsandResponsesOptionDialog.SelfInfo.WaitForExists(new Duration(1000000));
+					   repo.AlertActionsandResponsesOptionDialog.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 					   repo.AlertActionsandResponsesOptionDialog.btnActAndResAPRemove.Click();
-					   repo.ExceptionMessageDialog.SelfInfo.WaitForExists(new Duration(1000000));
+					   repo.ExceptionMessageDialog.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 					   repo.ExceptionMessageDialog.btnAAROk.Click();
-					   repo.AlertActionsandResponsesOptionDialog.SelfInfo.WaitForExists(new Duration(1000000));
+					   repo.AlertActionsandResponsesOptionDialog.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 					   repo.AlertActionsandResponsesOptionDialog.btnFinish.Click();
 					   
               		      
@@ -1712,8 +1718,8 @@ namespace AutomationSQLdm.BVT
 			{
 				try 
 				{
-					repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.tblRESProcedureCacheInfo.WaitForItemExists(1000000);
+					repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.tblRESProcedureCacheInfo.WaitForItemExists(MaxSyncWaitTime);
 				    
 				    if (repo.SQLdm.tblRESProcedureCacheInfo.Exists())
 					{
@@ -1736,8 +1742,8 @@ namespace AutomationSQLdm.BVT
 				try 
 				{
 					
-				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.ResourcesTab.rgRESDiskInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.ResourcesTab.rgRESDiskInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				    repo.SQLdm.ResourcesTab.rgRESDisk.Click();
 				    Reports.ReportLog("Successfully Clicked On Disk In Resources Tab", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 					
@@ -1773,8 +1779,8 @@ namespace AutomationSQLdm.BVT
 				try 
 				{
 					
-				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.ResourcesTab.rgRESMemoryInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.ResourcesTab.rgRESMemoryInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				    repo.SQLdm.ResourcesTab.rgRESMemory.Click();
 				    Reports.ReportLog("Successfully Clicked On Memory In Resources Tab", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 					
@@ -1810,8 +1816,8 @@ namespace AutomationSQLdm.BVT
 				try 
 				{
 					
-				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.ResourcesTab.rgRESCPUInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.ResourcesTab.rgRESCPUInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				    repo.SQLdm.ResourcesTab.rgRESCPU.Click();
 				    Reports.ReportLog("Successfully Clicked On CPU In Resources Tab", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 					
@@ -1845,8 +1851,8 @@ public static void VerifyTablesAndIndexesInDataBases()
 			{
 				try 
 				{
-					repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.tblDBSTablesAndIndexesInfo.WaitForItemExists(1000000);
+					repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.tblDBSTablesAndIndexesInfo.WaitForItemExists(MaxSyncWaitTime);
 				    
 				    if (repo.SQLdm.tblDBSTablesAndIndexesInfo.Exists())
 					{
@@ -1869,8 +1875,8 @@ public static void VerifyTablesAndIndexesInDataBases()
 			{
 				try 
 					{
-					repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.tblDBSMirroringInfo.WaitForItemExists(1000000);
+					repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.tblDBSMirroringInfo.WaitForItemExists(MaxSyncWaitTime);
 				    
 				    if (repo.SQLdm.tblDBSMirroringInfo.Exists())
 					{
@@ -1893,8 +1899,8 @@ public static void VerifyTablesAndIndexesInDataBases()
 			{
 				try 
 				{
-					repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.tblDBSBackupsAndRestoresInfo.WaitForItemExists(1000000);
+					repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.tblDBSBackupsAndRestoresInfo.WaitForItemExists(MaxSyncWaitTime);
 				    
 				    if (repo.SQLdm.tblDBSBackupsAndRestoresInfo.Exists())
 					{
@@ -1933,8 +1939,8 @@ public static void VerifyTablesAndIndexesInDataBases()
 				try 
 				{
 					
-				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.ResourcesTab.rgRESDiskSizeInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.ResourcesTab.rgRESDiskSizeInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				    repo.SQLdm.ResourcesTab.rgRESDiskSize.Click();
 				    Reports.ReportLog("Successfully Clicked On DiskSize In Resources Tab", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 					
@@ -1966,8 +1972,8 @@ public static void VerifyTablesAndIndexesInDataBases()
 			{
 				try 
 				{ 					
-				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.DatabasesTab.rgDBAvailabillityGroupInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.DatabasesTab.rgDBAvailabillityGroupInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				    repo.SQLdm.DatabasesTab.rgDBAvailabillityGroup.Click();
 				    Reports.ReportLog("Successfully Clicked On Availability Group in Databases", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 					
@@ -1981,8 +1987,8 @@ public static void VerifyTablesAndIndexesInDataBases()
 			{
 				try 
 				{
-					repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.tblDBSTempDBSummaryInfo.WaitForItemExists(1000000);
+					repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.tblDBSTempDBSummaryInfo.WaitForItemExists(MaxSyncWaitTime);
 				    
 				    if (repo.SQLdm.tblDBSTempDBSummaryInfo.Exists())
 					{
@@ -2008,7 +2014,7 @@ public static void VerifyTablesAndIndexesInDataBases()
 				
 					repo.SQLdm.ddlConfiguration.Click();
 					
-				    repo.SQLdm.tblDatabaseConfigurationInfo.WaitForItemExists(1000000);
+				    repo.SQLdm.tblDatabaseConfigurationInfo.WaitForItemExists(MaxSyncWaitTime);
 				    
 					if (repo.SQLdm.tblDatabaseConfiguration.Rows.Count >= 0 )
 					{
@@ -2033,7 +2039,7 @@ public static void VerifyTablesAndIndexesInDataBases()
          {
          	try 
 					{
-					 repo.MonitoredSqlServerInstancePropertiesDial.SelfInfo.WaitForExists(new Duration(1000000));	
+					 repo.MonitoredSqlServerInstancePropertiesDial.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));	
 					 repo.MonitoredSqlServerInstancePropertiesDial.rdbsqlauthentication.Click();
 					 repo.MonitoredSqlServerInstancePropertiesDial.txtsqlloginname.Click();
 				     repo.MonitoredSqlServerInstancePropertiesDial.txtsqlloginname.Element.SetAttributeValue("Text",SQLUserName);
@@ -2066,29 +2072,29 @@ public static void VerifyTablesAndIndexesInDataBases()
         	try 
 				{
 					
-				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.txtSUMResponseTimeInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.txtSUMResponseTimeInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				    if (repo.SQLdm.txtSUMResponseTime.TextValue == "Response Time")
 						Reports.ReportLog("Response Time View Under Sessions Displayed Successfully", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 					else
 						Reports.ReportLog("Response Time View Under Sessions Is Not Displaying", Reports.SQLdmReportLevel.Fail, null, Config.TestCaseName);
 					
-					 repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.txtSumSessionsInfo.WaitForExists(new Duration(1000000));
+					 repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.txtSumSessionsInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				    if (repo.SQLdm.txtSumSessions.TextValue == "Sessions")
 						Reports.ReportLog("Sessions View Under Sessions Displayed Successfully", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 					else
 						Reports.ReportLog("Sessions View Under Sessions Is Not Displaying", Reports.SQLdmReportLevel.Fail, null, Config.TestCaseName);
 					
-					 repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.txtSUMLockStatisticsInfo.WaitForExists(new Duration(1000000));
+					 repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.txtSUMLockStatisticsInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				    if (repo.SQLdm.txtSUMLockStatistics.Text == "Lock Statistics: Requests")
 						Reports.ReportLog("Lock Statistics View Under Sessions Displayed Successfully", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 					else
 						Reports.ReportLog("Lock Statistics View Under Sessions Is Not Displaying", Reports.SQLdmReportLevel.Fail, null, Config.TestCaseName);
 					
-					 repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdm.txtSUMBlockedSessionsInfo.WaitForExists(new Duration(1000000));
+					 repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.txtSUMBlockedSessionsInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				    if (repo.SQLdm.txtSUMBlockedSessions.TextValue == "Blocked Sessions")
 						Reports.ReportLog("Blocked Sessions View Under Sessions Displayed Successfully", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 					else

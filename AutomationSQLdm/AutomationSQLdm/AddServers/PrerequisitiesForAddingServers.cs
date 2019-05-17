@@ -34,8 +34,9 @@ namespace AutomationSQLdm.AddServers
         {
         	try 
         	{
-        		//int ServerID;
+        		
         		Steps.AddSQLServerInstance(Config.ServerOptions_DEFAULTSERVER); //CMWIN2016-S8        		
+        		
         	} 
         	catch (Exception ex)
         	{

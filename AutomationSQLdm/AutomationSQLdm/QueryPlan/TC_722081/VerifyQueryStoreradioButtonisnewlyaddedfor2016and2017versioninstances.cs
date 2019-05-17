@@ -12,13 +12,13 @@ using Ranorex.Core.Testing;
 
 using AutomationSQLdm.Commons;
 using AutomationSQLdm.Configuration;
-
+using AutomationSQLdm.Grooming_Modifications;
 
 namespace AutomationSQLdm.QueryPlan.TC_722081
 {
     
     [TestModule("4434A720-B45D-40E3-919D-C07AE666718E", ModuleType.UserCode, 1)]
-    public class VerifyQueryStoreradioButtonisnewlyaddedfor2016and2017versioninstances :Base.BaseClass, ITestModule
+    public class VerifyQueryStoreradioButtonisnewlyaddedfor2016and2017versioninstances :Base.BaseClass,ITestModule
     {
        
         public VerifyQueryStoreradioButtonisnewlyaddedfor2016and2017versioninstances()

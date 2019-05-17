@@ -1,14 +1,25 @@
 ﻿
 using System;
-
+using System.Configuration;
 
 namespace AutomationSQLdm.Configuration
 {
  
     public static class Config 
     {
-        public static string AppPath = System.Configuration.ConfigurationManager.AppSettings["APP_PATH"].ToString();
+        public static string AppPath = ConfigurationManager.AppSettings["APP_PATH"].ToString();
         
+        public static string NewWindowsUser = ConfigurationManager.AppSettings["NewWindowsUser"].ToString();
+		public static string NewSqlUser = ConfigurationManager.AppSettings["NewSqlUser"].ToString();
+		public static string NewSqlUserPassword = ConfigurationManager.AppSettings["NewSqlUserPassword"].ToString();
+		
+		public static string SqlSystemUser = ConfigurationManager.AppSettings["SqlSystemUser"].ToString();
+		public static string SqlSystemUserPassword = ConfigurationManager.AppSettings["SqlSystemUserPassword"].ToString();
+		
+		public static string SQLdmRepository = ConfigurationManager.AppSettings["SQLdmRepository"].ToString();
+		public static string RepositoryName = ConfigurationManager.AppSettings["RepositoryName"].ToString();
+		
+		
 		public static int ProcessID;
 		public static string TestCaseName;
 		
@@ -46,8 +57,8 @@ namespace AutomationSQLdm.Configuration
 		public const string Query_PhysicalDiskWrites		= "select PlanID from QueryMonitorStatistics where SQLServerID = '4' and PlanID is not null order by Writes DESC";
 		
 		
-		public static string WindowsUser = System.Configuration.ConfigurationManager.AppSettings["WindowsUser"].ToString();
-		public static string WinUserPassword = System.Configuration.ConfigurationManager.AppSettings["WinUserPassword"].ToString();
+		public static string WindowsUser = ConfigurationManager.AppSettings["WindowsUser"].ToString();
+		public static string WinUserPassword = ConfigurationManager.AppSettings["WinUserPassword"].ToString();
 		
 		
     }

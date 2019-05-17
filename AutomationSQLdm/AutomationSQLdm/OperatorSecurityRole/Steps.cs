@@ -22,6 +22,7 @@ namespace AutomationSQLdm.OperatorSecurityRole
 		public const string SNOOZEALERT_MENU = @"/contextmenu[@processname='SQLdmDesktopClient']/menuitem[@automationid='snoozeAllAlertsToolMenu']";
 		public const string RESUMEALERT_MENU = @"/contextmenu[@processname='SQLdmDesktopClient']/menuitem[@automationid='resumeAllAlertsToolMenu']";
 		public const string MAINTAINANCEMODE_MENU = @"/contextmenu[@processname='SQLdmDesktopClient']/menuitem[@automationid='MaintenanceModeButtonKey']";
+		public const string UserTableRow1 = @"/form[@title~'^Idera\ SQL\ diagnostic\ mana']/statusbar[@automationid='statusBar']//container[@automationid='viewContainer']/container[@automationid='windowsFormsHostControl']//container[@controlname='_child']//container[@controlname='ApplicationSecurityView_Fill_Panel']//table[@accessiblename~'^\ \ \ \ \ \ \ System\ logins,\ whi']/row[1]";
 		public static int rownum = 0;
 		
 		public static void SelectSnoozeAlertMenuItem()
@@ -43,7 +44,6 @@ namespace AutomationSQLdm.OperatorSecurityRole
 				throw new Exception("Failed : SelectSnoozeAlertMenuItem :" + ex.Message);
 			}
 		}
-		
 		
 		public static void ResumeAlertMenuItem()
 		{ 
@@ -86,7 +86,6 @@ namespace AutomationSQLdm.OperatorSecurityRole
 			}
 		}
 		
-		
 		public static void RightClickMonitoredServer()
 		{ 
 			try
@@ -116,6 +115,7 @@ namespace AutomationSQLdm.OperatorSecurityRole
 		{ 
 			try
 			{
+				repo.Application.MyViewsAllServersInfo.WaitForItemExists(20000);
 				repo.Application.MyViewsAllServers.Click(System.Windows.Forms.MouseButtons.Right);
 				Reports.ReportLog("Right Clicked All Server Under My Views ", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 			}
@@ -139,20 +139,6 @@ namespace AutomationSQLdm.OperatorSecurityRole
 				throw new Exception("Failed : RightClickMonitoredServer :" + ex.Message);
 			}
 		}
-		
-//		public static void RightClickTag()
-//		{ 
-//			try
-//			{	
-//				var tagSnoozeAlert = repo.Application.TagSnoozeAlert;
-//				tagSnoozeAlert.Click(System.Windows.Forms.MouseButtons.Right);
-//				Reports.ReportLog("Right Clicked Tag ", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
-//			}
-//			catch (Exception ex)
-//			{
-//				throw new Exception("Failed : RightClickTag :" + ex.Message);
-//			}
-//		}
 		
 		public static void ClickServersInLeftPane()
 		{ 
@@ -411,7 +397,6 @@ namespace AutomationSQLdm.OperatorSecurityRole
 			}
 		}
 		
-		
 		public static void VerifyServerSnoozed_MyViews()
 		{ 
 			try
@@ -537,9 +522,18 @@ namespace AutomationSQLdm.OperatorSecurityRole
 		public static void ClickToAddUsers()
 		{
 			try
-			{
-				repo.Application.btnAddUsers.ClickThis();
-				Reports.ReportLog("Clicked Add Users", Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
+			{   if(repo.Application.btnAddUsersInfo.Exists())
+				{
+					repo.Application.btnAddUsers.ClickThis();
+					Reports.ReportLog("Clicked Add Users", Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
+				}
+				else
+				{
+					ClickEnableSecurity();
+        	  		AcceptExceptionMessage();
+        	  		repo.Application.btnAddUsers.ClickThis();
+					Reports.ReportLog("Clicked Add Users", Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
+				}
 			}
 			catch(Exception ex)
 			{
@@ -616,7 +610,7 @@ namespace AutomationSQLdm.OperatorSecurityRole
 					serversLists = repo.AddPermissionWizard.AvailableServers;
 					int itemCount = serversLists.Children.Count;
 					Report.Info("Servers Count ="+ itemCount.ToString());
-					if(itemCount >= 1)
+					if(itemCount >= 2)
 					{
 						//Report.Info("serversLists.Items[0]: " + serversLists.Items[0]);
 						//serversLists.Children[0].Click();
@@ -629,14 +623,19 @@ namespace AutomationSQLdm.OperatorSecurityRole
 						serversLists.Items[itemCount/2+1].PressKeys("{LControlKey up}{LShiftKey up}");
 						Reports.ReportLog("Selected Server", Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
 					}
+					else if(itemCount == 1)
+					{
+						serversLists.Items[0].Click();
+						Reports.ReportLog("Selected Server", Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
+					}
 					else
 					{
-						Reports.ReportLog("No Servers Available in Server List : ", Reports.SQLdmReportLevel.Info, null, Configuration.Config.TestCaseName);
+						Reports.ReportLog("No Servers Available in Server List : ", Reports.SQLdmReportLevel.Fail, null, Configuration.Config.TestCaseName);
 					}
 				}
 				else
 				{
-					Reports.ReportLog("Available Server Dialog not exists : ", Reports.SQLdmReportLevel.Info, null, Configuration.Config.TestCaseName);
+					Reports.ReportLog("Available Server Dialog not exists : ", Reports.SQLdmReportLevel.Fail, null, Configuration.Config.TestCaseName);
 				}
 			}
 			catch(Exception ex)
@@ -677,15 +676,19 @@ namespace AutomationSQLdm.OperatorSecurityRole
 		{
 			try
 			{
-				repo.Application.NewWindowsUserAddedInfo.WaitForItemExists(20000);
-				if(repo.Application.NewWindowsUserAddedInfo.Exists())
+				repo.Application.TableSystemLoginsWhichBelongInfo.WaitForItemExists(200000);
+				
+				Ranorex.Cell cellUser= null;
+				cellUser = repo.Application.TableSystemLoginsWhichBelong.FindSingle("//cell[@accessiblevalue='"+ Config.NewWindowsUser +"']");
+				
+				if(cellUser.GetAttributeValue<string>("accessiblevalue").ToLower().Equals(Config.NewWindowsUser.ToLower()))
 				{
-					Reports.ReportLog("New User Added Successfully ! " , Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
+					Reports.ReportLog("New Windows User Added Successfully ! " , Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
 				}
 				else
 				{
-					Reports.ReportLog("New User not Added : ", Reports.SQLdmReportLevel.Info, null, Configuration.Config.TestCaseName);
-					Validate.Fail("New User not Added Successfully");
+					Reports.ReportLog("New Windows User not Added : ", Reports.SQLdmReportLevel.Info, null, Configuration.Config.TestCaseName);
+					Validate.Fail("New Windows User not Added Successfully");
 				}
 			}
 			catch(Exception ex)
@@ -699,28 +702,29 @@ namespace AutomationSQLdm.OperatorSecurityRole
 			try
 			{
 				string user = null;
-				if(userType.ToLower().Equals(Constants.NewSqlUser.ToLower()))
-					user = Constants.NewSqlUser;
+				if(userType.ToLower().Equals(Config.NewSqlUser.ToLower()))
+					user = Config.NewSqlUser;
 				else
-					user = Constants.NewWindowsUser;
+					user = Config.NewWindowsUser;
 				
-				var cell = Host.Local.FindSingle<Ranorex.Cell>(@"/form[@title~'^Idera\ SQL\ diagnostic\ mana']/statusbar[@automationid='statusBar']//table[@accessiblename~'^\ \ \ \ \ \ \ System\ logins,\ whi']//cell[@accessiblevalue='"+ user +"']");
-
-				if(cell != null)
+				repo.Application.TableSystemLoginsWhichBelongInfo.WaitForItemExists(200000);
+				//Ranorex.Cell cellUser = repo.Application.TableSystemLoginsWhichBelong.FindSingle("/row[1]/cell[@accessiblevalue='"+ user +"']");
+				Ranorex.Cell cellUser = Host.Local.FindSingle<Ranorex.Cell>(@"/form[@title~'^Idera\ SQL\ diagnostic\ mana']/statusbar[@automationid='statusBar']//container[@automationid='viewContainer']/container[@automationid='windowsFormsHostControl']//container[@controlname='_child']//container[@controlname='ApplicationSecurityView_Fill_Panel']//table[@accessiblename~'^\ \ \ \ \ \ \ System\ logins,\ whi']/row[1]/cell[@accessiblevalue='"+ user +"']");
+				if(cellUser.Text.ToLower().Equals(user.ToLower()))
 				{
-					cell.Click();
-					Reports.ReportLog("New User Added Successfully ! " , Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
+					cellUser.Click();
+					Reports.ReportLog("New User "+ user +" Added Successfully ! " , Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
 				}
 				else
 				{
-					Reports.ReportLog("New User not Added : ", Reports.SQLdmReportLevel.Info, null, Configuration.Config.TestCaseName);
-					Validate.Fail("New User not Added Successfully");
+					Reports.ReportLog("New User "+ user +" not Added : ", Reports.SQLdmReportLevel.Info, null, Configuration.Config.TestCaseName);
+					Validate.Fail("New User not "+ user +" Added Successfully");
 				}
 			
 			}
 			catch(Exception ex)
 			{
-				throw new Exception("Failed : VerifySqlUserAdded : " + ex.Message);
+				throw new Exception("Failed : VerifyUserAdded : " + ex.Message);
 			}
 		}
 		
@@ -728,15 +732,21 @@ namespace AutomationSQLdm.OperatorSecurityRole
 		{
 			try
 			{
-				repo.NewSqlUserAddedInfo.WaitForItemExists(20000);
-				if(repo.NewSqlUserAddedInfo.Exists())
+				repo.Application.TableSystemLoginsWhichBelongInfo.WaitForItemExists(200000);
+				
+				Ranorex.Cell cellUser= null;
+				cellUser = repo.Application.TableSystemLoginsWhichBelong.FindSingle("//cell[@accessiblevalue='"+ Config.NewSqlUser +"']");
+				
+				//Report.Info(cellUser.Visible.ToString() + cellUser.Enabled.ToString()+ cellUser.Text.ToString());
+				//if(repo.Application.NewSqlUserAddedInfo.Exists())
+				if(cellUser.GetAttributeValue<string>("accessiblevalue").ToLower().Equals(Config.NewSqlUser.ToLower()))
 				{
-					Reports.ReportLog("New User Added Successfully ! " , Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
+					Reports.ReportLog("New Sql User Added Successfully ! " , Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
 				}
 				else
 				{
-					Reports.ReportLog("New User not Added : ", Reports.SQLdmReportLevel.Info, null, Configuration.Config.TestCaseName);
-					Validate.Fail("New User not Added Successfully");
+					Reports.ReportLog("New Sql User not Added : ", Reports.SQLdmReportLevel.Info, null, Configuration.Config.TestCaseName);
+					Validate.Fail("New Sql User not Added Successfully");
 				}
 			
 			}
@@ -752,9 +762,9 @@ namespace AutomationSQLdm.OperatorSecurityRole
 			{
 				Ranorex.Cell cellUser= null;
 				if (userType.ToLower() == "sqluser")
-					cellUser = repo.Application.TableSystemLoginsWhichBelong.FindSingle("//cell[@accessiblevalue='"+ Constants.NewSqlUser +"']");
+					cellUser = repo.Application.TableSystemLoginsWhichBelong.FindSingle("//cell[@accessiblevalue='"+ Config.NewSqlUser +"']");
 				else
-					cellUser = repo.Application.TableSystemLoginsWhichBelong.FindSingle("//cell[@accessiblevalue='"+ Constants.NewWindowsUser +"']");
+					cellUser = repo.Application.TableSystemLoginsWhichBelong.FindSingle("//cell[@accessiblevalue='"+ Config.NewWindowsUser +"']");
 				cellUser.MoveTo();
 				//Thread.Sleep(2000);
 				cellUser.Click();
@@ -785,8 +795,6 @@ namespace AutomationSQLdm.OperatorSecurityRole
 			}
 		}
 		
-		
-		
 		public static void VerifyPermissionChanged()
 		{
 			bool IsFound = false;
@@ -795,7 +803,7 @@ namespace AutomationSQLdm.OperatorSecurityRole
 				var tableSystemLoginsWhichBelong = repo.Application.TableSystemLoginsWhichBelong;
 				foreach(var row in tableSystemLoginsWhichBelong.Rows)
 				{
-					if(row.Cells[3].Text.ToLower().Equals(Constants.NewSqlUser.ToLower()))
+					if(row.Cells[3].Text.ToLower().Equals(Config.NewSqlUser.ToLower()))
 					{
 						if(row.Cells[5].Text.ToLower().Equals(Constants.strAdministrator.ToLower()))
 						{
@@ -836,11 +844,16 @@ namespace AutomationSQLdm.OperatorSecurityRole
 		{
 			try
 			{
-				//repo.Application.NewWindowsUserAdded.DoubleClick();
-				if(userType.Equals("WindowsUser")) 
-					repo.Application.NewWindowsUserAdded.DoubleClick();
-				else 
-					repo.NewSqlUserAdded.DoubleClick();
+				string user = null;
+				if(userType.ToLower().Equals(Constants.WindowsUser.ToLower()))
+					user = Config.NewWindowsUser;
+				else
+					user = Config.NewSqlUser;
+				
+				repo.Application.TableSystemLoginsWhichBelongInfo.WaitForItemExists(200000);
+				Ranorex.Cell cellUser = Host.Local.FindSingle<Ranorex.Cell>(UserTableRow1 + "/cell[@accessiblevalue='"+ user +"']");
+				cellUser.DoubleClick();
+				
 				if(repo.PermissionPropertyDialog.ViewDataAcknowledgwAlarm.Checked)
 				{
 					Reports.ReportLog("ViewDataAcknowledgwAlarm Option is Selected " , Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
@@ -853,7 +866,7 @@ namespace AutomationSQLdm.OperatorSecurityRole
 			}
 			catch(Exception ex)
 			{
-				throw new Exception("Failed : VerifyUserAdded : " + ex.Message);
+				throw new Exception("Failed : VerifyViewDataAcknowledgwAlarmIsSelected : " + ex.Message);
 			}
 		}
 		
@@ -866,7 +879,7 @@ namespace AutomationSQLdm.OperatorSecurityRole
 			}
 			catch(Exception ex)
 			{
-				throw new Exception("Failed : VerifyUserAdded : " + ex.Message);
+				throw new Exception("Failed : ClickCancelPermissionProperties : " + ex.Message);
 			}
 		}
 		
@@ -887,8 +900,8 @@ namespace AutomationSQLdm.OperatorSecurityRole
 		{
 			try
 			{
-				repo.NewSqlUserAddedInfo.WaitForItemExists(20000);
-				repo.NewSqlUserAdded.Click();
+				repo.Application.NewSqlUserAddedInfo.WaitForItemExists(200000);
+				repo.Application.NewSqlUserAdded.Click();
 				Reports.ReportLog("Clicked New SqlUser Added " , Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
 			}
 			catch(Exception ex)
@@ -901,7 +914,7 @@ namespace AutomationSQLdm.OperatorSecurityRole
 		{
 			try
 			{
-				repo.Application.btnDeleteInfo.WaitForItemExists(20000);
+				repo.Application.btnDeleteInfo.WaitForItemExists(200000);
 				repo.Application.btnDelete.Click();
 				repo.ExceptionForm.btnYes.Click();
 				Reports.ReportLog("New User Deleted Successfully ! ", Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
@@ -927,14 +940,14 @@ namespace AutomationSQLdm.OperatorSecurityRole
 //				lst_userItem.Click(); 
 //				Reports.ReportLog("SQL Server Authentication Selected ", Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
 //				repo.RepositoryConnectionDialog.Username.PressKeys(Constants.SqlSystemUser);
-//				Reports.ReportLog("Username : " + Constants.NewSqlUser + "Entered Successfully  " , Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
+//				Reports.ReportLog("Username : " + Config.NewSqlUser + "Entered Successfully  " , Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
 //				
 //				repo.RepositoryConnectionDialog.Password.PressKeys(Constants.SqlSystemUserPassword);
 //				Reports.ReportLog("Passsword Entered Successfully  " , Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
 //				repo.RepositoryConnectionDialog.ConnectButton.ClickThis();
 //				Reports.ReportLog("Clicked Connect Button Successfully !  " , Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
 //				
-//				if(repo.Application.CaptionText.TextValue.Contains(Constants.SQLdmRepository))
+//				if(repo.Application.CaptionText.TextValue.Contains(Config.RepositoryName))
 //					Reports.ReportLog("Connected to SQLdmRepository Successfully !  "   , Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
 //				else
 //				{
@@ -965,10 +978,10 @@ namespace AutomationSQLdm.OperatorSecurityRole
 					lst_userItem.Focus();  
 					lst_userItem.Click(); 
 					Reports.ReportLog("SQL Server Authentication Selected ", Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
-					repo.RepositoryConnectionDialog.Username.PressKeys(Constants.NewSqlUser);
-					Reports.ReportLog("Username : " + Constants.NewSqlUser + "Entered Successfully  " , Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
+					repo.RepositoryConnectionDialog.Username.PressKeys(Config.NewSqlUser);
+					Reports.ReportLog("Username : " + Config.NewSqlUser + "Entered Successfully  " , Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
 					
-					repo.RepositoryConnectionDialog.Password.PressKeys(Constants.NewSqlUserPassword);
+					repo.RepositoryConnectionDialog.Password.PressKeys(Config.NewSqlUserPassword);
 					Reports.ReportLog("Passsword Entered Successfully  " , Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
 				}
 				else
@@ -984,7 +997,7 @@ namespace AutomationSQLdm.OperatorSecurityRole
 				repo.RepositoryConnectionDialog.ConnectButton.ClickThis();
 				Reports.ReportLog("Clicked Connect Button Successfully !  " , Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
 				
-				if(repo.Application.CaptionText.TextValue.Contains(Constants.SQLdmRepository))
+				if(repo.Application.CaptionText.TextValue.Contains(Config.RepositoryName))
 					Reports.ReportLog("Connected to SQLdmRepository Successfully !  "   , Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
 				else
 				{

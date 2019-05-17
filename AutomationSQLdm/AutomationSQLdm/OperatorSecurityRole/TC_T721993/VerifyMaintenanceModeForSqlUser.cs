@@ -11,6 +11,7 @@ using Ranorex.Core;
 using Ranorex.Core.Testing;
 using AutomationSQLdm.Base;
 using AutomationSQLdm.Commons;
+using AutomationSQLdm.Configuration;
 
 namespace AutomationSQLdm.OperatorSecurityRole.New_folder
 {
@@ -41,11 +42,9 @@ namespace AutomationSQLdm.OperatorSecurityRole.New_folder
         	  Common.ConnectDMRepoWindowsUser();
         	  Steps.ClickAdministration();
         	  Steps.ClickApplicationSecurity();
-        	  Steps.ClickEnableSecurity();
-        	  Steps.AcceptExceptionMessage();
         	  Steps.ClickToAddUsers();
         	  Steps.ClickNextButton();
-        	  Steps.EnterDomianUserName(Constants.NewSqlUser);
+        	  Steps.EnterDomianUserName(Config.NewSqlUser);
         	  Steps.SelectSqlAuthentication();
         	  Steps.ClickNextButton();
         	  Steps.ClickOptionBtn_ViewDataAcknowledgwAlarm();
@@ -54,7 +53,7 @@ namespace AutomationSQLdm.OperatorSecurityRole.New_folder
         	  Steps.ClickAddButton();
         	  Steps.ClickNextButton();
         	  Steps.ClickFinishButton();
-        	  Steps.VerifySqlUserAdded();
+			  Steps.VerifyUserAdded(Config.NewSqlUser);
 			  Steps.ClickServersInLeftPane();
 			  Steps.RightClickAllServer_MyViews();
         	  Steps.ClickMaintainceModeContextMenu();
@@ -71,7 +70,6 @@ namespace AutomationSQLdm.OperatorSecurityRole.New_folder
         	finally
         	{
         		Steps.ClickAdministration();
-        		Steps.ClickSqlUserToDelete();
         	    Steps.DeleteAddedUser();
         	}
         	return true;

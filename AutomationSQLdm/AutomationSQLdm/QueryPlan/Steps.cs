@@ -29,14 +29,19 @@ namespace AutomationSQLdm.QueryPlan
     {
        
         public static QueryPlanRepo repo = QueryPlanRepo.Instance;
-	//	public const string GROOMING_MENU = @"/contextmenu[@processname='SQLdmDesktopClient']/menuitem[@automationid='menuToolsGrooming']";
+        
+        //Handling Sync Wait
+    	public static int MinSyncWaitTime = 180000;
+    	public static int MidSyncWaitTime = 240000;    		
+		public static int MaxSyncWaitTime = 300000;    		
+    			
 		public const string FILECONNECT_MENU = @"/contextmenu[@processname='SQLdmDesktopClient']/menuitem[@automationid='menuFileConnect']";
 		
         public static void ClickOnFile()
 		{
 			try 
 			{
-				repo.SQLdmDesktop.FileInfo.WaitForExists(new Duration(1000000));
+				repo.SQLdmDesktop.FileInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				repo.SQLdmDesktop.File.ClickThis();
 				Reports.ReportLog("ClickOnFile", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 			} 
@@ -64,8 +69,8 @@ namespace AutomationSQLdm.QueryPlan
 		{
 			try 
 				{
-					repo.RepoConsoleDialog.SelfInfo.WaitForExists(new Duration(1000000));
-					repo.RepoConsoleDialog.btnRCDConnectInfo.WaitForItemExists(1000000);
+					repo.RepoConsoleDialog.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+					repo.RepoConsoleDialog.btnRCDConnectInfo.WaitForItemExists(MaxSyncWaitTime);
 					repo.RepoConsoleDialog.btnRCDConnect.ClickThis();
 					
 					Reports.ReportLog("Click On Connect", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
@@ -106,7 +111,7 @@ namespace AutomationSQLdm.QueryPlan
 				try 
 				{
 					
-				    repo.SQLdmDesktop.tabQueriesInfo.WaitForItemExists(1000000);
+				    repo.SQLdmDesktop.tabQueriesInfo.WaitForItemExists(MaxSyncWaitTime);
 				    repo.SQLdmDesktop.tabQueries.ClickThis();
 				    Reports.ReportLog("Successfully Clicked On Queries Tab", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 					
@@ -121,7 +126,7 @@ namespace AutomationSQLdm.QueryPlan
 				try 
 				{
 					
-				    repo.SQLdmDesktop.QueriesTab.rgQUESignatureModeInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdmDesktop.QueriesTab.rgQUESignatureModeInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				    repo.SQLdmDesktop.QueriesTab.rgQUESignatureMode.ClickThis();
 				    Reports.ReportLog("Successfully Clicked On Signature Mode", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 					
@@ -137,7 +142,7 @@ namespace AutomationSQLdm.QueryPlan
 				try 
 				{
 					
-				    repo.SQLdmDesktop.btnQUEConfigureQueryMonitorInfo.WaitForItemExists(1000000);
+				    repo.SQLdmDesktop.btnQUEConfigureQueryMonitorInfo.WaitForItemExists(MaxSyncWaitTime);
 				    repo.SQLdmDesktop.btnQUEConfigureQueryMonitor.ClickThis();
 				    Reports.ReportLog("Successfully Clicked On ConfigureQueryMonitor", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 					
@@ -152,8 +157,8 @@ namespace AutomationSQLdm.QueryPlan
 			{
 				try 
 				{
-					repo.MonitoredSQLServerProperties.SelfInfo.WaitForExists(new Duration(1000000));
-					repo.MonitoredSQLServerProperties.pnlQueryMonitor.cbMSSPEnableQueryMonitorInfo.WaitForExists(1000000);
+					repo.MonitoredSQLServerProperties.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+					repo.MonitoredSQLServerProperties.pnlQueryMonitor.cbMSSPEnableQueryMonitorInfo.WaitForExists(MaxSyncWaitTime);
 					
 					if(!repo.MonitoredSQLServerProperties.pnlQueryMonitor.cbMSSPEnableQueryMonitor.Checked)
 					{
@@ -177,8 +182,8 @@ namespace AutomationSQLdm.QueryPlan
 			{
 				try 
 				{
-					repo.MonitoredSQLServerProperties.SelfInfo.WaitForExists(new Duration(1000000));
-					repo.MonitoredSQLServerProperties.pnlQueryMonitor.cbMSSPEnableQueryMonitorInfo.WaitForExists(1000000);
+					repo.MonitoredSQLServerProperties.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+					repo.MonitoredSQLServerProperties.pnlQueryMonitor.cbMSSPEnableQueryMonitorInfo.WaitForExists(MaxSyncWaitTime);
 					
 					if(repo.MonitoredSQLServerProperties.pnlQueryMonitor.cbMSSPEnableQueryMonitor.Checked)
 					{
@@ -203,7 +208,7 @@ namespace AutomationSQLdm.QueryPlan
 				try 
 				{
 					
-					repo.MonitoredSQLServerProperties.pnlQueryMonitor.cbCollectActualQueryPlansInfo.WaitForExists(1000000);
+					repo.MonitoredSQLServerProperties.pnlQueryMonitor.cbCollectActualQueryPlansInfo.WaitForExists(MaxSyncWaitTime);
 					
 					if(!repo.MonitoredSQLServerProperties.pnlQueryMonitor.cbCollectActualQueryPlans.Checked)
 					{
@@ -227,7 +232,7 @@ namespace AutomationSQLdm.QueryPlan
 			{
 				try 
 				{
-					repo.MonitoredSQLServerProperties.pnlQueryMonitor.cbCollectActualQueryPlansInfo.WaitForExists(1000000);
+					repo.MonitoredSQLServerProperties.pnlQueryMonitor.cbCollectActualQueryPlansInfo.WaitForExists(MaxSyncWaitTime);
 					
 					if(repo.MonitoredSQLServerProperties.pnlQueryMonitor.cbCollectActualQueryPlans.Checked)
 					{
@@ -249,7 +254,7 @@ namespace AutomationSQLdm.QueryPlan
 			{
 				try 
 				{
-					repo.MonitoredSQLServerProperties.pnlQueryMonitor.rgCQDUsingQueryStoreInfo.WaitForExists(1000000);
+					repo.MonitoredSQLServerProperties.pnlQueryMonitor.rgCQDUsingQueryStoreInfo.WaitForExists(MaxSyncWaitTime);
 					
 					if (repo.MonitoredSQLServerProperties.pnlQueryMonitor.rgCQDUsingQueryStore.Visible == true)
 					{
@@ -272,7 +277,7 @@ namespace AutomationSQLdm.QueryPlan
 			{
 				try 
 				{
-					repo.MonitoredSQLServerProperties.btnMSSPOkInfo.WaitForItemExists(1000000);
+					repo.MonitoredSQLServerProperties.btnMSSPOkInfo.WaitForItemExists(MaxSyncWaitTime);
 					repo.MonitoredSQLServerProperties.btnMSSPOk.ClickThis();
 				    
 				    Reports.ReportLog("Successfully Clicked On Ok button", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
@@ -288,7 +293,7 @@ namespace AutomationSQLdm.QueryPlan
 			{
 				try 
 				{
-					repo.MonitoredSQLServerProperties.btnMSSPCancelInfo.WaitForItemExists(1000000);
+					repo.MonitoredSQLServerProperties.btnMSSPCancelInfo.WaitForItemExists(MaxSyncWaitTime);
 					repo.MonitoredSQLServerProperties.btnMSSPCancel.ClickThis();
 				    
 				    Reports.ReportLog("Successfully Clicked On Cancel button", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
@@ -325,7 +330,7 @@ namespace AutomationSQLdm.QueryPlan
 			{
 				try 
 				{
-					repo.MonitoredSQLServerProperties.pnlPoorlyPerforming.txtPPQueryPlanInfo.WaitForItemExists(1000000);
+					repo.MonitoredSQLServerProperties.pnlPoorlyPerforming.txtPPQueryPlanInfo.WaitForItemExists(MaxSyncWaitTime);
 						
 					//if ((repo.MonitoredSQLServerProperties.pnlPoorlyPerforming.txtPPQueryPlan.Enabled = true) && (repo.MonitoredSQLServerProperties.pnlPoorlyPerforming.ddlPPPlansBy.Enabled = true))
 					if (repo.MonitoredSQLServerProperties.pnlPoorlyPerforming.txtPPQueryPlan.Enabled == true) 
@@ -343,7 +348,7 @@ namespace AutomationSQLdm.QueryPlan
 		{
 			try 
 				{	
-					repo.MonitoredSQLServerProperties.pnlPoorlyPerforming.txtPPQueryPlanInfo.WaitForItemExists(1000000);
+					repo.MonitoredSQLServerProperties.pnlPoorlyPerforming.txtPPQueryPlanInfo.WaitForItemExists(MaxSyncWaitTime);
 					repo.MonitoredSQLServerProperties.pnlPoorlyPerforming.txtPPQueryPlan.TextValue = SelectTop.ToString();
 					Reports.ReportLog("Successfully Entered Query Plan Value: " + SelectTop, Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 				} 
@@ -357,7 +362,7 @@ namespace AutomationSQLdm.QueryPlan
 		{
 			try 
 				{	
-					repo.MonitoredSQLServerProperties.pnlPoorlyPerforming.txtPPDurationInfo.WaitForItemExists(1000000);
+					repo.MonitoredSQLServerProperties.pnlPoorlyPerforming.txtPPDurationInfo.WaitForItemExists(MaxSyncWaitTime);
 					repo.MonitoredSQLServerProperties.pnlPoorlyPerforming.txtPPDuration.TextValue = DurationMS.ToString();
 					Reports.ReportLog("Successfully Entered Duration Milli Seconds Value: " + DurationMS, Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 				} 
@@ -371,7 +376,7 @@ namespace AutomationSQLdm.QueryPlan
 		{
 			try 
 				{	
-					repo.MonitoredSQLServerProperties.pnlPoorlyPerforming.txtPPQueryPlanInfo.WaitForItemExists(1000000);
+					repo.MonitoredSQLServerProperties.pnlPoorlyPerforming.txtPPQueryPlanInfo.WaitForItemExists(MaxSyncWaitTime);
 					if (repo.MonitoredSQLServerProperties.pnlPoorlyPerforming.txtPPQueryPlan.TextValue.Contains(Convert.ToString(SelectTop)))
 						Reports.ReportLog("Successfully Verifyed Query Plan Value: " + SelectTop, Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 					else
@@ -387,7 +392,7 @@ namespace AutomationSQLdm.QueryPlan
 			{
 				try 
 				{
-					repo.MonitoredSQLServerProperties.pnlQueryMonitor.rgCQDUsingExtendedEventsInfo.WaitForItemExists(1000000);
+					repo.MonitoredSQLServerProperties.pnlQueryMonitor.rgCQDUsingExtendedEventsInfo.WaitForItemExists(MaxSyncWaitTime);
 					repo.MonitoredSQLServerProperties.pnlQueryMonitor.rgCQDUsingExtendedEvents.Click();
 				    Reports.ReportLog("Successfully Clicked On Extended Events Radio button", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 					
@@ -402,7 +407,7 @@ namespace AutomationSQLdm.QueryPlan
 			{
 				try 
 				{
-					repo.MonitoredSQLServerProperties.pnlQueryMonitor.btnMSSPAdvancedInfo.WaitForItemExists(1000000);
+					repo.MonitoredSQLServerProperties.pnlQueryMonitor.btnMSSPAdvancedInfo.WaitForItemExists(MaxSyncWaitTime);
 					repo.MonitoredSQLServerProperties.pnlQueryMonitor.btnMSSPAdvanced.ClickThis();
 				    Reports.ReportLog("Successfully Clicked On Advanced button", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 				} 
@@ -416,7 +421,7 @@ namespace AutomationSQLdm.QueryPlan
 			{
 				try 
 				{
-					repo.AdvancedQueryFilterConfigurationDialog.cbAQFCExcludeSQLDMQueryInfo.WaitForItemExists(1000000);
+					repo.AdvancedQueryFilterConfigurationDialog.cbAQFCExcludeSQLDMQueryInfo.WaitForItemExists(MaxSyncWaitTime);
 					if(repo.AdvancedQueryFilterConfigurationDialog.cbAQFCExcludeSQLDMQuery.Checked)
 					{
 						repo.AdvancedQueryFilterConfigurationDialog.cbAQFCExcludeSQLDMQuery.Checked = false;
@@ -439,7 +444,7 @@ namespace AutomationSQLdm.QueryPlan
 			{
 				try 
 				{
-					repo.AdvancedQueryFilterConfigurationDialog.btnAQFMOkInfo.WaitForItemExists(1000000);
+					repo.AdvancedQueryFilterConfigurationDialog.btnAQFMOkInfo.WaitForItemExists(MaxSyncWaitTime);
 					repo.AdvancedQueryFilterConfigurationDialog.btnAQFMOk.ClickThis();
 				    Reports.ReportLog("Successfully Clicked On Ok button", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 					
@@ -476,7 +481,7 @@ namespace AutomationSQLdm.QueryPlan
 			{
 				try 
 				{
-					repo.MonitoredSQLServerProperties.pnlPoorlyPerforming.ddlPPPlansByInfo.WaitForItemExists(1000000);
+					repo.MonitoredSQLServerProperties.pnlPoorlyPerforming.ddlPPPlansByInfo.WaitForItemExists(MaxSyncWaitTime);
 					Common.WaitForSync(5000);
 					repo.MonitoredSQLServerProperties.pnlPoorlyPerforming.btnPPPlandByOpen.ClickThis();
 					Common.WaitForSync(5000);
@@ -499,9 +504,7 @@ namespace AutomationSQLdm.QueryPlan
 				{
 					throw new Exception("Failed : SelectValueInPlansBy :" + ex.Message);
 				}
-			}
-         
-         //------------------------------------------------------------------------------------------------------
+            }
 		
     }
 }

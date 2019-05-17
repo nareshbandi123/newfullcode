@@ -34,6 +34,7 @@ namespace AutomationSQLdm.Grooming_Modifications
         GroomingRepoFolders.ManageServersDialogAppFolder _manageserversdialog;
         GroomingRepoFolders.AddServersWizardDialogAppFolder _addserverswizarddialog;
         GroomingRepoFolders.ExceptionMessageBoxFormAppFolder _exceptionmessageboxform;
+        GroomingRepoFolders.GettingStartWindowAppFolder _gettingstartwindow;
 
         /// <summary>
         /// Gets the singleton class instance representing the GroomingRepo element repository.
@@ -57,6 +58,7 @@ namespace AutomationSQLdm.Grooming_Modifications
             _manageserversdialog = new GroomingRepoFolders.ManageServersDialogAppFolder(this);
             _addserverswizarddialog = new GroomingRepoFolders.AddServersWizardDialogAppFolder(this);
             _exceptionmessageboxform = new GroomingRepoFolders.ExceptionMessageBoxFormAppFolder(this);
+            _gettingstartwindow = new GroomingRepoFolders.GettingStartWindowAppFolder(this);
         }
 
 #region Variables
@@ -136,6 +138,15 @@ namespace AutomationSQLdm.Grooming_Modifications
         public virtual GroomingRepoFolders.ExceptionMessageBoxFormAppFolder ExceptionMessageBoxForm
         {
             get { return _exceptionmessageboxform; }
+        }
+
+        /// <summary>
+        /// The GettingStartWindow folder.
+        /// </summary>
+        [RepositoryFolder("9bf04c70-da51-4de1-baf9-e6f1a6b65a1e")]
+        public virtual GroomingRepoFolders.GettingStartWindowAppFolder GettingStartWindow
+        {
+            get { return _gettingstartwindow; }
         }
     }
 
@@ -1565,6 +1576,150 @@ namespace AutomationSQLdm.Grooming_Modifications
                 get
                 {
                     return _btnmsyesInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The GettingStartWindowAppFolder folder.
+        /// </summary>
+        [RepositoryFolder("9bf04c70-da51-4de1-baf9-e6f1a6b65a1e")]
+        public partial class GettingStartWindowAppFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _txtgswaddnewserverInfo;
+            RepoItemInfo _txtgswvisittrialcenterInfo;
+            RepoItemInfo _txtgswconfigurealertsInfo;
+            RepoItemInfo _btngswstartconsoleInfo;
+
+            /// <summary>
+            /// Creates a new GettingStartWindow  folder.
+            /// </summary>
+            public GettingStartWindowAppFolder(RepoGenBaseFolder parentFolder) :
+                    base("GettingStartWindow", "//form[@controlname='GettingStartedWizard']", parentFolder, 30000, null, true, "9bf04c70-da51-4de1-baf9-e6f1a6b65a1e", "")
+            {
+                _txtgswaddnewserverInfo = new RepoItemInfo(this, "txtGSWAddNewServer", ".//container[@controlname='addNewServersFeatureButton']/?/?/text[@controlname='featureHeaderLabel']", 30000, null, "96789711-c9ed-433f-adfe-f1fdd303319c");
+                _txtgswvisittrialcenterInfo = new RepoItemInfo(this, "txtGSWVisitTrialCenter", ".//container[@controlname='visitTrialCenterFeatureButton']/?/?/text[@controlname='featureHeaderLabel']", 30000, null, "cdd736dc-98fc-4aae-9b9a-575b32e91f6a");
+                _txtgswconfigurealertsInfo = new RepoItemInfo(this, "txtGSWConfigureAlerts", ".//container[@controlname='configureAlertsFeatureButton']/?/?/text[@controlname='featureHeaderLabel']", 30000, null, "3d546cef-5535-400a-b39e-4871d1ee18e5");
+                _btngswstartconsoleInfo = new RepoItemInfo(this, "btnGSWStartConsole", ".//button[@controlname='cancelButton']", 30000, null, "5026ceaa-38c1-4ed7-9511-ae36069f57cd");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("9bf04c70-da51-4de1-baf9-e6f1a6b65a1e")]
+            public virtual Ranorex.Form Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.Form>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("9bf04c70-da51-4de1-baf9-e6f1a6b65a1e")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The txtGSWAddNewServer item.
+            /// </summary>
+            [RepositoryItem("96789711-c9ed-433f-adfe-f1fdd303319c")]
+            public virtual Ranorex.Text txtGSWAddNewServer
+            {
+                get
+                {
+                    return _txtgswaddnewserverInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The txtGSWAddNewServer item info.
+            /// </summary>
+            [RepositoryItemInfo("96789711-c9ed-433f-adfe-f1fdd303319c")]
+            public virtual RepoItemInfo txtGSWAddNewServerInfo
+            {
+                get
+                {
+                    return _txtgswaddnewserverInfo;
+                }
+            }
+
+            /// <summary>
+            /// The txtGSWVisitTrialCenter item.
+            /// </summary>
+            [RepositoryItem("cdd736dc-98fc-4aae-9b9a-575b32e91f6a")]
+            public virtual Ranorex.Text txtGSWVisitTrialCenter
+            {
+                get
+                {
+                    return _txtgswvisittrialcenterInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The txtGSWVisitTrialCenter item info.
+            /// </summary>
+            [RepositoryItemInfo("cdd736dc-98fc-4aae-9b9a-575b32e91f6a")]
+            public virtual RepoItemInfo txtGSWVisitTrialCenterInfo
+            {
+                get
+                {
+                    return _txtgswvisittrialcenterInfo;
+                }
+            }
+
+            /// <summary>
+            /// The txtGSWConfigureAlerts item.
+            /// </summary>
+            [RepositoryItem("3d546cef-5535-400a-b39e-4871d1ee18e5")]
+            public virtual Ranorex.Text txtGSWConfigureAlerts
+            {
+                get
+                {
+                    return _txtgswconfigurealertsInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The txtGSWConfigureAlerts item info.
+            /// </summary>
+            [RepositoryItemInfo("3d546cef-5535-400a-b39e-4871d1ee18e5")]
+            public virtual RepoItemInfo txtGSWConfigureAlertsInfo
+            {
+                get
+                {
+                    return _txtgswconfigurealertsInfo;
+                }
+            }
+
+            /// <summary>
+            /// The btnGSWStartConsole item.
+            /// </summary>
+            [RepositoryItem("5026ceaa-38c1-4ed7-9511-ae36069f57cd")]
+            public virtual Ranorex.Button btnGSWStartConsole
+            {
+                get
+                {
+                    return _btngswstartconsoleInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The btnGSWStartConsole item info.
+            /// </summary>
+            [RepositoryItemInfo("5026ceaa-38c1-4ed7-9511-ae36069f57cd")]
+            public virtual RepoItemInfo btnGSWStartConsoleInfo
+            {
+                get
+                {
+                    return _btngswstartconsoleInfo;
                 }
             }
         }

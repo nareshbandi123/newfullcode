@@ -11,6 +11,7 @@ using Ranorex.Core;
 using Ranorex.Core.Testing;
 using AutomationSQLdm.Base;
 using AutomationSQLdm.Commons;
+using AutomationSQLdm.Configuration;
 
 namespace AutomationSQLdm.OperatorSecurityRole.TC_T721981
 {
@@ -41,11 +42,9 @@ namespace AutomationSQLdm.OperatorSecurityRole.TC_T721981
         	  Common.ConnectDMRepoWindowsUser();
         	  Steps.ClickAdministration();
         	  Steps.ClickApplicationSecurity();
-        	  Steps.ClickEnableSecurity();
-        	  Steps.AcceptExceptionMessage();
         	  Steps.ClickToAddUsers();
         	  Steps.ClickNextButton();
-        	  Steps.EnterDomianUserName(Constants.NewWindowsUser);
+        	  Steps.EnterDomianUserName(Config.NewWindowsUser);
         	  Steps.ClickNextButton();
         	  Steps.ClickOptionBtn_ViewDataAcknowledgwAlarm();
         	  Steps.ClickNextButton();
@@ -53,7 +52,7 @@ namespace AutomationSQLdm.OperatorSecurityRole.TC_T721981
         	  Steps.ClickAddButton();
         	  Steps.ClickNextButton();
         	  Steps.ClickFinishButton();
-        	  Steps.VerifyWindowsUserAdded();
+			  Steps.VerifyUserAdded(Config.NewWindowsUser);
 			  AutomationSQLdm.Grooming_Modifications.Steps.ClickOnTools();
         	  Steps.SelectSnoozeAlertMenuItem();
         	  Steps.SetSnoozeAlertTime();
@@ -70,7 +69,6 @@ namespace AutomationSQLdm.OperatorSecurityRole.TC_T721981
         	finally
         	{
         		Steps.ClickAdministration();
-        		Steps.ClickWindowsUserToDelete();
         	    Steps.DeleteAddedUser();
         	}
         	return true;

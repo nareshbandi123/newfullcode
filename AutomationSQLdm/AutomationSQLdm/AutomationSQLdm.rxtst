@@ -2664,6 +2664,12 @@ rxversion="8.2">
 			ref="f6e5cfa3-a02f-427c-bddb-4185a3d272f4"
 			type="UserCode">
 			</testmodule>
+			<testmodule
+			id="e7f7f337-7f56-4f37-8f2b-d854f1b4e571"
+			name="AddUersToSSMS"
+			ref="17889e2f-efe9-4547-aba9-a32163160443"
+			type="UserCode">
+			</testmodule>
 			<teardown
 			id="e81f1b32-615d-4ef5-8389-90873f2e8b1a"
 			name="teardown">
@@ -2970,6 +2976,10 @@ rxversion="8.2">
 							id="76609d94-920f-4b71-bdf0-1dc910258a3f"
 							name="PrerequisitiesForAddingServers">
 							</testmodule>
+							<testmodule
+							id="e7f7f337-7f56-4f37-8f2b-d854f1b4e571"
+							name="AddUersToSSMS">
+							</testmodule>
 						</setup>
 						<teardown
 						id="a10bb61e-d93c-4792-a564-96ecacdf9663"
@@ -3111,39 +3121,39 @@ rxversion="8.2">
 							name="DeleteforMonitoredServerID">
 							</testmodule>
 						</testcase>
-						<smartfoldernode
-						id="83c712f9-9907-4fee-a88a-dbb2e3d28ea1"
-						name="T721950">
-							<setup
-							id="20a40f5d-9f51-4011-b388-2f22f17773e1"
-							name="setup">
-								<testmodule
-								id="fb608831-8a0c-420e-b575-321dbcc0c59e"
-								name="OpenSQLdm">
-								</testmodule>
-							</setup>
-							<testcase
-							id="0e55ab9d-eb87-442f-a8df-d6bd66627901"
-							name="Verify_three_metrics_Disk_Space,_Table_Space,_Database_space_associated_tables">
-								<testmodule
-								id="a8c1b7eb-f461-4353-bb81-9293841171b5"
-								name="VerifyThreeMetrics">
-								</testmodule>
-							</testcase>
-							<teardown
-							id="d187ab19-31c3-48b7-b0ce-1a70f79b0cdd"
-							name="teardown">
-								<testmodule
-								id="83b2ca28-eaa2-4d21-b8bb-3138f33cdad9"
-								name="CloseSQLdm">
-								</testmodule>
-							</teardown>
-						</smartfoldernode>
 						<teardown
 						id="0c15d487-a0a0-4f9d-bce6-6a379d5dd0be"
 						name="teardown">
 							<testmodule
 							id="ad4b1d1e-d1bd-480f-a5a6-2b85d571341f"
+							name="CloseSQLdm">
+							</testmodule>
+						</teardown>
+					</smartfoldernode>
+					<smartfoldernode
+					id="83c712f9-9907-4fee-a88a-dbb2e3d28ea1"
+					name="T721950">
+						<setup
+						id="20a40f5d-9f51-4011-b388-2f22f17773e1"
+						name="setup">
+							<testmodule
+							id="fb608831-8a0c-420e-b575-321dbcc0c59e"
+							name="OpenSQLdm">
+							</testmodule>
+						</setup>
+						<testcase
+						id="0e55ab9d-eb87-442f-a8df-d6bd66627901"
+						name="Verify_three_metrics_Disk_Space,_Table_Space,_Database_space_associated_tables">
+							<testmodule
+							id="a8c1b7eb-f461-4353-bb81-9293841171b5"
+							name="VerifyThreeMetrics">
+							</testmodule>
+						</testcase>
+						<teardown
+						id="d187ab19-31c3-48b7-b0ce-1a70f79b0cdd"
+						name="teardown">
+							<testmodule
+							id="83b2ca28-eaa2-4d21-b8bb-3138f33cdad9"
 							name="CloseSQLdm">
 							</testmodule>
 						</teardown>
@@ -5371,10 +5381,13 @@ rxversion="8.2">
 		<testconfiguration
 		name="TestRun">
 			<testcontainer
-			id="258f24c3-ca2b-40c7-b96b-21e737088944">
+			id="5e3b329f-982d-4a6d-9158-0eed5778ea4f">
 			</testcontainer>
 			<testcontainer
-			id="5e3b329f-982d-4a6d-9158-0eed5778ea4f">
+			id="c0a43a54-2f10-4198-b94d-bbfb919ee322">
+			</testcontainer>
+			<testcontainer
+			id="c9244b2d-4f9b-44de-b7cc-c2b51b53d941">
 			</testcontainer>
 		</testconfiguration>
 	</testconfigurations>

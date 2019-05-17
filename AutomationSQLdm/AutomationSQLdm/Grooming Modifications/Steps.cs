@@ -28,6 +28,12 @@ namespace AutomationSQLdm.Grooming_Modifications
 	public static class Steps
 	{
 		public static GroomingRepo repo = GroomingRepo.Instance;
+		
+		 //Handling Sync Wait
+    	public static int MinSyncWaitTime = 180000;
+    	public static int MidSyncWaitTime = 240000;    		
+		public static int MaxSyncWaitTime = 300000;    		
+    	//MaxSyncWaitTime	
 		public const string GROOMING_MENU = @"/contextmenu[@processname='SQLdmDesktopClient']/menuitem[@automationid='menuToolsGrooming']";
 		
 		
@@ -35,7 +41,7 @@ namespace AutomationSQLdm.Grooming_Modifications
 		{
 			try
 			{
-				repo.Application.ToolsInfo.WaitForExists(new Duration(1000000));
+				repo.Application.ToolsInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				repo.Application.Tools.Click();
 				Reports.ReportLog("ClickOnTools", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 			}
@@ -63,7 +69,7 @@ namespace AutomationSQLdm.Grooming_Modifications
 		{
 			try
 			{
-				repo.GroomingOptionWindow.SelfInfo.WaitForExists(new Duration(1000000));
+				repo.GroomingOptionWindow.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				//if (repo.GroomingOptionWindow.AggregateTextboxInfo.Exists())
 				if (repo.GroomingOptionWindow.AggregateTextbox.TextValue == "1095")
 					Reports.ReportLog("Verify Aggregate forecasting data to daily records after is Displaying: " + repo.GroomingOptionWindow.AggregateTextbox.TextValue , Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
@@ -80,7 +86,7 @@ namespace AutomationSQLdm.Grooming_Modifications
 		{
 			try
 			{
-				repo.GroomingOptionWindow.SelfInfo.WaitForExists(new Duration(1000000));
+				repo.GroomingOptionWindow.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				//if (repo.GroomingOptionWindow.GroomForecastTextboxInfo.Exists())
 				if (repo.GroomingOptionWindow.GroomForecastTextbox.TextValue == "1095")
 					
@@ -98,7 +104,7 @@ namespace AutomationSQLdm.Grooming_Modifications
 		{
 			try
 			{
-				repo.GroomingOptionWindow.CancelButtonInfo.WaitForExists(new Duration(1000000));
+				repo.GroomingOptionWindow.CancelButtonInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				repo.GroomingOptionWindow.CancelButton.Click();
 				Reports.ReportLog("Click On Cancel Button", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 			}
@@ -120,7 +126,7 @@ namespace AutomationSQLdm.Grooming_Modifications
 					Reports.ReportLog("The Current time on the repository is Displaying Only : " + repo.GroomingOptionWindow.AggregationInCurrentTime.Caption, Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 				
 				//Verify Query is Removed from The Current time on the repository
-				repo.GroomingOptionWindow.SelfInfo.WaitForExists(new Duration(1000000));
+				repo.GroomingOptionWindow.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				if (repo.GroomingOptionWindow.CombineOlderData.TextValue.Contains("Query"))
 					Reports.ReportLog("Query is not Removed from The Current time on the repository", Reports.SQLdmReportLevel.Fail, null, Config.TestCaseName);
 				else
@@ -144,7 +150,7 @@ namespace AutomationSQLdm.Grooming_Modifications
 			try
 			{
 				
-				repo.GroomingOptionWindow.SelfInfo.WaitForExists(new Duration(1000000));
+				repo.GroomingOptionWindow.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				repo.GroomingOptionWindow.GroomMetricsAndBaseLine.TextValue = "";
 				repo.GroomingOptionWindow.GroomMetricsAndBaseLine.TextValue = "1100";
 				if (repo.GroomingOptionWindow.GroomMetricsAndBaseLine.TextValue.Contains("1100"))
@@ -234,7 +240,7 @@ namespace AutomationSQLdm.Grooming_Modifications
 		{
 			try
 			{
-				repo.GroomingOptionWindow.AggregateTextboxInfo.WaitForExists(new Duration(1000000));
+				repo.GroomingOptionWindow.AggregateTextboxInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				//repo.GroomingOptionWindow.AggregateTextbox.TextValue = "";
 				repo.GroomingOptionWindow.AggregateTextbox.TextValue = AggregateForecasting.ToString();
 				
@@ -251,7 +257,7 @@ namespace AutomationSQLdm.Grooming_Modifications
 		{
 			try
 			{
-				repo.GroomingOptionWindow.btnGroomNowInfo.WaitForExists(new Duration(1000000));
+				repo.GroomingOptionWindow.btnGroomNowInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				repo.GroomingOptionWindow.btnGroomNow.ClickThis();
 				Reports.ReportLog("Click On Groom Now Button", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 			}
@@ -265,7 +271,7 @@ namespace AutomationSQLdm.Grooming_Modifications
 		{
 			try
 			{
-				repo.GroomingOptionWindow.btnAggregateNowInfo.WaitForExists(new Duration(1000000));
+				repo.GroomingOptionWindow.btnAggregateNowInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				repo.GroomingOptionWindow.btnAggregateNow.ClickThis();
 				Reports.ReportLog("Click On Aggregate Now Button", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 			}
@@ -279,7 +285,7 @@ namespace AutomationSQLdm.Grooming_Modifications
 		{
 			try
 			{
-				repo.GroomingOptionWindow.btnRefreshInfo.WaitForExists(new Duration(1000000));
+				repo.GroomingOptionWindow.btnRefreshInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				repo.GroomingOptionWindow.btnRefresh.ClickThis();
 				Reports.ReportLog("Click On Refresh Button", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 			}
@@ -295,7 +301,7 @@ namespace AutomationSQLdm.Grooming_Modifications
 		{
 			try
 			{
-				repo.GroomingOptionWindow.btnGOWOkInfo.WaitForExists(new Duration(1000000));
+				repo.GroomingOptionWindow.btnGOWOkInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				repo.GroomingOptionWindow.btnGOWOk.ClickThis();
 				Reports.ReportLog("Click On Ok Button", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 			}
@@ -309,7 +315,7 @@ namespace AutomationSQLdm.Grooming_Modifications
 		{
 			try
 			{
-				repo.GroomingOptionWindow.txtDGCurrentlyRunningStatusInfo.WaitForExists(new Duration(1000000));
+				repo.GroomingOptionWindow.txtDGCurrentlyRunningStatusInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				
 				if (repo.GroomingOptionWindow.txtDGCurrentlyRunningStatus.TextValue == strCurrentRunningStatusInDG)
 					Reports.ReportLog("Successfully Verified Current Running Status In DataGrooming As: " + repo.GroomingOptionWindow.txtDGCurrentlyRunningStatus.TextValue, Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
@@ -326,7 +332,7 @@ namespace AutomationSQLdm.Grooming_Modifications
 		{
 			try
 			{
-				repo.GroomingOptionWindow.txtDGCompletionStatusInfo.WaitForExists(new Duration(1000000));
+				repo.GroomingOptionWindow.txtDGCompletionStatusInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				
 				if (repo.GroomingOptionWindow.txtDGCompletionStatus.TextValue == strCompletionStatusInDG)
 					Reports.ReportLog("Successfully Verified Completion Status In DataGrooming As: " + repo.GroomingOptionWindow.txtDGCompletionStatus.TextValue, Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
@@ -343,7 +349,7 @@ namespace AutomationSQLdm.Grooming_Modifications
 		{
 			try
 			{
-				repo.GroomingOptionWindow.txtAggregationCurrentlyRunningInfo.WaitForExists(new Duration(1000000));
+				repo.GroomingOptionWindow.txtAggregationCurrentlyRunningInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				
 				if (repo.GroomingOptionWindow.txtAggregationCurrentlyRunning.TextValue == strCurrentRunningStatusInAG)
 					Reports.ReportLog("Successfully Verified Current Running Status In Aggregation As: " + repo.GroomingOptionWindow.txtAggregationCurrentlyRunning.TextValue, Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
@@ -360,7 +366,7 @@ namespace AutomationSQLdm.Grooming_Modifications
 		{
 			try
 			{
-				repo.GroomingOptionWindow.txtAggregationCompletionStatusInfo.WaitForExists(new Duration(1000000));
+				repo.GroomingOptionWindow.txtAggregationCompletionStatusInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				
 				if (repo.GroomingOptionWindow.txtAggregationCompletionStatus.TextValue == strCompletionStatusInAG)
 					Reports.ReportLog("Successfully Verified Completion Status In Aggregation As: " + repo.GroomingOptionWindow.txtAggregationCompletionStatus.TextValue, Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
@@ -434,19 +440,53 @@ namespace AutomationSQLdm.Grooming_Modifications
 		{
 			try
 			{
-				repo.Application.AllServersInfo.WaitForItemExists(120000);
-				TreeItem serveritem = repo.Application.AllServers.GetChildItem(serverName);
-				if(serveritem == null)
+				if (repo.GettingStartWindow.txtGSWAddNewServerInfo.Exists())
 				{
-					repo.Application.AllServers.RightClick();
-					//serveritem.RightClick();
+					//Click On Add Server Button
+					repo.GettingStartWindow.txtGSWAddNewServer.ClickThis();
 					
-					//Click On Manage Servers
-					repo.SQLdmDC.ManageServersInfo.WaitForExists(120000);
-					repo.SQLdmDC.ManageServers.ClickThis();
+					//Calling the function to Add Server
+					StepsAddServer(serverName);
+				}
+				
+				else
+				{
+					repo.Application.AllServersInfo.WaitForItemExists(120000);
+					TreeItem serveritem = repo.Application.AllServers.GetChildItem(serverName);
+					if(serveritem == null)
+					{
+						//Right Click On AllServers
+						repo.Application.AllServers.RightClick();
+						
+						//Click On Manage Servers
+						repo.SQLdmDC.ManageServersInfo.WaitForExists(120000);
+						repo.SQLdmDC.ManageServers.ClickThis();
+						
+						//Calling the function to Add Server
+						StepsAddServer(serverName);
+						
+					}
+					else
+					{
+						Reports.ReportLog("Server Instance is Already Present: " + serverName, Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
+						
+					}
 					
+				}
+
+			}
+			catch (Exception ex)
+			{
+				throw new Exception("Failed : AddSQLServerInstance : " + ex.Message);
+			}
+		}
+		
+		public static void StepsAddServer(string serverName)
+		{
+			try
+			{
 					//Wait For Confirmation
-					repo.ManageServersDialog.SelfInfo.WaitForExists(new Duration(1000000));
+					repo.ManageServersDialog.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 					
 					//Click ON Add Button IN Manage Servers
 					repo.ManageServersDialog.btnMSAddInfo.WaitForExists(120000);
@@ -486,8 +526,10 @@ namespace AutomationSQLdm.Grooming_Modifications
 					repo.AddServersWizardDialog.btnASWNext.ClickThis();
 					
 					//Click ON Finish in Configure OS Collection
+					Common.WaitForSync(120000);
 					repo.AddServersWizardDialog.btnASFinishInfo.WaitForExists(120000);
 					repo.AddServersWizardDialog.btnASFinish.ClickThis();
+					Common.WaitForSync(120000);
 					
 					//Click ON Finish in Configure OS Collection
 					repo.ExceptionMessageBoxForm.btnMSYesInfo.WaitForExists(120000);
@@ -499,22 +541,24 @@ namespace AutomationSQLdm.Grooming_Modifications
 					
 					//Click ON Ok Button IN Manage Servers
 					repo.ManageServersDialog.btnMSOkInfo.WaitForExists(120000);
+					
 					//repo.ManageServersDialog.btnMSOk.Enabled= true
 					repo.ManageServersDialog.btnMSOk.ClickThis();
 					
+					//Click On StartConsole If it is Present
+					if (repo.GettingStartWindow.btnGSWStartConsoleInfo.Exists())
+					{
+						repo.GettingStartWindow.btnGSWStartConsole.ClickThis();
+					}
 					
+					Common.WaitForSync(90000);
 					Reports.ReportLog("Successfully Added Server Instance: " + serverName, Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
-				}
 				
-				else
-				{
-					Reports.ReportLog("Server Instance is Already Present: " + serverName, Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
-				}
 			}
 			catch (Exception ex)
 			{
-				throw new Exception("Failed : OpenProperties : " + ex.Message);
-			}
+				throw new Exception("Failed : StepsAddServer :" + ex.Message);
+			}	
 		}
 		
 		public static void VerifyFieldsAreEditable()
@@ -604,7 +648,7 @@ namespace AutomationSQLdm.Grooming_Modifications
 		{
 			try
 			{
-				repo.GroomingOptionWindow.SelfInfo.WaitForExists(new Duration(1000000));
+				repo.GroomingOptionWindow.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				
 				Validate.AttributeContains(repo.GroomingOptionWindow.GroomStandardMetrixAndBaselineInfo, "Text", "90");
 				

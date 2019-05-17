@@ -13,15 +13,6 @@ rxversion="8.2">
 	name="Root"
 	searchtimeout="0ms"
 	usecache="True">
-		<item
-		addcaps="cell,accessible"
-		capname="cell"
-		id="172570af-8ff7-4fe3-85cb-8980091f5933"
-		name="NewSqlUserAdded"
-		refimgid="d0209644-d165-4c3b-b528-f7db475fdd15"
-		searchtimeout="30000ms">
-			/form[@title~'^Idera\ SQL\ diagnostic\ mana']/statusbar[@automationid='statusBar']//table[@accessiblename~'^\ \ \ \ \ \ \ System\ logins,\ whi']//cell[@accessiblevalue='sa1']
-		</item>
 		<appfolder
 		capname="form"
 		id="1a73f651-c755-42fc-8b6e-622d9bbcf5f6"
@@ -199,6 +190,15 @@ rxversion="8.2">
 			refimgid="2b1ea055-4c2d-44c5-ac2b-29544b7b3ee3"
 			searchtimeout="30000ms">
 				/form[@title~'^Idera\ SQL\ diagnostic\ mana']/statusbar[@automationid='statusBar']//container[@automationid='navigationPaneHost']//container[@controlname='NavigationPaneControl']//container[@controlname='tagsPanel']/tree[@controlname='tagsTreeView']/treeitem[@accessiblename&gt;'TagSnoozeAlert']
+			</item>
+			<item
+			addcaps="cell,accessible"
+			capname="cell"
+			id="172570af-8ff7-4fe3-85cb-8980091f5933"
+			name="NewSqlUserAdded"
+			refimgid="d0209644-d165-4c3b-b528-f7db475fdd15"
+			searchtimeout="30000ms">
+				/form[@title~'^Idera\ SQL\ diagnostic\ mana']/statusbar[@automationid='statusBar']//table[@accessiblename~'^\ \ \ \ \ \ \ System\ logins,\ whi']//cell[@accessiblevalue='sa1']
 			</item>
 			<basepath>
 				/form[@title~'^Idera\ SQL\ diagnostic\ mana']

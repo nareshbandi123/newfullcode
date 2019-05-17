@@ -118,6 +118,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddServers\AddUersToSSMS.cs">
+      <id>5e2bda3b-c4e8-42d6-b649-bc72d7ef59e9</id>
+    </Compile>
     <Compile Include="AddServers\PrerequisitiesForAddingServers.cs">
       <id>92e6c70f-1944-4eb0-bf7a-d3d6ef4c7682</id>
     </Compile>
@@ -411,48 +414,48 @@
     </Compile>
     <Compile Include="OperatorSecurityRole\OperatorSecurityRoleRepo.cs">
       <DependentUpon>OperatorSecurityRoleRepo.rxrep</DependentUpon>
-      <id>d37ef1fc-12c6-48c9-a91e-69bc99fc9c74</id>
-      <BoundTo>ce1932fc-5edb-4ee0-96a3-78ce1f484bb0</BoundTo>
+      <id>72a69a6e-832f-43e2-8f6e-f24b40f661bd</id>
+      <BoundTo>6e3fa885-9ebf-46d7-9b1f-5ab7d99b8552</BoundTo>
       <RepositoryCode>true</RepositoryCode>
     </Compile>
     <Compile Include="OperatorSecurityRole\Steps.cs">
-      <id>1b4731e8-2ac3-4679-846c-6970d8864065</id>
+      <id>afae6f99-9eb5-448d-a7ec-14090003d1f0</id>
     </Compile>
     <Compile Include="OperatorSecurityRole\TC_T721974\AddingWindowsUserToSecurityRole.cs">
-      <id>4e212085-8413-4c80-a617-e34fba51a933</id>
+      <id>c7d24900-8ca7-440f-8fe6-0cb4a7db260c</id>
     </Compile>
     <Compile Include="OperatorSecurityRole\TC_T721975\AddingSqlUserToSecurityRole.cs">
-      <id>c7a29455-62d8-4b97-a16f-434d7ce81bde</id>
+      <id>2f313e76-1b5d-48f3-84a4-a78aa370a490</id>
     </Compile>
     <Compile Include="OperatorSecurityRole\TC_T721976\VerifyViewDataAcknowledgeWindowsUser.cs">
-      <id>593b40c7-79c4-462a-91c6-0107ac98fbaf</id>
+      <id>b9cd4f46-274f-45bf-a5a0-93c22d6b0f2f</id>
     </Compile>
     <Compile Include="OperatorSecurityRole\TC_T721977\VerifyViewDataAcknowledgeSqlUser.cs">
-      <id>29b022f3-0a3f-41ea-88d6-2fc843cd6b49</id>
+      <id>a59f567c-521f-4bf2-b681-cd14612cfce8</id>
     </Compile>
     <Compile Include="OperatorSecurityRole\TC_T721981\VerifySnoozeAlertsForFewMinutesForWindowsUser.cs">
-      <id>cb1a5a5f-a269-4fd1-bd58-4d8a6adc1731</id>
+      <id>880f9dfb-d4f1-4012-9504-bf74835b4986</id>
     </Compile>
     <Compile Include="OperatorSecurityRole\TC_T721982\VerifySnoozeAlertsFor10MinutesForWindowsUser.cs">
-      <id>5415036f-4da0-40d9-b83e-ed5c9e2cff78</id>
+      <id>9f5ec45f-993f-483f-98c0-8192159ef9ec</id>
     </Compile>
     <Compile Include="OperatorSecurityRole\TC_T721983\VerifyMaintenanceModeForWindowsUser.cs">
-      <id>9df986b9-634d-4f18-8d1b-ae350b33bac8</id>
+      <id>2ab329da-35e1-44f8-ae3b-d32b0dbc3fca</id>
     </Compile>
     <Compile Include="OperatorSecurityRole\TC_T721988\AbleToSaveUserWithNewPermission.cs">
-      <id>402d82e0-2b6d-4811-ac8b-79c88389c538</id>
+      <id>e38939ce-b2a8-432d-9cff-d72a5821e79a</id>
     </Compile>
     <Compile Include="OperatorSecurityRole\TC_T721989\VerifyMaintenanceModeForAllServersForWindowsUser.cs">
-      <id>ae9181e6-6d84-43a2-8e52-4dfdc8406bc8</id>
+      <id>c63c2109-3c83-47fa-8bfa-6c0ba296c5dc</id>
     </Compile>
     <Compile Include="OperatorSecurityRole\TC_T721990\VerifySnoozeAlertsAllServerSqlUser.cs">
-      <id>b020fb77-d006-4c7d-aea4-2b2cd06ea0c2</id>
+      <id>954cd1d4-c328-47b5-a3e6-64983b115b77</id>
     </Compile>
     <Compile Include="OperatorSecurityRole\TC_T721993\VerifyMaintenanceModeForSqlUser.cs">
-      <id>584ec1d0-9056-4ad9-8e58-2ececc300c8e</id>
+      <id>07441ce5-9f4a-42a2-9fb5-a4b0c2799db5</id>
     </Compile>
     <Compile Include="OperatorSecurityRole\TC_T721994\VerifySnoozeAlertsForFewMinutesForWindowsUser.cs">
-      <id>7d54899e-306e-4397-af5f-af282a71fb08</id>
+      <id>b2bba1df-19a0-4216-aba8-0b87f5dfafff</id>
     </Compile>
     <Compile Include="Program.cs">
       <id>5814e780-ff95-4e51-a14a-9bc079e4f89d</id>
@@ -555,12 +558,12 @@
     </None>
     <None Include="OperatorSecurityRole\OperatorSecurityRoleRepo.rximg">
       <DependentUpon>OperatorSecurityRoleRepo.rxrep</DependentUpon>
-      <id>422e7279-7a2c-4b39-afc0-8b72c78d83b3</id>
-      <BoundTo>ce1932fc-5edb-4ee0-96a3-78ce1f484bb0</BoundTo>
+      <id>04f088b7-4ac5-4c26-b171-9b79eabd2a5d</id>
+      <BoundTo>6e3fa885-9ebf-46d7-9b1f-5ab7d99b8552</BoundTo>
       <imageblob>true</imageblob>
     </None>
     <None Include="OperatorSecurityRole\OperatorSecurityRoleRepo.rxrep">
-      <id>ce1932fc-5edb-4ee0-96a3-78ce1f484bb0</id>
+      <id>6e3fa885-9ebf-46d7-9b1f-5ab7d99b8552</id>
       <repoid>e032fee8-66ef-49a5-bc55-053f9974bd0f</repoid>
       <reporootid>c0b1886f-194f-4804-ae68-99f28ac1402e</reporootid>
     </None>

@@ -38,7 +38,6 @@ namespace AutomationSQLdm.OperatorSecurityRole
         OperatorSecurityRoleRepoFolders.PermissionPropertiesSIMPSONSAdminisAppFolder _permissionpropertiessimpsonsadminis;
         OperatorSecurityRoleRepoFolders.ManageTagsDialogAppFolder _managetagsdialog;
         OperatorSecurityRoleRepoFolders.TagPropertiesDialogAppFolder _tagpropertiesdialog;
-        RepoItemInfo _newsqluseraddedInfo;
 
         /// <summary>
         /// Gets the singleton class instance representing the OperatorSecurityRoleRepo element repository.
@@ -66,7 +65,6 @@ namespace AutomationSQLdm.OperatorSecurityRole
             _permissionpropertiessimpsonsadminis = new OperatorSecurityRoleRepoFolders.PermissionPropertiesSIMPSONSAdminisAppFolder(this);
             _managetagsdialog = new OperatorSecurityRoleRepoFolders.ManageTagsDialogAppFolder(this);
             _tagpropertiesdialog = new OperatorSecurityRoleRepoFolders.TagPropertiesDialogAppFolder(this);
-            _newsqluseraddedInfo = new RepoItemInfo(this, "NewSqlUserAdded", "/form[@title~'^Idera\\ SQL\\ diagnostic\\ mana']/statusbar[@automationid='statusBar']//table[@accessiblename~'^\\ \\ \\ \\ \\ \\ \\ System\\ logins,\\ whi']//cell[@accessiblevalue='sa1']", 30000, null, "172570af-8ff7-4fe3-85cb-8980091f5933");
         }
 
 #region Variables
@@ -94,30 +92,6 @@ namespace AutomationSQLdm.OperatorSecurityRole
             get
             {
                 return _selfInfo;
-            }
-        }
-
-        /// <summary>
-        /// The NewSqlUserAdded item.
-        /// </summary>
-        [RepositoryItem("172570af-8ff7-4fe3-85cb-8980091f5933")]
-        public virtual Ranorex.Cell NewSqlUserAdded
-        {
-            get
-            {
-                 return _newsqluseraddedInfo.CreateAdapter<Ranorex.Cell>(true);
-            }
-        }
-
-        /// <summary>
-        /// The NewSqlUserAdded item info.
-        /// </summary>
-        [RepositoryItemInfo("172570af-8ff7-4fe3-85cb-8980091f5933")]
-        public virtual RepoItemInfo NewSqlUserAddedInfo
-        {
-            get
-            {
-                return _newsqluseraddedInfo;
             }
         }
 
@@ -252,6 +226,7 @@ namespace AutomationSQLdm.OperatorSecurityRole
             RepoItemInfo _myviewsallserversInfo;
             RepoItemInfo _tagsInfo;
             RepoItemInfo _tagsnoozealertInfo;
+            RepoItemInfo _newsqluseraddedInfo;
 
             /// <summary>
             /// Creates a new Application  folder.
@@ -278,6 +253,7 @@ namespace AutomationSQLdm.OperatorSecurityRole
                 _myviewsallserversInfo = new RepoItemInfo(this, "MyViewsAllServers", ".//container[@controlname='NavigationPaneControl']//container[@controlname='userViewsPanel']/tree[@controlname='userViewsTreeView']/treeitem[@accessiblename>'All Servers']", 30000, null, "6903854f-2b1c-493f-9889-921b27b56f5a");
                 _tagsInfo = new RepoItemInfo(this, "Tags", "statusbar[@automationid='statusBar']//container[@automationid='navigationPaneHost']//container[@controlname='NavigationPaneControl']//container[@controlname='tagsPanel']/text[@controlname='manageTagsLabel']", 30000, null, "0a718083-c629-489b-b026-8f64d6644495");
                 _tagsnoozealertInfo = new RepoItemInfo(this, "TagSnoozeAlert", "statusbar[@automationid='statusBar']//container[@automationid='navigationPaneHost']//container[@controlname='NavigationPaneControl']//container[@controlname='tagsPanel']/tree[@controlname='tagsTreeView']/treeitem[@accessiblename>'TagSnoozeAlert']", 30000, null, "fd46d20a-6c84-486d-86b2-ea3d77063153");
+                _newsqluseraddedInfo = new RepoItemInfo(this, "NewSqlUserAdded", "statusbar[@automationid='statusBar']//table[@accessiblename~'^\\ \\ \\ \\ \\ \\ \\ System\\ logins,\\ whi']//cell[@accessiblevalue='sa1']", 30000, null, "172570af-8ff7-4fe3-85cb-8980091f5933");
             }
 
             /// <summary>
@@ -757,6 +733,30 @@ namespace AutomationSQLdm.OperatorSecurityRole
                 get
                 {
                     return _tagsnoozealertInfo;
+                }
+            }
+
+            /// <summary>
+            /// The NewSqlUserAdded item.
+            /// </summary>
+            [RepositoryItem("172570af-8ff7-4fe3-85cb-8980091f5933")]
+            public virtual Ranorex.Cell NewSqlUserAdded
+            {
+                get
+                {
+                    return _newsqluseraddedInfo.CreateAdapter<Ranorex.Cell>(true);
+                }
+            }
+
+            /// <summary>
+            /// The NewSqlUserAdded item info.
+            /// </summary>
+            [RepositoryItemInfo("172570af-8ff7-4fe3-85cb-8980091f5933")]
+            public virtual RepoItemInfo NewSqlUserAddedInfo
+            {
+                get
+                {
+                    return _newsqluseraddedInfo;
                 }
             }
         }

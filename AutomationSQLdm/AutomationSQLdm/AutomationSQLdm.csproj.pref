@@ -1,15 +1,13 @@
 ﻿<Properties>
   <Array name="active">
-    <Element value="AutomationSQLdm.rxtst" />
+    <Element value="BVT\Steps.cs" />
   </Array>
   <Array name="bookmarks" />
   <Array name="files">
-    <Element value="BVT\TC_722141\VerifyDatabasesMirroringViewIsDisplayedSuccessfully.cs" />
     <Element value="BVT\Steps.cs" />
     <Element value="AutomationSQLdm.rxtst" />
     <Element value="BVT\BVTRepo.cs" />
-    <Element value="BVT\TC_722161\VerifySessionsSummaryIsDisplaying.cs" />
-    <Element value="BVT\TC_722160\VerifySessionsDetailsviewisdisplayedsuccessfully.cs" />
+    <Element value="BVT\TC_722019\VerifydatacollectionhappensandshowsdataonSessionsLocks.cs" />
   </Array>
   <Properties name="projectSavedData">
     <Properties name="customTool">

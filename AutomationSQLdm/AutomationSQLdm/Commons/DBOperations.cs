@@ -1,7 +1,11 @@
 ﻿using System;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Configuration;
+
+using AutomationSQLdm.Commons;
+using Ranorex;
+using AutomationSQLdm.Configuration;
 
 namespace AutomationSQLdm.Commons
 {
@@ -32,6 +36,70 @@ namespace AutomationSQLdm.Commons
                 }
             }
         }
+		
+		
+		public static void AddUsersToDatabase(string userType)
+		{
+			string userToAdd = string.Empty;
+			int result=0; string sqlCreateLogin = string.Empty;
+			SqlCommand cmd = null;
+			//string databasename = "SQLdmRepository";
+			
+			if(userType.ToLower().Equals(Config.NewSqlUser.ToLower()))
+	        {
+				userToAdd = Config.NewSqlUser;
+	        	sqlCreateLogin = "CREATE LOGIN " + userToAdd + " WITH PASSWORD = '" +
+	            Config.NewSqlUserPassword + "';  USE " + Config.RepositoryName + "; CREATE USER " + userToAdd + " FOR LOGIN " + userToAdd + ";";
+	        }
+	        else
+	        {
+	        	userToAdd = Config.NewWindowsUser;
+	        	sqlCreateLogin = "CREATE LOGIN [" + userToAdd + "] FROM WINDOWS;" +
+	            "USE " + Config.RepositoryName + "; CREATE USER [" + userToAdd + "] FOR LOGIN [" + userToAdd + "];";
+	        	//CREATE LOGIN [SIMPSONS\administrator1] FROM WINDOWS;USE SQLdmRepository; CREATE USER [SIMPSONS\administrator1] FOR LOGIN [SIMPSONS\administrator1];
+	        }
+	        
+			Report.Info(userToAdd);
+		    string connetionString = ConfigurationManager.AppSettings["SqldmRepository"].ToString();
+            using (SqlConnection conn = new SqlConnection(connetionString))
+            {
+		        conn.Open();
+				
+		        string sqlLoginChk = "USE " + Config.RepositoryName + "; select count(*) from master.dbo.syslogins where name ='"+ userToAdd +"'";
+		        cmd = new SqlCommand(sqlLoginChk,conn);
+		        result = Convert.ToInt16(cmd.ExecuteScalar());
+		        
+		        
+		        if(result>=1) // User already Exists
+		        {
+		        	string sqlDropLoginAndUser = "drop login ["+userToAdd +"];USE " + Config.RepositoryName + ";drop user ["+ userToAdd +"];";
+		        	cmd = new SqlCommand(sqlDropLoginAndUser,conn);
+			        int resultDropLogin = cmd.ExecuteNonQuery();
+			        //if(resultDropLogin >=1)
+				    Reports.ReportLog("Login and User '"+ userToAdd +"' dropped from SSMS", Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
+//		        	else
+//		        		Reports.ReportLog("Login and User "+ userToAdd +" both are failed to be dropped from SSMS", Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
+		        }
+		        
+		        cmd = new SqlCommand(sqlCreateLogin,conn);
+		        cmd.ExecuteNonQuery();
+				Reports.ReportLog("User "+ userToAdd +" added to SSMS", Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
+					
+//		        if(result<1)
+//		        {
+//			        cmd = new SqlCommand(sqlCreateLogin,conn);
+//			        cmd.ExecuteNonQuery();
+//					Reports.ReportLog("User "+ userToAdd +" added to SSMS", Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
+//		        }
+//		        else
+//		        {
+//		        	Reports.ReportLog("User "+ userToAdd +" already exists in SSMS", Reports.SQLdmReportLevel.Info, null, Configuration.Config.TestCaseName);
+//		        }
+		
+      			cmd.Dispose();
+		        conn.Close();
+		    }
+		}
 		
 //		static SqlConnection connection = null;
 //        static SqlCommand command = null;

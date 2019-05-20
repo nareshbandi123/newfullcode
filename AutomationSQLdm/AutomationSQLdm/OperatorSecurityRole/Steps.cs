@@ -601,48 +601,50 @@ namespace AutomationSQLdm.OperatorSecurityRole
 		}
 		
 		public static void SelectServers()
-		{
-			try
-			{
-				Ranorex.List serversLists= null;
-				if(repo.AddPermissionWizard.AvailableServersInfo.Exists())
-				{
-					serversLists = repo.AddPermissionWizard.AvailableServers;
-					int itemCount = serversLists.Children.Count;
-					Report.Info("Servers Count ="+ itemCount.ToString());
-					if(itemCount >= 2)
-					{
-						//Report.Info("serversLists.Items[0]: " + serversLists.Items[0]);
-						//serversLists.Children[0].Click();
-						serversLists.Items[0].Click();
-						Thread.Sleep(2000);
-						serversLists.Items[0].PressKeys("{LControlKey down}{LShiftKey down}");
-						Thread.Sleep(2000);
-						//serversLists.Items[itemCount/2+1].EnsureVisible();
-						serversLists.Items[itemCount/2+1].Click();
-						serversLists.Items[itemCount/2+1].PressKeys("{LControlKey up}{LShiftKey up}");
-						Reports.ReportLog("Selected Server", Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
-					}
-					else if(itemCount == 1)
-					{
-						serversLists.Items[0].Click();
-						Reports.ReportLog("Selected Server", Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
-					}
-					else
-					{
-						Reports.ReportLog("No Servers Available in Server List : ", Reports.SQLdmReportLevel.Fail, null, Configuration.Config.TestCaseName);
-					}
-				}
-				else
-				{
-					Reports.ReportLog("Available Server Dialog not exists : ", Reports.SQLdmReportLevel.Fail, null, Configuration.Config.TestCaseName);
-				}
-			}
-			catch(Exception ex)
-			{
-				throw new Exception("Failed : ClickOptionBtn_ViewDataAcknowledgwAlarm : " + ex.Message);
-			}
-		}
+        {
+            try
+            {
+                Ranorex.List serversLists= null;
+                if(repo.AddPermissionWizard.AvailableServersInfo.Exists())
+                {
+                    serversLists = repo.AddPermissionWizard.AvailableServers;
+                    int itemCount = serversLists.Children.Count;
+                    Report.Info("Servers Count ="+ itemCount.ToString());
+                    if(itemCount >= 2)
+                    {
+                        //Report.Info("serversLists.Items[0]: " + serversLists.Items[0]);
+                        //serversLists.Children[0].Click();
+                        serversLists.Items[0].Click();
+                        Thread.Sleep(2000);
+                        serversLists.Items[0].PressKeys("{LControlKey down}{LShiftKey down}");
+                        Thread.Sleep(2000);
+                        //serversLists.Items[itemCount/2+1].EnsureVisible();
+                        serversLists.Items[itemCount/2+1].Click();
+                        serversLists.Items[itemCount/2+1].PressKeys("{LControlKey up}{LShiftKey up}");
+                        Reports.ReportLog("Selected Server", Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
+                    }
+                    else if(itemCount == 1)
+                    {
+                        serversLists.Items[0].Click();
+                        Reports.ReportLog("Selected Server", Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
+                    }
+                    else
+                    {
+                        //Reports.ReportLog("No Servers Available in Server List", Reports.SQLdmReportLevel.Info, null, Configuration.Config.TestCaseName);
+                        Validate.Fail("No Servers Available in Server List");
+                    }
+                }
+                else
+                {
+                    //Reports.ReportLog("Available Server Dialog not exists : ", Reports.SQLdmReportLevel.Info, null, Configuration.Config.TestCaseName);
+                    Validate.Fail("Available Server Dialog not exists");
+                }
+            }
+            catch(Exception ex)
+            {
+                throw new Exception("Failed : SelectServers : " + ex.Message);
+            }
+        }
 		
 		public static void ClickAddButton()
 		{

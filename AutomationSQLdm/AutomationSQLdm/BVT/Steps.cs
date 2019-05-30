@@ -2135,7 +2135,61 @@ public static void VerifyTablesAndIndexesInDataBases()
 				throw new Exception("Failed : ValidateCurrencycodeColorChart  : " + ex.Message);
 			}
 
-	   }  
+	   }
+
+			public static void ClickonFulltextSearchInServices()
+		   {
+		   	try 
+			{					
+			    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
+			    repo.SQLdm.ServicesTab.rgSERFullTextSearchInfo.WaitForExists(new Duration(1000000));
+			    repo.SQLdm.ServicesTab.rgSERFullTextSearch.Click();
+			    Reports.ReportLog("Successfully Clicked On Full Text Search in Services", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+				
+			} 
+			catch (Exception ex)
+			{
+				throw new Exception("Failed : Click On Full Text Search in services :" + ex.Message);
+			}
+		   }
+		   public static void VerifyFullTextSearchInservices()
+		   {
+		   	try 
+			{
+				repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
+			    repo.SQLdm.tblFulltextsearchInfo.WaitForItemExists(1000000);
+			    
+			    if (repo.SQLdm.tblFulltextsearchInfo.Exists())
+				{
+					repo.SQLdm.tblFulltextsearch.Rows[0].Click();
+					Reports.ReportLog("No Of Records Present in Full Text Search In Services Is:" + repo.SQLdm.tblFulltextsearch.Rows.Count, Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
+					Reports.ReportLog("Full Text Search Displayed Successfully In Services", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+				}
+				else
+				{
+					Reports.ReportLog("Full Text Search Is Not Displaying", Reports.SQLdmReportLevel.Fail, null, Config.TestCaseName);
+				}
+			} 
+			catch (Exception ex)
+			{
+				throw new Exception("Failed : VerifyFullTextSearchInservices :" + ex.Message);
+			}
+		   }
+
+ 			public static void ClickOnLogsTab()
+			{
+				try 
+				{					
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.tabLogsInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.tabLogs.Click();
+				    Reports.ReportLog("Successfully Clicked On Logs Tab", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);					
+				} 
+				catch (Exception ex)
+				{
+					throw new Exception("Failed : ClickOnLogsTab :" + ex.Message);
+				}
+			}		   
           
     }
 }

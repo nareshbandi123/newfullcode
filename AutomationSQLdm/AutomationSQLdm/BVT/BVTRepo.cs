@@ -475,6 +475,7 @@ namespace AutomationSQLdm.BVT
             RepoItemInfo _ddlsesumlockstatisticsrequestsInfo;
             RepoItemInfo _txtsesumblockedsessionsInfo;
             RepoItemInfo _tblsedetailsInfo;
+            RepoItemInfo _tblfulltextsearchInfo;
 
             /// <summary>
             /// Creates a new SQLdm  folder.
@@ -535,6 +536,7 @@ namespace AutomationSQLdm.BVT
                 _ddlsesumlockstatisticsrequestsInfo = new RepoItemInfo(this, "ddlSESUMLockStatisticsRequests", ".//statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']//container[@controlname='lockStatisticsPanel']/toolbar[@controlname='lockStatisticsHeaderStrip']/menuitem[@accessiblename='Lock Statistics: Requests']", 30000, null, "c2d9335d-e7b2-4a65-8ad9-4395f5d88123");
                 _txtsesumblockedsessionsInfo = new RepoItemInfo(this, "txtSESUMBlockedSessions", ".//statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']//container[@controlname='blockedSessionsPanel']/toolbar[@controlname='blockedSessionsHeaderStrip']/text[@accessiblename='Blocked Sessions']", 30000, null, "070aa624-9076-4669-8035-c478a053e6e8");
                 _tblsedetailsInfo = new RepoItemInfo(this, "tblSEDetails", ".//statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']/?/?/container[@controlname='_child']/container[@controlname='SessionsDetailsView']//table[@accessiblerole='Table']", 30000, null, "f2dadfaf-bcd5-43f0-958f-da936f34aa59");
+                _tblfulltextsearchInfo = new RepoItemInfo(this, "tblFulltextsearch", ".//statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']/?/?/container[@controlname='_child']/container[@controlname='ServicesFullTextSearchView']//table[@accessiblerole='Table']", 30000, null, "1ceb1bf8-9899-487e-90cc-c864dd77b1d0");
             }
 
             /// <summary>
@@ -1764,6 +1766,30 @@ namespace AutomationSQLdm.BVT
             }
 
             /// <summary>
+            /// The tblFulltextsearch item.
+            /// </summary>
+            [RepositoryItem("1ceb1bf8-9899-487e-90cc-c864dd77b1d0")]
+            public virtual Ranorex.Table tblFulltextsearch
+            {
+                get
+                {
+                    return _tblfulltextsearchInfo.CreateAdapter<Ranorex.Table>(true);
+                }
+            }
+
+            /// <summary>
+            /// The tblFulltextsearch item info.
+            /// </summary>
+            [RepositoryItemInfo("1ceb1bf8-9899-487e-90cc-c864dd77b1d0")]
+            public virtual RepoItemInfo tblFulltextsearchInfo
+            {
+                get
+                {
+                    return _tblfulltextsearchInfo;
+                }
+            }
+
+            /// <summary>
             /// The OverViewTab folder.
             /// </summary>
             [RepositoryFolder("b4198f1b-1b59-48c6-abc4-9ecd0d0d6a75")]
@@ -2841,6 +2867,7 @@ namespace AutomationSQLdm.BVT
         {
             RepoItemInfo _rgsersummaryInfo;
             RepoItemInfo _rgsersqlagentjobsInfo;
+            RepoItemInfo _rgserfulltextsearchInfo;
 
             /// <summary>
             /// Creates a new ServicesTab  folder.
@@ -2850,6 +2877,7 @@ namespace AutomationSQLdm.BVT
             {
                 _rgsersummaryInfo = new RepoItemInfo(this, "rgSERSummary", ".//toolbar[@automationid='ribbon']/tabpage[@automationid='Services']/toolbar[@automationid='servicesTabViewsGroup']/container[@caption='']/radiobutton[1]", 30000, null, "0488712f-bc6c-43c7-8521-409d62190f17");
                 _rgsersqlagentjobsInfo = new RepoItemInfo(this, "rgSERSqlAgentJobs", ".//toolbar[@automationid='ribbon']/tabpage[@automationid='Services']/toolbar[@automationid='servicesTabViewsGroup']/container[@caption='']/radiobutton[2]", 30000, null, "cae5e8ec-faca-4ec8-a32e-da06214a7d71");
+                _rgserfulltextsearchInfo = new RepoItemInfo(this, "rgSERFullTextSearch", ".//container[@caption='']/radiobutton[3]", 30000, null, "a890c78c-bf31-4d3e-a1de-da7c66523fd5");
             }
 
             /// <summary>
@@ -2921,6 +2949,30 @@ namespace AutomationSQLdm.BVT
                 get
                 {
                     return _rgsersqlagentjobsInfo;
+                }
+            }
+
+            /// <summary>
+            /// The rgSERFullTextSearch item.
+            /// </summary>
+            [RepositoryItem("a890c78c-bf31-4d3e-a1de-da7c66523fd5")]
+            public virtual Ranorex.RadioButton rgSERFullTextSearch
+            {
+                get
+                {
+                    return _rgserfulltextsearchInfo.CreateAdapter<Ranorex.RadioButton>(true);
+                }
+            }
+
+            /// <summary>
+            /// The rgSERFullTextSearch item info.
+            /// </summary>
+            [RepositoryItemInfo("a890c78c-bf31-4d3e-a1de-da7c66523fd5")]
+            public virtual RepoItemInfo rgSERFullTextSearchInfo
+            {
+                get
+                {
+                    return _rgserfulltextsearchInfo;
                 }
             }
         }

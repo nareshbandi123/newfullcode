@@ -908,9 +908,6 @@
     <Folder Include="QueryPlan\TC_722069">
       <id>62160dca-0078-43fb-9227-be0da74ac54b</id>
     </Folder>
-    <Folder Include="SQLQueries">
-      <id>8a4a7c66-ece1-4b70-b784-bb7bb3876280</id>
-    </Folder>
     <Folder Include="TestData">
       <id>ec09b06a-497a-4f2b-955c-0ba17f7fc2c0</id>
     </Folder>

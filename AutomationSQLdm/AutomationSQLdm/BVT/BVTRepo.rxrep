@@ -4108,6 +4108,13 @@ AAAAAAAAABiKEP4PL9Uva6cOhYIAAAAASUVORK5CYII=
 				searchtimeout="30000ms">
 					//form[@title~'^Idera\ SQL\ diagnostic\ mana']//toolbar[@automationid='ribbon']/tabpage[@automationid='Services']/toolbar[@automationid='servicesTabViewsGroup']//toolbar[@automationid='ribbon']/tabpage[@automationid='Services']/toolbar[@automationid='servicesTabViewsGroup']/container[@caption='']/radiobutton[2]
 				</item>
+				<item
+				capname="radiobutton"
+				id="a890c78c-bf31-4d3e-a1de-da7c66523fd5"
+				name="rgSERFullTextSearch"
+				searchtimeout="30000ms">
+					//form[@title~'^Idera\ SQL\ diagnostic\ mana']//toolbar[@automationid='ribbon']/tabpage[@automationid='Services']/toolbar[@automationid='servicesTabViewsGroup']//container[@caption='']/radiobutton[3]
+				</item>
 				<basepath>
 					//form[@title~'^Idera\ SQL\ diagnostic\ mana']//toolbar[@automationid='ribbon']/tabpage[@automationid='Services']/toolbar[@automationid='servicesTabViewsGroup']
 				</basepath>
@@ -4256,6 +4263,13 @@ AAAAAAAAABiKEP4PL9Uva6cOhYIAAAAASUVORK5CYII=
 					//form[@title~'^Idera\ SQL\ diagnostic\ mana']//statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']
 				</basepath>
 			</folder>
+			<item
+			capname="table"
+			id="1ceb1bf8-9899-487e-90cc-c864dd77b1d0"
+			name="tblFulltextsearch"
+			searchtimeout="30000ms">
+				//form[@title~'^Idera\ SQL\ diagnostic\ mana']//statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']/?/?/container[@controlname='_child']/container[@controlname='ServicesFullTextSearchView']//table[@accessiblerole='Table']
+			</item>
 			<basepath>
 				//form[@title~'^Idera\ SQL\ diagnostic\ mana']
 			</basepath>

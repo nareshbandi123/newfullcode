@@ -34,10 +34,10 @@ namespace AutomationSQLdm.BVT.TC_722023
         {
         	try 
         	{
-        		Steps.RightClickOnServer(Config.ServerOptions_CMWIN2016S8);
+        		Steps.RightClickOnServer(Config.ServerOptions_SQLAUTHSERVER);
         		Steps.ClickProperties();
         		Steps.TestSQLAuthentication();
-        		Steps.SelectRequiredServer(Config.ServerOptions_CMWIN2016S8);
+        		Steps.SelectRequiredServer(Config.ServerOptions_SQLAUTHSERVER);
         		Steps.ClickOnQueriesTab();
         		Steps.ClickOnQueryHistory();
         		Steps.VerifyQueryHistoryIsDisplayed();

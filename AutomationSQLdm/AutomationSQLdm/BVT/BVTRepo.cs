@@ -3246,7 +3246,6 @@ namespace AutomationSQLdm.BVT
         public partial class MonitoredSqlServerInstancePropertiesDialAppFolder : RepoGenBaseFolder
         {
             BVTRepoFolders.OsPropertyPageFolder _ospropertypage;
-            BVTRepoFolders.Copy_of_OsPropertyPageFolder _copy_of_ospropertypage;
             RepoItemInfo _osmetrixInfo;
             RepoItemInfo _rdbsqlauthenticationInfo;
             RepoItemInfo _txtsqlloginnameInfo;
@@ -3262,7 +3261,6 @@ namespace AutomationSQLdm.BVT
                     base("MonitoredSqlServerInstancePropertiesDial", "/form[@controlname='MonitoredSqlServerInstancePropertiesDialog']", parentFolder, 30000, null, true, "cdc48991-0ebd-482b-9b79-ed5a0ff93a99", "")
             {
                 _ospropertypage = new BVTRepoFolders.OsPropertyPageFolder(this);
-                _copy_of_ospropertypage = new BVTRepoFolders.Copy_of_OsPropertyPageFolder(this);
                 _osmetrixInfo = new RepoItemInfo(this, "OSMetrix", "container[@controlname='propertiesControl']//list[@controlname='propertyPageListBox']//listitem[@index='8']", 30000, null, "e0720cb8-acdc-4c56-b62e-12b4b2365c19");
                 _rdbsqlauthenticationInfo = new RepoItemInfo(this, "rdbsqlauthentication", ".//container[@controlname='propertiesControl']//container[@controlname='popularPropertyPage']/?/?/container[@controlname='tableLayoutPanel6']/radiobutton[@controlname='useSqlServerAuthenticationRadioButton']", 30000, null, "844b935e-0036-415d-ac59-3cb462f3e281");
                 _txtsqlloginnameInfo = new RepoItemInfo(this, "txtsqlloginname", ".//container[@controlname='propertiesControl']//container[@controlname='popularPropertyPage']/?/?/container[@controlname='tableLayoutPanel6']/?/?/text[@accessiblename='Login name:']", 30000, null, "e5d3dda6-9a53-4a14-b1e1-2cf5d52af411");
@@ -3472,15 +3470,6 @@ namespace AutomationSQLdm.BVT
             {
                 get { return _ospropertypage; }
             }
-
-            /// <summary>
-            /// The Copy_of_OsPropertyPage folder.
-            /// </summary>
-            [RepositoryFolder("e8fa8c3c-8494-41f2-bd3b-8084ed6734b0")]
-            public virtual BVTRepoFolders.Copy_of_OsPropertyPageFolder Copy_of_OsPropertyPage
-            {
-                get { return _copy_of_ospropertypage; }
-            }
         }
 
         /// <summary>
@@ -3644,176 +3633,6 @@ namespace AutomationSQLdm.BVT
             /// The WmiTestButton item info.
             /// </summary>
             [RepositoryItemInfo("b69e423f-19ea-4d62-ada1-891b31aeb7bb")]
-            public virtual RepoItemInfo WmiTestButtonInfo
-            {
-                get
-                {
-                    return _wmitestbuttonInfo;
-                }
-            }
-        }
-
-        /// <summary>
-        /// The Copy_of_OsPropertyPageFolder folder.
-        /// </summary>
-        [RepositoryFolder("e8fa8c3c-8494-41f2-bd3b-8084ed6734b0")]
-        public partial class Copy_of_OsPropertyPageFolder : RepoGenBaseFolder
-        {
-            RepoItemInfo _sqldmserviceaccountInfo;
-            RepoItemInfo _usernameInfo;
-            RepoItemInfo _optionwmidirectInfo;
-            RepoItemInfo _passwordInfo;
-            RepoItemInfo _wmitestbuttonInfo;
-
-            /// <summary>
-            /// Creates a new Copy_of_OsPropertyPage  folder.
-            /// </summary>
-            public Copy_of_OsPropertyPageFolder(RepoGenBaseFolder parentFolder) :
-                    base("Copy_of_OsPropertyPage", "container[@controlname='propertiesControl']//container[@controlname='osPropertyPage']", parentFolder, 30000, null, false, "e8fa8c3c-8494-41f2-bd3b-8084ed6734b0", "")
-            {
-                _sqldmserviceaccountInfo = new RepoItemInfo(this, "SqldmServiceAccount", ".//container[@controlname='wmiCredentialsSecondaryContainer']//checkbox[@controlname='optionWmiCSCreds']", 30000, null, "05d88346-e1d8-4d6e-912a-5ecbcebe052b");
-                _usernameInfo = new RepoItemInfo(this, "UserName", ".//container[@controlname='wmiCredentialsSecondaryContainer']//text[@controlname='directWmiUserName']/text[@accessiblerole='Text']", 30000, null, "5ae836ff-048d-486c-ae02-060adf790064");
-                _optionwmidirectInfo = new RepoItemInfo(this, "OptionWmiDirect", ".//radiobutton[@controlname='optionWmiDirect']", 30000, null, "15b1aac7-b02b-41fd-b2fc-095f9c5c6968");
-                _passwordInfo = new RepoItemInfo(this, "Password", ".//container[@controlname='wmiCredentialsSecondaryContainer']//text[@controlname='directWmiPassword']/text[@accessiblerole='Text']", 30000, null, "cb58ef4d-9215-4f60-826a-4e7931fce847");
-                _wmitestbuttonInfo = new RepoItemInfo(this, "WmiTestButton", ".//container[@controlname='wmiCredentialsSecondaryContainer']///button[@controlname='wmiTestButton']", 30000, null, "14dec1bf-b081-45b6-9ec9-fd88b80c9554");
-            }
-
-            /// <summary>
-            /// The Self item.
-            /// </summary>
-            [RepositoryItem("e8fa8c3c-8494-41f2-bd3b-8084ed6734b0")]
-            public virtual Ranorex.Container Self
-            {
-                get
-                {
-                    return _selfInfo.CreateAdapter<Ranorex.Container>(true);
-                }
-            }
-
-            /// <summary>
-            /// The Self item info.
-            /// </summary>
-            [RepositoryItemInfo("e8fa8c3c-8494-41f2-bd3b-8084ed6734b0")]
-            public virtual RepoItemInfo SelfInfo
-            {
-                get
-                {
-                    return _selfInfo;
-                }
-            }
-
-            /// <summary>
-            /// The SqldmServiceAccount item.
-            /// </summary>
-            [RepositoryItem("05d88346-e1d8-4d6e-912a-5ecbcebe052b")]
-            public virtual Ranorex.CheckBox SqldmServiceAccount
-            {
-                get
-                {
-                    return _sqldmserviceaccountInfo.CreateAdapter<Ranorex.CheckBox>(true);
-                }
-            }
-
-            /// <summary>
-            /// The SqldmServiceAccount item info.
-            /// </summary>
-            [RepositoryItemInfo("05d88346-e1d8-4d6e-912a-5ecbcebe052b")]
-            public virtual RepoItemInfo SqldmServiceAccountInfo
-            {
-                get
-                {
-                    return _sqldmserviceaccountInfo;
-                }
-            }
-
-            /// <summary>
-            /// The UserName item.
-            /// </summary>
-            [RepositoryItem("5ae836ff-048d-486c-ae02-060adf790064")]
-            public virtual Ranorex.Text UserName
-            {
-                get
-                {
-                    return _usernameInfo.CreateAdapter<Ranorex.Text>(true);
-                }
-            }
-
-            /// <summary>
-            /// The UserName item info.
-            /// </summary>
-            [RepositoryItemInfo("5ae836ff-048d-486c-ae02-060adf790064")]
-            public virtual RepoItemInfo UserNameInfo
-            {
-                get
-                {
-                    return _usernameInfo;
-                }
-            }
-
-            /// <summary>
-            /// The OptionWmiDirect item.
-            /// </summary>
-            [RepositoryItem("15b1aac7-b02b-41fd-b2fc-095f9c5c6968")]
-            public virtual Ranorex.RadioButton OptionWmiDirect
-            {
-                get
-                {
-                    return _optionwmidirectInfo.CreateAdapter<Ranorex.RadioButton>(true);
-                }
-            }
-
-            /// <summary>
-            /// The OptionWmiDirect item info.
-            /// </summary>
-            [RepositoryItemInfo("15b1aac7-b02b-41fd-b2fc-095f9c5c6968")]
-            public virtual RepoItemInfo OptionWmiDirectInfo
-            {
-                get
-                {
-                    return _optionwmidirectInfo;
-                }
-            }
-
-            /// <summary>
-            /// The Password item.
-            /// </summary>
-            [RepositoryItem("cb58ef4d-9215-4f60-826a-4e7931fce847")]
-            public virtual Ranorex.Text Password
-            {
-                get
-                {
-                    return _passwordInfo.CreateAdapter<Ranorex.Text>(true);
-                }
-            }
-
-            /// <summary>
-            /// The Password item info.
-            /// </summary>
-            [RepositoryItemInfo("cb58ef4d-9215-4f60-826a-4e7931fce847")]
-            public virtual RepoItemInfo PasswordInfo
-            {
-                get
-                {
-                    return _passwordInfo;
-                }
-            }
-
-            /// <summary>
-            /// The WmiTestButton item.
-            /// </summary>
-            [RepositoryItem("14dec1bf-b081-45b6-9ec9-fd88b80c9554")]
-            public virtual Ranorex.Button WmiTestButton
-            {
-                get
-                {
-                    return _wmitestbuttonInfo.CreateAdapter<Ranorex.Button>(true);
-                }
-            }
-
-            /// <summary>
-            /// The WmiTestButton item info.
-            /// </summary>
-            [RepositoryItemInfo("14dec1bf-b081-45b6-9ec9-fd88b80c9554")]
             public virtual RepoItemInfo WmiTestButtonInfo
             {
                 get
@@ -4550,6 +4369,7 @@ namespace AutomationSQLdm.BVT
             RepoItemInfo _txtdeleteconfirmmsgInfo;
             RepoItemInfo _btnaarokInfo;
             RepoItemInfo _btnaarcancelInfo;
+            RepoItemInfo _lbldatabasenavigationerrorInfo;
 
             /// <summary>
             /// Creates a new ExceptionMessageDialog  folder.
@@ -4560,6 +4380,7 @@ namespace AutomationSQLdm.BVT
                 _txtdeleteconfirmmsgInfo = new RepoItemInfo(this, "txtDeleteConfirmMsg", ".//container[@controlname='pnlForm']//text[@accessiblename~'^Delete\\ the\\ selected\\ notif']", 30000, null, "734b487f-9795-4166-8b43-6e9724ab42a6");
                 _btnaarokInfo = new RepoItemInfo(this, "btnAAROk", ".//container[@controlname='pnlForm']/?/?/button[@controlname='button1']", 30000, null, "b06688ad-5441-4ca9-8678-a8a16984d4f7");
                 _btnaarcancelInfo = new RepoItemInfo(this, "btnAARCancel", ".//container[@controlname='pnlForm']/?/?/button[@controlname='button2']", 30000, null, "89e78359-914f-4202-bad6-e3867091361b");
+                _lbldatabasenavigationerrorInfo = new RepoItemInfo(this, "lblDataBaseNavigationError", ".//link[@controlname='lblTopMessage']/text[@accessiblename~'^An\\ error\\ was\\ detected\\ whi']", 30000, null, "f529c909-520b-4cef-a583-cc22183c7ec4");
             }
 
             /// <summary>
@@ -4655,6 +4476,30 @@ namespace AutomationSQLdm.BVT
                 get
                 {
                     return _btnaarcancelInfo;
+                }
+            }
+
+            /// <summary>
+            /// The lblDataBaseNavigationError item.
+            /// </summary>
+            [RepositoryItem("f529c909-520b-4cef-a583-cc22183c7ec4")]
+            public virtual Ranorex.Text lblDataBaseNavigationError
+            {
+                get
+                {
+                    return _lbldatabasenavigationerrorInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The lblDataBaseNavigationError item info.
+            /// </summary>
+            [RepositoryItemInfo("f529c909-520b-4cef-a583-cc22183c7ec4")]
+            public virtual RepoItemInfo lblDataBaseNavigationErrorInfo
+            {
+                get
+                {
+                    return _lbldatabasenavigationerrorInfo;
                 }
             }
         }

@@ -32,6 +32,13 @@ rxversion="8.2">
 			searchtimeout="30000ms">
 				/form[@title~'^Idera\ SQL\ diagnostic\ mana']//button[@automationid='toolBarTodayButton']/text[@caption='SQLDM Today']
 			</item>
+			<item
+			capname="picture"
+			id="093817f7-06e0-4c86-ab85-20f41993b6ee"
+			name="imgSQLdiagnosticManager"
+			searchtimeout="30000ms">
+				/form[@title~'^Idera\ SQL\ diagnostic\ mana']//statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='windowsFormsHostControl']/?/?/container[@controlname='_child']//container[@controlname='headerPanel']/picture[@controlname='pictureBox1']
+			</item>
 			<basepath>
 				/form[@title~'^Idera\ SQL\ diagnostic\ mana']
 			</basepath>

@@ -16,7 +16,7 @@ namespace AutomationSQLdm.Configuration
 		public static string SqlSystemUser = ConfigurationManager.AppSettings["SqlSystemUser"].ToString();
 		public static string SqlSystemUserPassword = ConfigurationManager.AppSettings["SqlSystemUserPassword"].ToString();
 		
-		public static string SQLdmRepository = ConfigurationManager.AppSettings["SQLdmRepository"].ToString();
+//		public static string SQLdmRepository = ConfigurationManager.AppSettings["SQLdmRepository"].ToString();
 		public static string RepositoryName = ConfigurationManager.AppSettings["RepositoryName"].ToString();
 		
 		
@@ -25,12 +25,14 @@ namespace AutomationSQLdm.Configuration
 		
 		
 		//Available Servers
+		public const string ServerOptions_DEFAULTSERVER 	= "CMWIN2016-S8";  //ForNavigations
+		public const string ServerOptions_SQLAUTHSERVER 	= "T-MSSQL2016";  //ForSQLAuthentication
 		public const string ServerOptions_CMWIN2016S8 		= "CMWIN2016-S8";
 		public const string ServerOptions_CMWIN2016SQL17 	= "CMWIN2016SQL17";
 		public const string ServerOptions_TMSSQL2016 		= "T-MSSQL2016";
 		public const string ServerOptions_FORDELETE 		= "BI-ET-W2012";  //ForDeleteServer
 		//public const string ServerOptions_DEFAULTSERVER 	= "T-MSSQL2016";  //ForNavigations
-		public const string ServerOptions_DEFAULTSERVER 	= "CMWIN2016-S8";  //ForNavigations
+		//public const string ServerOptions_DEFAULTSERVER 	= "CMWIN2016-S8";  //ForNavigations
 		
 		
 		//Available Queryyes

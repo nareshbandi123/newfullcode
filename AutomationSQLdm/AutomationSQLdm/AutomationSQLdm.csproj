@@ -419,7 +419,7 @@
       <RepositoryCode>true</RepositoryCode>
     </Compile>
     <Compile Include="OperatorSecurityRole\Steps.cs">
-      <id>afae6f99-9eb5-448d-a7ec-14090003d1f0</id>
+      <id>40a79359-25b9-4680-9f11-d777f083c2e1</id>
     </Compile>
     <Compile Include="OperatorSecurityRole\TC_T721974\AddingWindowsUserToSecurityRole.cs">
       <id>c7d24900-8ca7-440f-8fe6-0cb4a7db260c</id>
@@ -450,6 +450,9 @@
     </Compile>
     <Compile Include="OperatorSecurityRole\TC_T721990\VerifySnoozeAlertsAllServerSqlUser.cs">
       <id>954cd1d4-c328-47b5-a3e6-64983b115b77</id>
+    </Compile>
+    <Compile Include="OperatorSecurityRole\TC_T721992\VerifySnoozeAlertsForFewMinutesForSqlUser.cs">
+      <id>bcf9664b-9689-4057-9753-fe565915c715</id>
     </Compile>
     <Compile Include="OperatorSecurityRole\TC_T721993\VerifyMaintenanceModeForSqlUser.cs">
       <id>07441ce5-9f4a-42a2-9fb5-a4b0c2799db5</id>
@@ -838,6 +841,9 @@
     </Folder>
     <Folder Include="BVT">
       <id>435ace51-31ae-4bef-bf4d-5d490d806462</id>
+    </Folder>
+    <Folder Include="OperatorSecurityRole\TC_T721992">
+      <id>4ad35cf3-b489-489c-8b7d-758690dc3294</id>
     </Folder>
     <Folder Include="OperatorSecurityRole\TC_T721990">
       <id>d13c23b5-c19f-4806-88c3-352149232bec</id>

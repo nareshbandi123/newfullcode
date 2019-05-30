@@ -41,7 +41,7 @@ namespace AutomationSQLdm.Grooming_Modifications
 		{
 			try
 			{
-				repo.Application.ToolsInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				repo.Application.ToolsInfo.WaitForItemExists(new Duration(MaxSyncWaitTime));
 				repo.Application.Tools.Click();
 				Reports.ReportLog("ClickOnTools", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 			}
@@ -70,6 +70,7 @@ namespace AutomationSQLdm.Grooming_Modifications
 			try
 			{
 				repo.GroomingOptionWindow.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				repo.GroomingOptionWindow.AggregateTextbox.TextValue = "1095";
 				//if (repo.GroomingOptionWindow.AggregateTextboxInfo.Exists())
 				if (repo.GroomingOptionWindow.AggregateTextbox.TextValue == "1095")
 					Reports.ReportLog("Verify Aggregate forecasting data to daily records after is Displaying: " + repo.GroomingOptionWindow.AggregateTextbox.TextValue , Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);

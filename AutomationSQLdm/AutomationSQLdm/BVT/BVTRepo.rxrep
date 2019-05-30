@@ -4455,64 +4455,6 @@ DAPIxVgFicf/GQCdrAkiuOdOjQAAAABJRU5ErkJggg==
 			searchtimeout="30000ms">
 				/form[@controlname='MonitoredSqlServerInstancePropertiesDialog']//button[@accessiblename='Close']
 			</item>
-			<folder
-			addcaps="container,control,nativewindow"
-			capname="container"
-			id="e8fa8c3c-8494-41f2-bd3b-8084ed6734b0"
-			isrooted="True"
-			name="Copy_of_OsPropertyPage"
-			refpath="/form[@controlname='MonitoredSqlServerInstancePropertiesDialog']/container[@controlname='propertiesControl']/container[@controlname='splitContainer']/container[@controlname='panel2']/container[@controlname='osPropertyPage']"
-			searchtimeout="30000ms"
-			usecache="False">
-				<item
-				addcaps="checkbox,control,nativewindow"
-				capname="checkbox"
-				id="05d88346-e1d8-4d6e-912a-5ecbcebe052b"
-				name="SqldmServiceAccount"
-				refimgid="5d8fe448-e38a-45ff-8708-3c37e2b9cb49"
-				searchtimeout="30000ms">
-					/form[@controlname='MonitoredSqlServerInstancePropertiesDialog']/container[@controlname='propertiesControl']//container[@controlname='osPropertyPage']//container[@controlname='wmiCredentialsSecondaryContainer']//checkbox[@controlname='optionWmiCSCreds']
-				</item>
-				<item
-				addcaps="text,accessible"
-				capname="text"
-				id="5ae836ff-048d-486c-ae02-060adf790064"
-				name="UserName"
-				refimgid="4ad048a9-3f6f-43e2-b791-570b38af705e"
-				searchtimeout="30000ms">
-					/form[@controlname='MonitoredSqlServerInstancePropertiesDialog']/container[@controlname='propertiesControl']//container[@controlname='osPropertyPage']//container[@controlname='wmiCredentialsSecondaryContainer']//text[@controlname='directWmiUserName']/text[@accessiblerole='Text']
-				</item>
-				<item
-				addcaps="radiobutton,control,nativewindow"
-				capname="radiobutton"
-				id="15b1aac7-b02b-41fd-b2fc-095f9c5c6968"
-				name="OptionWmiDirect"
-				refimgid="6c3f5126-3c7a-4933-b18e-a9582f068fce"
-				searchtimeout="30000ms">
-					/form[@controlname='MonitoredSqlServerInstancePropertiesDialog']/container[@controlname='propertiesControl']//container[@controlname='osPropertyPage']//radiobutton[@controlname='optionWmiDirect']
-				</item>
-				<item
-				addcaps="text,accessible"
-				capname="text"
-				id="cb58ef4d-9215-4f60-826a-4e7931fce847"
-				name="Password"
-				refimgid="bcf5fa11-8359-4f6a-b5c6-3b74a17b1074"
-				searchtimeout="30000ms">
-					/form[@controlname='MonitoredSqlServerInstancePropertiesDialog']/container[@controlname='propertiesControl']//container[@controlname='osPropertyPage']//container[@controlname='wmiCredentialsSecondaryContainer']//text[@controlname='directWmiPassword']/text[@accessiblerole='Text']
-				</item>
-				<item
-				addcaps="button,control,nativewindow"
-				capname="button"
-				id="14dec1bf-b081-45b6-9ec9-fd88b80c9554"
-				name="WmiTestButton"
-				refimgid="a0ded10a-bf6d-4064-8374-4db61667f604"
-				searchtimeout="30000ms">
-					/form[@controlname='MonitoredSqlServerInstancePropertiesDialog']/container[@controlname='propertiesControl']//container[@controlname='osPropertyPage']//container[@controlname='wmiCredentialsSecondaryContainer']///button[@controlname='wmiTestButton']
-				</item>
-				<basepath>
-					/form[@controlname='MonitoredSqlServerInstancePropertiesDialog']/container[@controlname='propertiesControl']//container[@controlname='osPropertyPage']
-				</basepath>
-			</folder>
 			<basepath>
 				/form[@controlname='MonitoredSqlServerInstancePropertiesDialog']
 			</basepath>
@@ -4768,6 +4710,13 @@ XrLp0EM2aG+RntUiB+ZT6fxfIsRPbYnQgbXhGFYAAAAASUVORK5CYII=
 			name="btnAARCancel"
 			searchtimeout="30000ms">
 				//form[@controlname='ExceptionMessageBoxForm']//container[@controlname='pnlForm']/?/?/button[@controlname='button2']
+			</item>
+			<item
+			capname="text"
+			id="f529c909-520b-4cef-a583-cc22183c7ec4"
+			name="lblDataBaseNavigationError"
+			searchtimeout="30000ms">
+				//form[@controlname='ExceptionMessageBoxForm']//link[@controlname='lblTopMessage']/text[@accessiblename~'^An\ error\ was\ detected\ whi']
 			</item>
 			<basepath>
 				//form[@controlname='ExceptionMessageBoxForm']

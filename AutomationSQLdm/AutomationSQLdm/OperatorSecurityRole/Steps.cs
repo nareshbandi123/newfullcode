@@ -144,6 +144,7 @@ namespace AutomationSQLdm.OperatorSecurityRole
 		{ 
 			try
 			{
+				repo.Application.ServersInfo.WaitForItemExists(new Duration(200000));
 				repo.Application.Servers.ClickThis();
 				Reports.ReportLog("Clicked Servers in Left Pane ", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 				
@@ -158,6 +159,7 @@ namespace AutomationSQLdm.OperatorSecurityRole
 		{ 
 			try
 			{
+				repo.SQLdmDesktopClient.SnoozeAlerts_ContextMenuInfo.WaitForItemExists(new Duration(200000));
 				repo.SQLdmDesktopClient.SnoozeAlerts_ContextMenu.ClickThis();
 				Reports.ReportLog("Snooze Server Context Menu Clicked  ", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 			}
@@ -171,6 +173,7 @@ namespace AutomationSQLdm.OperatorSecurityRole
 		{ 
 			try
 			{
+				repo.SQLdmDesktopClient.SnoozeAlerts_ContextMenuInfo.WaitForItemExists(new Duration(200000));
 				repo.SQLdmDesktopClient.ResumeAlerts_ContextMenu.ClickThis();
 				repo.SnoozeAlertsDialog.OkButton.ClickThis();
 				Reports.ReportLog("Resumed alert for Server using Context Menu. ", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
@@ -457,7 +460,7 @@ namespace AutomationSQLdm.OperatorSecurityRole
 		{
 			try
 			{
-				repo.Application.btnAdministrationInfo.WaitForExists(new Duration(100000));
+				repo.Application.btnAdministrationInfo.WaitForExists(new Duration(200000));
 				repo.Application.btnAdministration.ClickThis();
 				//repo.Application.btnAdministration.Press();
 				Reports.ReportLog("Clicked Administration button", Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
@@ -472,7 +475,7 @@ namespace AutomationSQLdm.OperatorSecurityRole
 		{
 			try
 			{
-				//repo.Application.ApplicationSecurityInfo.WaitForExists(new Duration(100000));
+				repo.Application.ApplicationSecurityInfo.WaitForExists(new Duration(200000));
 				repo.Application.ApplicationSecurity.Click();
 				Reports.ReportLog("Clicked Application Security", Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
 			}
@@ -559,7 +562,7 @@ namespace AutomationSQLdm.OperatorSecurityRole
 		{
 			try
 			{
-				//repo.AddPermissionWizard.txtUserNameInfo.WaitForExists(new Duration(500));				
+				repo.AddPermissionWizard.txtUserNameInfo.WaitForItemExists(new Duration(200000));				
 				repo.AddPermissionWizard.txtUserName.PressKeys(domainUserName);
 				Reports.ReportLog("Entered DomianUserName", Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
 			}
@@ -573,6 +576,7 @@ namespace AutomationSQLdm.OperatorSecurityRole
 		{
 			try
 			{
+				repo.AddPermissionWizard.ComboBoxUserPageCmbBxAuthenticationInfo.WaitForItemExists(new Duration(200000));				
 				Ranorex.ComboBox combobox = repo.AddPermissionWizard.ComboBoxUserPageCmbBxAuthentication;
 				combobox.Click();
 				ListItem lst_userItem = combobox.FindSingle<ListItem>("/list/listitem[@text='SQL Server Authentication']");
@@ -590,7 +594,7 @@ namespace AutomationSQLdm.OperatorSecurityRole
 		{
 			try
 			{
-				//repo.AddPermissionWizard.ViewDataAcknowledgwAlarmInfo.WaitForExists(new Duration(500));
+				repo.AddPermissionWizard.ViewDataAcknowledgwAlarmInfo.WaitForItemExists(new Duration(200000));
 				repo.AddPermissionWizard.ViewDataAcknowledgwAlarm.Click();
 				Reports.ReportLog("Selected Option ViewDataAcknowledgwAlarm ", Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
 			}
@@ -601,50 +605,50 @@ namespace AutomationSQLdm.OperatorSecurityRole
 		}
 		
 		public static void SelectServers()
-        {
-            try
-            {
-                Ranorex.List serversLists= null;
-                if(repo.AddPermissionWizard.AvailableServersInfo.Exists())
-                {
-                    serversLists = repo.AddPermissionWizard.AvailableServers;
-                    int itemCount = serversLists.Children.Count;
-                    Report.Info("Servers Count ="+ itemCount.ToString());
-                    if(itemCount >= 2)
-                    {
-                        //Report.Info("serversLists.Items[0]: " + serversLists.Items[0]);
-                        //serversLists.Children[0].Click();
-                        serversLists.Items[0].Click();
-                        Thread.Sleep(2000);
-                        serversLists.Items[0].PressKeys("{LControlKey down}{LShiftKey down}");
-                        Thread.Sleep(2000);
-                        //serversLists.Items[itemCount/2+1].EnsureVisible();
-                        serversLists.Items[itemCount/2+1].Click();
-                        serversLists.Items[itemCount/2+1].PressKeys("{LControlKey up}{LShiftKey up}");
-                        Reports.ReportLog("Selected Server", Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
-                    }
-                    else if(itemCount == 1)
-                    {
-                        serversLists.Items[0].Click();
-                        Reports.ReportLog("Selected Server", Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
-                    }
-                    else
-                    {
-                        //Reports.ReportLog("No Servers Available in Server List", Reports.SQLdmReportLevel.Info, null, Configuration.Config.TestCaseName);
-                        Validate.Fail("No Servers Available in Server List");
-                    }
-                }
-                else
-                {
-                    //Reports.ReportLog("Available Server Dialog not exists : ", Reports.SQLdmReportLevel.Info, null, Configuration.Config.TestCaseName);
-                    Validate.Fail("Available Server Dialog not exists");
-                }
-            }
-            catch(Exception ex)
-            {
-                throw new Exception("Failed : SelectServers : " + ex.Message);
-            }
-        }
+		{
+			try
+			{
+				Ranorex.List serversLists= null;
+				if(repo.AddPermissionWizard.AvailableServersInfo.Exists())
+				{
+					serversLists = repo.AddPermissionWizard.AvailableServers;
+					int itemCount = serversLists.Children.Count;
+					Report.Info("Servers Count ="+ itemCount.ToString());
+					if(itemCount >= 2)
+					{
+						//Report.Info("serversLists.Items[0]: " + serversLists.Items[0]);
+						//serversLists.Children[0].Click();
+						serversLists.Items[0].Click();
+						Thread.Sleep(2000);
+						serversLists.Items[0].PressKeys("{LControlKey down}{LShiftKey down}");
+						Thread.Sleep(2000);
+						//serversLists.Items[itemCount/2+1].EnsureVisible();
+						serversLists.Items[itemCount/2+1].Click();
+						serversLists.Items[itemCount/2+1].PressKeys("{LControlKey up}{LShiftKey up}");
+						Reports.ReportLog("Selected Server", Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
+					}
+					else if(itemCount == 1)
+					{
+						serversLists.Items[0].Click();
+						Reports.ReportLog("Selected Server", Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
+					}
+					else
+					{
+						//Reports.ReportLog("No Servers Available in Server List", Reports.SQLdmReportLevel.Info, null, Configuration.Config.TestCaseName);
+						Validate.Fail("No Servers Available in Server List");
+					}
+				}
+				else
+				{
+					//Reports.ReportLog("Available Server Dialog not exists : ", Reports.SQLdmReportLevel.Info, null, Configuration.Config.TestCaseName);
+					Validate.Fail("Available Server Dialog not exists");
+				}
+			}
+			catch(Exception ex)
+			{
+				throw new Exception("Failed : SelectServers : " + ex.Message);
+			}
+		}
 		
 		public static void ClickAddButton()
 		{
@@ -711,7 +715,8 @@ namespace AutomationSQLdm.OperatorSecurityRole
 				
 				repo.Application.TableSystemLoginsWhichBelongInfo.WaitForItemExists(200000);
 				//Ranorex.Cell cellUser = repo.Application.TableSystemLoginsWhichBelong.FindSingle("/row[1]/cell[@accessiblevalue='"+ user +"']");
-				Ranorex.Cell cellUser = Host.Local.FindSingle<Ranorex.Cell>(@"/form[@title~'^Idera\ SQL\ diagnostic\ mana']/statusbar[@automationid='statusBar']//container[@automationid='viewContainer']/container[@automationid='windowsFormsHostControl']//container[@controlname='_child']//container[@controlname='ApplicationSecurityView_Fill_Panel']//table[@accessiblename~'^\ \ \ \ \ \ \ System\ logins,\ whi']/row[1]/cell[@accessiblevalue='"+ user +"']");
+				//Ranorex.Cell cellUser = Host.Local.FindSingle<Ranorex.Cell>(@"/form[@title~'^Idera\ SQL\ diagnostic\ mana']/statusbar[@automationid='statusBar']//container[@automationid='viewContainer']/container[@automationid='windowsFormsHostControl']//container[@controlname='_child']//container[@controlname='ApplicationSecurityView_Fill_Panel']//table[@accessiblename~'^\ \ \ \ \ \ \ System\ logins,\ whi']/row[1]/cell[@accessiblevalue='"+ user +"']");
+				Ranorex.Cell cellUser = Host.Local.FindSingle<Ranorex.Cell>(UserTableRow1 + "/cell[@accessiblevalue='"+ user +"']");
 				if(cellUser.Text.ToLower().Equals(user.ToLower()))
 				{
 					cellUser.Click();
@@ -719,8 +724,8 @@ namespace AutomationSQLdm.OperatorSecurityRole
 				}
 				else
 				{
-					Reports.ReportLog("New User "+ user +" not Added : ", Reports.SQLdmReportLevel.Info, null, Configuration.Config.TestCaseName);
-					Validate.Fail("New User not "+ user +" Added Successfully");
+					Reports.ReportLog("New User "+ user +" is not Added Successfully", Reports.SQLdmReportLevel.Info, null, Configuration.Config.TestCaseName);
+					Validate.Fail("New User  "+ user +" is not Added Successfully");
 				}
 			
 			}

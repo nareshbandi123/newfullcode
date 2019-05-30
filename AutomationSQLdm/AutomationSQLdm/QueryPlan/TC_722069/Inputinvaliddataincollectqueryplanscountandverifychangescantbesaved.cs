@@ -42,10 +42,14 @@ namespace AutomationSQLdm.QueryPlan.TC_722069
         		Steps.SelectServer(Config.ServerOptions_DEFAULTSERVER);
         		Steps.ClickOnQueriesTab();
         		Steps.ClickOnSignatureMode();
+        		Steps.ClickOnConfigureQueryMonitor();
         		Steps.CheckEnableQueryMonitor();
-        		//Steps.VerifyQueryPlansStatus("enable");
-        		//Steps.EnterTextInSelectTop("1");
-        		//Steps.ClickOnOnInMSSP();
+        		Steps.VerifyQueryPlanOptionsEnable();
+        		Steps.EnterTextInQueryPlan(-1);
+        		Steps.ClickOnOkInMSSP();
+        		Steps.ClickOnConfigureQueryMonitor();
+        		Steps.VerifyQueryPlanValue(1);
+        		Steps.ClickOnOkInMSSP();
         		Common.UpdateStatus(1); // 1 : Pass
         		
         		

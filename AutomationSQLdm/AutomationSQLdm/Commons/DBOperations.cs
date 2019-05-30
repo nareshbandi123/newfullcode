@@ -60,7 +60,7 @@ namespace AutomationSQLdm.Commons
 	        }
 	        
 			Report.Info(userToAdd);
-		    string connetionString = ConfigurationManager.AppSettings["SqldmRepository"].ToString();
+		    string connetionString = ConfigurationManager.AppSettings["SqldmRepositoryConn"].ToString();
             using (SqlConnection conn = new SqlConnection(connetionString))
             {
 		        conn.Open();

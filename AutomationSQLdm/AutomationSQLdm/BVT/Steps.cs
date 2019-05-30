@@ -50,8 +50,8 @@ namespace AutomationSQLdm.BVT
     	public static string CopyResponseName ="ResponseName(Copy)";
     	//public static string SQLUserName="sa";
     	//public static string SQLPassword="control*88";	
-    	public static string SQLUserName="Test";
-    	public static string SQLPassword="Test@1";
+    	public static string SQLUserName="TestUser";
+    	public static string SQLPassword="TestUser@1";
     	
     	public static void VerifySQLdmToday()
 			{
@@ -76,12 +76,14 @@ namespace AutomationSQLdm.BVT
 			{
 				try 
 				{
-					 repo.Application.AllServersInfo.WaitForItemExists(120000);
+					 //repo.Application.AllServersInfo.WaitForItemExists(120000);
+					 repo.Application.AllServersInfo.WaitForItemExists(MidSyncWaitTime);
 					 TreeItem serveritem = repo.Application.AllServers.GetChildItem(serverName);
 					 
 					if(serveritem != null)
 					{
 						serveritem.ClickThis();
+						repo.SQLdm.tabQueriesInfo.WaitForItemExists(MidSyncWaitTime);
 						Reports.ReportLog("Successfully Selected Default Server : " + serverName, Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 					}
 					else
@@ -523,8 +525,7 @@ namespace AutomationSQLdm.BVT
 				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				    repo.SQLdm.tabDatabasesInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				    repo.SQLdm.tabDatabases.Click();
-				    Reports.ReportLog("Successfully Clicked On DataBases Tab", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
-					
+				    Reports.ReportLog("Successfully Clicked On DataBases Tab", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);	
 				} 
 				catch (Exception ex)
 				{
@@ -858,7 +859,7 @@ namespace AutomationSQLdm.BVT
 			{
 				try 
 				{
-					repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+					//repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 				    repo.SQLdm.tblQueryEventOccerrancesInfo.WaitForItemExists(MaxSyncWaitTime);
 				    
 					if (repo.SQLdm.tblQueryEventOccerrances.Rows.Count >= 0 )
@@ -993,12 +994,13 @@ namespace AutomationSQLdm.BVT
 				}
 			}
 			
-          //--------------------------------------
+          
        	public static void ClickProperties()
 		{
 			try
 			{
 				repo.SQLdmDesktopClient.Properties.ClickThis();
+				Common.WaitForSync(30000);
 				Reports.ReportLog("Clicked Properties ", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 			}
 			catch (Exception ex)
@@ -1926,6 +1928,7 @@ public static void VerifyTablesAndIndexesInDataBases()
 				repo.Application.AllServersInfo.WaitForItemExists(120000);
 				TreeItem serveritem = repo.Application.AllServers.GetChildItem(serverName);
 				if(serveritem != null) serveritem.RightClick(); 
+				
 			} 
 			catch (Exception ex) 
 			{
@@ -2058,7 +2061,7 @@ public static void VerifyTablesAndIndexesInDataBases()
 						}
 				        repo.MonitoredSqlServerInstancePropertiesDial.btnOk.Click();
 						repo.MonitoredSqlServerInstancePropertiesDial.btnClose.Click();
-				     	Thread.Sleep(360000);
+				     	Thread.Sleep(36000);
 				    } 
 					catch (Exception ex)
 					{

@@ -32,7 +32,7 @@ namespace AutomationSQLdm.BVT.TC_722137
         {
         	try 
         	{
-        		Steps.SelectRequiredServer(Config.ServerOptions_TMSSQL2016);
+        		Steps.SelectRequiredServer(Config.ServerOptions_DEFAULTSERVER);
         		Steps.VerifyDashboardView();
         		Steps.ClickOnResourcesTab();
         		Steps.ClickOnSummaryInResourcesTab();

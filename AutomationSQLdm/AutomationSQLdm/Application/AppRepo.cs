@@ -86,6 +86,7 @@ namespace AutomationSQLdm.Application
         public partial class IderaSQLdmRepoAppFolder : RepoGenBaseFolder
         {
             RepoItemInfo _lblsqldmtodayInfo;
+            RepoItemInfo _imgsqldiagnosticmanagerInfo;
 
             /// <summary>
             /// Creates a new IderaSQLdmRepo  folder.
@@ -94,6 +95,7 @@ namespace AutomationSQLdm.Application
                     base("IderaSQLdmRepo", "/form[@title~'^Idera\\ SQL\\ diagnostic\\ mana']", parentFolder, 30000, null, true, "3740dcd6-d531-41d1-9c95-f02d217dce74", "")
             {
                 _lblsqldmtodayInfo = new RepoItemInfo(this, "lblSQLDMToday", ".//button[@automationid='toolBarTodayButton']/text[@caption='SQLDM Today']", 30000, null, "dc6dc38a-499d-48a4-96d2-e1b6e7640819");
+                _imgsqldiagnosticmanagerInfo = new RepoItemInfo(this, "imgSQLdiagnosticManager", ".//statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='windowsFormsHostControl']/?/?/container[@controlname='_child']//container[@controlname='headerPanel']/picture[@controlname='pictureBox1']", 30000, null, "093817f7-06e0-4c86-ab85-20f41993b6ee");
             }
 
             /// <summary>
@@ -141,6 +143,30 @@ namespace AutomationSQLdm.Application
                 get
                 {
                     return _lblsqldmtodayInfo;
+                }
+            }
+
+            /// <summary>
+            /// The imgSQLdiagnosticManager item.
+            /// </summary>
+            [RepositoryItem("093817f7-06e0-4c86-ab85-20f41993b6ee")]
+            public virtual Ranorex.Picture imgSQLdiagnosticManager
+            {
+                get
+                {
+                    return _imgsqldiagnosticmanagerInfo.CreateAdapter<Ranorex.Picture>(true);
+                }
+            }
+
+            /// <summary>
+            /// The imgSQLdiagnosticManager item info.
+            /// </summary>
+            [RepositoryItemInfo("093817f7-06e0-4c86-ab85-20f41993b6ee")]
+            public virtual RepoItemInfo imgSQLdiagnosticManagerInfo
+            {
+                get
+                {
+                    return _imgsqldiagnosticmanagerInfo;
                 }
             }
         }

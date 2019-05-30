@@ -1,13 +1,16 @@
 ﻿<Properties>
   <Array name="active">
-    <Element value="BVT\Steps.cs" />
-  </Array>
-  <Array name="bookmarks" />
-  <Array name="files">
-    <Element value="BVT\Steps.cs" />
     <Element value="AutomationSQLdm.rxtst" />
-    <Element value="BVT\BVTRepo.cs" />
-    <Element value="BVT\TC_722019\VerifydatacollectionhappensandshowsdataonSessionsLocks.cs" />
+  </Array>
+  <Array name="bookmarks">
+    <Element value="Breakpoint|D:\repos\20may\newfullcode\AutomationSQLdm\AutomationSQLdm\Commons\DBOperations.cs|48|4|True|Break||" />
+    <Element value="Breakpoint|D:\repos\20may\newfullcode\AutomationSQLdm\AutomationSQLdm\Commons\DBOperations.cs|64|13|True|Break||" />
+    <Element value="Breakpoint|D:\repos\20may\newfullcode\AutomationSQLdm\AutomationSQLdm\AddServers\AddUersToSSMS.cs|47|11|True|Break||" />
+    <Element value="Breakpoint|D:\repos\20may\newfullcode\AutomationSQLdm\AutomationSQLdm\BVT\TC_722141\VerifyDatabasesMirroringViewIsDisplayedSuccessfully.cs|37|11|True|Break||" />
+    <Element value="Breakpoint|D:\repos\20may\newfullcode\AutomationSQLdm\AutomationSQLdm\BVT\TC_722141\VerifyDatabasesMirroringViewIsDisplayedSuccessfully.cs|38|11|True|Break||" />
+  </Array>
+  <Array name="files">
+    <Element value="AutomationSQLdm.rxtst" />
   </Array>
   <Properties name="projectSavedData">
     <Properties name="customTool">

@@ -13,7 +13,8 @@ namespace AutomationSQLdm.Commons
     public static class Common 
     {
        public static CommonRepo repo = CommonRepo.Instance; 
-       public static int ApplicationOpenWaitTime = 280000;
+       //public static int ApplicationOpenWaitTime = 280000;
+       public static int ApplicationOpenWaitTime = 12000000;
 		
 		public static void DeleteFile(string filename)
         {

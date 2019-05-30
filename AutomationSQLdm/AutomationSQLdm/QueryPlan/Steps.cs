@@ -41,7 +41,7 @@ namespace AutomationSQLdm.QueryPlan
 		{
 			try 
 			{
-				repo.SQLdmDesktop.FileInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				repo.SQLdmDesktop.FileInfo.WaitForItemExists(new Duration(MaxSyncWaitTime));
 				repo.SQLdmDesktop.File.ClickThis();
 				Reports.ReportLog("ClickOnFile", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 			} 
@@ -69,7 +69,7 @@ namespace AutomationSQLdm.QueryPlan
 		{
 			try 
 				{
-					repo.RepoConsoleDialog.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+					repo.RepoConsoleDialog.SelfInfo.WaitForItemExists(new Duration(MaxSyncWaitTime));
 					repo.RepoConsoleDialog.btnRCDConnectInfo.WaitForItemExists(MaxSyncWaitTime);
 					repo.RepoConsoleDialog.btnRCDConnect.ClickThis();
 					
@@ -91,6 +91,8 @@ namespace AutomationSQLdm.QueryPlan
 					if(serveritem != null)
 					{
 						serveritem.ClickThis();
+						//Common.WaitForSync(60000);
+						repo.SQLdmDesktop.tabQueriesInfo.WaitForItemExists(60000);
 						Reports.ReportLog("Successfully Selected Required Server : " + serverName, Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 					}
 					else

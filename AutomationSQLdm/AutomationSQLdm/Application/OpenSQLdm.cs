@@ -38,9 +38,22 @@ namespace AutomationSQLdm.Application
         	try 
         	{
         		Ranorex.Host.Local.OpenSQLdm();
-        		repo.IderaSQLdmRepo.SelfInfo.WaitForExists(Commons.Common.ApplicationOpenWaitTime);
+        		repo.IderaSQLdmRepo.SelfInfo.WaitForItemExists(Commons.Common.ApplicationOpenWaitTime);
+        		Common.WaitForSync(30000);
+        		//repo.IderaSQLdmRepo.imgSQLdiagnosticManagerInfo.WaitForItemExists(Commons.Common.ApplicationOpenWaitTime);
+        		Reports.ReportLog("SQLdm Application Open", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
         		
-				Reports.ReportLog("SQLdm Application Open", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+        		//repo.IderaSQLdmRepo.SelfInfo.WaitForItemExists(Commons.Common.ApplicationOpenWaitTime);
+        		
+//        		if (repo.IderaSQLdmRepo.imgSQLdiagnosticManager.Visible == true)
+//        		{
+//					Reports.ReportLog("SQLdm Application Open", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+//        		}
+//        		else
+//        		{
+//        			//Common.WaitForSync(120000);
+//        			//Reports.ReportLog("SQLdm Application Open", Reports.SQLdmReportLevel.Fail, null, Config.TestCaseName);
+//        		}
         	} 
         	catch (Exception ex) 
         	{

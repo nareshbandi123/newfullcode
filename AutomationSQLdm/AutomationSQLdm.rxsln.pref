@@ -2,63 +2,8 @@
   <ActiveConfiguration value="Debug" />
   <ActivePlatform value="x86" />
   <SerializedValue name="ModuleBrowserState">
-    <ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-      <string>{61F99090-53F7-41D0-9F8A-6FC8C2262E52}</string>
-      <string>60513a05-eab7-41e7-8c10-e51c735edc2e</string>
-      <string>8f29f265-6029-4d74-a75f-7ebb4cd617e4</string>
-      <string>4a6de247-0fc0-4c5f-91de-4426bcec9862</string>
-      <string>435ace51-31ae-4bef-bf4d-5d490d806462</string>
-      <string>67d95f15-5c56-4ac2-b8d7-e69e990b1e3c</string>
-      <string>256f7f67-a7b8-4578-9357-c4b25a3d2ab9</string>
-      <string>0a4f52d5-88af-4a3e-80b9-1d9d3ac24f71</string>
-      <string>a391cb12-15bf-418f-a8f3-3fff91bd2c8f</string>
-      <string>7b3b47b8-aa67-4d98-9f10-778b15e91402</string>
-      <string>01f97181-a0b1-4b2f-b667-36ead09b81c0</string>
-      <string>c0e8f708-922b-4cbc-918f-1c572421a0b8</string>
-      <string>0c693408-e214-4380-8159-107dc370551b</string>
-      <string>188f64d6-ad22-4ac1-b5cd-39f40076ddb7</string>
-      <string>abee23c0-5716-42a1-86b1-5d7b521cf442</string>
-      <string>50cdf668-2047-4fda-b553-cf6889748a9e</string>
-      <string>365b16cd-b11d-4ab7-b21b-0ec452cfed29</string>
-      <string>cf2fdcda-c026-4a64-8114-44119164f62c</string>
-      <string>c4373fa7-0337-4407-b57d-3a35e4353bae</string>
-      <string>3d7eb8b5-cbea-4b21-a14c-0cfe800754c4</string>
-      <string>fea83a8e-a76f-413d-b6a0-868f1a5c468d</string>
-      <string>bca5d0d1-f6e4-49b8-93d2-a90bd420142f</string>
-      <string>947ac279-a44e-4b1c-a8dc-8d37b7ece651</string>
-      <string>9dfbe5a1-39eb-43d7-8680-b65eeb039c2e</string>
-      <string>8b890abf-f25c-4b7f-a740-a531701decb9</string>
-      <string>2f5303e1-31c7-40e1-beb0-6db0f96c9851</string>
-      <string>2d6b78ea-eb1c-44bb-b4da-f337949fb80e</string>
-      <string>99da5af7-373a-4af1-86d7-6baf62206085</string>
-      <string>b954a892-36f3-4e65-8c83-0800a9ebb180</string>
-      <string>0702afc5-9c99-4446-9493-f5f15244aca4</string>
-      <string>69ce9c90-285b-4edd-b285-d1a3240ca559</string>
-      <string>b797f7ca-8ebb-43ed-9c17-cfc15b5154bd</string>
-      <string>71079302-9dbc-417b-bb90-d5bcef186919</string>
-      <string>acce8b64-e927-47be-9f72-c00df446a7ab</string>
-      <string>ded140a1-ce76-4733-a693-b0ad421f5fac</string>
-      <string>507e1fe9-b3aa-4282-8307-c5e66a10f8d3</string>
-      <string>7b9fbf10-a042-432e-9e04-1cdc7a8d3abd</string>
-      <string>4111d808-51c3-433a-939b-9d26c6cd0de9</string>
-      <string>b2a1c7cc-b352-48b2-90e1-47fa0200635c</string>
-      <string>57517799-165b-4c0a-9248-0880689f0d55</string>
-      <string>28d505b6-6704-4f18-ae40-dfd9c24fdcc7</string>
-      <string>d51e70be-b510-4597-b7ba-3ddbae30f06d</string>
-      <string>71a738f9-6698-414a-bdb4-8794c49c46e2</string>
-      <string>d4d710d0-ab61-4424-be91-0096fa1ff762</string>
-      <string>18dce66b-5b8e-4cce-89eb-a21d34a22768</string>
-      <string>0a6fc3b9-b05b-4388-8e12-4e087be00f66</string>
-      <string>602b8b30-97ba-464a-928e-eb39126a1183</string>
-      <string>d3af87b7-65cf-405a-b7de-0f66403fe3b8</string>
-      <string>63057c66-458d-4cc0-bf82-67565e7d4d33</string>
-      <string>b497f7c9-f61c-4bda-8aeb-7da68097831f</string>
-      <string>d13c23b5-c19f-4806-88c3-352149232bec</string>
-      <string>4ad35cf3-b489-489c-8b7d-758690dc3294</string>
-      <string>db34df95-e9cf-4f20-b04c-3bc2c9802204</string>
-      <string>0847a94a-2939-4eb8-b1fa-8d70cb66e50d</string>
-    </ArrayOfString>
+    <ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
   </SerializedValue>
-  <ProjectBrowserState value="[Solution AutomationSQLdm[AutomationSQLdm[]]]&#xD;&#xA;Solution AutomationSQLdm&#xD;&#xA;Solution AutomationSQLdm" />
+  <ProjectBrowserState value="[Solution AutomationSQLdm[AutomationSQLdm[]]]&#xD;&#xA;Solution AutomationSQLdm\AutomationSQLdm\AutomationSQLdm.rxtst&#xD;&#xA;Solution AutomationSQLdm" />
   <StartupProject value="{61F99090-53F7-41D0-9F8A-6FC8C2262E52}" />
 </Properties>

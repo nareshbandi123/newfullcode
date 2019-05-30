@@ -6,8 +6,6 @@
   <Array name="files">
     <Element value="AutomationSQLdm.rxtst" />
     <Element value="BVT\Steps.cs" />
-    <Element value="BVT\TC_722047\VerifydatacollectionhappensandshowsdataonFullTextSearchscreen.cs" />
-    <Element value="BVT\TC_722049\VerifydatacollectionandshowsdataonLogsscreen.cs" />
     <Element value="BVT\BVTRepo.rxrep" />
   </Array>
   <Properties name="projectSavedData">

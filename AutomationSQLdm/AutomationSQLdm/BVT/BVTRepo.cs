@@ -22,7 +22,7 @@ namespace AutomationSQLdm.BVT
     /// <summary>
     /// The class representing the BVTRepo element repository.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("Ranorex", "8.2")]
+    [System.CodeDom.Compiler.GeneratedCode("Ranorex", global::Ranorex.Core.Constants.CodeGenVersion)]
     [RepositoryFolder("66deb29b-1505-4aae-ba1c-80d360e98697")]
     public partial class BVTRepo : RepoGenBaseFolder
     {
@@ -208,7 +208,7 @@ namespace AutomationSQLdm.BVT
     /// <summary>
     /// Inner folder classes.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("Ranorex", "8.2")]
+    [System.CodeDom.Compiler.GeneratedCode("Ranorex", global::Ranorex.Core.Constants.CodeGenVersion)]
     public partial class BVTRepoFolders
     {
         /// <summary>

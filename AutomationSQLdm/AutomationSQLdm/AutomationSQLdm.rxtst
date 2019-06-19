@@ -1503,15 +1503,20 @@ rxversion="8.2">
 			ReportTime="RelativeToTestSuiteStartTime"
 			TracingScreenshotMode="Foreground"
 			TracingScreenshotQuality="40"
+			VideoBitrate="2000"
+			VideoFps="15"
+			VideoRecordingMode="Off"
+			VideoSource="Auto"
 			enabletracingscreenshots="True"
 			id="72c32248-290e-403c-924f-e485d66662f3"
+			junitreport="False"
 			name="AutomationSQLdm"
-			placescreenshotsinfolder="True"
 			reportcompress="False"
+			reportdirectoryname=""
+			reportenabled="True"
 			reportfilename="%S_%Y%M%D_%T.rxlog"
 			reporttemplatefolder=""
-			reportwriteinterval="30000ms"
-			showinvisiblechars="True">
+			reportwriteinterval="30000ms">
 			</testsuite>
 			<smartfoldernode
 			id="72cd1202-ee87-46b5-b6c4-fb388f24b6c0"

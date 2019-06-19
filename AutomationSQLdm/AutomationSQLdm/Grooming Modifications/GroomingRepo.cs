@@ -22,7 +22,7 @@ namespace AutomationSQLdm.Grooming_Modifications
     /// <summary>
     /// The class representing the GroomingRepo element repository.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("Ranorex", "8.2")]
+    [System.CodeDom.Compiler.GeneratedCode("Ranorex", global::Ranorex.Core.Constants.CodeGenVersion)]
     [RepositoryFolder("16a56f01-8f73-4e50-8864-86e658161df7")]
     public partial class GroomingRepo : RepoGenBaseFolder
     {
@@ -153,7 +153,7 @@ namespace AutomationSQLdm.Grooming_Modifications
     /// <summary>
     /// Inner folder classes.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("Ranorex", "8.2")]
+    [System.CodeDom.Compiler.GeneratedCode("Ranorex", global::Ranorex.Core.Constants.CodeGenVersion)]
     public partial class GroomingRepoFolders
     {
         /// <summary>

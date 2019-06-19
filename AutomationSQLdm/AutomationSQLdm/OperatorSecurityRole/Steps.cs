@@ -10,6 +10,7 @@ using AutomationSQLdm.Extensions;
 using Ranorex;
 using Ranorex.Core;
 using System.Threading;
+using SQDLDMConstants = AutomationSQLdm.Commons.Constants; 
 
 namespace AutomationSQLdm.OperatorSecurityRole
 {
@@ -380,9 +381,9 @@ namespace AutomationSQLdm.OperatorSecurityRole
 		{ 
 			try
 			{
-				if(AllServerOrTag.Equals(Constants.allServer))
+				if(AllServerOrTag.Equals(SQDLDMConstants.allServer))
 					RightClickAllServer();
-				else if(AllServerOrTag.Equals(Constants.tagSnoozeAlert))
+				else if(AllServerOrTag.Equals(SQDLDMConstants.tagSnoozeAlert))
 					RightClickTag();
 				
 				if(!repo.SQLdmDesktopClient.SnoozeAlerts_ContextMenu.Enabled) 
@@ -812,7 +813,7 @@ namespace AutomationSQLdm.OperatorSecurityRole
 				{
 					if(row.Cells[3].Text.ToLower().Equals(Config.NewSqlUser.ToLower()))
 					{
-						if(row.Cells[5].Text.ToLower().Equals(Constants.strAdministrator.ToLower()))
+						if(row.Cells[5].Text.ToLower().Equals(SQDLDMConstants.strAdministrator.ToLower()))
 						{
 							IsFound = true;
 							break;
@@ -852,7 +853,7 @@ namespace AutomationSQLdm.OperatorSecurityRole
 			try
 			{
 				string user = null;
-				if(userType.ToLower().Equals(Constants.WindowsUser.ToLower()))
+				if(userType.ToLower().Equals(SQDLDMConstants.WindowsUser.ToLower()))
 					user = Config.NewWindowsUser;
 				else
 					user = Config.NewSqlUser;
@@ -977,7 +978,7 @@ namespace AutomationSQLdm.OperatorSecurityRole
 				repo.SQLdmDesktopClient.ConnectToSQLDMRepository.Click();
 				Reports.ReportLog("Clicked Menuitem ConnectToSQLDMRepository Successfully ! ", Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
 				
-				if(userType.Equals(Constants.SqlUser))
+				if(userType.Equals(SQDLDMConstants.SqlUser))
 				{
 					Ranorex.ComboBox combobox = repo.RepositoryConnectionDialog.AuthenticationDropDownList;
 					combobox.Click();
@@ -1076,7 +1077,7 @@ namespace AutomationSQLdm.OperatorSecurityRole
 				{
 					repo.Application.Tags.Click();
 					repo.ManageTagsDialog.AddButton.ClickThis();
-					repo.TagPropertiesDialog.TagName.TextValue = Constants.tagSnoozeAlert;
+					repo.TagPropertiesDialog.TagName.TextValue = SQDLDMConstants.tagSnoozeAlert;
 					repo.TagPropertiesDialog.SelectAllServersCheckBox.Checked = true;
 					repo.TagPropertiesDialog.OkButton.ClickThis();
 					repo.ManageTagsDialog.DoneButton.ClickThis();

@@ -12,6 +12,7 @@ using Ranorex.Core.Testing;
 using AutomationSQLdm.Base;
 using AutomationSQLdm.Commons;
 using AutomationSQLdm.Configuration;
+using SQDLDMConstants = AutomationSQLdm.Commons.Constants; 
 
 namespace AutomationSQLdm.OperatorSecurityRole.TC_T721977
 {
@@ -54,7 +55,7 @@ namespace AutomationSQLdm.OperatorSecurityRole.TC_T721977
         	  Steps.ClickNextButton();
         	  Steps.ClickFinishButton();
 			  Steps.VerifyUserAdded(Config.NewSqlUser);
-        	  Steps.VerifyViewDataAcknowledgwAlarmIsSelected(Constants.SqlUser);
+        	  Steps.VerifyViewDataAcknowledgwAlarmIsSelected(SQDLDMConstants.SqlUser);
         	  Steps.ClickCancelPermissionProperties();
         	  Steps.DeleteAddedUser();
         	  Common.UpdateStatus(1); // 1 : Pass

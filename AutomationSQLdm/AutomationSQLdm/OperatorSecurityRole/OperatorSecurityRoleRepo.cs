@@ -22,7 +22,7 @@ namespace AutomationSQLdm.OperatorSecurityRole
     /// <summary>
     /// The class representing the OperatorSecurityRoleRepo element repository.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("Ranorex", "8.2")]
+    [System.CodeDom.Compiler.GeneratedCode("Ranorex", global::Ranorex.Core.Constants.CodeGenVersion)]
     [RepositoryFolder("c0b1886f-194f-4804-ae68-99f28ac1402e")]
     public partial class OperatorSecurityRoleRepo : RepoGenBaseFolder
     {
@@ -198,7 +198,7 @@ namespace AutomationSQLdm.OperatorSecurityRole
     /// <summary>
     /// Inner folder classes.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("Ranorex", "8.2")]
+    [System.CodeDom.Compiler.GeneratedCode("Ranorex", global::Ranorex.Core.Constants.CodeGenVersion)]
     public partial class OperatorSecurityRoleRepoFolders
     {
         /// <summary>

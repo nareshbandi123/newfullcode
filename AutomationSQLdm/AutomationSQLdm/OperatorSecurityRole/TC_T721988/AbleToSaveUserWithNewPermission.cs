@@ -12,6 +12,7 @@ using WinForms = System.Windows.Forms;
 using AutomationSQLdm.Base;
 using AutomationSQLdm.Commons;
 using AutomationSQLdm.Configuration;
+using SQDLDMConstants = AutomationSQLdm.Commons.Constants; 
 
 
 namespace AutomationSQLdm.OperatorSecurityRole.TC_T721988
@@ -55,7 +56,7 @@ namespace AutomationSQLdm.OperatorSecurityRole.TC_T721988
         	  Steps.ClickNextButton();
         	  Steps.ClickFinishButton();
 			  Steps.VerifyUserAdded(Config.NewSqlUser);
-        	  Steps.ChangePermission(Constants.SqlUser);
+        	  Steps.ChangePermission(SQDLDMConstants.SqlUser);
         	  Steps.VerifyPermissionChanged();
         	  Steps.DeleteAddedUser();
         	  Common.UpdateStatus(1); // 1 : Pass

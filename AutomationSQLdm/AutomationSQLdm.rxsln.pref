@@ -1,9 +1,16 @@
 ﻿<Properties>
+  <Array name="active" />
   <ActiveConfiguration value="Debug" />
   <ActivePlatform value="x86" />
+  <Array name="bookmarks" />
+  <Array name="files" />
   <SerializedValue name="ModuleBrowserState">
-    <ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+    <ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <string>{61F99090-53F7-41D0-9F8A-6FC8C2262E52}</string>
+      <string>60513a05-eab7-41e7-8c10-e51c735edc2e</string>
+      <string>4a6de247-0fc0-4c5f-91de-4426bcec9862</string>
+    </ArrayOfString>
   </SerializedValue>
-  <ProjectBrowserState value="[Solution AutomationSQLdm[AutomationSQLdm[]]]&#xD;&#xA;Solution AutomationSQLdm\AutomationSQLdm\AutomationSQLdm.rxtst&#xD;&#xA;Solution AutomationSQLdm" />
+  <ProjectBrowserState value="[Solution AutomationSQLdm[Solution Items[]AutomationSQLdm[Commons[]OperatorSecurityRole[TC_T721974[]]]]]&#xD;&#xA;Solution AutomationSQLdm\AutomationSQLdm\AutomationSQLdm.rxtst&#xD;&#xA;Solution AutomationSQLdm\AutomationSQLdm\Commons" />
   <StartupProject value="{61F99090-53F7-41D0-9F8A-6FC8C2262E52}" />
 </Properties>

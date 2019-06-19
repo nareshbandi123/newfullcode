@@ -50,8 +50,10 @@ namespace AutomationSQLdm.BVT
     	public static string CopyResponseName ="ResponseName(Copy)";
     	//public static string SQLUserName="sa";
     	//public static string SQLPassword="control*88";	
-    	public static string SQLUserName="TestUser";
-    	public static string SQLPassword="TestUser@1";
+    	//TestUserCreation
+//TestUser@1234
+    	public static string SQLUserName="TestSQLAuth";
+    	public static string SQLPassword="Test@123";
     	
     	public static void VerifySQLdmToday()
 			{
@@ -2045,14 +2047,17 @@ public static void VerifyTablesAndIndexesInDataBases()
 					 repo.MonitoredSqlServerInstancePropertiesDial.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));	
 					 repo.MonitoredSqlServerInstancePropertiesDial.rdbsqlauthentication.Click();
 					 repo.MonitoredSqlServerInstancePropertiesDial.txtsqlloginname.Click();
+					 repo.MonitoredSqlServerInstancePropertiesDial.txtsqlloginname.Element.SetAttributeValue("Text","");
 				     repo.MonitoredSqlServerInstancePropertiesDial.txtsqlloginname.Element.SetAttributeValue("Text",SQLUserName);
 				     repo.MonitoredSqlServerInstancePropertiesDial.txtsqlpwd.Click();
+				     repo.MonitoredSqlServerInstancePropertiesDial.txtsqlpwd.Element.SetAttributeValue("Text","");
 				     repo.MonitoredSqlServerInstancePropertiesDial.txtsqlpwd.Element.SetAttributeValue("Text",SQLPassword);
 				     repo.MonitoredSqlServerInstancePropertiesDial.btnTest.Click();
 					 if(repo.ExceptionMessageBoxForm.SelfInfo.Exists())
 						{
 					     repo.ExceptionMessageBoxForm.ButtonYes.Click();
 						 Reports.ReportLog("PopupMessage Exists", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+						 
 						}
 						else
 						{
@@ -2060,12 +2065,12 @@ public static void VerifyTablesAndIndexesInDataBases()
 							throw new Exception("Failed : VerifyPopupMessage ");
 						}
 				        repo.MonitoredSqlServerInstancePropertiesDial.btnOk.Click();
-						repo.MonitoredSqlServerInstancePropertiesDial.btnClose.Click();
-				     	Thread.Sleep(36000);
+						//repo.MonitoredSqlServerInstancePropertiesDial.btnClose.Click();
+				     	Thread.Sleep(12000);
 				    } 
 					catch (Exception ex)
 					{
-					throw new Exception("Failed : CopyAlertResponses :" + ex.Message);
+					throw new Exception("Failed : TestSQLAuthentication :" + ex.Message);
 					}
          	
          }

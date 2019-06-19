@@ -1,5 +1,5 @@
 ﻿<configuration
-rxversion="8.2">
+rxversion="9.1">
 	<adapter.defaultsearchtimeout>
 		10000ms
 	</adapter.defaultsearchtimeout>
@@ -15,6 +15,12 @@ rxversion="8.2">
 	<imaging.usehiddenimagecapture>
 		True
 	</imaging.usehiddenimagecapture>
+	<input.enableimehookkey>
+		False
+	</input.enableimehookkey>
+	<keyboard.presssequencepredelay>
+		150ms
+	</keyboard.presssequencepredelay>
 	<pointer.checkisvalidlocation>
 		True
 	</pointer.checkisvalidlocation>
@@ -45,6 +51,9 @@ rxversion="8.2">
 	<recorder.keysequencesplittime>
 		1000ms
 	</recorder.keysequencesplittime>
+	<report.ShowInvisibleCharactersKey>
+		True
+	</report.ShowInvisibleCharactersKey>
 	<repository.appfoldertimeout>
 		30000ms
 	</repository.appfoldertimeout>
@@ -57,6 +66,9 @@ rxversion="8.2">
 	<repository.useappfoldercache>
 		True
 	</repository.useappfoldercache>
+	<repository.variablestoredaction>
+		None
+	</repository.variablestoredaction>
 	<repository.autogeneratefolders>
 		True
 	</repository.autogeneratefolders>
@@ -393,9 +405,42 @@ rxversion="8.2">
 	<TestCase.Retry.ShowWarning>
 		True
 	</TestCase.Retry.ShowWarning>
+	<Testing.Data.ExcelDataLoadingPreference>
+		PreferExcel
+	</Testing.Data.ExcelDataLoadingPreference>
 	<TestExecution.CopyRuntimeToOutput>
 		False
 	</TestExecution.CopyRuntimeToOutput>
+	<vbcodegenconfig.generate.root.namespace>
+		True
+	</vbcodegenconfig.generate.root.namespace>
+	<TestExecution.RemoteAgentOptimizations>
+		ReuseDirectoryForExecution, DetectChangesOnUpload
+	</TestExecution.RemoteAgentOptimizations>
+	<perftracing.tracers>
+		None
+	</perftracing.tracers>
+	<perftracing.directory>
+		%MyDocuments%\Ranorex\TraceLogs
+	</perftracing.directory>
+	<mouse.interpolation.mode>
+		Optimized
+	</mouse.interpolation.mode>
+	<mouse.disableonaction>
+		True
+	</mouse.disableonaction>
+	<keyboard.sequence.focusretries>
+		5
+	</keyboard.sequence.focusretries>
+	<keyboard.sequence.focusinterval>
+		20
+	</keyboard.sequence.focusinterval>
+	<recorder.focusresolving.Enabled>
+		True
+	</recorder.focusresolving.Enabled>
+	<recorder.focusresolving.TopLevelFallbackEnabled>
+		True
+	</recorder.focusresolving.TopLevelFallbackEnabled>
 	<plugins.win32.EnableBasicDelphiSupport>
 		True
 	</plugins.win32.EnableBasicDelphiSupport>
@@ -409,6 +454,9 @@ rxversion="8.2">
 	</plugins.win32.ProcessWhitelist>
 	<plugins.win32.ProcessBlacklist>
 	</plugins.win32.ProcessBlacklist>
+	<plugin.delphi.enabled>
+		True
+	</plugin.delphi.enabled>
 	<plugins.msaa.FilterEnabled>
 		True
 	</plugins.msaa.FilterEnabled>
@@ -427,6 +475,18 @@ rxversion="8.2">
 	<plugins.web.EnableEmbeddedWebDocuments>
 		True
 	</plugins.web.EnableEmbeddedWebDocuments>
+	<plugins.web.EnableJsAcceleration>
+		True
+	</plugins.web.EnableJsAcceleration>
+	<plugins.web.EnableIeAddon>
+		True
+	</plugins.web.EnableIeAddon>
+	<plugins.web.DynamicIdDetection>
+		True
+	</plugins.web.DynamicIdDetection>
+	<plugins.web.EnableRxPathJs>
+		True
+	</plugins.web.EnableRxPathJs>
 	<plugins.wpfnative.enablewpfdebug>
 		False
 	</plugins.wpfnative.enablewpfdebug>
@@ -485,6 +545,12 @@ rxversion="8.2">
 	<plugins.wpf.EnableWinAppFrameFiltering>
 		True
 	</plugins.wpf.EnableWinAppFrameFiltering>
+	<plugin.rawtext.captureansi>
+		True
+	</plugin.rawtext.captureansi>
+	<plugin.rawtext.includetextinrectcomparison>
+		False
+	</plugin.rawtext.includetextinrectcomparison>
 	<plugins.java.classnames>
 	</plugins.java.classnames>
 	<plugins.java.swtlegacymode>
@@ -496,6 +562,9 @@ rxversion="8.2">
 	<plugins.java.fxfilter>
 		True
 	</plugins.java.fxfilter>
+	<plugins.java.refreshwindow>
+		False
+	</plugins.java.refreshwindow>
 	<plugins.qt.legacymode>
 		False
 	</plugins.qt.legacymode>

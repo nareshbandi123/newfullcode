@@ -22,7 +22,7 @@ namespace AutomationSQLdm.Commons
     /// <summary>
     /// The class representing the CommonRepo element repository.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("Ranorex", "8.2")]
+    [System.CodeDom.Compiler.GeneratedCode("Ranorex", global::Ranorex.Core.Constants.CodeGenVersion)]
     [RepositoryFolder("9d2c49e9-5e4f-42bf-a8cf-910a588e3639")]
     public partial class CommonRepo : RepoGenBaseFolder
     {
@@ -98,7 +98,7 @@ namespace AutomationSQLdm.Commons
     /// <summary>
     /// Inner folder classes.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("Ranorex", "8.2")]
+    [System.CodeDom.Compiler.GeneratedCode("Ranorex", global::Ranorex.Core.Constants.CodeGenVersion)]
     public partial class CommonRepoFolders
     {
         /// <summary>

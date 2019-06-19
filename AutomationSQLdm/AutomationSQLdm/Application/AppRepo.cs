@@ -22,7 +22,7 @@ namespace AutomationSQLdm.Application
     /// <summary>
     /// The class representing the AppRepo element repository.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("Ranorex", "8.2")]
+    [System.CodeDom.Compiler.GeneratedCode("Ranorex", global::Ranorex.Core.Constants.CodeGenVersion)]
     [RepositoryFolder("2d96b086-6c2e-4921-95da-54b21d7428c0")]
     public partial class AppRepo : RepoGenBaseFolder
     {
@@ -76,7 +76,7 @@ namespace AutomationSQLdm.Application
     /// <summary>
     /// Inner folder classes.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("Ranorex", "8.2")]
+    [System.CodeDom.Compiler.GeneratedCode("Ranorex", global::Ranorex.Core.Constants.CodeGenVersion)]
     public partial class AppRepoFolders
     {
         /// <summary>

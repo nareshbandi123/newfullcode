@@ -22,7 +22,7 @@ namespace AutomationSQLdm.QueryPlan
     /// <summary>
     /// The class representing the QueryPlanRepo element repository.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("Ranorex", "8.2")]
+    [System.CodeDom.Compiler.GeneratedCode("Ranorex", global::Ranorex.Core.Constants.CodeGenVersion)]
     [RepositoryFolder("425f0314-efb0-4ba1-80d4-752d599c9284")]
     public partial class QueryPlanRepo : RepoGenBaseFolder
     {
@@ -120,7 +120,7 @@ namespace AutomationSQLdm.QueryPlan
     /// <summary>
     /// Inner folder classes.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("Ranorex", "8.2")]
+    [System.CodeDom.Compiler.GeneratedCode("Ranorex", global::Ranorex.Core.Constants.CodeGenVersion)]
     public partial class QueryPlanRepoFolders
     {
         /// <summary>

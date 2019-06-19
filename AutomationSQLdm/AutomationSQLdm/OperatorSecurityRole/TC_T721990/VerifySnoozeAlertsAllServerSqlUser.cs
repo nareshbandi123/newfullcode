@@ -12,6 +12,7 @@ using Ranorex.Core.Testing;
 using AutomationSQLdm.Base;
 using AutomationSQLdm.Commons;
 using AutomationSQLdm.Configuration;
+using SQDLDMConstants = AutomationSQLdm.Commons.Constants; 
 
 namespace AutomationSQLdm.OperatorSecurityRole.TC_T721990
 {
@@ -58,7 +59,7 @@ namespace AutomationSQLdm.OperatorSecurityRole.TC_T721990
 			  Steps.RightClickAllServer();
         	  Steps.ClickSnoozeAlertContextMenu();
         	  Steps.SetSnoozeAlertTime();
-        	  Steps.VerifyAllServerSnoozed(Constants.allServer);
+        	  Steps.VerifyAllServerSnoozed(SQDLDMConstants.allServer);
         	  Steps.ClickResumeAlertContextMenu();
         	  Common.UpdateStatus(1); // 1 : Pass
         	} 

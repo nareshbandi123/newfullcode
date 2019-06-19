@@ -22,7 +22,7 @@ namespace AutomationSQLdm
     /// <summary>
     /// The class representing the AutomationSQLdmRepository element repository.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("Ranorex", "8.2")]
+    [System.CodeDom.Compiler.GeneratedCode("Ranorex", global::Ranorex.Core.Constants.CodeGenVersion)]
     [RepositoryFolder("7bd21acd-09e4-4c42-81c5-68b39ccd889b")]
     public partial class AutomationSQLdmRepository : RepoGenBaseFolder
     {
@@ -65,7 +65,7 @@ namespace AutomationSQLdm
     /// <summary>
     /// Inner folder classes.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("Ranorex", "8.2")]
+    [System.CodeDom.Compiler.GeneratedCode("Ranorex", global::Ranorex.Core.Constants.CodeGenVersion)]
     public partial class AutomationSQLdmRepositoryFolders
     {
     }

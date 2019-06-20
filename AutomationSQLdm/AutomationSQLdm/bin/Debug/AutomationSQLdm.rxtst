@@ -5879,55 +5879,13 @@ rxversion="8.2">
 		<testconfiguration
 		name="TestRun">
 			<testcontainer
-			id="03bc89c8-0e1f-4733-84d5-776633cc9ff9">
-			</testcontainer>
-			<testcontainer
-			id="03e2130d-f3a7-4aa6-896f-f4547c7471d1">
-			</testcontainer>
-			<testcontainer
-			id="177bc383-aaff-4395-9c24-5600199b5626">
-			</testcontainer>
-			<testcontainer
-			id="2fba1fdd-6956-41ea-b7bf-d08c2a15d4e4">
-			</testcontainer>
-			<testcontainer
-			id="4ea2734d-579b-4596-ac9f-45f5a1fafd64">
-			</testcontainer>
-			<testcontainer
-			id="5a09dc0f-7809-4bcc-abc3-bf8c278ce16a">
-			</testcontainer>
-			<testcontainer
 			id="5e3b329f-982d-4a6d-9158-0eed5778ea4f">
 			</testcontainer>
 			<testcontainer
-			id="6efc704e-f787-4884-8716-d4bfae15cc07">
+			id="c0a43a54-2f10-4198-b94d-bbfb919ee322">
 			</testcontainer>
 			<testcontainer
-			id="74f36475-f892-48f6-955f-f0452e22e812">
-			</testcontainer>
-			<testcontainer
-			id="7c1f8d65-53d2-4410-9df6-1a12e9a956e3">
-			</testcontainer>
-			<testcontainer
-			id="8e1cac9a-9282-4702-bd9d-10c1dbf15913">
-			</testcontainer>
-			<testcontainer
-			id="94b4df99-a47e-4640-8984-0dce408bb940">
-			</testcontainer>
-			<testcontainer
-			id="a15a671e-7236-43e0-a125-daf8fcaba946">
-			</testcontainer>
-			<testcontainer
-			id="bd6008ab-7a8a-4add-a80b-c1926713762e">
-			</testcontainer>
-			<testcontainer
-			id="c1d882e0-3e48-4b90-a9de-12e419b62b39">
-			</testcontainer>
-			<testcontainer
-			id="dbe51db4-9d05-43ed-a064-6356a204b494">
-			</testcontainer>
-			<testcontainer
-			id="de01fdc3-9fb4-48d4-b296-d5e91d8d892d">
+			id="c9244b2d-4f9b-44de-b7cc-c2b51b53d941">
 			</testcontainer>
 		</testconfiguration>
 	</testconfigurations>

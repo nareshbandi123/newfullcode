@@ -52,7 +52,8 @@ namespace AutomationSQLdm.QueryPlan.TC_722075
         		Steps.ClickOnOkInAQFC();
         		Steps.ClickOnOkInMSSP();
         		Steps.ClickOnWarningYes();
-        		Common.WaitForSync(420000);
+        		Common.WaitForSync(20000);
+        		//Common.WaitForSync(420000);
         		Steps.ClickOnConfigureQueryMonitor();
         		Steps.UnCheckEnableQueryMonitor();
         		Steps.ClickOnOkInMSSP();

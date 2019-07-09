@@ -44,6 +44,7 @@ namespace AutomationSQLdm.Grooming_Modifications.TC_721962
         			
         		Steps.ClickOnTools();
         		Steps.SelectGroomingOption();
+        		Common.WaitForSync(5000);
         		Steps.EnterTextInAggregateForecasting(Aggregation);
         		Steps.ClickOnOk();
         		Steps.VerifyQueryDataCount(Config.Query_DBFileStatistics,"DatabaseFileStatistics");

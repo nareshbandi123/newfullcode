@@ -33,7 +33,7 @@ namespace AutomationSQLdm.Configuration
 		public const string ServerOptions_FORDELETE 		= "BI-ET-W2012";  //ForDeleteServer
 		//public const string ServerOptions_DEFAULTSERVER 	= "T-MSSQL2016";  //ForNavigations
 		public const string ServerOptions_DEFAULTSERVER 	= @"CIGNIT001-SQLDM\SQL2017";  //ForNavigations
-		public const string ServerOptions_SQLAUTHSERVER 	= @"WIN2016\SQL2017";  //ForSQLAuthentication
+		public const string ServerOptions_SQLAUTHSERVER 	= @"CIGNITI002-DM\SQL2016";  //ForSQLAuthentication
 		
 		//Available Queryyes
 		public const string Query_DBFileStatistics 			= "Select * from DatabaseFileStatistics";

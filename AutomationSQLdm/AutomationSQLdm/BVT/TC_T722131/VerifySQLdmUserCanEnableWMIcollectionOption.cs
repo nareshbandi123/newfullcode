@@ -22,7 +22,7 @@ namespace AutomationSQLdm.BVT.TC_T722131
     [TestModule("F7A1C105-66CA-4582-A174-11B938AE4E0A", ModuleType.UserCode, 1)]
     
     
-    public class VerifySQLdmUserCanEnableWMIcollectionOption : BaseClass, ITestModule
+    public class VerifySQLdmUserCanEnableWMIcollectionOption : Base.BaseClass, ITestModule
     {
         /// <summary>
         /// Constructs a new instance.
@@ -41,7 +41,9 @@ namespace AutomationSQLdm.BVT.TC_T722131
         {
         	try 
         	{
-        		Common.RightClickOnServer(ServerListConstants.WIN2K12_SQL14);
+        		//Common.RightClickOnServer(ServerListConstants.WIN2K12_SQL14);
+        		
+        		Steps.RightClickOnServer(Config.ServerOptions_SQLAUTHSERVER);
         		Steps.ClickProperties();
         		Steps.ClickOSMetrix();
         		Steps.SelectOperatingSystemMetrixUsingDirectWMI();

@@ -52,8 +52,8 @@ namespace AutomationSQLdm.BVT
     	//public static string SQLPassword="control*88";	
     	//TestUserCreation
 //TestUser@1234
-    	public static string SQLUserName="TestSQLAuth";
-    	public static string SQLPassword="Test@123";
+    	public static string SQLUserName="SqlNewTestUser";
+    	public static string SQLPassword="control*88";
     	
     	public static void VerifySQLdmToday()
 			{
@@ -1149,7 +1149,7 @@ namespace AutomationSQLdm.BVT
 			{
 				try 
 				{ 
-					
+					Common.WaitForSync(5000);
 		            if(repo.SQLdm.TableLayoutPanelInfo.Exists())
 		             {
 		                CompressedImage rsSummary = repo.SQLdm.TableLayoutPanelInfo.GetRESSummary();
@@ -1239,6 +1239,22 @@ namespace AutomationSQLdm.BVT
 				}
 			  } 
 		      
+		       public static void ClickOnReplicationInService()
+			  {
+				try 
+				{
+					
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.tabServicesInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    repo.SQLdm.tabServices.Click();
+				    Reports.ReportLog("Successfully Clicked On Replication In Service Tab", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+					
+				} 
+				catch (Exception ex)
+				{
+					throw new Exception("Failed : ClickOnReplicationInService :" + ex.Message);
+				}
+			  }
 		       public static void VerifySummaryInServices()
 			  {
 			  	try 
@@ -1879,13 +1895,14 @@ public static void VerifyTablesAndIndexesInDataBases()
 			{
 				try 
 					{
-					repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
-				    repo.SQLdm.tblDBSMirroringInfo.WaitForItemExists(MaxSyncWaitTime);
+					repo.SQLdm.tabMirroringStatusInfo.WaitForItemExists(MaxSyncWaitTime);
+				    //repo.SQLdm.tblDBSMirroringInfo.WaitForItemExists(MaxSyncWaitTime);
 				    
-				    if (repo.SQLdm.tblDBSMirroringInfo.Exists())
+				    //if (repo.SQLdm.tblDBSMirroringInfo.Exists())
+				    if (repo.SQLdm.tabMirroringStatusInfo.Exists())
 					{
-						repo.SQLdm.tblDBSMirroring.Rows[0].Click();
-						Reports.ReportLog("No Of Records Present in Mirroring View In DataBases Is:" + repo.SQLdm.tblDBSMirroring.Rows.Count, Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
+						//repo.SQLdm.tblDBSMirroring.Rows[0].Click();
+						//Reports.ReportLog("No Of Records Present in Mirroring View In DataBases Is:" + repo.SQLdm.tblDBSMirroring.Rows.Count, Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
 						Reports.ReportLog("Mirroring View Displayed Successfully in Databases", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 					}
 					else
@@ -2161,13 +2178,16 @@ public static void VerifyTablesAndIndexesInDataBases()
 		   {
 		   	try 
 			{
-				repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
-			    repo.SQLdm.tblFulltextsearchInfo.WaitForItemExists(1000000);
+				//repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
+			    //repo.SQLdm.tblFulltextsearchInfo.WaitForItemExists(1000000);
+			    repo.SQLdm.SERFTSCatalogDetailsInfo.WaitForItemExists(1000000);
+			    //SERFTSCatalogDetails
 			    
-			    if (repo.SQLdm.tblFulltextsearchInfo.Exists())
+			    //if (repo.SQLdm.tblFulltextsearchInfo.Exists())
+			    if (repo.SQLdm.SERFTSCatalogDetailsInfo.Exists())
 				{
-					repo.SQLdm.tblFulltextsearch.Rows[0].Click();
-					Reports.ReportLog("No Of Records Present in Full Text Search In Services Is:" + repo.SQLdm.tblFulltextsearch.Rows.Count, Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
+//					repo.SQLdm.tblFulltextsearch.Rows[0].Click();
+//					Reports.ReportLog("No Of Records Present in Full Text Search In Services Is:" + repo.SQLdm.tblFulltextsearch.Rows.Count, Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
 					Reports.ReportLog("Full Text Search Displayed Successfully In Services", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 				}
 				else
@@ -2194,7 +2214,76 @@ public static void VerifyTablesAndIndexesInDataBases()
 				{
 					throw new Exception("Failed : ClickOnLogsTab :" + ex.Message);
 				}
-			}		   
+			}
+
+           public static void ClickOnAnalyzeTab()
+			{
+				try 
+				{					
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.tabAnalyzeInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.tabAnalyze.Click();
+				    Reports.ReportLog("Successfully Clicked On Analyze Tab", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);					
+				} 
+				catch (Exception ex)
+				{
+					throw new Exception("Failed : ClickOnAnalyzeTab :" + ex.Message);
+				}
+			}	 			
+          
+        	public static void ClickOnRunAnalysisInAnalyze()
+			{
+				try 
+				{					
+				   repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
+				   repo.SQLdm.AnalyzeTab.rgAnalyzeRunAnalysisInfo.WaitForExists(new Duration(1000000));
+			       repo.SQLdm.AnalyzeTab.rgAnalyzeRunAnalysis.Click();				   
+				   Reports.ReportLog("Successfully Clicked On Run Analysis In Analyze Tab", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);					
+				} 
+				catch (Exception ex)
+				{
+					throw new Exception("Failed : ClickOnRunAnalysisInAnalyze :" + ex.Message);
+				}
+			}
+        	
+           public static void VerifyRunAnalysisInAnalyze()
+		   {
+		   	try 
+			{
+				repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
+			    repo.SQLdm.tblAnalyzeRunAnalysisInfo.WaitForItemExists(1000000);
+			    
+			    if (repo.SQLdm.tblAnalyzeRunAnalysisInfo.Exists())
+				{
+					repo.SQLdm.tblAnalyzeRunAnalysis.Rows[0].Click();
+					Reports.ReportLog("No Of Records Present in Run Analysis In Analyze Is:" + repo.SQLdm.tblFulltextsearch.Rows.Count, Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
+					Reports.ReportLog("Run Analysis In Analyze Displayed Successfully", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+				}
+				else
+				{
+					Reports.ReportLog("Run Analysis In Analyze Is Not Displaying", Reports.SQLdmReportLevel.Fail, null, Config.TestCaseName);
+				}
+			} 
+			catch (Exception ex)
+			{
+				throw new Exception("Failed : VerifyRunAnalysisInAnalyze :" + ex.Message);
+			}
+		   }
+
+            public static void ClickOnRunWorkLoadAnalysisInAnalyze()
+			{
+				try 
+				{					
+				   repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
+				   repo.SQLdm.AnalyzeTab.rgAnalyzeRunWorkLoadAnalysisInfo.WaitForExists(new Duration(1000000));
+			       repo.SQLdm.AnalyzeTab.rgAnalyzeRunWorkLoadAnalysis.Click();				   
+				   Reports.ReportLog("Successfully Clicked On Run Work Load Analysis In Analyze Tab", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);					
+				} 
+				catch (Exception ex)
+				{
+					throw new Exception("Failed : ClickOnRunWorkLoadAnalysisInAnalyze :" + ex.Message);
+				}
+			}   			
           
     }
 }

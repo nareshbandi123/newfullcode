@@ -158,8 +158,9 @@ namespace AutomationSQLdm.QueryPlan
          public static void CheckEnableQueryMonitor()
 			{
 				try 
-				{
-					repo.MonitoredSQLServerProperties.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				{	
+					Common.WaitForSync(10000);
+					//repo.MonitoredSQLServerProperties.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
 					repo.MonitoredSQLServerProperties.pnlQueryMonitor.cbMSSPEnableQueryMonitorInfo.WaitForExists(MaxSyncWaitTime);
 					
 					if(!repo.MonitoredSQLServerProperties.pnlQueryMonitor.cbMSSPEnableQueryMonitor.Checked)
@@ -184,7 +185,8 @@ namespace AutomationSQLdm.QueryPlan
 			{
 				try 
 				{
-					repo.MonitoredSQLServerProperties.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+					//repo.MonitoredSQLServerProperties.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+					Common.WaitForSync(8000);
 					repo.MonitoredSQLServerProperties.pnlQueryMonitor.cbMSSPEnableQueryMonitorInfo.WaitForExists(MaxSyncWaitTime);
 					
 					if(repo.MonitoredSQLServerProperties.pnlQueryMonitor.cbMSSPEnableQueryMonitor.Checked)
@@ -389,6 +391,143 @@ namespace AutomationSQLdm.QueryPlan
 					throw new Exception("Failed : VerifyQueryPlanValue :" + ex.Message);
 				}
 		}
+           public static void VerifyPlansByValue(string DurationValue)
+		{
+			try 
+				{
+				
+					repo.MonitoredSQLServerProperties.pnlPoorlyPerforming.ddlPPPlansByInfo.WaitForItemExists(MaxSyncWaitTime);
+					Common.WaitForSync(5000);
+					repo.MonitoredSQLServerProperties.pnlPoorlyPerforming.btnPPPlandByOpen.ClickThis();
+					Common.WaitForSync(5000);
+					
+					string defaultSelectedItem = repo.MonitoredSQLServerProperties.pnlPoorlyPerforming.ddlPPPlansBy.SelectedItem.Text;
+					
+					if (DurationValue == defaultSelectedItem)
+						Reports.ReportLog("Successfully Verifyed Plans By Value: " + DurationValue, Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+					else
+						Reports.ReportLog("Plans By Value is Not having : " + DurationValue, Reports.SQLdmReportLevel.Fail, null, Config.TestCaseName);
+				} 
+			catch (Exception ex)
+				{
+					throw new Exception("Failed : VerifyPlansByValue :" + ex.Message);
+				}
+		}
+        
+        public static void ClickOnWaitMonitoringtab()
+			{
+				try 
+				{
+					repo.MonitoredSQLServerProperties.tabWaitMonitoringInfo.WaitForItemExists(MaxSyncWaitTime);
+					repo.MonitoredSQLServerProperties.tabWaitMonitoring.ClickThis();
+				    Reports.ReportLog("Successfully Clicked On Wait Monitoring Tab", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+				} 
+				catch (Exception ex)
+				{
+					throw new Exception("Failed : ClickOnWaitMonitoringtab :" + ex.Message);
+				}
+			} 
+         public static void VerifyUseExtendedEventsCheckboxisEnabled()
+         {
+         	try 
+				{         		   
+					repo.MonitoredSQLServerProperties.cbUseExtendedEventsInfo.WaitForItemExists(MaxSyncWaitTime);
+					if(repo.MonitoredSQLServerProperties.cbUseExtendedEvents.Enabled == true)
+					{
+						//repo.MonitoredSQLServerProperties.pnlQueryMonitor.cbCollectActualQueryPlans.Checked = false;
+						Reports.ReportLog("Use Extended Events Checkbox is Enabled", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+					}
+					else
+					{
+						Reports.ReportLog("Use Extended Events Checkbox is not Enabled", Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
+					}                    			
+				} 
+				catch (Exception ex)
+				{
+					throw new Exception("Failed : VerifyUseExtendedEventsCheckboxisEnabled :" + ex.Message);
+				}
+         }
+        
+         public static void ClickOnOueryMonitorTab()
+			{
+				try 
+				{
+					repo.MonitoredSQLServerProperties.tabQueryMonitorInfo.WaitForItemExists(MaxSyncWaitTime);
+					repo.MonitoredSQLServerProperties.tabQueryMonitor.ClickThis();
+				    Reports.ReportLog("Successfully Clicked On Ouery Monitor Tab", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+				} 
+				catch (Exception ex)
+				{
+					throw new Exception("Failed : ClickOnOueryMonitorTab :" + ex.Message);
+				}
+			}
+         public static void Verifyqueryplansoptionsaredisabled()
+         {
+         	try 
+				{
+         		    repo.MonitoredSQLServerProperties.pnlQueryMonitor.rgCQDUsingTraceInfo.WaitForItemExists(MaxSyncWaitTime);
+					repo.MonitoredSQLServerProperties.pnlQueryMonitor.rgCQDUsingTrace.Click();
+				    Reports.ReportLog("Successfully Clicked On Collect Query Data Using SQL Trace Radio button", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+				    
+					repo.MonitoredSQLServerProperties.pnlQueryMonitor.cbCollectActualQueryPlansInfo.WaitForItemExists(MaxSyncWaitTime);
+					if(repo.MonitoredSQLServerProperties.pnlQueryMonitor.cbCollectActualQueryPlans.Enabled == false)
+					{
+						//repo.MonitoredSQLServerProperties.pnlQueryMonitor.cbCollectActualQueryPlans.Checked = false;
+						Reports.ReportLog("Collect Query Data Using SQL Trace checkbox is Disabled", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+					}
+					else
+					{
+						Reports.ReportLog("Collect Query Data Using SQL Trace checkbox is not Disabled", Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
+					}
+
+                    repo.MonitoredSQLServerProperties.pnlQueryMonitor.cbCollectEstimatedQueryPlansInfo.WaitForItemExists(MaxSyncWaitTime);
+					if(repo.MonitoredSQLServerProperties.pnlQueryMonitor.cbCollectEstimatedQueryPlans.Enabled== false)
+					{
+						//repo.MonitoredSQLServerProperties.pnlQueryMonitor.cbCollectActualQueryPlans.Checked = false;
+						Reports.ReportLog("Collect Estimated Query Plans checkbox is Disabled", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+					}
+					else
+					{
+						Reports.ReportLog("Collect Estimated Query Plans checkbox is not Disabled", Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
+					}					
+				} 
+				catch (Exception ex)
+				{
+					throw new Exception("Failed : Verifyqueryplansoptionsaredisabled :" + ex.Message);
+				}
+         }
+         
+         public static void VerifySelectTopandPlansbyareDisabled()
+         {
+         	try 
+				{         		   
+					repo.MonitoredSQLServerProperties.pnlPoorlyPerforming.txtPPQueryPlanInfo.WaitForItemExists(MaxSyncWaitTime);
+					if(repo.MonitoredSQLServerProperties.pnlPoorlyPerforming.txtPPQueryPlan.Enabled == false)
+					{
+						//repo.MonitoredSQLServerProperties.pnlQueryMonitor.cbCollectActualQueryPlans.Checked = false;
+						Reports.ReportLog("Select Top Dropdown is Disabled", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+					}
+					else
+					{
+						Reports.ReportLog("Select Top Dropdown is not Disabled", Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
+					}
+
+                    repo.MonitoredSQLServerProperties.pnlPoorlyPerforming.ddlPPPlansByInfo.WaitForItemExists(MaxSyncWaitTime);
+					if(repo.MonitoredSQLServerProperties.pnlPoorlyPerforming.ddlPPPlansBy.Enabled== false)
+					{
+						//repo.MonitoredSQLServerProperties.pnlQueryMonitor.cbCollectActualQueryPlans.Checked = false;
+						Reports.ReportLog("Plans By Dropdown is Disabled", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+					}
+					else
+					{
+						Reports.ReportLog("Plans By Dropdown is not Disabled", Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
+					}					
+				} 
+				catch (Exception ex)
+				{
+					throw new Exception("Failed : VerifySelectTopandPlansbyareDisabled :" + ex.Message);
+				}
+         }
           
          public static void ClickOnExtendedEvents()
 			{
@@ -404,6 +543,8 @@ namespace AutomationSQLdm.QueryPlan
 					throw new Exception("Failed : ClickOnExtendedEvents :" + ex.Message);
 				}
 			}
+          
+        
          
           public static void ClickOnAdvancedTab()
 			{
@@ -507,6 +648,37 @@ namespace AutomationSQLdm.QueryPlan
 					throw new Exception("Failed : SelectValueInPlansBy :" + ex.Message);
 				}
             }
+		
+               public static void RightClickOnServerQP(string serverName)
+			{
+				try 
+				{
+					repo.SQLdmDesktop.AllServersInfo.WaitForItemExists(120000);
+					TreeItem serveritem = repo.SQLdmDesktop.AllServers.GetChildItem(serverName);
+					if(serveritem != null) serveritem.RightClick(); 
+					
+				} 
+				catch (Exception ex) 
+				{
+					throw new Exception("Failed : RightClickOnServerQP : " + ex.Message);
+				}
+			}
+
+
+		public static void ClickPropertiesQP()
+			{
+				try
+				{
+					repo.SQLdmDesktopClient.PropertiesQP.ClickThis();
+					Common.WaitForSync(30000);
+					Reports.ReportLog("Clicked Properties ", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+				}
+				catch (Exception ex)
+				{
+					throw new Exception("Failed : ClickPropertiesQP :" + ex.Message);
+				}
+			}
+		
 		
     }
 }

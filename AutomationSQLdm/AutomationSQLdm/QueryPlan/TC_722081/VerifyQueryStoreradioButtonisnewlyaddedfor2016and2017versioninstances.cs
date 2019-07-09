@@ -36,22 +36,27 @@ namespace AutomationSQLdm.QueryPlan.TC_722081
         	try 
         	{
         		
-        		Steps.SelectServer(Config.ServerOptions_TMSSQL2016); //Version 2016
+        		Steps.SelectServer(Config.ServerOptions_DEFAULTSERVER);
         		Steps.ClickOnQueriesTab();
         		Steps.ClickOnSignatureMode();
         		Steps.ClickOnConfigureQueryMonitor();
         		Steps.CheckEnableQueryMonitor();
+//        		Steps.SelectServer(Config.ServerOptions_DEFAULTSERVER); //Version 2016
+//        		Steps.ClickOnQueriesTab();
+//        		Steps.ClickOnSignatureMode();
+//        		Steps.ClickOnConfigureQueryMonitor();
+//        		Steps.CheckEnableQueryMonitor();
         		Steps.VerifyQueryStoreRB();
         		Steps.ClickOnOkInMSSP();
         		Steps.ClickOnWarningYes();
-        		Steps.SelectServer(Config.ServerOptions_CMWIN2016SQL17); //Version 2017
-        		Steps.ClickOnQueriesTab();
-        		Steps.ClickOnSignatureMode();
-        		Steps.ClickOnConfigureQueryMonitor();
-        		Steps.CheckEnableQueryMonitor();
-        		Steps.VerifyQueryStoreRB();
-        		Steps.ClickOnOkInMSSP();
-        		Steps.ClickOnWarningYes();
+//        		Steps.SelectServer(Config.ServerOptions_DEFAULTSERVER); //Version 2017
+//        		Steps.ClickOnQueriesTab();
+//        		Steps.ClickOnSignatureMode();
+//        		Steps.ClickOnConfigureQueryMonitor();
+//        		Steps.CheckEnableQueryMonitor();
+//        		Steps.VerifyQueryStoreRB();
+//        		Steps.ClickOnOkInMSSP();
+//        		Steps.ClickOnWarningYes();
         		Common.UpdateStatus(1); // 1 : Pass
         		
         	} 

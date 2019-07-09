@@ -216,6 +216,9 @@
     <Compile Include="BVT\TC_722037\VerifyquerydatacollectionhappensandshowsdataonFilesscreen.cs">
       <id>9f02c30e-428b-4b1b-af79-50f7616f0b98</id>
     </Compile>
+    <Compile Include="BVT\TC_722038\VerifydatashowsonBackupsRestoresscreenInDatabases.cs">
+      <id>9c88f8ae-3f2a-428c-a06f-e6d9cbcf700c</id>
+    </Compile>
     <Compile Include="BVT\TC_722039\VerifydatacollectionandshowsdataonTablesandIndexesscreen.cs">
       <id>6234df48-a2ac-4c10-81d3-46e61da94449</id>
     </Compile>
@@ -234,8 +237,14 @@
     <Compile Include="BVT\TC_722047\VerifydatacollectionhappensandshowsdataonFullTextSearchscreen.cs">
       <id>2bec955f-5460-46f6-9627-2a630464e2e2</id>
     </Compile>
+    <Compile Include="BVT\TC_722048\VerifyquerydatacollectionshowsdataonReplicationscreen.cs">
+      <id>6e7e63ed-281c-43f0-816c-7d3a54f8db2b</id>
+    </Compile>
     <Compile Include="BVT\TC_722049\VerifydatacollectionandshowsdataonLogsscreen.cs">
       <id>3f975464-deb8-4354-b195-0045f49d24b4</id>
+    </Compile>
+    <Compile Include="BVT\TC_722050\VerifydatacollectiononAnalyzescreenwhenuserrunsanalysis.cs">
+      <id>e1254f73-2e3f-4f9e-ad0c-c12551ee49a8</id>
     </Compile>
     <Compile Include="BVT\TC_722114\BVTVerifyanactionprovidercanbeRemovedSuccessfully.cs">
       <id>95a8c363-a3ab-45c6-8289-5f3f52363f1d</id>
@@ -492,8 +501,14 @@
     <Compile Include="QueryPlan\Steps.cs">
       <id>3f9e147b-7054-46d2-b101-d9118176ded4</id>
     </Compile>
+    <Compile Include="QueryPlan\TC_722068\VerifythedefaultnoofcollectqueryplanscountandDuration.cs">
+      <id>f0fe4cc9-d206-4fe8-86af-28b9794feb27</id>
+    </Compile>
     <Compile Include="QueryPlan\TC_722069\Inputinvaliddataincollectqueryplanscountandverifychangescantbesaved.cs">
       <id>4f77f1fa-30d6-467d-acc3-e3181ef5802c</id>
+    </Compile>
+    <Compile Include="QueryPlan\TC_722070\Verifyqueryplansoptionsarenotenabled.cs">
+      <id>0774cef9-e375-458b-ae15-b54c8fc16def</id>
     </Compile>
     <Compile Include="QueryPlan\TC_722072\SelectDurationmillisecondsforqueryplans.cs">
       <id>6a676b4e-7146-47e7-b048-12f771e96a0f</id>
@@ -507,8 +522,17 @@
     <Compile Include="QueryPlan\TC_722075\SelectPhysicalDiskWritesforQueryPlans.cs">
       <id>ce4481c3-a778-455d-adb3-6de5cda51a60</id>
     </Compile>
+    <Compile Include="QueryPlan\TC_722077\Verifyqueryplancountandselecttopoptionsarenotenabled.cs">
+      <id>e9606645-b649-40d8-9c05-9576f9f518e6</id>
+    </Compile>
+    <Compile Include="QueryPlan\TC_722080\Verifyminimumandmaximumlimitofqueryplancount.cs">
+      <id>e36f2776-81a1-4e9d-b21b-da2b72e5a9f9</id>
+    </Compile>
     <Compile Include="QueryPlan\TC_722081\VerifyQueryStoreradioButtonisnewlyaddedfor2016and2017versioninstances.cs">
       <id>53041b9e-032b-439b-b907-713da0507112</id>
+    </Compile>
+    <Compile Include="QueryPlan\TC_722084\VerifyQueryStoreoptionisnotselectedbydefault.cs">
+      <id>57f04032-fd9a-46ad-b8db-1f935805f400</id>
     </Compile>
     <Compile Include="TestRailAPI\APIClient.cs">
       <id>f372d424-5d9d-46f5-99e8-27b22423ebee</id>
@@ -676,6 +700,9 @@
     <Folder Include="BVT\TC_722018">
       <id>67d95f15-5c56-4ac2-b8d7-e69e990b1e3c</id>
     </Folder>
+    <Folder Include="BVT\TC_722038">
+      <id>0fd51174-43e3-4a01-9cf5-201c43e2e7ab</id>
+    </Folder>
     <Folder Include="BVT\TC_722039">
       <id>a543971c-e6af-4637-9e22-47d5067a42f9</id>
     </Folder>
@@ -703,8 +730,14 @@
     <Folder Include="BVT\TC_722047">
       <id>5b86ca32-e03f-48d4-ab5b-dd36f6632219</id>
     </Folder>
+    <Folder Include="BVT\TC_722048">
+      <id>3db8b186-729b-4442-aef6-f8291abbc740</id>
+    </Folder>
     <Folder Include="BVT\TC_722049">
       <id>20746c47-846d-4c01-ae2a-667dd9d05266</id>
+    </Folder>
+    <Folder Include="BVT\TC_722050">
+      <id>29de7933-5c36-4462-9eb3-a7eb6d399d37</id>
     </Folder>
     <Folder Include="BVT\TC_722120">
       <id>9a2a5054-eeb9-417c-9472-33d1ee9e214f</id>
@@ -886,6 +919,18 @@
     <Folder Include="OperatorSecurityRole\TC_T721990">
       <id>d13c23b5-c19f-4806-88c3-352149232bec</id>
     </Folder>
+    <Folder Include="QueryPlan\TC_722068">
+      <id>f4517b58-af8c-40df-9778-118a9da47236</id>
+    </Folder>
+    <Folder Include="QueryPlan\TC_722070">
+      <id>b57df8f6-c731-44ba-9955-0102fa39466a</id>
+    </Folder>
+    <Folder Include="QueryPlan\TC_722077">
+      <id>75f83946-1f22-4df0-a560-7dfb97a63172</id>
+    </Folder>
+    <Folder Include="QueryPlan\TC_722080">
+      <id>ddb9255f-76a1-44f6-8208-b1f5c19066d0</id>
+    </Folder>
     <Folder Include="QueryPlan\TC_722081">
       <id>87f46e44-fcbe-45fa-bbfa-8a2b3b67e926</id>
     </Folder>
@@ -900,6 +945,9 @@
     </Folder>
     <Folder Include="QueryPlan\TC_722072">
       <id>2d4c5f95-fa96-44f0-b9c7-cb4657419c56</id>
+    </Folder>
+    <Folder Include="QueryPlan\TC_722084">
+      <id>ba93c036-2632-451b-8f28-0cf29183d962</id>
     </Folder>
     <Folder Include="TestRailAPI">
       <id>ef133857-78f0-4eb7-a7cd-526159e9ff32</id>

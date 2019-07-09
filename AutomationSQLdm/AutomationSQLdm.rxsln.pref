@@ -8,9 +8,59 @@
     <ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
       <string>{61F99090-53F7-41D0-9F8A-6FC8C2262E52}</string>
       <string>60513a05-eab7-41e7-8c10-e51c735edc2e</string>
-      <string>4a6de247-0fc0-4c5f-91de-4426bcec9862</string>
+      <string>8f29f265-6029-4d74-a75f-7ebb4cd617e4</string>
+      <string>435ace51-31ae-4bef-bf4d-5d490d806462</string>
+      <string>05642562-e05c-48cf-9629-9641dd9cd6ae</string>
+      <string>1c6d623b-ae14-4952-9484-a892284d8d22</string>
+      <string>01f97181-a0b1-4b2f-b667-36ead09b81c0</string>
+      <string>c0e8f708-922b-4cbc-918f-1c572421a0b8</string>
+      <string>50cdf668-2047-4fda-b553-cf6889748a9e</string>
+      <string>cf2fdcda-c026-4a64-8114-44119164f62c</string>
+      <string>a2cf4d18-6ae6-470c-aa6d-1d72d9d9a6da</string>
+      <string>c9fcced0-b187-4927-8b49-5dee85d9a2af</string>
+      <string>a543971c-e6af-4637-9e22-47d5067a42f9</string>
+      <string>469bf07c-531f-4b6b-8c29-f95dfb0e12b1</string>
+      <string>44e43046-32cc-4e58-acb7-8ff03efa7ea1</string>
+      <string>4e94fd31-fe8a-4eb3-a37d-25bbd5f79897</string>
+      <string>5b86ca32-e03f-48d4-ab5b-dd36f6632219</string>
+      <string>3db8b186-729b-4442-aef6-f8291abbc740</string>
+      <string>20746c47-846d-4c01-ae2a-667dd9d05266</string>
+      <string>29de7933-5c36-4462-9eb3-a7eb6d399d37</string>
+      <string>33a3bacb-b4c0-4c34-8f35-43902ef18a04</string>
+      <string>99da5af7-373a-4af1-86d7-6baf62206085</string>
+      <string>71079302-9dbc-417b-bb90-d5bcef186919</string>
+      <string>b2a1c7cc-b352-48b2-90e1-47fa0200635c</string>
+      <string>9696066c-442c-4f4a-afd3-825880196961</string>
+      <string>28d505b6-6704-4f18-ae40-dfd9c24fdcc7</string>
+      <string>98759f0e-d651-46b9-8146-dbfaf3f8a8c9</string>
+      <string>d51e70be-b510-4597-b7ba-3ddbae30f06d</string>
+      <string>7d780982-3b24-49a2-88de-006c57bd4d06</string>
+      <string>0a6fc3b9-b05b-4388-8e12-4e087be00f66</string>
+      <string>602b8b30-97ba-464a-928e-eb39126a1183</string>
+      <string>3765b026-6d95-4e3d-b582-2c15e3833da7</string>
+      <string>673820d4-216f-4c0d-a597-589876e57c54</string>
+      <string>05a7eb2c-c01f-4b28-8723-e1fbd75a8fdf</string>
+      <string>d3af87b7-65cf-405a-b7de-0f66403fe3b8</string>
+      <string>440e405d-5cdc-4e48-bb28-455bddfc5fbc</string>
+      <string>57a5a064-90a6-4baa-8728-c541ce27c6c6</string>
+      <string>5b81b0af-8e82-49ec-ab5a-50f08465e463</string>
+      <string>bf371e4b-0105-45db-a6d8-51ac9a2c142b</string>
+      <string>1baf21b8-f274-4f5b-94e6-4ce926db2662</string>
+      <string>d1311f71-6a19-44fb-90ac-86f35a737194</string>
+      <string>db34df95-e9cf-4f20-b04c-3bc2c9802204</string>
+      <string>f4517b58-af8c-40df-9778-118a9da47236</string>
+      <string>62160dca-0078-43fb-9227-be0da74ac54b</string>
+      <string>b57df8f6-c731-44ba-9955-0102fa39466a</string>
+      <string>2d4c5f95-fa96-44f0-b9c7-cb4657419c56</string>
+      <string>29d9ed26-5f53-4dc4-8896-c1cd4c1ecc96</string>
+      <string>0847a94a-2939-4eb8-b1fa-8d70cb66e50d</string>
+      <string>77b56a72-cd65-469f-a872-8e80cf468f2d</string>
+      <string>75f83946-1f22-4df0-a560-7dfb97a63172</string>
+      <string>ddb9255f-76a1-44f6-8208-b1f5c19066d0</string>
+      <string>87f46e44-fcbe-45fa-bbfa-8a2b3b67e926</string>
+      <string>ba93c036-2632-451b-8f28-0cf29183d962</string>
     </ArrayOfString>
   </SerializedValue>
-  <ProjectBrowserState value="[Solution AutomationSQLdm[Solution Items[]AutomationSQLdm[Commons[]OperatorSecurityRole[TC_T721974[]]]]]&#xD;&#xA;Solution AutomationSQLdm\AutomationSQLdm\AutomationSQLdm.rxtst&#xD;&#xA;Solution AutomationSQLdm\AutomationSQLdm\Commons" />
+  <ProjectBrowserState value="[Solution AutomationSQLdm[Solution Items[]AutomationSQLdm[]]]&#xD;&#xA;Solution AutomationSQLdm\AutomationSQLdm\AutomationSQLdm.rxtst&#xD;&#xA;Solution AutomationSQLdm" />
   <StartupProject value="{61F99090-53F7-41D0-9F8A-6FC8C2262E52}" />
 </Properties>

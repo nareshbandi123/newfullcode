@@ -38,6 +38,7 @@ namespace AutomationSQLdm.BVT.TC_722153
         		Steps.SelectRequiredServer(Config.ServerOptions_DEFAULTSERVER);
         		Steps.VerifyDashboardView();
         		Steps.ClickOnTimeLineInOverView();
+        		Common.WaitForSync(5000);
         		Steps.VerifyTimeLineInOverView();
         		Common.UpdateStatus(1); // 1 : Pass
         		

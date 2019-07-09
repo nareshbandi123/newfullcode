@@ -429,6 +429,7 @@ namespace AutomationSQLdm.BVT
             BVTRepoFolders.ResourcesTabFolder _resourcestab;
             BVTRepoFolders.ServicesTabFolder _servicestab;
             BVTRepoFolders.ServerInfoFolder _serverinfo;
+            BVTRepoFolders.AnalyzeTabFolder _analyzetab;
             RepoItemInfo _radiosummaryInfo;
             RepoItemInfo _radiodetailsInfo;
             RepoItemInfo _radiolocksInfo;
@@ -476,6 +477,9 @@ namespace AutomationSQLdm.BVT
             RepoItemInfo _txtsesumblockedsessionsInfo;
             RepoItemInfo _tblsedetailsInfo;
             RepoItemInfo _tblfulltextsearchInfo;
+            RepoItemInfo _tblanalyzerunanalysisInfo;
+            RepoItemInfo _tabmirroringstatusInfo;
+            RepoItemInfo _serftscatalogdetailsInfo;
 
             /// <summary>
             /// Creates a new SQLdm  folder.
@@ -490,6 +494,7 @@ namespace AutomationSQLdm.BVT
                 _resourcestab = new BVTRepoFolders.ResourcesTabFolder(this);
                 _servicestab = new BVTRepoFolders.ServicesTabFolder(this);
                 _serverinfo = new BVTRepoFolders.ServerInfoFolder(this);
+                _analyzetab = new BVTRepoFolders.AnalyzeTabFolder(this);
                 _radiosummaryInfo = new RepoItemInfo(this, "radioSummary", ".//toolbar[@automationid='ribbon']/tabpage[@automationid='Sessions']/toolbar[@automationid='sessionsTabViewsGroup']/container[@caption='']/radiobutton[1]", 30000, null, "cd1b304b-88bd-448d-84b1-a47b878dc059");
                 _radiodetailsInfo = new RepoItemInfo(this, "radioDetails", ".//toolbar[@automationid='ribbon']/tabpage[@automationid='Sessions']/toolbar[@automationid='sessionsTabViewsGroup']/container[@caption='']/radiobutton[2]", 30000, null, "514075e6-e49f-4bb1-bd46-69b8d3efb092");
                 _radiolocksInfo = new RepoItemInfo(this, "radioLocks", ".//toolbar[@automationid='ribbon']/tabpage[@automationid='Sessions']/toolbar[@automationid='sessionsTabViewsGroup']/container[@caption='']/radiobutton[3]", 30000, null, "d75d8732-b228-4244-aab9-8017060a5a68");
@@ -537,6 +542,9 @@ namespace AutomationSQLdm.BVT
                 _txtsesumblockedsessionsInfo = new RepoItemInfo(this, "txtSESUMBlockedSessions", ".//statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']//container[@controlname='blockedSessionsPanel']/toolbar[@controlname='blockedSessionsHeaderStrip']/text[@accessiblename='Blocked Sessions']", 30000, null, "070aa624-9076-4669-8035-c478a053e6e8");
                 _tblsedetailsInfo = new RepoItemInfo(this, "tblSEDetails", ".//statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']/?/?/container[@controlname='_child']/container[@controlname='SessionsDetailsView']//table[@accessiblerole='Table']", 30000, null, "f2dadfaf-bcd5-43f0-958f-da936f34aa59");
                 _tblfulltextsearchInfo = new RepoItemInfo(this, "tblFulltextsearch", ".//statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']/?/?/container[@controlname='_child']/container[@controlname='ServicesFullTextSearchView']//table[@accessiblerole='Table']", 30000, null, "1ceb1bf8-9899-487e-90cc-c864dd77b1d0");
+                _tblanalyzerunanalysisInfo = new RepoItemInfo(this, "tblAnalyzeRunAnalysis", ".//form[@title>'Idera SQL diagnostic manager']/statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']/?/?/container[@controlname='_child']/container[@caption='' and @controltypename='Recommendations' and @instance='0']//table[@accessiblerole='Table']", 30000, null, "e2ff9a67-e587-44a8-b303-1754ead395ce");
+                _tabmirroringstatusInfo = new RepoItemInfo(this, "tabMirroringStatus", ".//statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']/?/?/container[@controlname='_child']/container[@controlname='DatabasesMirroringView']/?/?/container[@controlname='contentContainerPanel']//tabpage[@accessiblename='Status']", 30000, null, "76046275-6db1-40f9-96ee-2ea58d179e3b");
+                _serftscatalogdetailsInfo = new RepoItemInfo(this, "SERFTSCatalogDetails", ".//statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']//container[@controlname='ServicesFullTextSearchView']//toolbar[@controlname='catalogDetailsHeaderStrip']/text[@accessiblename='Catalog Details']", 30000, null, "7f90503c-fb73-4d6c-b36e-7d09b335723e");
             }
 
             /// <summary>
@@ -1790,6 +1798,78 @@ namespace AutomationSQLdm.BVT
             }
 
             /// <summary>
+            /// The tblAnalyzeRunAnalysis item.
+            /// </summary>
+            [RepositoryItem("e2ff9a67-e587-44a8-b303-1754ead395ce")]
+            public virtual Ranorex.Table tblAnalyzeRunAnalysis
+            {
+                get
+                {
+                    return _tblanalyzerunanalysisInfo.CreateAdapter<Ranorex.Table>(true);
+                }
+            }
+
+            /// <summary>
+            /// The tblAnalyzeRunAnalysis item info.
+            /// </summary>
+            [RepositoryItemInfo("e2ff9a67-e587-44a8-b303-1754ead395ce")]
+            public virtual RepoItemInfo tblAnalyzeRunAnalysisInfo
+            {
+                get
+                {
+                    return _tblanalyzerunanalysisInfo;
+                }
+            }
+
+            /// <summary>
+            /// The tabMirroringStatus item.
+            /// </summary>
+            [RepositoryItem("76046275-6db1-40f9-96ee-2ea58d179e3b")]
+            public virtual Ranorex.TabPage tabMirroringStatus
+            {
+                get
+                {
+                    return _tabmirroringstatusInfo.CreateAdapter<Ranorex.TabPage>(true);
+                }
+            }
+
+            /// <summary>
+            /// The tabMirroringStatus item info.
+            /// </summary>
+            [RepositoryItemInfo("76046275-6db1-40f9-96ee-2ea58d179e3b")]
+            public virtual RepoItemInfo tabMirroringStatusInfo
+            {
+                get
+                {
+                    return _tabmirroringstatusInfo;
+                }
+            }
+
+            /// <summary>
+            /// The SERFTSCatalogDetails item.
+            /// </summary>
+            [RepositoryItem("7f90503c-fb73-4d6c-b36e-7d09b335723e")]
+            public virtual Ranorex.Text SERFTSCatalogDetails
+            {
+                get
+                {
+                    return _serftscatalogdetailsInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The SERFTSCatalogDetails item info.
+            /// </summary>
+            [RepositoryItemInfo("7f90503c-fb73-4d6c-b36e-7d09b335723e")]
+            public virtual RepoItemInfo SERFTSCatalogDetailsInfo
+            {
+                get
+                {
+                    return _serftscatalogdetailsInfo;
+                }
+            }
+
+            /// <summary>
             /// The OverViewTab folder.
             /// </summary>
             [RepositoryFolder("b4198f1b-1b59-48c6-abc4-9ecd0d0d6a75")]
@@ -1850,6 +1930,15 @@ namespace AutomationSQLdm.BVT
             public virtual BVTRepoFolders.ServerInfoFolder ServerInfo
             {
                 get { return _serverinfo; }
+            }
+
+            /// <summary>
+            /// The AnalyzeTab folder.
+            /// </summary>
+            [RepositoryFolder("c7828b26-9385-4dba-a973-99be971eef77")]
+            public virtual BVTRepoFolders.AnalyzeTabFolder AnalyzeTab
+            {
+                get { return _analyzetab; }
             }
         }
 
@@ -2875,8 +2964,8 @@ namespace AutomationSQLdm.BVT
             public ServicesTabFolder(RepoGenBaseFolder parentFolder) :
                     base("ServicesTab", ".//toolbar[@automationid='ribbon']/tabpage[@automationid='Services']/toolbar[@automationid='servicesTabViewsGroup']", parentFolder, 30000, null, false, "68c28ebf-8c92-4152-92ba-0e18414f85a3", "")
             {
-                _rgsersummaryInfo = new RepoItemInfo(this, "rgSERSummary", ".//toolbar[@automationid='ribbon']/tabpage[@automationid='Services']/toolbar[@automationid='servicesTabViewsGroup']/container[@caption='']/radiobutton[1]", 30000, null, "0488712f-bc6c-43c7-8521-409d62190f17");
-                _rgsersqlagentjobsInfo = new RepoItemInfo(this, "rgSERSqlAgentJobs", ".//toolbar[@automationid='ribbon']/tabpage[@automationid='Services']/toolbar[@automationid='servicesTabViewsGroup']/container[@caption='']/radiobutton[2]", 30000, null, "cae5e8ec-faca-4ec8-a32e-da06214a7d71");
+                _rgsersummaryInfo = new RepoItemInfo(this, "rgSERSummary", ".//container[@caption='']/radiobutton[1]", 30000, null, "0488712f-bc6c-43c7-8521-409d62190f17");
+                _rgsersqlagentjobsInfo = new RepoItemInfo(this, "rgSERSqlAgentJobs", ".//container[@caption='']/radiobutton[2]", 30000, null, "cae5e8ec-faca-4ec8-a32e-da06214a7d71");
                 _rgserfulltextsearchInfo = new RepoItemInfo(this, "rgSERFullTextSearch", ".//container[@caption='']/radiobutton[3]", 30000, null, "a890c78c-bf31-4d3e-a1de-da7c66523fd5");
             }
 
@@ -3221,6 +3310,98 @@ namespace AutomationSQLdm.BVT
                 get
                 {
                     return _btndabmemoryInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The AnalyzeTabFolder folder.
+        /// </summary>
+        [RepositoryFolder("c7828b26-9385-4dba-a973-99be971eef77")]
+        public partial class AnalyzeTabFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _rganalyzerunanalysisInfo;
+            RepoItemInfo _rganalyzerunworkloadanalysisInfo;
+
+            /// <summary>
+            /// Creates a new AnalyzeTab  folder.
+            /// </summary>
+            public AnalyzeTabFolder(RepoGenBaseFolder parentFolder) :
+                    base("AnalyzeTab", ".//toolbar[@automationid='ribbon']/?/?/tabpage[@automationid='Analyze']/?/?/toolbar[@automationid='analyzeTabRunGroup']", parentFolder, 30000, null, false, "c7828b26-9385-4dba-a973-99be971eef77", "")
+            {
+                _rganalyzerunanalysisInfo = new RepoItemInfo(this, "rgAnalyzeRunAnalysis", ".//radiobutton[@name='Run Analysis']", 30000, null, "fe1cae7b-17b7-45af-b10a-525ddb9b0a4f");
+                _rganalyzerunworkloadanalysisInfo = new RepoItemInfo(this, "rgAnalyzeRunWorkLoadAnalysis", ".//radiobutton[@name='Run Work Load Analysis']", 30000, null, "c625903a-584f-427e-9789-8391bce2ecd8");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("c7828b26-9385-4dba-a973-99be971eef77")]
+            public virtual Ranorex.ToolBar Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.ToolBar>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("c7828b26-9385-4dba-a973-99be971eef77")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The rgAnalyzeRunAnalysis item.
+            /// </summary>
+            [RepositoryItem("fe1cae7b-17b7-45af-b10a-525ddb9b0a4f")]
+            public virtual Ranorex.RadioButton rgAnalyzeRunAnalysis
+            {
+                get
+                {
+                    return _rganalyzerunanalysisInfo.CreateAdapter<Ranorex.RadioButton>(true);
+                }
+            }
+
+            /// <summary>
+            /// The rgAnalyzeRunAnalysis item info.
+            /// </summary>
+            [RepositoryItemInfo("fe1cae7b-17b7-45af-b10a-525ddb9b0a4f")]
+            public virtual RepoItemInfo rgAnalyzeRunAnalysisInfo
+            {
+                get
+                {
+                    return _rganalyzerunanalysisInfo;
+                }
+            }
+
+            /// <summary>
+            /// The rgAnalyzeRunWorkLoadAnalysis item.
+            /// </summary>
+            [RepositoryItem("c625903a-584f-427e-9789-8391bce2ecd8")]
+            public virtual Ranorex.RadioButton rgAnalyzeRunWorkLoadAnalysis
+            {
+                get
+                {
+                    return _rganalyzerunworkloadanalysisInfo.CreateAdapter<Ranorex.RadioButton>(true);
+                }
+            }
+
+            /// <summary>
+            /// The rgAnalyzeRunWorkLoadAnalysis item info.
+            /// </summary>
+            [RepositoryItemInfo("c625903a-584f-427e-9789-8391bce2ecd8")]
+            public virtual RepoItemInfo rgAnalyzeRunWorkLoadAnalysisInfo
+            {
+                get
+                {
+                    return _rganalyzerunworkloadanalysisInfo;
                 }
             }
         }

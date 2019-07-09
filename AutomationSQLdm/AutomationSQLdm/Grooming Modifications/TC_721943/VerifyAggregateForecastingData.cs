@@ -37,6 +37,7 @@ namespace AutomationSQLdm.Grooming_Modifications.TC_721943
         		
         		Steps.ClickOnTools();
         		Steps.SelectGroomingOption();
+        		Common.WaitForSync(10000);
         		Steps.VerifyAggregateforecastingValue();
         		Steps.ClickOnCancel();
         		Common.UpdateStatus(1); // 1 : Pass

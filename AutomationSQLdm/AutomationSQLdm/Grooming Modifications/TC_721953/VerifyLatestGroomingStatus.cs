@@ -42,7 +42,8 @@ namespace AutomationSQLdm.Grooming_Modifications.C_T721953
         	{
         		
         		//Verify LatestGroomingStatus Table Info in DB
-	            string queryLatestGroomingStatus = "Select * from dbo.LatestGroomingStatus";
+	            //string queryLatestGroomingStatus = "Select * from dbo.LatestGroomingStatus";
+	            string queryLatestGroomingStatus = "Select * from dbo.GroomingLog";
 	        	DataTable dtLatestGroomingStatus = DataAccess.GetData(queryLatestGroomingStatus);
 	        	if(dtLatestGroomingStatus != null && dtLatestGroomingStatus.Rows.Count > 0)
 	        	{
@@ -59,7 +60,8 @@ namespace AutomationSQLdm.Grooming_Modifications.C_T721953
         		Steps.ClickOnGroomNow();
         		
         		//Verify LatestGroomingStatus After Grooming Table Info in DB
-	            string queryLatestGroomingStatusAfter = "Select * from dbo.LatestGroomingStatus";
+	            //string queryLatestGroomingStatusAfter = "Select * from dbo.LatestGroomingStatus";
+	            string queryLatestGroomingStatusAfter = "Select * from dbo.GroomingLog";
 	        	DataTable dtLatestGroomingStatusAfter = DataAccess.GetData(queryLatestGroomingStatusAfter);
 	        	if(dtLatestGroomingStatusAfter != null && dtLatestGroomingStatusAfter.Rows.Count > 0)
 	        	{

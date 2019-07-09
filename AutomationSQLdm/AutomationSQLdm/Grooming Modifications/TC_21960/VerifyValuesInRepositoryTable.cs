@@ -42,6 +42,7 @@ namespace AutomationSQLdm.Grooming_Modifications.TC_21960
         		
         		Steps.ClickOnTools();
         		Steps.SelectGroomingOption();
+        		Common.WaitForSync(10000);
         		Steps.VerifyFieldsAreEditable();
 //        		Steps.ClickOnCancel();
                 Common.UpdateStatus(1); // 1 : Pass

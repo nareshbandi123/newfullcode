@@ -621,11 +621,14 @@ namespace AutomationSQLdm.OperatorSecurityRole
 						//serversLists.Children[0].Click();
 						serversLists.Items[0].Click();
 						Thread.Sleep(2000);
-						serversLists.Items[0].PressKeys("{LControlKey down}{LShiftKey down}");
-						Thread.Sleep(2000);
-						//serversLists.Items[itemCount/2+1].EnsureVisible();
-						serversLists.Items[itemCount/2+1].Click();
-						serversLists.Items[itemCount/2+1].PressKeys("{LControlKey up}{LShiftKey up}");
+						
+//						serversLists.Items[0].PressKeys("{LControlKey down}{LShiftKey down}");
+//						Thread.Sleep(2000);
+//						
+//						//serversLists.Items[itemCount/2+1].EnsureVisible();
+//						serversLists.Items[itemCount/2+1].Click();
+//						serversLists.Items[itemCount/2+1].PressKeys("{LControlKey up}{LShiftKey up}");
+						
 						Reports.ReportLog("Selected Server", Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
 					}
 					else if(itemCount == 1)
@@ -708,6 +711,7 @@ namespace AutomationSQLdm.OperatorSecurityRole
 		{
 			try
 			{
+				Common.WaitForSync(10000);
 				string user = null;
 				if(userType.ToLower().Equals(Config.NewSqlUser.ToLower()))
 					user = Config.NewSqlUser;
@@ -924,6 +928,7 @@ namespace AutomationSQLdm.OperatorSecurityRole
 			{
 				repo.Application.btnDeleteInfo.WaitForItemExists(200000);
 				repo.Application.btnDelete.Click();
+				repo.ExceptionForm.btnYesInfo.WaitForItemExists(200000);
 				repo.ExceptionForm.btnYes.Click();
 				Reports.ReportLog("New User Deleted Successfully ! ", Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
 			}

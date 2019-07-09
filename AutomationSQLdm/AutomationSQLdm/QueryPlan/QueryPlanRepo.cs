@@ -32,6 +32,7 @@ namespace AutomationSQLdm.QueryPlan
         QueryPlanRepoFolders.MonitoredSQLServerPropertiesAppFolder _monitoredsqlserverproperties;
         QueryPlanRepoFolders.ExceptionMessageDialogAppFolder _exceptionmessagedialog;
         QueryPlanRepoFolders.AdvancedQueryFilterConfigurationDialogAppFolder _advancedqueryfilterconfigurationdialog;
+        QueryPlanRepoFolders.SQLdmDesktopClientAppFolder _sqldmdesktopclient;
 
         /// <summary>
         /// Gets the singleton class instance representing the QueryPlanRepo element repository.
@@ -53,6 +54,7 @@ namespace AutomationSQLdm.QueryPlan
             _monitoredsqlserverproperties = new QueryPlanRepoFolders.MonitoredSQLServerPropertiesAppFolder(this);
             _exceptionmessagedialog = new QueryPlanRepoFolders.ExceptionMessageDialogAppFolder(this);
             _advancedqueryfilterconfigurationdialog = new QueryPlanRepoFolders.AdvancedQueryFilterConfigurationDialogAppFolder(this);
+            _sqldmdesktopclient = new QueryPlanRepoFolders.SQLdmDesktopClientAppFolder(this);
         }
 
 #region Variables
@@ -114,6 +116,15 @@ namespace AutomationSQLdm.QueryPlan
         public virtual QueryPlanRepoFolders.AdvancedQueryFilterConfigurationDialogAppFolder AdvancedQueryFilterConfigurationDialog
         {
             get { return _advancedqueryfilterconfigurationdialog; }
+        }
+
+        /// <summary>
+        /// The SQLdmDesktopClient folder.
+        /// </summary>
+        [RepositoryFolder("13aa116f-fe13-42a7-a62a-310344dc9e66")]
+        public virtual QueryPlanRepoFolders.SQLdmDesktopClientAppFolder SQLdmDesktopClient
+        {
+            get { return _sqldmdesktopclient; }
         }
     }
 
@@ -446,6 +457,9 @@ namespace AutomationSQLdm.QueryPlan
             QueryPlanRepoFolders.PnlPoorlyPerformingFolder _pnlpoorlyperforming;
             RepoItemInfo _btnmsspokInfo;
             RepoItemInfo _btnmsspcancelInfo;
+            RepoItemInfo _tabquerymonitorInfo;
+            RepoItemInfo _tabwaitmonitoringInfo;
+            RepoItemInfo _cbuseextendedeventsInfo;
 
             /// <summary>
             /// Creates a new MonitoredSQLServerProperties  folder.
@@ -457,6 +471,9 @@ namespace AutomationSQLdm.QueryPlan
                 _pnlpoorlyperforming = new QueryPlanRepoFolders.PnlPoorlyPerformingFolder(this);
                 _btnmsspokInfo = new RepoItemInfo(this, "btnMSSPOk", ".//button[@controlname='okButton']", 30000, null, "13b47ba1-9cc6-4d2e-9ad7-55fd1cf97087");
                 _btnmsspcancelInfo = new RepoItemInfo(this, "btnMSSPCancel", ".//button[@controlname='cancelButton']", 30000, null, "a943eb34-0451-44cf-82b4-d0dde07eaeec");
+                _tabquerymonitorInfo = new RepoItemInfo(this, "tabQueryMonitor", ".//container[@controlname='propertiesControl']//list[@controlname='propertyPageListBox']/?/?/listitem[@index='2']", 30000, null, "6e30eeb8-b844-42e3-8006-536e5d307a4a");
+                _tabwaitmonitoringInfo = new RepoItemInfo(this, "tabWaitMonitoring", ".//container[@controlname='propertiesControl']//list[@controlname='propertyPageListBox']/?/?/listitem[@index='11']", 30000, null, "39a42035-6bb9-4a3a-8d79-fc3e7652c7e7");
+                _cbuseextendedeventsInfo = new RepoItemInfo(this, "cbUseExtendedEvents", "container[@controlname='propertiesControl']//container[@controlname='waitPropertyPage']/?/?/container[@controlname='collectStatisticsSecondaryContainer']/checkbox[@controlname='chkUseXE']", 30000, null, "924b1e40-ec53-4347-92be-12c17c0529e1");
             }
 
             /// <summary>
@@ -528,6 +545,78 @@ namespace AutomationSQLdm.QueryPlan
                 get
                 {
                     return _btnmsspcancelInfo;
+                }
+            }
+
+            /// <summary>
+            /// The tabQueryMonitor item.
+            /// </summary>
+            [RepositoryItem("6e30eeb8-b844-42e3-8006-536e5d307a4a")]
+            public virtual Ranorex.ListItem tabQueryMonitor
+            {
+                get
+                {
+                    return _tabquerymonitorInfo.CreateAdapter<Ranorex.ListItem>(true);
+                }
+            }
+
+            /// <summary>
+            /// The tabQueryMonitor item info.
+            /// </summary>
+            [RepositoryItemInfo("6e30eeb8-b844-42e3-8006-536e5d307a4a")]
+            public virtual RepoItemInfo tabQueryMonitorInfo
+            {
+                get
+                {
+                    return _tabquerymonitorInfo;
+                }
+            }
+
+            /// <summary>
+            /// The tabWaitMonitoring item.
+            /// </summary>
+            [RepositoryItem("39a42035-6bb9-4a3a-8d79-fc3e7652c7e7")]
+            public virtual Ranorex.ListItem tabWaitMonitoring
+            {
+                get
+                {
+                    return _tabwaitmonitoringInfo.CreateAdapter<Ranorex.ListItem>(true);
+                }
+            }
+
+            /// <summary>
+            /// The tabWaitMonitoring item info.
+            /// </summary>
+            [RepositoryItemInfo("39a42035-6bb9-4a3a-8d79-fc3e7652c7e7")]
+            public virtual RepoItemInfo tabWaitMonitoringInfo
+            {
+                get
+                {
+                    return _tabwaitmonitoringInfo;
+                }
+            }
+
+            /// <summary>
+            /// The cbUseExtendedEvents item.
+            /// </summary>
+            [RepositoryItem("924b1e40-ec53-4347-92be-12c17c0529e1")]
+            public virtual Ranorex.CheckBox cbUseExtendedEvents
+            {
+                get
+                {
+                    return _cbuseextendedeventsInfo.CreateAdapter<Ranorex.CheckBox>(true);
+                }
+            }
+
+            /// <summary>
+            /// The cbUseExtendedEvents item info.
+            /// </summary>
+            [RepositoryItemInfo("924b1e40-ec53-4347-92be-12c17c0529e1")]
+            public virtual RepoItemInfo cbUseExtendedEventsInfo
+            {
+                get
+                {
+                    return _cbuseextendedeventsInfo;
                 }
             }
 
@@ -1200,6 +1289,72 @@ namespace AutomationSQLdm.QueryPlan
                 get
                 {
                     return _cbaqfcexcludesqldmqueryInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The SQLdmDesktopClientAppFolder folder.
+        /// </summary>
+        [RepositoryFolder("13aa116f-fe13-42a7-a62a-310344dc9e66")]
+        public partial class SQLdmDesktopClientAppFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _propertiesqpInfo;
+
+            /// <summary>
+            /// Creates a new SQLdmDesktopClient  folder.
+            /// </summary>
+            public SQLdmDesktopClientAppFolder(RepoGenBaseFolder parentFolder) :
+                    base("SQLdmDesktopClient", "/contextmenu[@processname='SQLdmDesktopClient']", parentFolder, 30000, null, false, "13aa116f-fe13-42a7-a62a-310344dc9e66", "")
+            {
+                _propertiesqpInfo = new RepoItemInfo(this, "PropertiesQP", ".//menuitem[@accessiblename='Properties...']", 30000, null, "7a0f5e01-e837-4eb4-b9bc-b1ac4228bbe8");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("13aa116f-fe13-42a7-a62a-310344dc9e66")]
+            public virtual Ranorex.ContextMenu Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.ContextMenu>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("13aa116f-fe13-42a7-a62a-310344dc9e66")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The PropertiesQP item.
+            /// </summary>
+            [RepositoryItem("7a0f5e01-e837-4eb4-b9bc-b1ac4228bbe8")]
+            public virtual Ranorex.MenuItem PropertiesQP
+            {
+                get
+                {
+                    return _propertiesqpInfo.CreateAdapter<Ranorex.MenuItem>(true);
+                }
+            }
+
+            /// <summary>
+            /// The PropertiesQP item info.
+            /// </summary>
+            [RepositoryItemInfo("7a0f5e01-e837-4eb4-b9bc-b1ac4228bbe8")]
+            public virtual RepoItemInfo PropertiesQPInfo
+            {
+                get
+                {
+                    return _propertiesqpInfo;
                 }
             }
         }

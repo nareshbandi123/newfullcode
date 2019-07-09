@@ -3,13 +3,12 @@
     <Element value="AutomationSQLdm.rxtst" />
   </Array>
   <Array name="bookmarks">
-    <Element value="Breakpoint|D:\repos\newfullcode\AutomationSQLdm\AutomationSQLdm\Application\OpenSQLdm.cs|40|11|True|Break||" />
+    <Element value="Breakpoint|D:\repos\newfullcode\AutomationSQLdm\AutomationSQLdm\OperatorSecurityRole\TC_T721977\VerifyViewDataAcknowledgeSqlUser.cs|57|6|True|Break||" />
+    <Element value="Breakpoint|D:\repos\newfullcode\AutomationSQLdm\AutomationSQLdm\OperatorSecurityRole\TC_T721976\VerifyViewDataAcknowledgeWindowsUser.cs|56|6|True|Break||" />
   </Array>
   <Array name="files">
-    <Element value="Commons\Constants.cs" />
     <Element value="AutomationSQLdm.rxtst" />
     <Element value="BVT\Steps.cs" />
-    <Element value="Application\OpenSQLdm.cs" />
   </Array>
   <Properties name="projectSavedData">
     <Properties name="customTool">

@@ -480,6 +480,7 @@ namespace AutomationSQLdm.BVT
             RepoItemInfo _tblanalyzerunanalysisInfo;
             RepoItemInfo _tabmirroringstatusInfo;
             RepoItemInfo _serftscatalogdetailsInfo;
+            RepoItemInfo _txtdbsavailablitygroupInfo;
 
             /// <summary>
             /// Creates a new SQLdm  folder.
@@ -545,6 +546,7 @@ namespace AutomationSQLdm.BVT
                 _tblanalyzerunanalysisInfo = new RepoItemInfo(this, "tblAnalyzeRunAnalysis", ".//form[@title>'Idera SQL diagnostic manager']/statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']/?/?/container[@controlname='_child']/container[@caption='' and @controltypename='Recommendations' and @instance='0']//table[@accessiblerole='Table']", 30000, null, "e2ff9a67-e587-44a8-b303-1754ead395ce");
                 _tabmirroringstatusInfo = new RepoItemInfo(this, "tabMirroringStatus", ".//statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']/?/?/container[@controlname='_child']/container[@controlname='DatabasesMirroringView']/?/?/container[@controlname='contentContainerPanel']//tabpage[@accessiblename='Status']", 30000, null, "76046275-6db1-40f9-96ee-2ea58d179e3b");
                 _serftscatalogdetailsInfo = new RepoItemInfo(this, "SERFTSCatalogDetails", ".//statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']//container[@controlname='ServicesFullTextSearchView']//toolbar[@controlname='catalogDetailsHeaderStrip']/text[@accessiblename='Catalog Details']", 30000, null, "7f90503c-fb73-4d6c-b36e-7d09b335723e");
+                _txtdbsavailablitygroupInfo = new RepoItemInfo(this, "txtDBSAvailablityGroup", ".//statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']/?/?/container[@controlname='_child']/container[@controlname='DatabasesAlwaysOnView']//toolbar[@controlname='alwaysOnSizeHeaderStrip']/text[@accessiblename='Queue Size (Redo and Log)']", 30000, null, "14279cda-4d9b-4656-92bb-4c2a48a08df7");
             }
 
             /// <summary>
@@ -1866,6 +1868,30 @@ namespace AutomationSQLdm.BVT
                 get
                 {
                     return _serftscatalogdetailsInfo;
+                }
+            }
+
+            /// <summary>
+            /// The txtDBSAvailablityGroup item.
+            /// </summary>
+            [RepositoryItem("14279cda-4d9b-4656-92bb-4c2a48a08df7")]
+            public virtual Ranorex.Text txtDBSAvailablityGroup
+            {
+                get
+                {
+                    return _txtdbsavailablitygroupInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The txtDBSAvailablityGroup item info.
+            /// </summary>
+            [RepositoryItemInfo("14279cda-4d9b-4656-92bb-4c2a48a08df7")]
+            public virtual RepoItemInfo txtDBSAvailablityGroupInfo
+            {
+                get
+                {
+                    return _txtdbsavailablitygroupInfo;
                 }
             }
 

@@ -2009,13 +2009,15 @@ public static void VerifyTablesAndIndexesInDataBases()
 			{
 				try 
 				{
-					repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
-				    repo.SQLdm.tblDBSTempDBSummaryInfo.WaitForItemExists(MaxSyncWaitTime);
+					//repo.SQLdm.SelfInfo.WaitForExists(new Duration(MaxSyncWaitTime));
+				    //repo.SQLdm.tblDBSTempDBSummaryInfo.WaitForItemExists(MaxSyncWaitTime);
 				    
-				    if (repo.SQLdm.tblDBSTempDBSummaryInfo.Exists())
+				    repo.SQLdm.txtDBSAvailablityGroupInfo.WaitForItemExists(MaxSyncWaitTime);
+				    //if (repo.SQLdm.tblDBSTempDBSummaryInfo.Exists())
+				    if (repo.SQLdm.txtDBSAvailablityGroupInfo.Exists())
 					{
-						repo.SQLdm.tblDBSTempDBSummary.Rows[0].Click();
-						Reports.ReportLog("No Of Records Present in Availability Group In DataBases Is:" + repo.SQLdm.tblDBSTempDBSummary.Rows.Count, Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
+						//repo.SQLdm.tblDBSTempDBSummary.Rows[0].Click();
+						//Reports.ReportLog("No Of Records Present in Availability Group In DataBases Is:" + repo.SQLdm.tblDBSTempDBSummary.Rows.Count, Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
 						Reports.ReportLog("Availability Group In Databases Displayed Successfully", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 					}
 					else

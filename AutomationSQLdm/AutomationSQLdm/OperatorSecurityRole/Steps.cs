@@ -711,7 +711,7 @@ namespace AutomationSQLdm.OperatorSecurityRole
 		{
 			try
 			{
-				Common.WaitForSync(10000);
+				Common.WaitForSync(15000);
 				string user = null;
 				if(userType.ToLower().Equals(Config.NewSqlUser.ToLower()))
 					user = Config.NewSqlUser;

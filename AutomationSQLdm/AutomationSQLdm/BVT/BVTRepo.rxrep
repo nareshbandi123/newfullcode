@@ -4320,6 +4320,13 @@ AAAAAAAAABiKEP4PL9Uva6cOhYIAAAAASUVORK5CYII=
 			searchtimeout="30000ms">
 				//form[@title~'^Idera\ SQL\ diagnostic\ mana']//statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']//container[@controlname='ServicesFullTextSearchView']//toolbar[@controlname='catalogDetailsHeaderStrip']/text[@accessiblename='Catalog Details']
 			</item>
+			<item
+			capname="text"
+			id="14279cda-4d9b-4656-92bb-4c2a48a08df7"
+			name="txtDBSAvailablityGroup"
+			searchtimeout="30000ms">
+				//form[@title~'^Idera\ SQL\ diagnostic\ mana']//statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']/?/?/container[@controlname='_child']/container[@controlname='DatabasesAlwaysOnView']//toolbar[@controlname='alwaysOnSizeHeaderStrip']/text[@accessiblename='Queue Size (Redo and Log)']
+			</item>
 			<basepath>
 				//form[@title~'^Idera\ SQL\ diagnostic\ mana']
 			</basepath>

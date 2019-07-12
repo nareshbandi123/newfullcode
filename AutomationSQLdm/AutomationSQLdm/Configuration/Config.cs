@@ -30,7 +30,8 @@ namespace AutomationSQLdm.Configuration
 		public const string ServerOptions_CMWIN2016S8 		= "CMWIN2016-S8";
 		public const string ServerOptions_CMWIN2016SQL17 	= "CMWIN2016SQL17";
 		public const string ServerOptions_TMSSQL2016 		= "T-MSSQL2016";
-		public const string ServerOptions_FORDELETE 		= "BI-ET-W2012";  //ForDeleteServer
+		public const string ServerOptions_FORDELETE 		= @"CIGNITI004-DM\SQL2016";  //ForDeleteServer
+		//public const string ServerOptions_FORDELETE 		= "BI-ET-W2012";  //ForDeleteServer
 		//public const string ServerOptions_DEFAULTSERVER 	= "T-MSSQL2016";  //ForNavigations
 		public const string ServerOptions_DEFAULTSERVER 	= @"CIGNIT001-SQLDM\SQL2017";  //ForNavigations
 		public const string ServerOptions_SQLAUTHSERVER 	= @"CIGNITI002-DM\SQL2016";  //ForSQLAuthentication

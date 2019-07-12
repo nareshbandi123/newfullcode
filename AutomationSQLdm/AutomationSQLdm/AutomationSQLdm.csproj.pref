@@ -1,11 +1,6 @@
 ﻿<Properties>
-  <Array name="active">
-    <Element value="AutomationSQLdm.rxtst" />
-  </Array>
-  <Array name="bookmarks">
-    <Element value="Breakpoint|D:\repos\newfullcode\AutomationSQLdm\AutomationSQLdm\OperatorSecurityRole\TC_T721977\VerifyViewDataAcknowledgeSqlUser.cs|57|6|True|Break||" />
-    <Element value="Breakpoint|D:\repos\newfullcode\AutomationSQLdm\AutomationSQLdm\OperatorSecurityRole\TC_T721976\VerifyViewDataAcknowledgeWindowsUser.cs|56|6|True|Break||" />
-  </Array>
+  <Array name="active" />
+  <Array name="bookmarks" />
   <Array name="files">
     <Element value="AutomationSQLdm.rxtst" />
     <Element value="BVT\Steps.cs" />

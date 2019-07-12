@@ -53,7 +53,7 @@ namespace AutomationSQLdm.OperatorSecurityRole.TC_T721976
         	  Steps.ClickAddButton();
         	  Steps.ClickNextButton();
         	  Steps.ClickFinishButton();
-			  Steps.VerifyUserAdded(Config.NewWindowsUser);
+			  //Steps.VerifyUserAdded(Config.NewWindowsUser);
         	  Steps.VerifyViewDataAcknowledgwAlarmIsSelected(SQDLDMConstants.WindowsUser); 
         	  Steps.ClickCancelPermissionProperties();
         	  Steps.DeleteAddedUser();
